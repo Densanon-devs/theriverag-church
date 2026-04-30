@@ -19,6 +19,9 @@
   <meta name="geo.region" content="US-ID">
   <meta name="geo.placename" content="Post Falls, Idaho">
   <title>The River Church — You Belong Here | Post Falls, Idaho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Oswald:wght@400;600;700&family=Abel&display=swap">
   <link rel="stylesheet" href="css/styles.css">
   <script type="application/ld+json">
   {
@@ -53,6 +56,9 @@
 </head>
 <body>
 
+  <!-- Announcement bar (matches original Squarespace announcement) -->
+  <div class="announcement-bar">NEW LOCATION: 19587 W Riverview Dr, Post Falls (Take Exit 299)</div>
+
   <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
@@ -77,7 +83,6 @@
     <div class="container">
       <div class="hero-content">
         <h1>YOU BELONG <span class="accent">HERE!</span></h1>
-        <p>A place where you feel at home. A place where you can feel like family.</p>
         <div class="hero-buttons">
           <a href="https://theriveragchurch.churchcenter.com/people/forms/559632" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Get Connected</a>
         </div>
@@ -85,30 +90,44 @@
     </div>
   </section>
 
-  <!-- 2. Service Times -->
+  <!-- 2. Service Times — 3 cards mirroring the original H2 layout -->
   <section class="section section-light">
     <div class="container">
-      <div class="schedule-block">
-        <ul class="schedule-list">
-          <li><strong>Sundays</strong><span>9:30 AM &middot; 1st Service</span><span>11:00 AM &middot; 2nd Service</span><span>River Kids during both services</span></li>
-          <li><strong>Mondays</strong><span>6:30 PM &middot; YA Fellowship</span></li>
-          <li><strong>Wednesdays</strong><span>5:00 PM &middot; Dinner Church</span><span>6:30 PM &middot; Bible Study &amp; River Youth</span></li>
-        </ul>
+      <div class="service-times-grid">
+        <div class="service-times-card">
+          <h2>Sunday Services</h2>
+          <span class="when">9:30 &amp; 11:00 AM</span>
+          <p>Two identical services every Sunday morning. Come to whichever fits your schedule.</p>
+        </div>
+        <div class="service-times-card">
+          <h2>Kids and Youth Services</h2>
+          <span class="when">River Kids &middot; River Youth</span>
+          <p>River Kids during both Sunday services. River Youth Wednesdays at 6:30 PM.</p>
+        </div>
+        <div class="service-times-card">
+          <h2>Wednesday Dinner</h2>
+          <span class="when">5:00 PM</span>
+          <p>A shared meal followed by the gospel message. Bible Study &amp; Youth at 6:30 PM.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Core Values -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="values-grid">
-        <div class="value-card"><h3>Reaching the Lost</h3></div>
-        <div class="value-card"><h3>Serving Others</h3></div>
-        <div class="value-card"><h3>Making Disciples</h3></div>
-        <div class="value-card"><h3>Reading the Word of God</h3></div>
-        <div class="value-card"><h3>Living by the Spirit</h3></div>
-        <div class="value-card"><h3>Doing Life Together</h3></div>
-      </div>
+  <!-- 3. Core Values — scrolling marquee -->
+  <section class="values-marquee">
+    <div class="values-track">
+      <span>Reaching the Lost</span><span class="sep">〰</span>
+      <span>Serving Others</span><span class="sep">〰</span>
+      <span>Making Disciples</span><span class="sep">〰</span>
+      <span>Reading the Word of God</span><span class="sep">〰</span>
+      <span>Living by the Spirit</span><span class="sep">〰</span>
+      <span>Doing Life Together</span><span class="sep">〰</span>
+      <span>Reaching the Lost</span><span class="sep">〰</span>
+      <span>Serving Others</span><span class="sep">〰</span>
+      <span>Making Disciples</span><span class="sep">〰</span>
+      <span>Reading the Word of God</span><span class="sep">〰</span>
+      <span>Living by the Spirit</span><span class="sep">〰</span>
+      <span>Doing Life Together</span><span class="sep">〰</span>
     </div>
   </section>
 
@@ -126,36 +145,39 @@
   <!-- 5. YouTube Livestream CTA -->
   <section class="section section-accent">
     <div class="container">
-      <div class="cta-row">
-        <div class="cta-text">
-          <h2>Join us live on YouTube!</h2>
-        </div>
+      <div class="youtube-cta">
+        <h3>Join us live on YouTube!</h3>
         <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Watch Live</a>
       </div>
     </div>
   </section>
 
-  <!-- 6. Core Values (repeated) -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="values-grid">
-        <div class="value-card"><h3>Reaching the Lost</h3></div>
-        <div class="value-card"><h3>Serving Others</h3></div>
-        <div class="value-card"><h3>Making Disciples</h3></div>
-        <div class="value-card"><h3>Reading the Word of God</h3></div>
-        <div class="value-card"><h3>Living by the Spirit</h3></div>
-        <div class="value-card"><h3>Doing Life Together</h3></div>
-      </div>
+  <!-- 6. Core Values (repeated, as on the live site) -->
+  <section class="values-marquee">
+    <div class="values-track">
+      <span>Reaching the Lost</span><span class="sep">〰</span>
+      <span>Serving Others</span><span class="sep">〰</span>
+      <span>Making Disciples</span><span class="sep">〰</span>
+      <span>Reading the Word of God</span><span class="sep">〰</span>
+      <span>Living by the Spirit</span><span class="sep">〰</span>
+      <span>Doing Life Together</span><span class="sep">〰</span>
+      <span>Reaching the Lost</span><span class="sep">〰</span>
+      <span>Serving Others</span><span class="sep">〰</span>
+      <span>Making Disciples</span><span class="sep">〰</span>
+      <span>Reading the Word of God</span><span class="sep">〰</span>
+      <span>Living by the Spirit</span><span class="sep">〰</span>
+      <span>Doing Life Together</span><span class="sep">〰</span>
     </div>
   </section>
 
-  <!-- 7. Invitation -->
+  <!-- 7. Invitation — 4 stacked H3 lines, verbatim from the live site -->
   <section class="section section-light">
     <div class="container">
       <div class="invitation">
-        <h2>Are You Curious About Jesus?</h2>
-        <p>Maybe you have been a Christian for a long time&hellip;</p>
-        <p>No matter what your past looks like we believe you will find <em>a place where you belong</em> at The River Church!</p>
+        <h3>Are You Curious About Jesus?</h3>
+        <h3>Maybe you have been a Christian for a long time&hellip;</h3>
+        <h3>No matter what your past looks like we believe you will find</h3>
+        <h3>A place where you belong at The River Church!</h3>
       </div>
     </div>
   </section>
@@ -174,28 +196,28 @@
   <!-- 9. Three-card section -->
   <section class="section section-dark">
     <div class="container">
-      <div class="services-grid services-grid-3">
-        <div class="service-card service-card-feature">
+      <div class="three-card-grid">
+        <div class="three-card">
           <h3>More About Us</h3>
-          <a href="/about/" class="card-link">Learn More</a>
+          <a href="/about/" class="btn btn-primary">More About Us</a>
         </div>
-        <div class="service-card service-card-feature">
+        <div class="three-card">
           <h3>River Youth Group</h3>
-          <a href="/about/#youth" class="card-link">Learn About River Youth Group</a>
+          <a href="/about/" class="btn btn-primary">Learn About River Youth Group</a>
         </div>
-        <div class="service-card service-card-feature">
+        <div class="three-card">
           <h3>How to Give Online</h3>
-          <a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener" class="card-link">How to Give Online</a>
+          <a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener" class="btn btn-primary">How to Give Online</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 10. Calendar callout -->
+  <!-- 10. Calendar callout — heading only (matches original) -->
   <section class="section section-accent">
     <div class="container">
       <div class="calendar-callout">
-        <h2>View Our Full Calendar!</h2>
+        <h1>View Our Full Calendar!</h1>
         <a href="https://theriveragchurch.churchcenter.com/calendar" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Open Calendar</a>
       </div>
     </div>
@@ -205,7 +227,7 @@
   <section class="section section-light">
     <div class="container">
       <div class="tagline">
-        <h2>You Belong Here!</h2>
+        <h1>You Belong Here!</h1>
       </div>
     </div>
   </section>
@@ -220,7 +242,7 @@
         </div>
         <div class="footer-col">
           <h4>Visit Us</h4>
-          <p>19587 W Riverview Dr<br>Post Falls, ID 83854</p>
+          <p>Meeting in Northwest Family Church West<br>19587 W Riverview Dr<br>Post Falls, ID 83854</p>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>

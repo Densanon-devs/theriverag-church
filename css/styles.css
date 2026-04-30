@@ -1,10 +1,11 @@
 /* ============================================
    The River Church — Stylesheet
-   Palette: deep navy + warm gold accent on cream/white
+   Brand palette from "The River Church Color Guide"
+   Fonts mirror the original Squarespace template:
+     Poppins (body), Oswald (headings), Abel (labels)
    ============================================ */
 
 :root {
-  /* Brand palette from "The River Church Color Guide" */
   --color-bg: #ffffff;
   --color-bg-light: #f5f2ec;
   --color-bg-dark: #0d0d0d;
@@ -21,8 +22,9 @@
   --radius: 6px;
   --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   --transition: all 0.25s ease;
-  --font-heading: 'Georgia', 'Times New Roman', serif;
-  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  --font-display: 'Abel', 'Oswald', sans-serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -32,9 +34,10 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--color-text);
   background: var(--color-bg);
+  font-weight: 400;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -42,13 +45,36 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: var(--color-accent); text-decoration: none; transition: var(--transition); }
 a:hover { color: var(--color-accent-hover); }
 
-h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; font-weight: 700; }
-h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
-h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin-bottom: 0.5em; }
-h3 { font-size: 1.35rem; margin-bottom: 0.5em; }
-h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; letter-spacing: 0.05em; }
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+h1 { font-size: clamp(2.6rem, 5.5vw, 4.5rem); text-transform: uppercase; }
+h2 { font-size: clamp(2rem, 3.5vw, 3rem); margin-bottom: 0.75rem; text-transform: uppercase; }
+h3 { font-size: 1.5rem; margin-bottom: 0.5em; }
+h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; letter-spacing: 0.08em; font-family: var(--font-display); }
+
+p { margin-bottom: 1rem; }
 
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+
+/* ============================================
+   Announcement bar
+   ============================================ */
+.announcement-bar {
+  background: var(--color-accent);
+  color: var(--color-bg-dark);
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.announcement-bar a { color: var(--color-bg-dark); text-decoration: underline; }
 
 /* ============================================
    Header
@@ -59,7 +85,7 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .header-inner {
@@ -74,12 +100,14 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
 
 .logo img { height: 64px; width: auto; }
 
-.main-nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
+.main-nav ul { list-style: none; display: flex; gap: 2.25rem; align-items: center; }
 .main-nav a {
   color: var(--color-text-light);
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .main-nav a:hover, .main-nav a.active { color: var(--color-accent); }
 
@@ -88,9 +116,10 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
   color: var(--color-bg-dark);
   padding: 0.65rem 1.5rem;
   border-radius: var(--radius);
+  font-family: var(--font-display);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   font-size: 0.85rem;
 }
 .header-cta:hover { background: var(--color-accent-hover); color: var(--color-bg-dark); }
@@ -117,17 +146,16 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
    Hero
    ============================================ */
 .hero {
-  background: linear-gradient(rgba(20,35,58,0.7), rgba(20,35,58,0.85)), url('../site/images/hero.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(13,13,13,0.55), rgba(13,13,13,0.75)), url('../site/images/hero.jpg') center/cover no-repeat;
   color: var(--color-text-light);
   padding: 7rem 0;
   text-align: center;
 }
-.hero-home { min-height: 70vh; display: flex; align-items: center; }
-.hero-page { padding: 5rem 0; }
+.hero-home { min-height: 75vh; display: flex; align-items: center; }
 
-.hero-content { max-width: 800px; margin: 0 auto; }
-.hero-content h1 { margin-bottom: 1.25rem; }
-.hero-content p { font-size: 1.2rem; opacity: 0.95; margin-bottom: 2rem; }
+.hero-content { max-width: 900px; margin: 0 auto; }
+.hero-content h1 { margin-bottom: 1.5rem; letter-spacing: 0.02em; }
+.hero-content p { font-size: 1.25rem; opacity: 0.95; margin-bottom: 2rem; max-width: 640px; margin-left: auto; margin-right: auto; }
 
 .accent { color: var(--color-accent); }
 
@@ -140,9 +168,10 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
   display: inline-block;
   padding: 0.85rem 1.75rem;
   border-radius: var(--radius);
+  font-family: var(--font-display);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   font-size: 0.9rem;
   cursor: pointer;
   border: 2px solid transparent;
@@ -161,19 +190,19 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
 .section-light { background: var(--color-bg-light); }
 .section-dark { background: var(--color-bg-dark); color: var(--color-text-light); }
 .section-accent { background: var(--color-bg-accent); color: var(--color-text-light); }
-.section-sage { background: var(--color-bg-sage); color: var(--color-text); }
 
 .section-dark h1, .section-dark h2, .section-dark h3,
 .section-accent h1, .section-accent h2, .section-accent h3 { color: var(--color-text-light); }
 
-.section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+.section-header { text-align: center; max-width: 760px; margin: 0 auto 3rem; }
 .section-header .label,
 .label {
   display: inline-block;
+  font-family: var(--font-display);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   color: var(--color-accent);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
@@ -181,94 +210,121 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
 .section-dark .section-header p, .section-accent .section-header p { color: rgba(255,255,255,0.85); }
 
 /* ============================================
-   Service / Card Grids
+   Service Times — 3 cards, mirrors original H2 layout
    ============================================ */
-.services-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-.services-grid-3 { grid-template-columns: repeat(3, 1fr); }
-.services-grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-.service-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 2rem 1.75rem;
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-.section-light .service-card {
-  background: #ffffff;
-  border-color: var(--color-border);
-  box-shadow: var(--shadow);
-}
-.service-card:hover { transform: translateY(-4px); }
-.service-card h3 { color: var(--color-accent); }
-.section-light .service-card h3 { color: var(--color-bg-dark); }
-.service-card p { font-size: 0.95rem; opacity: 0.9; margin-bottom: 0.75rem; }
-.service-card .service-time {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  margin: 0.25rem 0 0.75rem;
-}
-.section-light .service-card .service-time { color: var(--color-bg-dark); }
-.card-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-}
-
-.service-card-feature { padding: 2.5rem 2rem; }
-
-/* ============================================
-   Values Grid
-   ============================================ */
-.values-grid {
+.service-times-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-.value-card {
-  background: var(--color-bg-dark);
-  color: var(--color-text-light);
-  padding: 2.5rem 1.5rem;
-  border-radius: var(--radius);
-  text-align: center;
-  transition: var(--transition);
-}
-.value-card:hover { background: var(--color-bg-accent); transform: translateY(-4px); }
-.value-card h3 { color: var(--color-accent); margin: 0; }
-
-/* ============================================
-   CTA Row
-   ============================================ */
-.cta-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 2rem;
-  flex-wrap: wrap;
 }
-.cta-text { flex: 1; min-width: 280px; }
-.cta-text p { opacity: 0.9; margin-top: 0.5rem; }
+.service-times-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+.service-times-card h2 { margin-bottom: 1rem; color: var(--color-bg-dark); }
+.service-times-card p { color: var(--color-text-muted); font-size: 1rem; }
+.service-times-card .when {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-accent-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 
 /* ============================================
-   Gallery
+   Core Values — marquee/scrolling band
+   ============================================ */
+.values-marquee {
+  background: var(--color-bg-accent);
+  color: var(--color-text-light);
+  padding: 2.5rem 0;
+  overflow: hidden;
+  position: relative;
+}
+.values-track {
+  display: flex;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: marquee 60s linear infinite;
+  align-items: center;
+}
+.values-track span {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-light);
+}
+.values-track .sep {
+  color: var(--color-accent);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================
+   YouTube Livestream CTA
+   ============================================ */
+.youtube-cta {
+  text-align: center;
+  padding: 4rem 0;
+}
+.youtube-cta h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   Invitation block (4 stacked H3)
+   ============================================ */
+.invitation {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(6px);
+  padding: 3rem 2rem;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+.invitation h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--color-bg-dark);
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+.invitation h3:first-child {
+  font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+  text-transform: uppercase;
+  color: var(--color-accent-deep);
+  margin-bottom: 2rem;
+}
+.invitation h3:last-child { margin-bottom: 0; color: var(--color-bg-accent); }
+
+/* ============================================
+   Galleries
    ============================================ */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
 }
 .gallery-item {
   overflow: hidden;
   border-radius: var(--radius);
   aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow);
 }
 .gallery-item img {
   width: 100%;
@@ -279,92 +335,139 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
 .gallery-item:hover img { transform: scale(1.05); }
 
 /* ============================================
-   Embeds (Calendar, Forms)
+   Three-card section (image + heading + button)
    ============================================ */
-.embed-container { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-.embed-container-narrow { max-width: 720px; margin: 0 auto; }
-
-/* ============================================
-   Content Rows (About page)
-   ============================================ */
-.content-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-}
-.content-row-reverse .content-image { order: 2; }
-.content-image img { border-radius: var(--radius); box-shadow: var(--shadow); }
-.content-text h2 { margin-top: 0.5rem; }
-.content-text p { margin-bottom: 1rem; color: var(--color-text-muted); }
-.section-dark .content-text p, .section-accent .content-text p { color: rgba(255,255,255,0.9); }
-.meeting-time {
-  margin-top: 1rem;
-  padding: 0.75rem 1.25rem;
-  background: var(--color-accent);
-  color: var(--color-bg-dark);
-  display: inline-block;
-  border-radius: var(--radius);
-}
-
-/* ============================================
-   Beliefs Grid
-   ============================================ */
-.beliefs-grid {
+.three-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
-.belief-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 1.5rem;
+.three-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition);
 }
-.belief-card h3 { font-size: 1.1rem; color: var(--color-accent); margin-bottom: 0.5rem; }
-.belief-card p { font-size: 0.92rem; opacity: 0.9; margin: 0; }
+.three-card:hover { transform: translateY(-4px); border-color: var(--color-accent); }
+.three-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+}
 
 /* ============================================
-   Homepage — schedule list, invitation, calendar callout, tagline
+   Calendar callout
    ============================================ */
-.schedule-block { max-width: 720px; margin: 0 auto; }
-.schedule-list { list-style: none; }
-.schedule-list li {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 1.25rem 1rem;
-  border-bottom: 1px solid var(--color-border);
+.calendar-callout { text-align: center; padding: 1rem 0; }
+.calendar-callout h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  margin: 0;
 }
-.schedule-list li:last-child { border-bottom: none; }
-.schedule-list strong {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: var(--color-bg-accent);
-  margin-bottom: 0.35rem;
-}
-.schedule-list span { color: var(--color-text); font-size: 1rem; }
+.calendar-callout a { display: inline-block; margin-top: 1.5rem; }
 
-.invitation { max-width: 760px; margin: 0 auto; text-align: center; }
-.invitation h2 { margin-bottom: 1.25rem; }
-.invitation p { font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 0.75rem; }
-.invitation em { color: var(--color-accent-deep); font-style: italic; font-weight: 600; }
-
-.calendar-callout { text-align: center; }
-.calendar-callout h2 { margin-bottom: 1.5rem; }
-
+/* ============================================
+   Tagline
+   ============================================ */
 .tagline { text-align: center; padding: 2rem 0; }
-.tagline h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+.tagline h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
   color: var(--color-bg-accent);
   margin: 0;
 }
 
-.beliefs-link { text-align: center; margin-top: 2.5rem; }
+/* ============================================
+   About page — leadership / kids / youth content rows
+   ============================================ */
+.about-section {
+  padding: 5rem 0;
+}
+.about-section h1 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.about-row {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about-row-reverse { grid-template-columns: 6fr 5fr; }
+.about-row-reverse .about-image { order: 2; }
+.about-image img { border-radius: var(--radius); box-shadow: var(--shadow); }
+.about-text p { color: var(--color-text-muted); margin-bottom: 1rem; }
+.section-dark .about-text p, .section-accent .about-text p { color: rgba(255,255,255,0.92); }
+.about-when {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.65rem 1.25rem;
+  background: var(--color-accent);
+  color: var(--color-bg-dark);
+  font-family: var(--font-display);
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   Beliefs grid (16 cards with descriptions)
+   ============================================ */
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.belief-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 1.75rem;
+  border-radius: var(--radius);
+}
+.belief-card h2 {
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+  text-transform: none;
+  font-weight: 600;
+}
+.belief-card p { font-size: 0.95rem; opacity: 0.92; margin: 0; line-height: 1.6; }
 
 /* ============================================
    Sermons Page — card grid
    ============================================ */
+.platform-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.platform-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 1.75rem 1.25rem;
+  border-radius: var(--radius);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--color-text-light);
+  transition: var(--transition);
+}
+.platform-card:hover { background: var(--color-accent); color: var(--color-bg-dark); border-color: var(--color-accent); }
+.platform-name { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; text-transform: uppercase; }
+.platform-cta { font-family: var(--font-display); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
+
 .sermon-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -385,73 +488,45 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
 }
 .sermon-card:hover { transform: translateY(-4px); color: var(--color-text); }
 .sermon-thumb {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--color-bg-dark);
 }
 .sermon-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .sermon-meta { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; }
-.sermon-speaker {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-accent);
-  font-weight: 600;
-}
 .sermon-title {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   margin: 0;
+  text-transform: uppercase;
   color: var(--color-bg-dark);
+  line-height: 1.25;
 }
-.sermon-date { font-size: 0.9rem; color: var(--color-text-muted); }
+.sermon-date {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 .sermon-readmore {
   margin-top: 0.5rem;
+  font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--color-accent);
 }
 
-/* ============================================
-   Sermons Page (legacy)
-   ============================================ */
-.platform-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+.archive-note { text-align: center; margin-top: 3rem; }
+.archive-note a {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
 }
-.platform-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 2rem 1.5rem;
-  border-radius: var(--radius);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: var(--color-text-light);
-  transition: var(--transition);
-}
-.platform-card:hover { background: var(--color-accent); color: var(--color-bg-dark); border-color: var(--color-accent); }
-.platform-name { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; }
-.platform-cta { font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
-
-.sermon-list { list-style: none; max-width: 800px; margin: 0 auto; }
-.sermon-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 1rem;
-  border-bottom: 1px solid var(--color-border);
-  gap: 1rem;
-}
-.sermon-item:hover { background: rgba(0,0,0,0.02); }
-.sermon-title { font-weight: 600; font-size: 1.05rem; }
-.sermon-date { color: var(--color-text-muted); font-size: 0.9rem; white-space: nowrap; }
-
-.archive-note { text-align: center; margin-top: 2.5rem; color: var(--color-text-muted); }
 
 /* ============================================
    Footer
@@ -467,7 +542,7 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
   gap: 2.5rem;
   margin-bottom: 3rem;
 }
-.footer-logo { height: 60px; width: auto; margin-bottom: 1rem; }
+.footer-logo { height: 70px; width: auto; margin-bottom: 1rem; }
 .site-footer p, .site-footer a { font-size: 0.95rem; }
 .site-footer h4 { color: var(--color-accent); }
 .site-footer a { color: var(--color-text-light); }
@@ -485,11 +560,10 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
    Responsive
    ============================================ */
 @media (max-width: 960px) {
-  .services-grid-3, .services-grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .values-grid, .beliefs-grid, .platform-row, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .sermon-grid { grid-template-columns: repeat(2, 1fr); }
-  .content-row { grid-template-columns: 1fr; }
-  .content-row-reverse .content-image { order: 0; }
+  .service-times-grid, .three-card-grid, .platform-row, .gallery-grid, .sermon-grid { grid-template-columns: repeat(2, 1fr); }
+  .beliefs-grid { grid-template-columns: 1fr; }
+  .about-row, .about-row-reverse { grid-template-columns: 1fr; }
+  .about-row-reverse .about-image { order: 0; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -502,9 +576,9 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
 
   .hero { padding: 5rem 0; }
   .hero-home { min-height: 60vh; }
-  .services-grid-3, .services-grid-4 { grid-template-columns: 1fr; }
-  .values-grid, .beliefs-grid, .platform-row, .gallery-grid { grid-template-columns: 1fr; }
+  .service-times-grid, .three-card-grid, .platform-row, .gallery-grid, .sermon-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .sermon-item { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
-  .sermon-grid { grid-template-columns: 1fr; }
+
+  .values-track span { font-size: 1.4rem; }
+  .invitation { padding: 2rem 1.25rem; }
 }
