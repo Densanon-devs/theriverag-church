@@ -108,30 +108,78 @@
     </div>
   </section>
 
-  <!-- 2. Service Times — 3 cards mirroring the original H2 layout -->
-  <section class="section section-light">
+  <!-- Wave divider into the dark services block -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0d0d0d"/>
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40" fill="none" stroke="#cfa861" stroke-width="2.5"/>
+    </svg>
+  </div>
+
+  <!-- 2. Service Times — YT live card + accordion service cards (black bg) -->
+  <section class="service-block">
     <div class="container">
-      <div class="service-times-grid">
-        <div class="service-times-card">
-          <h2>Sunday Services</h2>
-          <span class="when">9:30 &amp; 11:00 AM</span>
-          <p>Two identical services every Sunday morning. Come to whichever fits your schedule.</p>
+      <div class="service-row">
+        <a class="live-card" href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener">
+          <h3>Join us live on Youtube!</h3>
+          <div class="live-thumb">
+            <img src="site/images/gallery-01.jpg" alt="Pastor Steve preaching at The River Church">
+          </div>
+        </a>
+
+        <div class="accordion-list">
+          <details class="accordion-card" open>
+            <summary>
+              <h2>Sunday Services 9:30 &amp; 11am</h2>
+              <span class="accordion-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion-body">
+              <p>Join us for worship! Two identical services every Sunday morning &mdash; come to whichever fits your schedule.</p>
+              <span class="when">Sundays @ 9:30 &amp; 11:00 AM</span>
+            </div>
+          </details>
+
+          <details class="accordion-card">
+            <summary>
+              <h2>Kids and Youth Services</h2>
+              <span class="accordion-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion-body">
+              <p>River Kids meets during both Sunday services &mdash; a safe, fun place where your kids can grow, learn, and make friends.</p>
+              <p>River Youth meets Wednesdays at 6:30 PM, right after Dinner Church.</p>
+              <span class="when">Sundays 9:30 &amp; 11 AM &middot; Wednesdays 6:30 PM</span>
+            </div>
+          </details>
+
+          <details class="accordion-card">
+            <summary>
+              <h2>Wednesday Dinner 5pm</h2>
+              <span class="accordion-chev" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion-body">
+              <p>A shared meal followed by the gospel message. Bible Study and River Youth follow at 6:30 PM.</p>
+              <span class="when">Wednesdays @ 5:00 PM</span>
+            </div>
+          </details>
         </div>
-        <div class="service-times-card">
-          <h2>Kids and Youth Services</h2>
-          <span class="when">River Kids &middot; River Youth</span>
-          <p>River Kids during both Sunday services. River Youth Wednesdays at 6:30 PM.</p>
+      </div>
+
+      <div class="service-row service-row-flip">
+        <div class="service-row__media">
+          <div class="rounded-photo">
+            <img src="site/images/gallery-03.jpg" alt="Easter egg hunt at The River Church">
+          </div>
         </div>
-        <div class="service-times-card">
-          <h2>Wednesday Dinner</h2>
-          <span class="when">5:00 PM</span>
-          <p>A shared meal followed by the gospel message. Bible Study &amp; Youth at 6:30 PM.</p>
+        <div class="inline-values">
+          <p>Reaching the Lost <span class="sep">〰</span> Serving Others</p>
+          <p>Making Disciples <span class="sep">〰</span> Reading the Word</p>
+          <p>Living by the Spirit <span class="sep">〰</span> Doing Life Together</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Core Values — scrolling marquee -->
+  <!-- 3. Core Values — scrolling marquee strip -->
   <section class="values-marquee">
     <div class="values-track">
       <span>Reaching the Lost</span><span class="sep">〰</span>
