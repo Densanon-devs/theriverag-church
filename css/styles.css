@@ -4,15 +4,18 @@
    ============================================ */
 
 :root {
+  /* Brand palette from "The River Church Color Guide" */
   --color-bg: #ffffff;
-  --color-bg-light: #f7f5ef;
-  --color-bg-dark: #14233a;
-  --color-bg-accent: #1f3357;
-  --color-text: #1a1a1a;
+  --color-bg-light: #f5f2ec;
+  --color-bg-dark: #0d0d0d;
+  --color-bg-accent: #445956;
+  --color-bg-sage: #afc4bf;
+  --color-text: #0d0d0d;
   --color-text-muted: #5a5a5a;
-  --color-text-light: #f7f5ef;
-  --color-accent: #c89b3c;
-  --color-accent-hover: #b3862a;
+  --color-text-light: #f5f2ec;
+  --color-accent: #cfa861;
+  --color-accent-hover: #b8924c;
+  --color-accent-deep: #755827;
   --color-border: #e3ddd0;
   --max-width: 1200px;
   --radius: 6px;
@@ -158,6 +161,7 @@ h4 { font-size: 1.05rem; margin-bottom: 0.75em; text-transform: uppercase; lette
 .section-light { background: var(--color-bg-light); }
 .section-dark { background: var(--color-bg-dark); color: var(--color-text-light); }
 .section-accent { background: var(--color-bg-accent); color: var(--color-text-light); }
+.section-sage { background: var(--color-bg-sage); color: var(--color-text); }
 
 .section-dark h1, .section-dark h2, .section-dark h3,
 .section-accent h1, .section-accent h2, .section-accent h3 { color: var(--color-text-light); }
