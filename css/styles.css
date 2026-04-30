@@ -653,8 +653,11 @@ p { margin-bottom: 1rem; }
 }
 .about-section h1 {
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  text-align: center;
-  margin-bottom: 2.5rem;
+  text-align: left;
+  margin: 0 auto 2.5rem;
+  max-width: 1100px;
+  text-transform: none;
+  letter-spacing: 0.01em;
 }
 .about-row {
   display: grid;
@@ -709,8 +712,35 @@ p { margin-bottom: 1rem; }
 .belief-card p { font-size: 0.95rem; opacity: 0.92; margin: 0; line-height: 1.6; }
 
 /* ============================================
-   Sermons Page — card grid
+   Sermons Page — light intro + 4-column card grid
    ============================================ */
+.sermons-intro { text-align: center; padding: 4.5rem 1.5rem 5rem; }
+.sermons-h1 {
+  color: var(--color-bg-dark);
+  text-transform: none;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+.sermons-h2 {
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  text-transform: none;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.sermons-platforms {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+.sermons-platforms .btn {
+  border-radius: 999px;
+  padding: 0.85rem 2rem;
+  font-size: 0.85rem;
+}
 .platform-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -736,16 +766,16 @@ p { margin-bottom: 1rem; }
 
 .sermon-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1100px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .sermon-card {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
-  border-radius: var(--radius);
+  background: var(--color-bg-light);
+  border-radius: 0;
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
@@ -759,10 +789,23 @@ p { margin-bottom: 1rem; }
   background: var(--color-bg-dark);
 }
 .sermon-thumb img { width: 100%; height: 100%; object-fit: cover; }
-.sermon-meta { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.sermon-meta {
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: center;
+}
+.sermon-category {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
 .sermon-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
@@ -771,20 +814,11 @@ p { margin-bottom: 1rem; }
 }
 .sermon-date {
   font-family: var(--font-display);
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-.sermon-readmore {
-  margin-top: 0.5rem;
-  font-family: var(--font-display);
   font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-accent);
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
 }
+.sermon-readmore { display: none; }
 
 .archive-note { text-align: center; margin-top: 3rem; }
 .archive-note a {
@@ -825,6 +859,9 @@ p { margin-bottom: 1rem; }
 /* ============================================
    Responsive
    ============================================ */
+@media (max-width: 1100px) {
+  .sermon-grid { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 960px) {
   .three-card-grid, .platform-row, .gallery-grid, .sermon-grid { grid-template-columns: repeat(2, 1fr); }
   .beliefs-grid { grid-template-columns: 1fr; }
