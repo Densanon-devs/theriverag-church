@@ -22,22 +22,37 @@
 
   <div class="announcement-bar">NEW LOCATION: 19587 W Riverview Dr, Post Falls (Take Exit 299)</div>
 
-  <!-- Header -->
+  <!-- Header — big centered logo, nav left, social + CTA right -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="logo"><img src="/site/images/logo.png" alt="The River Church"></a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
       <nav class="main-nav">
         <ul>
           <li><a href="/podcasts/">Sermons</a></li>
           <li><a href="/about/" class="active">About</a></li>
           <li><a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener">Give</a></li>
-          <li><a href="https://theriveragchurch.churchcenter.com/people/forms/559632" target="_blank" rel="noopener">Get Connected</a></li>
         </ul>
       </nav>
-      <a href="https://theriveragchurch.churchcenter.com/people/forms/559632" target="_blank" rel="noopener" class="header-cta header-cta-desktop">Get Connected</a>
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
+
+      <a href="/" class="logo"><img src="/site/images/logo.png" alt="The River Church"></a>
+
+      <div class="header-right">
+        <ul class="social-icons">
+          <li><a href="https://www.instagram.com/theriverag.church" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0-2.2c-3.3 0-3.7 0-5 .1-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4-.7.7-1.1 1.4-1.4 2.2-.3.8-.5 1.7-.6 3-.1 1.3-.1 1.7-.1 5s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6-1.3-.1-1.7-.1-5-.1zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+          </a></li>
+          <li><a href="https://www.facebook.com/theriverag" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.5 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
+          </a></li>
+          <li><a href="https://www.youtube.com/@theriverag.church" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.5 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+          </a></li>
+        </ul>
+        <a href="https://theriveragchurch.churchcenter.com/people/forms/559632" target="_blank" rel="noopener" class="header-cta header-cta-desktop">Get Connected</a>
+      </div>
     </div>
   </header>
 
