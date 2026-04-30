@@ -442,55 +442,6 @@ p { margin-bottom: 1rem; }
   font-weight: 400;
 }
 
-/* ============================================
-   Core Values — marquee/scrolling band
-   ============================================ */
-.values-marquee {
-  background: var(--color-bg-accent);
-  color: var(--color-text-light);
-  padding: 2rem 0;
-  overflow: hidden;
-  position: relative;
-  border-top: 2px solid rgba(207,168,97,0.3);
-  border-bottom: 2px solid rgba(207,168,97,0.3);
-}
-.values-track {
-  display: flex;
-  gap: 3rem;
-  white-space: nowrap;
-  animation: marquee 60s linear infinite;
-  align-items: center;
-}
-.values-track span {
-  font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-light);
-}
-.values-track .sep {
-  color: var(--color-accent);
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ============================================
-   YouTube Livestream CTA
-   ============================================ */
-.youtube-cta {
-  text-align: center;
-  padding: 4rem 0;
-}
-.youtube-cta h3 {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
 }
 
 /* ============================================
@@ -895,9 +846,7 @@ p { margin-bottom: 1rem; }
   .hero { padding: 4rem 1rem; }
   .hero-home { min-height: 60vh; }
   .hero-frame { padding: 2.5rem 1.5rem; }
-  .service-times-grid, .three-card-grid, .platform-row, .gallery-grid, .sermon-grid { grid-template-columns: 1fr; }
+  .three-card-grid, .platform-row, .gallery-grid, .sermon-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-
-  .values-track span { font-size: 1.4rem; }
   .invitation { padding: 2rem 1.25rem; }
 }
