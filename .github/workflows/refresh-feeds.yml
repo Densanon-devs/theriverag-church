@@ -1,0 +1,36 @@
+name: Refresh dynamic feeds
+
+on:
+  schedule:
+    # Daily at 8am Pacific (15:00 UTC)
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Refresh feeds
+        run: python scripts/refresh.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name 'theriverag-bot'
+          git config user.email 'noreply@theriverag.church'
+          if [[ -n "$(git status --porcelain site/data)" ]]; then
+            git add site/data
+            git commit -m "chore: refresh feeds [skip ci]"
+            git push
+          else
+            echo "no changes"
+          fi

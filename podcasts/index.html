@@ -67,10 +67,27 @@
     </div>
   </section>
 
-  <!-- Sermon grid (per-sermon thumbnail mapped from live site) -->
+  <!-- Spotify show embed — public, no creds -->
+  <section class="section section-dark spotify-block">
+    <div class="container">
+      <div class="spotify-embed">
+        <iframe
+          src="https://open.spotify.com/embed/show/3BV5ul28GDoP4jBbH0U4WS?utm_source=generator&theme=0"
+          width="100%"
+          height="232"
+          frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+          title="The River Church Podcast on Spotify"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sermon grid — JS populates from YouTube RSS via site/data/sermons.json,
+       static fallback below shows if JS fails. -->
   <section class="section section-dark">
     <div class="container">
-      <div class="sermon-grid">
+      <div class="sermon-grid" id="sermons-dynamic">
 
         <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card">
           <div class="sermon-thumb"><img src="../site/images/sermons/Artboard_1.png" alt="Acts Chapter 4"></div>
@@ -301,5 +318,6 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/dynamic.js"></script>
 </body>
 </html>
