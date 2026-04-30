@@ -496,53 +496,86 @@ p { margin-bottom: 1rem; }
 /* ============================================
    Invitation block (4 stacked H3)
    ============================================ */
+/* Invitation section sits on the same river image as the hero,
+   in a matching gold double-border frame card */
+.section-river {
+  position: relative;
+  background: linear-gradient(rgba(13,13,13,0.5), rgba(13,13,13,0.65)), url('../site/images/hero-river.png') center/cover no-repeat;
+  background-attachment: scroll;
+  color: var(--color-text-light);
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+}
 .invitation {
-  max-width: 920px;
+  max-width: 940px;
   margin: 0 auto;
-  text-align: center;
-  background: rgba(255,255,255,0.04);
-  border: 1.5px solid rgba(207,168,97,0.4);
-  border-radius: 30px;
-  padding: 3.5rem 2.5rem;
+  text-align: left;
+  padding: 3.5rem 3rem;
+  border: 2px solid var(--color-accent);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 8px;
+  background: rgba(13,13,13,0.18);
+  backdrop-filter: blur(2px);
 }
 .invitation h3 {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
   font-weight: 600;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: var(--color-text-light);
   text-transform: none;
   letter-spacing: 0.01em;
+  line-height: 1.25;
 }
 .invitation h3:first-child {
-  font-size: clamp(2rem, 3.4vw, 2.8rem);
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin-bottom: 2rem;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-light);
+  text-transform: none;
 }
-.invitation h3:last-child { margin-bottom: 0; color: var(--color-accent); }
+.invitation h3:last-child { margin-bottom: 0; }
 
 /* ============================================
-   Galleries
+   Galleries — full-bleed, no gaps (matches original strip)
    ============================================ */
-.gallery-grid {
+.gallery-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 0;
+  background: var(--color-bg-dark);
 }
-.gallery-item {
+.gallery-strip .gallery-item {
   overflow: hidden;
-  border-radius: var(--radius);
   aspect-ratio: 4 / 3;
-  box-shadow: var(--shadow);
 }
-.gallery-item img {
+.gallery-strip .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: var(--transition);
+  display: block;
 }
-.gallery-item:hover img { transform: scale(1.05); }
+.gallery-strip .gallery-item:hover img { transform: scale(1.04); }
+
+/* Legacy gallery-grid (still used elsewhere if needed) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.gallery-grid .gallery-item {
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+.gallery-grid .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: var(--transition);
+}
+.gallery-grid .gallery-item:hover img { transform: scale(1.04); }
 
 /* ============================================
    Three-card section (icon + heading + button)

@@ -197,16 +197,12 @@
     </div>
   </section>
 
-  <!-- 4. Image Gallery (first) -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="site/images/gallery-01.jpg" alt="Pastor Steve preaching"></div>
-        <div class="gallery-item"><img src="site/images/gallery-02.jpg" alt="Lake baptism"></div>
-        <div class="gallery-item"><img src="site/images/gallery-03.jpg" alt="Easter egg hunt"></div>
-      </div>
-    </div>
-  </section>
+  <!-- 4. Image Gallery (first) — full-bleed strip, no gaps -->
+  <div class="gallery-strip">
+    <div class="gallery-item"><img src="site/images/gallery-01.jpg" alt="Pastor Steve preaching"></div>
+    <div class="gallery-item"><img src="site/images/gallery-02.jpg" alt="Lake baptism"></div>
+    <div class="gallery-item"><img src="site/images/gallery-03.jpg" alt="Easter egg hunt"></div>
+  </div>
 
   <!-- 5. YouTube Livestream CTA -->
   <section class="section section-dark">
@@ -236,8 +232,16 @@
     </div>
   </section>
 
-  <!-- 7. Invitation — 4 stacked H3 lines, verbatim from the live site -->
-  <section class="section section-dark">
+  <!-- Wave divider into the river-backed invitation section -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0d0d0d"/>
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40" fill="none" stroke="#cfa861" stroke-width="2.5"/>
+    </svg>
+  </div>
+
+  <!-- 7. Invitation — same river bg as hero, gold-framed card -->
+  <section class="section-river">
     <div class="container">
       <div class="invitation">
         <h3>Are You Curious About Jesus?</h3>
@@ -248,16 +252,12 @@
     </div>
   </section>
 
-  <!-- 8. Image Gallery (second) -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="site/images/gallery-04.jpg" alt="Dad and daughter celebrating"></div>
-        <div class="gallery-item"><img src="site/images/gallery-05.jpg" alt="Kid with cotton candy at Fall Fest"></div>
-        <div class="gallery-item"><img src="site/images/gallery-06.jpg" alt="Ordination service"></div>
-      </div>
-    </div>
-  </section>
+  <!-- 8. Image Gallery (second) — full-bleed strip, no gaps -->
+  <div class="gallery-strip">
+    <div class="gallery-item"><img src="site/images/gallery-04.jpg" alt="Dad and daughter celebrating"></div>
+    <div class="gallery-item"><img src="site/images/gallery-05.jpg" alt="Kid with cotton candy at Fall Fest"></div>
+    <div class="gallery-item"><img src="site/images/gallery-06.jpg" alt="Ordination service"></div>
+  </div>
 
   <!-- 9. Three-card section — icons + heading + button -->
   <section class="section section-dark">
