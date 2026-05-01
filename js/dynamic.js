@@ -40,5 +40,27 @@
       .catch(function () { /* leave static fallback in place */ });
   }
 
-  document.addEventListener("DOMContentLoaded", renderSermons);
+  function updateLivePlayer() {
+    var iframe = document.getElementById("home-live-embed");
+    if (!iframe) return;
+    fetch(dataUrl("live.json"), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (state) {
+        if (!state || !state.videoId) return;
+        var src = state.live
+          ? "https://www.youtube.com/embed/" + state.videoId + "?autoplay=1&mute=1"
+          : "https://www.youtube.com/embed/" + state.videoId;
+        iframe.src = src;
+        if (state.live) {
+          var heading = document.querySelector(".live-card h3 a");
+          if (heading) heading.textContent = "We're live on Youtube right now!";
+        }
+      })
+      .catch(function () { /* keep server-rendered fallback */ });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    renderSermons();
+    updateLivePlayer();
+  });
 })();

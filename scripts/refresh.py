@@ -52,9 +52,35 @@ def refresh_sermons() -> int:
     return len(items)
 
 
+def refresh_live_status() -> dict:
+    """Check if the channel is live; otherwise note the latest video."""
+    feed = fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}")
+    # liveBroadcastContent is on the channel's live page, not in the videos feed.
+    # Probe the /live URL for a current broadcast.
+    state = {"live": False, "videoId": None}
+    try:
+        live_html = fetch(f"https://www.youtube.com/channel/{CHANNEL_ID}/live")
+        m = re.search(r'"liveBroadcastDetails":\{"isLiveNow":\s*(true|false)', live_html)
+        if m and m.group(1) == "true":
+            vid = re.search(r'"videoId":"([A-Za-z0-9_-]{11})"', live_html)
+            if vid:
+                state = {"live": True, "videoId": vid.group(1)}
+    except Exception:
+        pass
+    if not state["videoId"]:
+        latest = re.search(r"<yt:videoId>([^<]+)</yt:videoId>", feed)
+        if latest:
+            state["videoId"] = latest.group(1)
+    out = OUT_DIR / "live.json"
+    out.write_text(json.dumps(state, indent=2), encoding="utf-8")
+    return state
+
+
 def main() -> int:
     n = refresh_sermons()
     print(f"sermons.json: {n} entries")
+    s = refresh_live_status()
+    print(f"live.json: live={s['live']} videoId={s['videoId']}")
     return 0
 
 
