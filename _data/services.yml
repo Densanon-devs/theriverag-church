@@ -1,0 +1,13 @@
+# The 3 service-time cards on the home page.
+cards:
+  - heading: "Sunday Services 9:30 & 11am"
+    when: "Sundays @ 9:30 & 11:00 AM"
+    description: "Join us for worship! Two identical services every Sunday morning — come to whichever fits your schedule."
+
+  - heading: "Kids and Youth Services"
+    when: "Sundays 9:30 & 11 AM · Wednesdays 6:30 PM"
+    description: "River Kids meets during both Sunday services. River Youth meets Wednesdays at 6:30 PM, right after Dinner Church."
+
+  - heading: "Wednesday Dinner 5pm"
+    when: "Wednesdays @ 5:00 PM"
+    description: "A shared meal followed by the gospel message. Bible Study and River Youth follow at 6:30 PM."

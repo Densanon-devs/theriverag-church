@@ -1,0 +1,12 @@
+# Photos used on the home page.
+hero: "/site/images/hero-river.png"
+
+strip_1:
+  - photo: "/site/images/hero.jpg"
+  - photo: "/site/images/gallery-01.jpg"
+  - photo: "/site/images/gallery-03.jpg"
+
+strip_2:
+  - photo: "/site/images/gallery-04.jpg"
+  - photo: "/site/images/gallery-02.jpg"
+  - photo: "/site/images/gallery-06.jpg"
