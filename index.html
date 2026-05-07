@@ -56,17 +56,17 @@
 </head>
 <body>
 
-  <!-- Announcement bar (matches original Squarespace announcement) -->
+  <!-- Announcement bar -->
   <div class="announcement-bar" data-cms="site.announcement_text">NEW LOCATION: 19587 W Riverview Dr, Post Falls (Take Exit 299)</div>
 
-  <!-- Header — big centered logo, nav left, social + CTA right -->
+  <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Primary">
         <ul>
           <li><a href="podcasts/">Sermons</a></li>
           <li><a href="about/">About</a></li>
@@ -74,18 +74,18 @@
         </ul>
       </nav>
 
-      <a href="./" class="logo"><img src="site/images/logo.png" alt="The River Church"></a>
+      <a href="./" class="logo" aria-label="The River Church — Home"><img src="site/images/logo.png" alt="The River Church" width="180" height="180"></a>
 
       <div class="header-right">
         <ul class="social-icons">
           <li><a href="https://www.instagram.com/theriverag.church" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0-2.2c-3.3 0-3.7 0-5 .1-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4-.7.7-1.1 1.4-1.4 2.2-.3.8-.5 1.7-.6 3-.1 1.3-.1 1.7-.1 5s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6-1.3-.1-1.7-.1-5-.1zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0-2.2c-3.3 0-3.7 0-5 .1-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4-.7.7-1.1 1.4-1.4 2.2-.3.8-.5 1.7-.6 3-.1 1.3-.1 1.7-.1 5s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6-1.3-.1-1.7-.1-5-.1zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
           </a></li>
           <li><a href="https://www.facebook.com/profile.php?id=100090242570915" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.5 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.5 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
           </a></li>
           <li><a href="https://www.youtube.com/@theriverag.church" target="_blank" rel="noopener" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.5 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.5 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
           </a></li>
         </ul>
         <a href="https://theriveragchurch.churchcenter.com/people/forms/559632" target="_blank" rel="noopener" class="header-cta header-cta-desktop">Get Connected</a>
@@ -93,8 +93,8 @@
     </div>
   </header>
 
-  <!-- 1. Hero — river background + gold double-border frame -->
-  <section class="hero hero-home">
+  <!-- 1. Hero -->
+  <section class="hero hero-home wave-bottom">
     <div class="container">
       <div class="hero-frame">
         <div class="hero-content">
@@ -105,20 +105,19 @@
     </div>
   </section>
 
-  <!-- Wave divider into the dark services block -->
+  <!-- Wave divider (gold stroke decoration on the cut between sections) -->
   <div class="wave-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0d0d0d"/>
-      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40" fill="none" stroke="#cfa861" stroke-width="2.5"/>
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
     </svg>
   </div>
 
-  <!-- 2. Service Times — YT live card + accordion service cards (black bg) -->
-  <section class="service-block">
+  <!-- 2. Service Times -->
+  <section class="service-block wave-top" aria-label="Service times">
     <div class="container">
       <div class="service-row">
         <div class="live-card">
-          <h3><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener">Join us live on Youtube!</a></h3>
+          <h2><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener">Join us live on YouTube!</a></h2>
           <div class="live-thumb live-thumb-embed">
             <iframe
               id="home-live-embed"
@@ -134,7 +133,7 @@
         <div class="accordion-list">
           <details class="accordion-card" open>
             <summary>
-              <h2>Sunday Services 9:30 &amp; 11am</h2>
+              <h3>Sunday Services 9:30 &amp; 11am</h3>
               <span class="accordion-chev" aria-hidden="true"></span>
             </summary>
             <div class="accordion-body">
@@ -145,7 +144,7 @@
 
           <details class="accordion-card">
             <summary>
-              <h2>Kids and Youth Services</h2>
+              <h3>Kids and Youth Services</h3>
               <span class="accordion-chev" aria-hidden="true"></span>
             </summary>
             <div class="accordion-body">
@@ -157,7 +156,7 @@
 
           <details class="accordion-card">
             <summary>
-              <h2>Wednesday Dinner 5pm</h2>
+              <h3>Wednesday Dinner 5pm</h3>
               <span class="accordion-chev" aria-hidden="true"></span>
             </summary>
             <div class="accordion-body">
@@ -171,7 +170,7 @@
       <div class="service-row">
         <div class="service-row__media">
           <div class="rounded-photo">
-            <img src="site/images/gallery-01.jpg" alt="Pastor Steve preaching">
+            <img src="site/images/gallery-01.jpg" alt="Pastor Steve preaching" loading="lazy" decoding="async" width="800" height="600">
           </div>
         </div>
         <div class="inline-values">
@@ -183,51 +182,50 @@
     </div>
   </section>
 
-  <!-- Image Gallery (first) — full-bleed strip, no gaps -->
-  <div class="gallery-strip">
-    <div class="gallery-item"><img src="site/images/hero.jpg" alt="The River Church building"></div>
-    <div class="gallery-item"><img src="site/images/gallery-01.jpg" alt="Pastor Steve preaching"></div>
-    <div class="gallery-item"><img src="site/images/gallery-03.jpg" alt="Easter egg hunt"></div>
+  <!-- Image Gallery (first) -->
+  <div class="gallery-strip wave-bottom" aria-label="Photo gallery">
+    <div class="gallery-item"><img src="site/images/hero.jpg" alt="The River Church building" loading="lazy" decoding="async" width="800" height="600"></div>
+    <div class="gallery-item"><img src="site/images/gallery-01.jpg" alt="Pastor Steve preaching" loading="lazy" decoding="async" width="800" height="600"></div>
+    <div class="gallery-item"><img src="site/images/gallery-03.jpg" alt="Easter egg hunt" loading="lazy" decoding="async" width="800" height="600"></div>
   </div>
 
-  <!-- Wave divider into the river-backed invitation section -->
+  <!-- Wave divider (gold stroke decoration on the cut between sections) -->
   <div class="wave-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0d0d0d"/>
-      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40" fill="none" stroke="#cfa861" stroke-width="2.5"/>
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
     </svg>
   </div>
 
-  <!-- 7. Invitation — same river bg as hero, gold-framed card -->
-  <section class="section-river">
+  <!-- 7. Invitation -->
+  <section class="section-river wave-top">
     <div class="container">
       <div class="invitation">
-        <h3>Are You Curious About Jesus?</h3>
-        <h3>Maybe you have been a Christian for a long time&hellip;</h3>
-        <h3>No matter what your past looks like we believe you will find</h3>
-        <h3>A place where you belong at The River Church!</h3>
+        <h2>Are You Curious About Jesus?</h2>
+        <p>Maybe you have been a Christian for a long time&hellip;</p>
+        <p>No matter what your past looks like we believe you will find</p>
+        <p>A place where you belong at The River Church!</p>
       </div>
     </div>
   </section>
 
-  <!-- Image Gallery (second) — full-bleed strip, no gaps -->
-  <div class="gallery-strip">
-    <div class="gallery-item"><img src="site/images/gallery-04.jpg" alt="Dad and daughter celebrating"></div>
-    <div class="gallery-item"><img src="site/images/gallery-02.jpg" alt="Lake baptism"></div>
-    <div class="gallery-item"><img src="site/images/gallery-06.jpg" alt="Ordination service"></div>
+  <!-- Image Gallery (second) -->
+  <div class="gallery-strip" aria-label="Photo gallery">
+    <div class="gallery-item"><img src="site/images/gallery-04.jpg" alt="Dad and daughter celebrating" loading="lazy" decoding="async" width="800" height="600"></div>
+    <div class="gallery-item"><img src="site/images/gallery-02.jpg" alt="Lake baptism" loading="lazy" decoding="async" width="800" height="600"></div>
+    <div class="gallery-item"><img src="site/images/gallery-06.jpg" alt="Ordination service" loading="lazy" decoding="async" width="800" height="600"></div>
   </div>
 
-  <!-- 9. Three-card section — icons + heading + button -->
-  <section class="section section-dark">
+  <!-- 9. Three-card section -->
+  <section class="section section-dark wave-bottom">
     <div class="container">
       <div class="three-card-grid">
         <div class="three-card">
-          <div class="three-card-icon"><img src="site/images/pastors-steve-tracey.jpg" alt="More About Us"></div>
+          <div class="three-card-icon"><img src="site/images/pastors-steve-tracey.jpg" alt="Pastors Steve and Tracey" loading="lazy" decoding="async" width="320" height="320"></div>
           <h3>More About Us</h3>
           <a href="about/" class="btn btn-primary">More About Us</a>
         </div>
         <div class="three-card">
-          <div class="three-card-icon three-card-icon-blue"><img class="contain" src="site/images/brand/river-kids-logo.png" alt="River Youth Group"></div>
+          <div class="three-card-icon three-card-icon-blue"><img class="contain" src="site/images/brand/river-kids-logo.png" alt="River Youth Group logo" loading="lazy" decoding="async" width="320" height="320"></div>
           <h3>River Youth Group</h3>
           <a href="about/" class="btn btn-primary">Learn About River Youth Group</a>
         </div>
@@ -240,20 +238,19 @@
     </div>
   </section>
 
-  <!-- Wave divider into the river-backed calendar section -->
+  <!-- Wave divider (gold stroke decoration on the cut between sections) -->
   <div class="wave-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0d0d0d"/>
-      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40" fill="none" stroke="#cfa861" stroke-width="2.5"/>
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
     </svg>
   </div>
 
-  <!-- Calendar — Church Center official embed widget -->
-  <section class="section-river">
+  <!-- Calendar -->
+  <section class="section-river wave-top">
     <div class="container">
       <div class="calendar-callout">
         <a href="https://theriveragchurch.churchcenter.com/calendar" target="_blank" rel="noopener" style="text-decoration:none;">
-          <h1>View Our Full Calendar!</h1>
+          <h2>View Our Full Calendar!</h2>
         </a>
       </div>
       <div class="calendar-embed">
@@ -262,11 +259,11 @@
     </div>
   </section>
 
-  <!-- Tagline — light cream bg with gold heading (matches original) -->
+  <!-- Tagline -->
   <section class="section section-light">
     <div class="container">
       <div class="tagline">
-        <h1>You Belong Here!</h1>
+        <h2>You Belong Here!</h2>
       </div>
     </div>
   </section>
@@ -276,7 +273,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img src="site/images/logo.png" alt="The River Church" class="footer-logo">
+          <img src="site/images/logo.png" alt="The River Church" class="footer-logo" loading="lazy" decoding="async" width="180" height="180">
           <p>A place where you feel at home. A place where you can feel like family.</p>
         </div>
         <div class="footer-col">
