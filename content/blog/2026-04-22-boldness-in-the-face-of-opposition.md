@@ -1,14 +1,26 @@
 ---
-title: "Boldness in the Face of Opposition - Acts 4:1"
+title: "Boldness in the Face of Opposition — Acts 4"
 date: 2026-04-22
 slug: boldness-in-the-face-of-opposition
 sermon_id: gHczC5kLM0A
 youtube_url: https://www.youtube.com/watch?v=gHczC5kLM0A
-summary: "Explore how true faith is proven not just by miracles but through standing firm when opposition arises."
+summary: "Real faith isn't proven in the miracle — it's proven under pressure. Acts 4 and what happens when faith goes from private to public."
 ---
 
 <div class="sermon-video">
   <iframe src="https://www.youtube.com/embed/gHczC5kLM0A" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </div>
 
-<p>Imagine being arrested for teaching that someone was raised from the dead. That's exactly what happened to Peter and John in Acts 4:1. The Sadducees were so annoyed by their bold proclamation of Jesus’ resurrection that they took drastic action.</p><h2>The Power of Speaking Jesus' Name</h2><p>When we talk about speaking Jesus' name publicly, it’s not just a matter of vocalizing His title in casual conversation. It's about declaring Him as the source of our hope and salvation, even when doing so might bring us into conflict with those who oppose such claims.</p><p>In Acts 4:5, Peter stands before rulers, elders, and scribes to testify boldly that it was “by the name of Jesus Christ of Nazareth” whom they had crucified but God raised from dead. This is not just a historical account; this is an example for us today on how we should stand firm in our faith.</p><h2>Standing Boldly Despite Opposition</h2><p>The sermon emphasized that boldness isn't proven when it's easy to say you're a believer but rather under pressure and opposition. This aligns with Jesus' own warning in Matthew 10: “Beware of men, for they will deliver you over the courts and flog you in their synagogues.”</p><h2>Transformation Through Faith</h2><p>The contrast between Peter’s denial before Jesus’ crucifixion (Matthew 26) and his bold testimony after Pentecost is striking. This transformation shows us that true faith can lead to a profound change, enabling us to stand up for what we believe even in the face of opposition.</p>
+<p>Imagine being arrested for preaching that a dead man is alive. That's where Acts 4 opens: Peter and John are still talking to the crowd from chapter 3 when the priests and the Sadducees show up, "greatly annoyed" that they're teaching the resurrection of Jesus. They're seized and held overnight — and the church's first taste of real opposition begins.</p>
+
+<h2>Speaking the name of Jesus out loud</h2>
+
+<p>Speaking Jesus' name in public isn't about dropping a title into casual conversation. It's declaring Him as the only source of hope and salvation — even when that puts you at odds with people who don't want to hear it. The next morning Peter stands before the rulers, elders, and scribes and says it plainly: it was "by the name of Jesus Christ of Nazareth, whom you crucified, whom God raised from the dead" that the lame man was healed. That's not just a record of what happened; it's a model for how we're meant to stand.</p>
+
+<h2>Boldness shows up under pressure</h2>
+
+<p>Anyone can say they believe when it costs nothing. The message pressed in on this: faith is proven under pressure, not in the easy moments. Jesus said as much — "Beware of men, for they will deliver you over to courts and flog you in their synagogues" (Matthew 10). Opposition isn't a sign something has gone wrong; it's often a sign your faith has gone public.</p>
+
+<h2>The same man, transformed</h2>
+
+<p>Hold two scenes side by side: Peter denying Jesus three times before the crucifixion (Matthew 26), and Peter testifying boldly before the same kind of council weeks later. What changed? Pentecost. The transformation is the point — real faith doesn't just inform you, it changes you, until you can stand for what you believe with opposition staring right back.</p>

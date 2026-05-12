@@ -1,14 +1,26 @@
 ---
-title: "Miracles in the Ordinary: Acts 3 Sermon Recap"
+title: "Miracles in the Ordinary — Acts 3"
 date: 2026-04-16
 slug: miracles-in-the-ordinary
 sermon_id: I8953RgVrmw
 youtube_url: https://www.youtube.com/watch?v=I8953RgVrmw
-summary: "Discover how God works through ordinary people and events, not just dramatic moments. Read about Peter's miraculous healing at The River Church."
+summary: "God doesn't only move in the dramatic moments — Acts 3 shows Him working through ordinary people on an ordinary afternoon at the temple."
 ---
 
 <div class="sermon-video">
   <iframe src="https://www.youtube.com/embed/I8953RgVrmw" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 </div>
 
-<p>During our recent sermon on <em>Miracles in the Ordinary</em>, we explored Acts 3 to understand that divine intervention can happen during routine activities. Pastor shared a powerful story of how God used an ordinary moment to bring extraordinary change.</p><h2>The Power of Availability</h2><p>Peter was simply present at the temple when God chose to work a miracle. This highlights the importance of being available for God's purposes, even in our everyday lives. As Peter said, “I have no silver and gold, but what I do have I give to you in the name of Jesus Christ of Nazareth. Rise up and walk.”</p><h2>Personal Healing Stories</h2><p>The sermon also touched on personal healing stories, including one from Pastor himself who experienced a miraculous recovery from carpal tunnel syndrome through prayer. He shared how over the course of just a couple days, the numbness in his hands completely disappeared.</p><h2>Sin and Brokenness: A Barrier to God's Presence</h2><p>Another key moment was discussing humanity’s inherent sinfulness that prevents us from entering God’s presence. The lame man had been sitting at the temple gate for 40 years, completely dependent upon others. This underscores how our sins can create barriers between ourselves and a holy God.</p>
+<p>This Sunday's message walked through Acts 3, where Peter and John head up to the temple at the hour of prayer — an ordinary errand — and God turns it into something extraordinary. At the gate they meet a man who has been lame from birth, well over forty years old, carried there every day to beg. Peter looks at him and says, "I have no silver and gold, but what I do have I give to you. In the name of Jesus Christ of Nazareth, rise up and walk." The man does.</p>
+
+<h2>The power of being available</h2>
+
+<p>Peter wasn't on a special assignment. He was simply <em>there</em> — present, walking with God, ready. That's the invitation: God's biggest moves often find people in their most routine ones. We don't have to engineer the miracle; we have to be available for it.</p>
+
+<h2>Still happening now</h2>
+
+<p>The message didn't leave this in the first century. We heard a personal account of healing — carpal tunnel numbness in the hands that simply faded over the course of a couple of days after prayer. The point wasn't the method; it's that the same God who acted at the temple gate is still acting today.</p>
+
+<h2>Why we needed Jesus at all</h2>
+
+<p>And there's a deeper lameness underneath the physical one. The man sat outside the temple, dependent on others, unable to walk in on his own — a picture of all of us before Christ. Our sin keeps us at the gate of a holy God. The healing in Acts 3 points past itself to the One who doesn't just get us to the door but carries us through it.</p>
