@@ -16,6 +16,8 @@ node_modules/
 dist/
 .env
 .env.local
+__pycache__/
+*.pyc
 
 # Scratchpad scrapes of the live site
 _scrape/
