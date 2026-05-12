@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - '_data/**'
+      - 'content/blog/**'
+      - 'css/blog.css'
       - 'scripts/build_pages.py'
   workflow_dispatch:
 
@@ -34,7 +36,7 @@ jobs:
           git config user.email 'noreply@theriverag.church'
           if [[ -n "$(git status --porcelain)" ]]; then
             git add -A
-            git commit -m "build: substitute content from _data [skip ci]"
+            git commit -m "build: rebuild generated pages (content + blog) [skip ci]"
             git push
           else
             echo "no changes"

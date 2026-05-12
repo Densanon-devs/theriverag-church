@@ -10,6 +10,31 @@ Static replacement for The River Church's Squarespace site. Same structure, same
 | Sermons | `sermons.html` | Spotify / Apple / YouTube platform cards + sermon list (20 episodes) |
 | About | `about.html` | Pastors bio, kids, youth, beliefs (15 cards), visit CTA |
 | Give | external | Direct link to `theriverag.churchcenter.com/giving` (Planning Center) |
+| Blog / Sermon Notes | `blog/index.html` + `blog/<slug>/index.html` | **Generated** — see below |
+
+## Blog (Sermon Notes) — auto-generated
+
+`/blog/` is built from `content/blog/*.md` files. Those `.md` files are written
+and committed by the **church-ops** pipeline (`densanon-devs/church-ops`, runs on
+Jordan's box) when a sermon is processed: YAML frontmatter (`title` / `date` /
+`slug` / `summary` / `youtube_url` / `sermon_id`) + an HTML body (a responsive
+YouTube embed + the post HTML). The body is reviewed in the church-ops admin
+panel before it's published here.
+
+`scripts/build_pages.py` (`build_blog()`) renders those into:
+- `blog/<slug>/index.html` — one page per sermon recap (wrapped in the site shell, with the video embedded)
+- `blog/index.html` — the index, newest first
+
+The `.github/workflows/build-content.yml` GitHub Action runs `build_pages.py`
+on any push that touches `content/blog/**`, `_data/**`, `css/blog.css`, or the
+script itself, and commits the generated HTML back. So: church-ops pushes a
+`.md` → the Action rebuilds → Pages serves it. Nothing to do by hand.
+
+Styling for blog pages lives in `css/blog.css` (loaded on top of `styles.css`,
+only on `/blog/` pages). The "Blog" nav link is in the header of `index.html`,
+`about/index.html`, `podcasts/index.html`, and every generated blog page.
+
+Run the build locally: `pip install pyyaml && python scripts/build_pages.py`
 
 ## What needs to be filled in before launch
 
