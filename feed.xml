@@ -1,0 +1,1514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>The River Church | Post Falls, Idaho</title>
+  <link>https://theriverag.church/podcasts/</link>
+  <atom:link href="https://theriverag.church/feed.xml" rel="self" type="application/rss+xml"/>
+  <language>en-us</language>
+  <description><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></description>
+  <itunes:summary><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></itunes:summary>
+  <lastBuildDate>Tue, 12 May 2026 14:51:23 +0000</lastBuildDate>
+  <itunes:author>theriverag.church</itunes:author>
+  <itunes:owner>
+    <itunes:name>The River Church</itunes:name>
+    <itunes:email>media@theriverag.church</itunes:email>
+  </itunes:owner>
+  <itunes:image href="https://theriverag.church/site/images/podcast-cover.jpg"/>
+  <itunes:category text="Religion &amp; Spirituality">
+    <itunes:category text="Christianity"/>
+  </itunes:category>
+  <itunes:explicit>false</itunes:explicit>
+  <itunes:type>episodic</itunes:type>
+  <item>
+    <title>Acts Chapter 4</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:69e95703fa548a09b3ce10da</guid>
+    <pubDate>Sun, 19 Apr 2026 23:17:23 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-128-acts-chapter-4.mp3" length="15981249" type="audio/mpeg"/>
+    <itunes:duration>33:17</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Acts Chapter 3</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:69e1362477cac666c31d92c0</guid>
+    <pubDate>Sun, 12 Apr 2026 19:19:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-127-acts-chapter-3.mp3" length="17778202" type="audio/mpeg"/>
+    <itunes:duration>37:02</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Easter Sunday 2026</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:69d5b599ccd65b7f9d217f38</guid>
+    <pubDate>Sun, 05 Apr 2026 19:55:37 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-126-easter-sunday-2026.mp3" length="17487676" type="audio/mpeg"/>
+    <itunes:duration>36:25</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Palm Sunday 2026</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:69cc24282eb95f722d35a062</guid>
+    <pubDate>Sun, 29 Mar 2026 19:54:41 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-125-palm-sunday-2026.mp3" length="11234090" type="audio/mpeg"/>
+    <itunes:duration>23:23</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>You Belong 5</title>
+    <description><![CDATA[You Belong Here… What does it mean?]]></description>
+    <itunes:summary><![CDATA[You Belong Here… What does it mean?]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:69b2f998fb490924efd1fd9e</guid>
+    <pubDate>Sun, 08 Mar 2026 17:40:32 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-123-you-belong-5.mp3" length="14420396" type="audio/mpeg"/>
+    <itunes:duration>30:02</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>You Belong 4</title>
+    <description><![CDATA[You Belong Here… What does it mean?]]></description>
+    <itunes:summary><![CDATA[You Belong Here… What does it mean?]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:69a62f48b081864843268cf0</guid>
+    <pubDate>Mon, 02 Mar 2026 00:46:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-122-you-belong-4.mp3" length="13613307" type="audio/mpeg"/>
+    <itunes:duration>28:20</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>You Belong 3</title>
+    <description><![CDATA[You Belong Here… What does it mean?]]></description>
+    <itunes:summary><![CDATA[You Belong Here… What does it mean?]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:699c2004556d6f5aaf3ef4cb</guid>
+    <pubDate>Sun, 22 Feb 2026 21:38:12 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-121-you-belong-3.mp3" length="12925935" type="audio/mpeg"/>
+    <itunes:duration>26:55</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>You Belong 2</title>
+    <description><![CDATA[You Belong Here… What does it mean?]]></description>
+    <itunes:summary><![CDATA[You Belong Here… What does it mean?]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6996608a4f1bc33615332474</guid>
+    <pubDate>Mon, 16 Feb 2026 00:59:54 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-120-you-belong-2.mp3" length="12803891" type="audio/mpeg"/>
+    <itunes:duration>26:40</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>You Belong</title>
+    <description><![CDATA[You Belong Here… What does it mean?]]></description>
+    <itunes:summary><![CDATA[You Belong Here… What does it mean?]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:698e1442e74cea4e8f602dac</guid>
+    <pubDate>Sun, 08 Feb 2026 17:56:18 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-119-you-belong.mp3" length="15011960" type="audio/mpeg"/>
+    <itunes:duration>31:15</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Cody Karst | Conflict: A Family Tradition</title>
+    <description><![CDATA[Cody Karst talks about Conflict…]]></description>
+    <itunes:summary><![CDATA[Cody Karst talks about Conflict…]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6983948700ada322634386f3</guid>
+    <pubDate>Sun, 01 Feb 2026 18:57:40 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-118-cody-karst-conflict-a-family-tradition.mp3" length="13339947" type="audio/mpeg"/>
+    <itunes:duration>27:47</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Abundant Life</title>
+    <description><![CDATA[How do you get abundant life?]]></description>
+    <itunes:summary><![CDATA[How do you get abundant life?]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:697a6367cc96125d71247049</guid>
+    <pubDate>Sun, 25 Jan 2026 20:26:57 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-117-abundant-life.mp3" length="15680863" type="audio/mpeg"/>
+    <itunes:duration>32:39</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Judges Part 6</title>
+    <description><![CDATA[Continuing in Judges…]]></description>
+    <itunes:summary><![CDATA[Continuing in Judges…]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:697023f741046753b20d0c92</guid>
+    <pubDate>Mon, 19 Jan 2026 01:17:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-116-judges-part-6.mp3" length="15359779" type="audio/mpeg"/>
+    <itunes:duration>31:59</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Judges Part 5</title>
+    <description><![CDATA[Continuing in Judges…]]></description>
+    <itunes:summary><![CDATA[Continuing in Judges…]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6965d7b8de0e7f3ebff93299</guid>
+    <pubDate>Mon, 12 Jan 2026 05:27:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-115-judges-part-5.mp3" length="14553819" type="audio/mpeg"/>
+    <itunes:duration>30:19</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Judges Part 4</title>
+    <description><![CDATA[Getting back into Judges…
+
+We often ask God for relief, but God knows that relief without repentance 
+only leads back to bondage. Before God defeated the Midianites, He had to 
+defeat the "enemy of the heart" in Gideon by tearing down the altars in his 
+own household.]]></description>
+    <itunes:summary><![CDATA[Getting back into Judges…
+
+We often ask God for relief, but God knows that relief without repentance 
+only leads back to bondage. Before God defeated the Midianites, He had to 
+defeat the "enemy of the heart" in Gideon by tearing down the altars in his 
+own household.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:69603fbd38fc7965adc38cca</guid>
+    <pubDate>Sun, 04 Jan 2026 23:47:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-114-judges-part-4.mp3" length="15194738" type="audio/mpeg"/>
+    <itunes:duration>31:39</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Light of the World 3</title>
+    <description><![CDATA[Continuing in the Christmas season in 2025
+
+Isaiah 7:14; 9:2, 6, Matthew 1:18-25, Luke 1:26-38; 9:23, John 1:46]]></description>
+    <itunes:summary><![CDATA[Continuing in the Christmas season in 2025
+
+Isaiah 7:14; 9:2, 6, Matthew 1:18-25, Luke 1:26-38; 9:23, John 1:46]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:694c50fc054f735b9e9c3004</guid>
+    <pubDate>Sun, 21 Dec 2025 20:45:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-113-light-of-the-world-3.mp3" length="14079863" type="audio/mpeg"/>
+    <itunes:duration>29:19</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Light of the World 2</title>
+    <description><![CDATA[Continuing in the Christmas season in 2025
+
+    * Isaiah 9:2, 6-7
+
+    * Genesis 49:10
+
+    * Luke 3, 4:16-21
+
+    * Matthew 1:1-17
+
+    * 1 Chronicles 17:11-14
+
+    * Acts 13:22
+
+    * Leviticus 25:8-13
+
+    * Isaiah 61:1-2]]></description>
+    <itunes:summary><![CDATA[Continuing in the Christmas season in 2025
+
+    * Isaiah 9:2, 6-7
+
+    * Genesis 49:10
+
+    * Luke 3, 4:16-21
+
+    * Matthew 1:1-17
+
+    * 1 Chronicles 17:11-14
+
+    * Acts 13:22
+
+    * Leviticus 25:8-13
+
+    * Isaiah 61:1-2]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6945a46d766c6b4462308e4f</guid>
+    <pubDate>Sun, 14 Dec 2025 19:15:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-112-light-of-the-world-2.mp3" length="13460084" type="audio/mpeg"/>
+    <itunes:duration>28:02</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Light of the World</title>
+    <description><![CDATA[Entering the Christmas season in 2025]]></description>
+    <itunes:summary><![CDATA[Entering the Christmas season in 2025]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:693e30af1475cc3bc2b76e6a</guid>
+    <pubDate>Mon, 08 Dec 2025 03:57:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-111-light-of-the-world.mp3" length="13177939" type="audio/mpeg"/>
+    <itunes:duration>27:27</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Cody Karst | Jonah</title>
+    <description><![CDATA[The Assyrians were vile, cruel, and everything Jonah despised. So he ran 2,500 miles away! The Book of Jonah shows us what happens when we let our prejudice, politics, or nationalism trump the heart of God for the lost.]]></description>
+    <itunes:summary><![CDATA[The Assyrians were vile, cruel, and everything Jonah despised. So he ran 2,500 miles away! The Book of Jonah shows us what happens when we let our prejudice, politics, or nationalism trump the heart of God for the lost.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6931cafee3e7d078ae285120</guid>
+    <pubDate>Sun, 30 Nov 2025 18:09:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-110-cody-karst-jonah.mp3" length="15352310" type="audio/mpeg"/>
+    <itunes:duration>31:58</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The Cave is Not Your Address</title>
+    <description><![CDATA[“So many times… we withdraw from the the people, the community, from God, 
+and we let that cave become our home."]]></description>
+    <itunes:summary><![CDATA[“So many times… we withdraw from the the people, the community, from God, 
+and we let that cave become our home."]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:69262639eb79da57df9c4535</guid>
+    <pubDate>Tue, 25 Nov 2025 22:25:53 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-109-the-cave-is-not-your-address.mp3" length="9162814" type="audio/mpeg"/>
+    <itunes:duration>19:05</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Overflow</title>
+    <description><![CDATA[Why Tithing Is a Privilege of Faith, Not a Legal Obligation]]></description>
+    <itunes:summary><![CDATA[Why Tithing Is a Privilege of Faith, Not a Legal Obligation]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:691f624878393f1f054379ab</guid>
+    <pubDate>Thu, 20 Nov 2025 18:52:35 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-108-overflow.mp3" length="16537252" type="audio/mpeg"/>
+    <itunes:duration>34:26</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Judges Part 3</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6916318e4a6aa8632c60bf7e</guid>
+    <pubDate>Sun, 09 Nov 2025 19:29:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-107-judges-part-3.mp3" length="15813753" type="audio/mpeg"/>
+    <itunes:duration>32:56</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Judges Part 2</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:690babe60090890565cb10f1</guid>
+    <pubDate>Sun, 02 Nov 2025 19:56:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-106-judges-part-2.mp3" length="13316238" type="audio/mpeg"/>
+    <itunes:duration>27:44</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The Good Samaritan</title>
+    <description><![CDATA[Embrace your call to "go and do likewise" by asking the Holy Spirit to move you from just seeing to truly perceiving the needs of others. As you let that compassion lead you to sacrificial action, you will become a true neighbor and reflect the saving mercy that Jesus first extended to you.]]></description>
+    <itunes:summary><![CDATA[Embrace your call to "go and do likewise" by asking the Holy Spirit to move you from just seeing to truly perceiving the needs of others. As you let that compassion lead you to sacrificial action, you will become a true neighbor and reflect the saving mercy that Jesus first extended to you.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68fffd9dcee584402cbd2d5a</guid>
+    <pubDate>Mon, 27 Oct 2025 23:35:17 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-105-the-good-samaritan.mp3" length="13299973" type="audio/mpeg"/>
+    <itunes:duration>27:42</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Judges Part 1</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68f690f4438cf7452e46e161</guid>
+    <pubDate>Sun, 19 Oct 2025 19:57:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-104-judges-part-1.mp3" length="16680797" type="audio/mpeg"/>
+    <itunes:duration>34:44</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Joshua: Strong and Courageous 6</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68f1234bea3c3b52c980f5df</guid>
+    <pubDate>Sun, 12 Oct 2025 16:54:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-103-joshua-strong-and-courageous-6.mp3" length="13869708" type="audio/mpeg"/>
+    <itunes:duration>28:53</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Joshua: Strong and Courageous 5</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68e45e0cb3214a0a58eac979</guid>
+    <pubDate>Mon, 06 Oct 2025 00:31:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-102-joshua-strong-and-courageous-5.mp3" length="15166745" type="audio/mpeg"/>
+    <itunes:duration>31:35</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Joshua: Strong and Courageous 3</title>
+    <description><![CDATA[By understanding that God doesn't take sides but comes to take over, you are called to surrender your words and your will to Him. Embrace this truth, and you will find your tongue transformed from a tool of doubt into a powerful instrument of faith!]]></description>
+    <itunes:summary><![CDATA[By understanding that God doesn't take sides but comes to take over, you are called to surrender your words and your will to Him. Embrace this truth, and you will find your tongue transformed from a tool of doubt into a powerful instrument of faith!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68d1db49bec55d732f3a7d06</guid>
+    <pubDate>Sun, 21 Sep 2025 23:27:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-101-joshua-strong-and-courageous-3.mp3" length="15235192" type="audio/mpeg"/>
+    <itunes:duration>31:44</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>KICKOFF SUNDAY</title>
+    <description><![CDATA[Don't just be a spectator this year; actively participate in the great things God has in store for you. By intentionally stepping into the new season of ministry, you will be a part of God's work and experience His promises firsthand.]]></description>
+    <itunes:summary><![CDATA[Don't just be a spectator this year; actively participate in the great things God has in store for you. By intentionally stepping into the new season of ministry, you will be a part of God's work and experience His promises firsthand.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68cc4f8cae260b7c2034d8dc</guid>
+    <pubDate>Sun, 14 Sep 2025 18:29:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-100-kickoff-sunday.mp3" length="20946954" type="audio/mpeg"/>
+    <itunes:duration>43:38</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Joshua: Strong and Courageous 2</title>
+    <description><![CDATA[Don't let your past define you; embrace the truth that God can turn your darkest chapters into a beautiful redemption story. By accepting His forgiveness and purpose, you can move forward into the new covenant He has for you.]]></description>
+    <itunes:summary><![CDATA[Don't let your past define you; embrace the truth that God can turn your darkest chapters into a beautiful redemption story. By accepting His forgiveness and purpose, you can move forward into the new covenant He has for you.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68c0565d2e28e57116d0dae2</guid>
+    <pubDate>Sun, 07 Sep 2025 19:30:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-099-joshua-strong-and-courageous-2.mp3" length="18107328" type="audio/mpeg"/>
+    <itunes:duration>37:43</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Joshua: Strong and Courageous</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68b8caebf701f65d0ad7a486</guid>
+    <pubDate>Mon, 01 Sep 2025 00:09:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-098-joshua-strong-and-courageous.mp3" length="15166086" type="audio/mpeg"/>
+    <itunes:duration>31:35</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Moses Wrap-Up… Psalm 91</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68af3c3bd8a7ce5093e848b5</guid>
+    <pubDate>Sun, 24 Aug 2025 18:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-097-moses-wrap-up-psalm-91.mp3" length="13428641" type="audio/mpeg"/>
+    <itunes:duration>27:58</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Designed for Connection</title>
+    <description><![CDATA[The path of faith isn't meant to be walked alone. By intentionally linking arms with your church family and being vulnerable, you will find the strength, encouragement, and accountability needed to thrive in Christ.]]></description>
+    <itunes:summary><![CDATA[The path of faith isn't meant to be walked alone. By intentionally linking arms with your church family and being vulnerable, you will find the strength, encouragement, and accountability needed to thrive in Christ.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68a23a5999c9815f7c743487</guid>
+    <pubDate>Sun, 17 Aug 2025 20:31:26 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-096-designed-for-connection.mp3" length="15750430" type="audio/mpeg"/>
+    <itunes:duration>32:48</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Stability in a Shifting World</title>
+    <description><![CDATA[Instead of being tossed by the chaos of life, anchor your soul to God's unchanging Word and find unshakable stability. By actively engaging with God's truth, you can withstand life's storms and find rest in the unwavering hope of Jesus Christ.]]></description>
+    <itunes:summary><![CDATA[Instead of being tossed by the chaos of life, anchor your soul to God's unchanging Word and find unshakable stability. By actively engaging with God's truth, you can withstand life's storms and find rest in the unwavering hope of Jesus Christ.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:688fd398110d233938f2fee2</guid>
+    <pubDate>Sun, 03 Aug 2025 21:39:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-095-stability-in-a-shifting-world.mp3" length="11856598" type="audio/mpeg"/>
+    <itunes:duration>24:41</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Caleb and a Generation of Grasshoppers</title>
+    <description><![CDATA[Step out in faith and courage, just like Caleb, to claim the spiritual territory God has destined for you, knowing that the greatest fruit for His Kingdom is found where you're willing to go. Embrace an offensive heart, not a defensive one, and watch God work miraculously through your obedience to impact the lost and shine His light in enemy territory.]]></description>
+    <itunes:summary><![CDATA[Step out in faith and courage, just like Caleb, to claim the spiritual territory God has destined for you, knowing that the greatest fruit for His Kingdom is found where you're willing to go. Embrace an offensive heart, not a defensive one, and watch God work miraculously through your obedience to impact the lost and shine His light in enemy territory.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6886fb407f4c872da4f06a7c</guid>
+    <pubDate>Mon, 28 Jul 2025 04:26:54 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-094-caleb-and-a-generation-of-grasshoppers.mp3" length="13024586" type="audio/mpeg"/>
+    <itunes:duration>27:07</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>What's Your Purpose?</title>
+    <description><![CDATA[Everyone has a unique purpose from God, and we need to discover and live out that divine calling regardless of our circumstances or perceived influence. Knowing God and serving Him leads to a fulfilling life, impacting not only in our own lives, but also in our communities and the world!]]></description>
+    <itunes:summary><![CDATA[Everyone has a unique purpose from God, and we need to discover and live out that divine calling regardless of our circumstances or perceived influence. Knowing God and serving Him leads to a fulfilling life, impacting not only in our own lives, but also in our communities and the world!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:686b1fdb87ba297450ae32dd</guid>
+    <pubDate>Mon, 07 Jul 2025 01:29:59 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-093-what-s-your-purpose.mp3" length="13128449" type="audio/mpeg"/>
+    <itunes:duration>27:20</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The Anger Epidemic: Learning from Moses</title>
+    <description><![CDATA[This week we explore Moses's lifelong struggle with anger, demonstrating how his unchecked rage, from killing an Egyptian to breaking the stone tablets, kept him from the Promised Land. We’ll contrast Moses's ungodly anger with God's righteous anger…]]></description>
+    <itunes:summary><![CDATA[This week we explore Moses's lifelong struggle with anger, demonstrating how his unchecked rage, from killing an Egyptian to breaking the stone tablets, kept him from the Promised Land. We’ll contrast Moses's ungodly anger with God's righteous anger…]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68620d0aefe0cb27aa4205f0</guid>
+    <pubDate>Mon, 30 Jun 2025 04:09:02 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-092-the-anger-epidemic-learning-from-moses.mp3" length="17032188" type="audio/mpeg"/>
+    <itunes:duration>35:28</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The Silent Thief of Joy</title>
+    <description><![CDATA[This sermon delves into the insidious nature of envy, a "silent thief" that robs us of joy and peace, manifesting as bitterness, criticism, and division. Discover why this particular sin offers no temporary pleasure and how it can lead to hellish consequences. Most importantly, learn the powerful solutions found in the Gospel!]]></description>
+    <itunes:summary><![CDATA[This sermon delves into the insidious nature of envy, a "silent thief" that robs us of joy and peace, manifesting as bitterness, criticism, and division. Discover why this particular sin offers no temporary pleasure and how it can lead to hellish consequences. Most importantly, learn the powerful solutions found in the Gospel!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:68461e151a2b477fdc5082b5</guid>
+    <pubDate>Sun, 08 Jun 2025 23:52:29 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-090-the-silent-thief-of-joy.mp3" length="12004766" type="audio/mpeg"/>
+    <itunes:duration>25:00</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Exodus 19</title>
+    <description><![CDATA[In this sermon from Exodus 19, discover that while serving God can be difficult, the true reward isn't found in accomplishments or fulfilling a calling, but in the intimate relationship and presence of God Himself. Just as Moses ascended the mountain to meet God, and as the curtain in the temple was torn, we are invited into a deep, satisfying fellowship with Jesus that makes every challenge worth it.]]></description>
+    <itunes:summary><![CDATA[In this sermon from Exodus 19, discover that while serving God can be difficult, the true reward isn't found in accomplishments or fulfilling a calling, but in the intimate relationship and presence of God Himself. Just as Moses ascended the mountain to meet God, and as the curtain in the temple was torn, we are invited into a deep, satisfying fellowship with Jesus that makes every challenge worth it.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:683d174d820e4c75e53bd25d</guid>
+    <pubDate>Mon, 02 Jun 2025 03:18:20 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-089-exodus-19.mp3" length="14039600" type="audio/mpeg"/>
+    <itunes:duration>29:14</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Warning Lights</title>
+    <description><![CDATA[Ever feel like something's "off" in your life, but you can't quite put your finger on it? In this sermon, we explore how to recognize the spiritual warning signs in our lives and, more importantly, how God's Word serves as our ultimate diagnostic tool and repair manual. Learn why ignoring these spiritual "check engine lights" can lead to greater problems, and discover the transformative power of consistently engaging with the Bible.]]></description>
+    <itunes:summary><![CDATA[Ever feel like something's "off" in your life, but you can't quite put your finger on it? In this sermon, we explore how to recognize the spiritual warning signs in our lives and, more importantly, how God's Word serves as our ultimate diagnostic tool and repair manual. Learn why ignoring these spiritual "check engine lights" can lead to greater problems, and discover the transformative power of consistently engaging with the Bible.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6833ccd7b85d5113d6aa9fac</guid>
+    <pubDate>Mon, 26 May 2025 02:15:27 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-088-warning-lights.mp3" length="14358294" type="audio/mpeg"/>
+    <itunes:duration>29:54</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Exodus 17</title>
+    <description><![CDATA[Exodus 17]]></description>
+    <itunes:summary><![CDATA[Exodus 17]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:682ac09184ead93deaa3ce88</guid>
+    <pubDate>Mon, 19 May 2025 05:29:08 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-087-exodus-17.mp3" length="17974059" type="audio/mpeg"/>
+    <itunes:duration>37:26</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Service 5.11.25</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6821449ae3ced752725c43eb</guid>
+    <pubDate>Mon, 12 May 2025 00:52:05 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-086-service-5-11-25.mp3" length="12903169" type="audio/mpeg"/>
+    <itunes:duration>26:52</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Exodus 16</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6818371d5e15c412cc96013b</guid>
+    <pubDate>Mon, 05 May 2025 04:01:29 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-085-exodus-16.mp3" length="14288913" type="audio/mpeg"/>
+    <itunes:duration>29:46</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Moses</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:680eb83fe5d4447049f03255</guid>
+    <pubDate>Sun, 27 Apr 2025 23:09:10 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-084-moses.mp3" length="14755880" type="audio/mpeg"/>
+    <itunes:duration>30:44</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Passover - Easter</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6805d2bde0bb42783cd9584a</guid>
+    <pubDate>Mon, 21 Apr 2025 05:12:31 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-083-passover-easter.mp3" length="16372351" type="audio/mpeg"/>
+    <itunes:duration>34:06</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Waiting for God</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67f31f8a89a90b69091aceb7</guid>
+    <pubDate>Mon, 07 Apr 2025 00:46:43 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-082-waiting-for-god.mp3" length="13731060" type="audio/mpeg"/>
+    <itunes:duration>28:36</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Exodus 12</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67e9dc45df0c991ed0e782e5</guid>
+    <pubDate>Mon, 31 Mar 2025 00:19:50 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-081-exodus-12.mp3" length="14366143" type="audio/mpeg"/>
+    <itunes:duration>29:55</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Exodus 5</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67d73a3cc212aa21dfb9e9b3</guid>
+    <pubDate>Sun, 16 Mar 2025 21:20:19 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-080-exodus-5.mp3" length="12716671" type="audio/mpeg"/>
+    <itunes:duration>26:29</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Exodus 2</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67c4d8fbdb22f3137bbc1d55</guid>
+    <pubDate>Sun, 02 Mar 2025 22:29:02 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-079-exodus-2.mp3" length="18207032" type="audio/mpeg"/>
+    <itunes:duration>37:55</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Become Like Jesus</title>
+    <description><![CDATA[Become Like Jesus]]></description>
+    <itunes:summary><![CDATA[Become Like Jesus]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67bbc3ec976fa37e6d09cfb6</guid>
+    <pubDate>Mon, 24 Feb 2025 01:28:18 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-078-become-like-jesus.mp3" length="14249772" type="audio/mpeg"/>
+    <itunes:duration>29:41</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Pray With Power</title>
+    <description><![CDATA[Pray With Power]]></description>
+    <itunes:summary><![CDATA[Pray With Power]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67b27ecbef56ea40df62cb77</guid>
+    <pubDate>Mon, 17 Feb 2025 01:33:13 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-077-pray-with-power.mp3" length="15181214" type="audio/mpeg"/>
+    <itunes:duration>31:37</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Love Deeply</title>
+    <description><![CDATA[Happy and Holy]]></description>
+    <itunes:summary><![CDATA[Happy and Holy]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67a003818b7588150a194b62</guid>
+    <pubDate>Sun, 02 Feb 2025 23:50:47 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-076-love-deeply.mp3" length="15656944" type="audio/mpeg"/>
+    <itunes:duration>32:36</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>January 26th Sermon</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6796c3fdba155c46b427ad27</guid>
+    <pubDate>Sun, 26 Jan 2025 23:29:52 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-075-january-26th-sermon.mp3" length="18725850" type="audio/mpeg"/>
+    <itunes:duration>39:00</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>January 19th Sermon</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:678d7893fa934712f2576797</guid>
+    <pubDate>Sun, 19 Jan 2025 22:28:08 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-074-january-19th-sermon.mp3" length="23906819" type="audio/mpeg"/>
+    <itunes:duration>49:48</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Exodus 1</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67847d074845c50795880c6c</guid>
+    <pubDate>Mon, 13 Jan 2025 03:02:20 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-073-exodus-1.mp3" length="15477421" type="audio/mpeg"/>
+    <itunes:duration>32:14</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Genesis 41</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6781d8bd504a657fe1e1aacd</guid>
+    <pubDate>Sat, 11 Jan 2025 02:41:49 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-072-genesis-41.mp3" length="17555891" type="audio/mpeg"/>
+    <itunes:duration>36:34</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>New Year, New You, New Things</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6771d4f23fc607645d298208</guid>
+    <pubDate>Sun, 29 Dec 2024 23:16:58 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-071-new-year-new-you-new-things.mp3" length="18682882" type="audio/mpeg"/>
+    <itunes:duration>38:55</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The Greatest Gift Ever Given Part 3</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6768993895d51430b53af315</guid>
+    <pubDate>Sun, 22 Dec 2024 23:07:30 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-070-the-greatest-gift-ever-given-part-3.mp3" length="14284042" type="audio/mpeg"/>
+    <itunes:duration>29:45</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The Greatest Gift Ever Given Part 2</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:675f557f49baef3762f1b542</guid>
+    <pubDate>Sun, 15 Dec 2024 22:21:38 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-069-the-greatest-gift-ever-given-part-2.mp3" length="10814541" type="audio/mpeg"/>
+    <itunes:duration>22:31</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The Greatest Gift Ever Given Part 1</title>
+    <description><![CDATA[Matthew Chapter 2]]></description>
+    <itunes:summary><![CDATA[Matthew Chapter 2]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67560d03dae91055ff963525</guid>
+    <pubDate>Sun, 08 Dec 2024 22:46:02 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-068-the-greatest-gift-ever-given-part-1.mp3" length="15050624" type="audio/mpeg"/>
+    <itunes:duration>31:21</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Letting Go</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:674d3dd1e3507b134dd21ca2</guid>
+    <pubDate>Sun, 01 Dec 2024 20:40:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-067-letting-go.mp3" length="19269011" type="audio/mpeg"/>
+    <itunes:duration>40:08</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Thanksgiving 2024</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6743ceb868472b027337c99a</guid>
+    <pubDate>Mon, 25 Nov 2024 01:35:30 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-066-thanksgiving-2024.mp3" length="16951698" type="audio/mpeg"/>
+    <itunes:duration>35:18</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Joseph 3</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:673a70ea08089c041cd57362</guid>
+    <pubDate>Sun, 17 Nov 2024 23:04:18 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-065-joseph-3.mp3" length="14327892" type="audio/mpeg"/>
+    <itunes:duration>29:50</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Joseph 2</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67313c2e7bdaf21f04602487</guid>
+    <pubDate>Sun, 10 Nov 2024 23:09:10 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-064-joseph-2.mp3" length="16422912" type="audio/mpeg"/>
+    <itunes:duration>34:12</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Joseph 1</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:67281c978732af538eb18453</guid>
+    <pubDate>Mon, 04 Nov 2024 01:03:51 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-063-joseph-1.mp3" length="17305015" type="audio/mpeg"/>
+    <itunes:duration>36:03</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Issues Part II</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6721104ff8116c69e439cb58</guid>
+    <pubDate>Sun, 27 Oct 2024 19:01:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-062-issues-part-ii.mp3" length="19101234" type="audio/mpeg"/>
+    <itunes:duration>39:47</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Issues Part I</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6715ab572aa73e2b532bc747</guid>
+    <pubDate>Mon, 21 Oct 2024 02:23:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-061-issues-part-i.mp3" length="16370078" type="audio/mpeg"/>
+    <itunes:duration>34:06</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Growing Through Difficult Times</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:670c69f4317831521867f297</guid>
+    <pubDate>Mon, 14 Oct 2024 01:25:57 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-060-growing-through-difficult-times.mp3" length="9894187" type="audio/mpeg"/>
+    <itunes:duration>20:36</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Genesis 32</title>
+    <description><![CDATA[Continuing in Genesis]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:670328c34dbc4b7c62813a87</guid>
+    <pubDate>Mon, 07 Oct 2024 01:00:10 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-059-genesis-32.mp3" length="19684877" type="audio/mpeg"/>
+    <itunes:duration>41:00</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Genesis 30</title>
+    <description><![CDATA[Continuing in Genesis]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66fa2a2d14eb665da45f4997</guid>
+    <pubDate>Mon, 30 Sep 2024 04:38:43 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-058-genesis-30.mp3" length="16287107" type="audio/mpeg"/>
+    <itunes:duration>33:55</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Genesis 29</title>
+    <description><![CDATA[Continuing in Genesis]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66f0d82fbbfb151c49bd2791</guid>
+    <pubDate>Mon, 23 Sep 2024 02:56:23 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-057-genesis-29.mp3" length="16011733" type="audio/mpeg"/>
+    <itunes:duration>33:21</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Acts 12</title>
+    <description><![CDATA[Acts]]></description>
+    <itunes:summary><![CDATA[Acts]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66e753336f8ad571466fda51</guid>
+    <pubDate>Sun, 15 Sep 2024 21:57:01 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-056-acts-12.mp3" length="11544077" type="audio/mpeg"/>
+    <itunes:duration>24:02</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Genesis 28</title>
+    <description><![CDATA[Continuing in Genesis]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66e11377ec0c7c6f1f7e81b9</guid>
+    <pubDate>Wed, 11 Sep 2024 04:12:06 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-055-genesis-28.mp3" length="15456447" type="audio/mpeg"/>
+    <itunes:duration>32:11</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Genesis 27</title>
+    <description><![CDATA[Continuing in Genesis]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66d4d3b5d987f747688adcab</guid>
+    <pubDate>Sun, 01 Sep 2024 21:24:27 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-054-genesis-27.mp3" length="15280695" type="audio/mpeg"/>
+    <itunes:duration>31:49</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Vision Sunday 2024</title>
+    <description><![CDATA[Join us for a special service as we celebrate what Pastor Steve shares about all that God has done at The River in the past year, and what God has placed on his heart for the year to come...]]></description>
+    <itunes:summary><![CDATA[Join us for a special service as we celebrate what Pastor Steve shares about all that God has done at The River in the past year, and what God has placed on his heart for the year to come...]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66cc0bf8ed553964eb567221</guid>
+    <pubDate>Mon, 26 Aug 2024 05:05:26 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-053-vision-sunday-2024.mp3" length="22067051" type="audio/mpeg"/>
+    <itunes:duration>45:58</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The River Church Sermon From 8.4.24 (Copy)</title>
+    <description><![CDATA[August 18th Sermon]]></description>
+    <itunes:summary><![CDATA[August 18th Sermon]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66c3ad924f608a7435c69112</guid>
+    <pubDate>Mon, 19 Aug 2024 20:50:44 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-052-the-river-church-sermon-from-8-4-24-copy.mp3" length="14785792" type="audio/mpeg"/>
+    <itunes:duration>30:48</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Testify | Edward Warren</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66b93d4af5febb420f236088</guid>
+    <pubDate>Sun, 11 Aug 2024 22:50:39 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-051-testify-edward-warren.mp3" length="22851197" type="audio/mpeg"/>
+    <itunes:duration>47:36</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The River Church Sermon From 8.4.24</title>
+    <description><![CDATA[August 4th]]></description>
+    <itunes:summary><![CDATA[August 4th]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66b068f2f0a5880a614c82d7</guid>
+    <pubDate>Mon, 05 Aug 2024 06:02:03 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-050-the-river-church-sermon-from-8-4-24.mp3" length="20159102" type="audio/mpeg"/>
+    <itunes:duration>41:59</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Esau</title>
+    <description><![CDATA[Continuing in Genesis 25]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis 25]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:669dcafb2eac41041f1efab7</guid>
+    <pubDate>Mon, 22 Jul 2024 03:02:47 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-049-esau.mp3" length="15357044" type="audio/mpeg"/>
+    <itunes:duration>31:59</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Jacob and Esau</title>
+    <description><![CDATA[Continuing in Genesis 25]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis 25]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66947a54db4db24672e8029f</guid>
+    <pubDate>Mon, 15 Jul 2024 01:32:59 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-048-jacob-and-esau.mp3" length="14674654" type="audio/mpeg"/>
+    <itunes:duration>30:34</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Transformation</title>
+    <description><![CDATA[Transformation]]></description>
+    <itunes:summary><![CDATA[Transformation]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:668b190c1ccfbe0df354d4e8</guid>
+    <pubDate>Sun, 07 Jul 2024 22:43:01 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-047-transformation.mp3" length="17959746" type="audio/mpeg"/>
+    <itunes:duration>37:24</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Blessed Through Faith</title>
+    <description><![CDATA[Continuing in Genesis]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6681cce3361e6110fcfa3835</guid>
+    <pubDate>Sun, 30 Jun 2024 21:45:03 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-046-blessed-through-faith.mp3" length="14395185" type="audio/mpeg"/>
+    <itunes:duration>29:59</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Genesis 24</title>
+    <description><![CDATA[Continuing in Genesis]]></description>
+    <itunes:summary><![CDATA[Continuing in Genesis]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6678e8a903a4f15ba2ca76d8</guid>
+    <pubDate>Mon, 24 Jun 2024 03:50:26 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-045-genesis-24.mp3" length="18919656" type="audio/mpeg"/>
+    <itunes:duration>39:24</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Living Satisfied Conclusion</title>
+    <description><![CDATA[Living Satisfied Conclusion Genesis 21]]></description>
+    <itunes:summary><![CDATA[Living Satisfied Conclusion Genesis 21]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:666f587dd261b506f9d0843f</guid>
+    <pubDate>Sun, 16 Jun 2024 21:41:03 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-044-living-satisfied-conclusion.mp3" length="13959717" type="audio/mpeg"/>
+    <itunes:duration>29:04</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Unshakable Faith</title>
+    <description><![CDATA[Guest Cody Karst speaks on Genesis 22… Unshakable Faith]]></description>
+    <itunes:summary><![CDATA[Guest Cody Karst speaks on Genesis 22… Unshakable Faith]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:666682773d00da1ee276dea6</guid>
+    <pubDate>Mon, 10 Jun 2024 05:15:22 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-043-unshakable-faith.mp3" length="17555030" type="audio/mpeg"/>
+    <itunes:duration>36:34</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Living Satisfied… Genesis Chapter 18 Continued</title>
+    <description><![CDATA[Living Satisfied… Genesis Chapter 18 Continued]]></description>
+    <itunes:summary><![CDATA[Living Satisfied… Genesis Chapter 18 Continued]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:665d4dd44bde53668b1f0602</guid>
+    <pubDate>Mon, 03 Jun 2024 05:03:44 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-042-living-satisfied-genesis-chapter-18-continued.mp3" length="14891989" type="audio/mpeg"/>
+    <itunes:duration>31:01</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Living Satisfied… Genesis Chapter 18</title>
+    <description><![CDATA[Living Satisfied… Genesis Chapter 18]]></description>
+    <itunes:summary><![CDATA[Living Satisfied… Genesis Chapter 18]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:665406cb8c96df1a4cc663b7</guid>
+    <pubDate>Mon, 27 May 2024 04:15:57 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-041-living-satisfied-genesis-chapter-18.mp3" length="15321023" type="audio/mpeg"/>
+    <itunes:duration>31:55</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Living Satisfied… Genesis Chapter 17</title>
+    <description><![CDATA[Living Satisfied… Genesis Chapter 17]]></description>
+    <itunes:summary><![CDATA[Living Satisfied… Genesis Chapter 17]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:664af8f752d7574d7bb87055</guid>
+    <pubDate>Mon, 20 May 2024 00:08:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-040-living-satisfied-genesis-chapter-17.mp3" length="14268602" type="audio/mpeg"/>
+    <itunes:duration>29:43</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Mother’s Day</title>
+    <description><![CDATA[Ladies, you have the ear of God and the sight of God, and He loves you dearly. Men, you have a charge to care for the women in your life following after the example that Jesus gave! 
+
+Genesis 16, John 2:4-11]]></description>
+    <itunes:summary><![CDATA[Ladies, you have the ear of God and the sight of God, and He loves you dearly. Men, you have a charge to care for the women in your life following after the example that Jesus gave! 
+
+Genesis 16, John 2:4-11]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:66414f872f8896734864f396</guid>
+    <pubDate>Sun, 12 May 2024 23:23:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-039-mother-s-day.mp3" length="12484912" type="audio/mpeg"/>
+    <itunes:duration>26:00</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The River Church Sermon From 5.5.24</title>
+    <description><![CDATA[May 5th 2024 Sermon]]></description>
+    <itunes:summary><![CDATA[May 5th 2024 Sermon]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:663818ec6fc83d1acf62b55d</guid>
+    <pubDate>Sun, 05 May 2024 23:52:29 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-038-the-river-church-sermon-from-5-5-24.mp3" length="14564872" type="audio/mpeg"/>
+    <itunes:duration>30:20</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The River Church Sermon From 4.21.24</title>
+    <description><![CDATA[April 21st 2024 Sermon]]></description>
+    <itunes:summary><![CDATA[April 21st 2024 Sermon]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6625d9558d02b37db178f2b1</guid>
+    <pubDate>Mon, 22 Apr 2024 03:31:50 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-037-the-river-church-sermon-from-4-21-24.mp3" length="14181252" type="audio/mpeg"/>
+    <itunes:duration>29:32</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The River Church Sermon From 4.14.24</title>
+    <description><![CDATA[April 14th 2024 Sermon]]></description>
+    <itunes:summary><![CDATA[April 14th 2024 Sermon]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:660bbb5ccc0ff32be878e504</guid>
+    <pubDate>Sun, 14 Apr 2024 20:48:59 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-036-the-river-church-sermon-from-4-14-24.mp3" length="21213944" type="audio/mpeg"/>
+    <itunes:duration>44:11</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The River Church Sermon From 4.7.24</title>
+    <description><![CDATA[April 7th 2024 Sermon]]></description>
+    <itunes:summary><![CDATA[April 7th 2024 Sermon]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:660bba1a8c51092acdb1a700</guid>
+    <pubDate>Mon, 08 Apr 2024 18:23:05 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-035-the-river-church-sermon-from-4-7-24.mp3" length="16249705" type="audio/mpeg"/>
+    <itunes:duration>33:51</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>He Has Risen!</title>
+    <description><![CDATA[He is Risen!]]></description>
+    <itunes:summary><![CDATA[He is Risen!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:660a646504b19e128da5b7d0</guid>
+    <pubDate>Mon, 01 Apr 2024 02:54:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-034-he-has-risen.mp3" length="12146625" type="audio/mpeg"/>
+    <itunes:duration>25:18</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Abraham: Part IV</title>
+    <description><![CDATA[Pastor Steve continues his series on Abraham…]]></description>
+    <itunes:summary><![CDATA[Pastor Steve continues his series on Abraham…]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:660114e1f4a2b3020a106797</guid>
+    <pubDate>Mon, 25 Mar 2024 06:15:20 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-033-abraham-part-iv.mp3" length="15909068" type="audio/mpeg"/>
+    <itunes:duration>33:08</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Abraham: Keeping Faith During the Famine</title>
+    <description><![CDATA[Pastor Steve continues his series on Abraham…]]></description>
+    <itunes:summary><![CDATA[Pastor Steve continues his series on Abraham…]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65f868d99f287e53aa40e81b</guid>
+    <pubDate>Sun, 17 Mar 2024 19:27:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-032-abraham-keeping-faith-during-the-famine.mp3" length="13497678" type="audio/mpeg"/>
+    <itunes:duration>28:07</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Abraham: The Blessing</title>
+    <description><![CDATA[Pastor Steve continues his series on Abraham…
+
+Genesis 12, Galatians 3:7-9, Romans 12,  Acts 27 - 28]]></description>
+    <itunes:summary><![CDATA[Pastor Steve continues his series on Abraham…
+
+Genesis 12, Galatians 3:7-9, Romans 12,  Acts 27 - 28]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65ee8eca6adef87275371bb4</guid>
+    <pubDate>Mon, 11 Mar 2024 05:02:33 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-031-abraham-the-blessing.mp3" length="12028965" type="audio/mpeg"/>
+    <itunes:duration>25:03</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Abraham: Living Satisfied</title>
+    <description><![CDATA[Pastor Steve begins his series on Abraham: Living Satisfied…
+
+Genesis 25]]></description>
+    <itunes:summary><![CDATA[Pastor Steve begins his series on Abraham: Living Satisfied…
+
+Genesis 25]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65e756775c253d062471ba9e</guid>
+    <pubDate>Tue, 05 Mar 2024 18:22:30 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-030-abraham-living-satisfied.mp3" length="12787770" type="audio/mpeg"/>
+    <itunes:duration>26:38</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Temptation</title>
+    <description><![CDATA[Guest Cody Karst speaks on temptation.]]></description>
+    <itunes:summary><![CDATA[Guest Cody Karst speaks on temptation.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65de284ab4d666592265daba</guid>
+    <pubDate>Sun, 25 Feb 2024 18:22:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-029-temptation.mp3" length="17452420" type="audio/mpeg"/>
+    <itunes:duration>36:21</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Cain and Abel</title>
+    <description><![CDATA[Genesis 4,  Ecclesiastes 1:2,  Hebrews 11:4,  Acts 4:11-12]]></description>
+    <itunes:summary><![CDATA[Genesis 4,  Ecclesiastes 1:2,  Hebrews 11:4,  Acts 4:11-12]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65d4ea3038d068241d82068d</guid>
+    <pubDate>Mon, 19 Feb 2024 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-028-cain-and-abel.mp3" length="15498661" type="audio/mpeg"/>
+    <itunes:duration>32:17</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Covenant Keeping</title>
+    <description><![CDATA[We continue our series on How to Have a Totally Awesome Marriage!]]></description>
+    <itunes:summary><![CDATA[We continue our series on How to Have a Totally Awesome Marriage!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65c9d1c2d1487105e03f3284</guid>
+    <pubDate>Mon, 12 Feb 2024 05:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-027-covenant-keeping.mp3" length="14041037" type="audio/mpeg"/>
+    <itunes:duration>29:14</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Devil Stomping</title>
+    <description><![CDATA[We continue our series on How to Have a Totally Awesome Marriage!]]></description>
+    <itunes:summary><![CDATA[We continue our series on How to Have a Totally Awesome Marriage!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65c3fd2665199759f3cb4dec</guid>
+    <pubDate>Mon, 05 Feb 2024 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-026-devil-stomping.mp3" length="13924217" type="audio/mpeg"/>
+    <itunes:duration>29:00</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Mission Unified</title>
+    <description><![CDATA[We continue our series on How to Have a Totally Awesome Marriage! We need to be unified in our mission together! Genesis 1:28, 2:18,  Genesis 3:1-7,  Amos 3:3,  Mark 16:14-18]]></description>
+    <itunes:summary><![CDATA[We continue our series on How to Have a Totally Awesome Marriage! We need to be unified in our mission together! Genesis 1:28, 2:18,  Genesis 3:1-7,  Amos 3:3,  Mark 16:14-18]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65b93834766e6725ce802ba4</guid>
+    <pubDate>Tue, 30 Jan 2024 18:15:17 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-025-mission-unified.mp3" length="13640929" type="audio/mpeg"/>
+    <itunes:duration>28:24</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Jesus Centered</title>
+    <description><![CDATA[We begin our new series on How to Have a Totally Awesome Marriage! Make Jesus the center of your marriage and it will not be easily broken! Genesis 2:4, Ecclesiastes 4:9-12]]></description>
+    <itunes:summary><![CDATA[We begin our new series on How to Have a Totally Awesome Marriage! Make Jesus the center of your marriage and it will not be easily broken! Genesis 2:4, Ecclesiastes 4:9-12]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65aff963b73ffe001a912452</guid>
+    <pubDate>Mon, 22 Jan 2024 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-024-jesus-centered.mp3" length="13649297" type="audio/mpeg"/>
+    <itunes:duration>28:26</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Sabbath Rest</title>
+    <description><![CDATA[God created the Sabbath for your benefit, not just a ritual to be observed… Trust God with everything you have and take a day off!
+Genesis 2, Mark 2:23-28, Exodus 31:14]]></description>
+    <itunes:summary><![CDATA[God created the Sabbath for your benefit, not just a ritual to be observed… Trust God with everything you have and take a day off!
+Genesis 2, Mark 2:23-28, Exodus 31:14]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65aff1ea9a3a3f02cc02c498</guid>
+    <pubDate>Mon, 15 Jan 2024 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-023-sabbath-rest.mp3" length="15824703" type="audio/mpeg"/>
+    <itunes:duration>32:57</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Genesis 1</title>
+    <description><![CDATA[Join us for service at The River Church in Beautiful Post Falls, Idaho!]]></description>
+    <itunes:summary><![CDATA[Join us for service at The River Church in Beautiful Post Falls, Idaho!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65a8127ce8db432b85982fd3</guid>
+    <pubDate>Mon, 08 Jan 2024 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-022-genesis-1.mp3" length="13934482" type="audio/mpeg"/>
+    <itunes:duration>29:01</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>End of Year Offering</title>
+    <description><![CDATA[Join us for service at The River Church in Beautiful Post Falls, Idaho!]]></description>
+    <itunes:summary><![CDATA[Join us for service at The River Church in Beautiful Post Falls, Idaho!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65a803c06d228018ea67de39</guid>
+    <pubDate>Mon, 01 Jan 2024 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-021-end-of-year-offering.mp3" length="18635293" type="audio/mpeg"/>
+    <itunes:duration>38:49</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Christmas Eve</title>
+    <description><![CDATA[Join us for service at The River Church in Beautiful Post Falls, Idaho!]]></description>
+    <itunes:summary><![CDATA[Join us for service at The River Church in Beautiful Post Falls, Idaho!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:65a81128fb61f654e70e53e5</guid>
+    <pubDate>Mon, 25 Dec 2023 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-020-christmas-eve.mp3" length="14444183" type="audio/mpeg"/>
+    <itunes:duration>30:05</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Run the Race</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:657c9bc612e2b67daae38817</guid>
+    <pubDate>Mon, 11 Dec 2023 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-019-run-the-race.mp3" length="14245458" type="audio/mpeg"/>
+    <itunes:duration>29:41</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Noah</title>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:657228dcce5f051872956e16</guid>
+    <pubDate>Mon, 04 Dec 2023 02:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-018-noah.mp3" length="13725517" type="audio/mpeg"/>
+    <itunes:duration>28:36</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Elementary: Baptisms</title>
+    <description><![CDATA[Join us as we learn this week about the foundation truth of Baptisms.]]></description>
+    <itunes:summary><![CDATA[Join us as we learn this week about the foundation truth of Baptisms.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557cc1d5e866b21d078bb65</guid>
+    <pubDate>Sun, 22 Oct 2023 22:30:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-017-elementary-baptisms.mp3" length="15187956" type="audio/mpeg"/>
+    <itunes:duration>31:38</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Elementary: Eternal Judgement</title>
+    <description><![CDATA[Join us as Pastor Steve teaches us about how all of us will face a Judgment day.]]></description>
+    <itunes:summary><![CDATA[Join us as Pastor Steve teaches us about how all of us will face a Judgment day.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557e19bc60d7d5fcdd6037c</guid>
+    <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-016-elementary-eternal-judgement.mp3" length="16250200" type="audio/mpeg"/>
+    <itunes:duration>33:51</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Elementary: Resurrection of the Dead</title>
+    <description><![CDATA[Join us as we learn about the resurrection of Jesus and how we will experience a resurrection also.]]></description>
+    <itunes:summary><![CDATA[Join us as we learn about the resurrection of Jesus and how we will experience a resurrection also.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557e0260057610621d09f36</guid>
+    <pubDate>Sun, 08 Oct 2023 23:30:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-015-elementary-resurrection-of-the-dead.mp3" length="16689057" type="audio/mpeg"/>
+    <itunes:duration>34:46</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Elementary: Laying On of Hands</title>
+    <description><![CDATA[Join us as we learn about the significance of laying on of hands in scripture and how that helps us to have continuity from one generation to the next.]]></description>
+    <itunes:summary><![CDATA[Join us as we learn about the significance of laying on of hands in scripture and how that helps us to have continuity from one generation to the next.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557da783ef2276d7a014d83</guid>
+    <pubDate>Sun, 01 Oct 2023 23:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-014-elementary-laying-on-of-hands.mp3" length="14390908" type="audio/mpeg"/>
+    <itunes:duration>29:59</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Elementary: Faith</title>
+    <description><![CDATA[Join us as Pastor Steve teaches us about elementary faith and how we should continually take steps of faith.]]></description>
+    <itunes:summary><![CDATA[Join us as Pastor Steve teaches us about elementary faith and how we should continually take steps of faith.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557c5e9d194da1b8b772080</guid>
+    <pubDate>Sun, 17 Sep 2023 22:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-012-elementary-faith.mp3" length="14515251" type="audio/mpeg"/>
+    <itunes:duration>30:14</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Elementary: Repentance</title>
+    <description><![CDATA[This week Pastor Steve teaches us that repentance is required. Listen in as we learn that God is requiring us to turn away from our sins and walk towards him.]]></description>
+    <itunes:summary><![CDATA[This week Pastor Steve teaches us that repentance is required. Listen in as we learn that God is requiring us to turn away from our sins and walk towards him.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557c3e8f6173b5c2bc9b12e</guid>
+    <pubDate>Sun, 10 Sep 2023 21:30:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-011-elementary-repentance.mp3" length="17105971" type="audio/mpeg"/>
+    <itunes:duration>35:38</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>The Bitter End to Bitterness</title>
+    <description><![CDATA[In this podcast, Pastor Cody Karst teaches us that bitterness always has a bitter end and how to overcome the things that have caused us to be bitter in our lives.]]></description>
+    <itunes:summary><![CDATA[In this podcast, Pastor Cody Karst teaches us that bitterness always has a bitter end and how to overcome the things that have caused us to be bitter in our lives.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557c25353ca1f6547259985</guid>
+    <pubDate>Sun, 03 Sep 2023 21:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-010-the-bitter-end-to-bitterness.mp3" length="18250341" type="audio/mpeg"/>
+    <itunes:duration>38:01</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>El Roi</title>
+    <description><![CDATA[Pastor Steve wraps up our What's in a Name series with the name El Roi. Join us as Pastor Steve teaches about how valuable you are to God.]]></description>
+    <itunes:summary><![CDATA[Pastor Steve wraps up our What's in a Name series with the name El Roi. Join us as Pastor Steve teaches about how valuable you are to God.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557c04d3b166c7f1778cd0b</guid>
+    <pubDate>Sun, 27 Aug 2023 20:30:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-009-el-roi.mp3" length="17192278" type="audio/mpeg"/>
+    <itunes:duration>35:49</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Jehovah Nissi</title>
+    <description><![CDATA[This Sunday Pastor Steve taught us that we all have an important part in lifting the banner of Jesus. Please subscribe to the River Church podcast!]]></description>
+    <itunes:summary><![CDATA[This Sunday Pastor Steve taught us that we all have an important part in lifting the banner of Jesus. Please subscribe to the River Church podcast!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557bec73b8e8f3a9c6dc26f</guid>
+    <pubDate>Sun, 20 Aug 2023 20:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-008-jehovah-nissi.mp3" length="16649349" type="audio/mpeg"/>
+    <itunes:duration>34:41</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Redemption</title>
+    <description><![CDATA[This Sunday Pastor Steve taught us about the redemption that Jesus offers to all of us. Please listen to this life-changing message.]]></description>
+    <itunes:summary><![CDATA[This Sunday Pastor Steve taught us about the redemption that Jesus offers to all of us. Please listen to this life-changing message.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557bc4d1282e12ba3e93e13</guid>
+    <pubDate>Sun, 13 Aug 2023 19:30:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-007-redemption.mp3" length="15485123" type="audio/mpeg"/>
+    <itunes:duration>32:16</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Jehovah Go’El</title>
+    <description><![CDATA[Pastor Tracey Karst teaches us the name of God that means redemption and how that can impact your life. Her message will inspire and encourage you!]]></description>
+    <itunes:summary><![CDATA[Pastor Tracey Karst teaches us the name of God that means redemption and how that can impact your life. Her message will inspire and encourage you!]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6556941d4e178004053ecaa4</guid>
+    <pubDate>Sun, 06 Aug 2023 18:30:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-006-jehovah-go-el.mp3" length="15492856" type="audio/mpeg"/>
+    <itunes:duration>32:17</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Jehovah Rapha</title>
+    <description><![CDATA[This Sunday Pastor Steve Karst taught us about the name Jehovah Rapha and how God is our healer. Join us and hear about how God can turn any bitter circumstance that we are in around for our benefit.]]></description>
+    <itunes:summary><![CDATA[This Sunday Pastor Steve Karst taught us about the name Jehovah Rapha and how God is our healer. Join us and hear about how God can turn any bitter circumstance that we are in around for our benefit.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557bab2352a001b2d5d7396</guid>
+    <pubDate>Sun, 30 Jul 2023 19:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-005-jehovah-rapha.mp3" length="14991723" type="audio/mpeg"/>
+    <itunes:duration>31:14</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Jehovah Jireh</title>
+    <description><![CDATA[Pastor Steven Karst teaches about the name of God Jehovah Jireh in Genesis 22. We hope this message blesses you and inspires you to live your life for Jesus.]]></description>
+    <itunes:summary><![CDATA[Pastor Steven Karst teaches about the name of God Jehovah Jireh in Genesis 22. We hope this message blesses you and inspires you to live your life for Jesus.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557b6802f8db93ffda06998</guid>
+    <pubDate>Sun, 23 Jul 2023 18:09:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-004-jehovah-jireh.mp3" length="13450707" type="audio/mpeg"/>
+    <itunes:duration>28:01</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Jehovah Shalom</title>
+    <description><![CDATA[Are you looking for peace in your soul in the midst of this crazy and chaotic world? Listen in as Pastor Steven Karst teaches us about how God is the God of peace. We hope this message is inspiring and helps you to overcome the anxiety and fear in your life.]]></description>
+    <itunes:summary><![CDATA[Are you looking for peace in your soul in the midst of this crazy and chaotic world? Listen in as Pastor Steven Karst teaches us about how God is the God of peace. We hope this message is inspiring and helps you to overcome the anxiety and fear in your life.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:6557b501f396401d0c073e31</guid>
+    <pubDate>Sun, 16 Jul 2023 18:02:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-003-jehovah-shalom.mp3" length="14437300" type="audio/mpeg"/>
+    <itunes:duration>30:05</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Church Vision</title>
+    <description><![CDATA[Join us as Pastor Steven Karst explains why vision is important to the Church and how we often lose our passion for the vision God has given us. He will also explain the vision that God has given The River Church for the coming year.]]></description>
+    <itunes:summary><![CDATA[Join us as Pastor Steven Karst explains why vision is important to the Church and how we often lose our passion for the vision God has given us. He will also explain the vision that God has given The River Church for the coming year.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:655690b91136df4fbb4558fe</guid>
+    <pubDate>Sun, 09 Jul 2023 21:03:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-002-church-vision.mp3" length="17923481" type="audio/mpeg"/>
+    <itunes:duration>37:20</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+  <item>
+    <title>Elohim</title>
+    <description><![CDATA[Join us for the kickoff of our new series about the names of God found in Scripture. This week you will learn about the Hebrew word Elohim. We hope you will join us and subscribe to our weekly podcast.]]></description>
+    <itunes:summary><![CDATA[Join us for the kickoff of our new series about the names of God found in Scripture. This week you will learn about the Hebrew word Elohim. We hope you will join us and subscribe to our weekly podcast.]]></itunes:summary>
+    <link>https://theriverag.church/podcasts/</link>
+    <guid isPermaLink="false">654a753ad9c8c84c9eb92aad:65567bf28a8e570a71032dae:655683bd9d1d7367881aae31</guid>
+    <pubDate>Sun, 02 Jul 2023 20:12:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/archive-001-elohim.mp3" length="14188817" type="audio/mpeg"/>
+    <itunes:duration>29:34</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
+</channel>
+</rss>
