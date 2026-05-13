@@ -10,7 +10,7 @@
   <language>en-us</language>
   <description><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></description>
   <itunes:summary><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></itunes:summary>
-  <lastBuildDate>Tue, 12 May 2026 14:51:23 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 13 May 2026 02:05:05 +0000</lastBuildDate>
   <itunes:author>theriverag.church</itunes:author>
   <itunes:owner>
     <itunes:name>The River Church</itunes:name>
@@ -22,6 +22,18 @@
   </itunes:category>
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
+  <item>
+    <title>God's Call to Move Forward — Deuteronomy 1</title>
+    <description><![CDATA[The sermon explores the Israelites' long journey from slavery in Egypt to their promised land, emphasizing God's call for them to move forward despite fear and hesitation. The speaker encourages listeners to trust God’s timing and step into new opportunities.]]></description>
+    <itunes:summary><![CDATA[The sermon explores the Israelites' long journey from slavery in Egypt to their promised land, emphasizing God's call for them to move forward despite fear and hesitation. The speaker encourages listeners to trust God’s timing and step into new opportunities.]]></itunes:summary>
+    <link>https://theriverag.church/blog/</link>
+    <guid isPermaLink="false">7chZPwfwUQw</guid>
+    <pubDate>Tue, 12 May 2026 14:48:55 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/7chZPwfwUQw.mp3" length="13504616" type="audio/mpeg"/>
+    <itunes:duration>28:08</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
   <item>
     <title>Acts Chapter 4</title>
     <link>https://theriverag.church/podcasts/</link>
