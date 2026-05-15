@@ -6,9 +6,10 @@ backend:
   name: github
   repo: densanon-devs/theriverag-church
   branch: main
-  # OAuth gateway for github.com login. Deploy the Cloudflare Worker
-  # described in docs/CMS_SETUP.md, then update this URL to match.
-  base_url: https://decap-oauth.theriverag.workers.dev
+  # OAuth gateway for github.com login. The Worker source lives at
+  # oauth-worker/index.js in this repo; deployed to Cloudflare at the URL
+  # below. See docs/CMS_SETUP.md for the full setup.
+  base_url: https://decap-oauth.media-a75.workers.dev
   auth_endpoint: auth
 
 # editorial_workflow turns every save into a draft Pull Request that an admin
