@@ -4,9 +4,13 @@ cards:
     when: "Sundays @ 9:30 & 11:00 AM"
     description: "Join us for worship! Two identical services every Sunday morning — come to whichever fits your schedule."
 
-  - heading: "Kids and Youth Services"
-    when: "Sundays 9:30 & 11 AM · Wednesdays 6:30 PM"
-    description: "River Kids meets during both Sunday services. River Youth meets Wednesdays at 6:30 PM."
+  - heading: "River Kids"
+    when: "Sundays @ 9:30 & 11:00 AM"
+    description: "A safe, fun place where your kids can grow, learn, and make friends. River Kids meets during both Sunday services."
+
+  - heading: "River Youth"
+    when: "Wednesdays @ 6:30 PM"
+    description: "Wednesday night youth group for middle and high schoolers — a time of worship, teaching, and fellowship at the church."
 
   - heading: "Young Adults"
     when: "Mondays @ 6:30 PM"
