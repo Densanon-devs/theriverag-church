@@ -16,8 +16,10 @@ backend:
 publish_mode: editorial_workflow
 
 # Where uploaded images go in the repo and how they're referenced by URL.
-media_folder: site/images/uploads
-public_folder: /site/images/uploads
+# Aligned with the church-ops admin's /api/website/upload destination so
+# both editors drop images into the same folder.
+media_folder: site/images/uploaded
+public_folder: /site/images/uploaded
 
 site_url: https://theriverag.church
 display_url: https://theriverag.church
