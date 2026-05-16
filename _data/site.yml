@@ -30,8 +30,11 @@ invitation:
 
 three_cards:
   - heading: More About Us
+    image: /site/images/pastors-steve-tracey.jpg
   - heading: River Youth Group
+    image: /site/images/brand/river-kids-logo.png
   - heading: How to Give Online
+    image: ""  # this card uses the ♥ emoji, not an image
 
 calendar_heading: View Our Full Calendar!
 tagline_heading: You Belong Here!

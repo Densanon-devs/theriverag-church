@@ -129,6 +129,36 @@ _TEMPLATE_WITH_RENDERED_RE = re.compile(
     re.DOTALL,
 )
 
+# <img data-cms-image="path"> binds the src attribute to a YAML value.
+# data-cms (text content) doesn't work on void <img> elements.
+_DATA_CMS_IMAGE_RE = re.compile(
+    r'<img\b(?P<attrs>[^>]*?\bdata-cms-image="(?P<path>[^"]+)"[^>]*?)\s*/?>',
+    re.IGNORECASE,
+)
+_SRC_ATTR_RE = re.compile(r'\bsrc="[^"]*"')
+
+
+def render_data_cms_image(html: str, data: dict) -> tuple[str, int]:
+    """Replace src attribute of <img data-cms-image="path"> with the
+    resolved YAML value. Inserts src=… if the tag had none."""
+    count = 0
+
+    def repl(m: re.Match) -> str:
+        nonlocal count
+        val = resolve(m.group("path"), data)
+        if val is None:
+            return m.group(0)
+        new_src = str(val)
+        attrs = m.group("attrs")
+        if _SRC_ATTR_RE.search(attrs):
+            new_attrs = _SRC_ATTR_RE.sub(f'src="{new_src}"', attrs, count=1)
+        else:
+            new_attrs = f' src="{new_src}"' + attrs
+        count += 1
+        return "<img" + new_attrs + ">"
+
+    return _DATA_CMS_IMAGE_RE.sub(repl, html), count
+
 
 def render_lists(html: str, data: dict) -> tuple[str, int]:
     """Expand <template data-cms-item-template="path"> blocks: repeat the
@@ -396,10 +426,12 @@ def main() -> int:
         rendered, n_list = render_lists(original, data)
         rendered, n_placeholder = render_placeholders(rendered, data)
         rendered, n_cms = render_data_cms(rendered, data)
+        rendered, n_img = render_data_cms_image(rendered, data)
         if rendered != original:
             target.write_text(rendered, encoding="utf-8")
-            print(f"  {target.relative_to(ROOT)}: {n_cms} data-cms + {n_placeholder} placeholder + {n_list} list")
-            total += n_cms + n_placeholder + n_list
+            print(f"  {target.relative_to(ROOT)}: {n_cms} data-cms + {n_img} img + "
+                  f"{n_placeholder} placeholder + {n_list} list")
+            total += n_cms + n_placeholder + n_list + n_img
         else:
             print(f"  {target.relative_to(ROOT)}: no changes")
     print(f"Total: {total} substitution(s)")

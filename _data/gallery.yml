@@ -1,5 +1,8 @@
-# Photos used on the home page.
+# Photos used on the home page. Strip items are templated — admin can
+# reorder, add, or remove them from the visual editor.
+
 hero: "/site/images/hero-river.png"
+inline_photo: "/site/images/gallery-01.jpg"
 
 strip_1:
   - photo: "/site/images/hero.jpg"
