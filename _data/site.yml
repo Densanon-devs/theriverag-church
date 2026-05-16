@@ -1,16 +1,11 @@
-# Site-wide editable settings. The admin CMS reads/writes this file.
-# A small build step substitutes these values into the HTML on push.
-
-announcement_text: "NEW LOCATION: 19587 W Riverview Dr, Post Falls (Take Exit 299)"
-hero_tagline: "At The River Church you will find a place where you feel at home. A place where you can feel like family. A place you belong!"
-footer_tagline: "A place where you feel at home. A place where you can feel like family."
-
-phone: "(208) 304-8536"
-email: "steven@theriverag.church"
-
-address_line_1: "Meeting in Northwest Family Church West"
-address_line_2: "19587 W Riverview Dr, Post Falls, ID 83854"
-
-facebook_url:  "https://www.facebook.com/profile.php?id=100090242570915"
-instagram_url: "https://www.instagram.com/theriverag.church"
-youtube_url:   "https://www.youtube.com/@theriverag.church"
+announcement_text: "NEW LOCATION: 19587 W Riverview Dr, Post Falls (Take Exit 299)."
+hero_tagline: At The River Church you will find a place where you feel at home.
+  A place where you can feel like family. A place you belong!
+footer_tagline: A place where you feel at home. A place where you can feel like family.
+phone: (208) 304-8536
+email: steven@theriverag.church
+address_line_1: Meeting in Northwest Family Church West
+address_line_2: 19587 W Riverview Dr, Post Falls, ID 83854
+facebook_url: https://www.facebook.com/profile.php?id=100090242570915
+instagram_url: https://www.instagram.com/theriverag.church
+youtube_url: https://www.youtube.com/@theriverag.church
