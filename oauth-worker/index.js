@@ -100,30 +100,55 @@ export default {
       const messageJs = JSON.stringify(`authorization:github:success:${payload}`);
 
       return html(
-        `<p>Signed in! This window will close automatically.</p>
-<pre id="dbg" style="color:#666;font-size:0.8rem;"></pre>
+        `<h2 style="color:#486;">Signed in!</h2>
+<p>If the main Decap tab activates, close this window. If it doesn't, copy the debug below and paste it back to Jordan.</p>
+<button id="closebtn" style="padding:6px 12px;font-size:14px;cursor:pointer;">Close this window</button>
+<h4 style="margin-top:1.5rem;">Debug log</h4>
+<pre id="dbg" style="background:#f3f0e6;padding:10px;border-radius:4px;font-size:0.85rem;white-space:pre-wrap;"></pre>
 <script>
 (function () {
   var msg = ${messageJs};
   var dbg = document.getElementById('dbg');
-  function log(s) { dbg.textContent += s + '\\n'; try { console.log('[callback]', s); } catch (_) {} }
-  log('origin: ' + window.location.origin);
-  log('opener: ' + (window.opener ? 'present' : 'NULL'));
-  function send() {
+  document.getElementById('closebtn').onclick = function () { window.close(); };
+  function log(s) {
+    dbg.textContent += '[' + new Date().toISOString().slice(11, 19) + '] ' + s + '\\n';
+    try { console.log('[callback]', s); } catch (_) {}
+  }
+  log('callback page origin: ' + window.location.origin);
+  log('window.opener: ' + (window.opener ? 'present' : 'NULL'));
+  log('opener.location origin (cross-origin so we expect a SecurityError if we read it):');
+  try { log('  -> ' + window.opener.location.origin); }
+  catch (e) { log('  -> (blocked: ' + e.message + ') — that is normal across origins'); }
+
+  var sendCount = 0;
+  function send(reason) {
+    sendCount++;
     if (window.opener && !window.opener.closed) {
-      try { window.opener.postMessage(msg, "*"); log('sent via opener (target *)'); } catch (e) { log('opener.postMessage threw: ' + e.message); }
+      try {
+        window.opener.postMessage(msg, "*");
+        log('postMessage #' + sendCount + ' to opener (target *) — reason: ' + reason);
+      } catch (e) {
+        log('postMessage #' + sendCount + ' THREW: ' + e.message);
+      }
+    } else {
+      log('postMessage #' + sendCount + ' SKIPPED: no opener');
     }
   }
-  // Decap polls us with "authorizing:github" — respond with the token.
+
+  // Decap polls us with "authorizing:github" every 500ms — respond.
   window.addEventListener("message", function (e) {
+    log('received message from ' + e.origin + ': ' + (typeof e.data === 'string' ? e.data.slice(0, 80) : '<non-string>'));
     if (typeof e.data === "string" && e.data.indexOf("authorizing:github") === 0) {
-      log('got authorizing handshake from ' + e.origin);
-      send();
+      send('Decap handshake');
     }
   });
-  // Also send proactively in case Decap's listener got ready before us.
-  send();
-  setTimeout(function () { window.close(); }, 4000);
+
+  // Send a few times in case Decap's listener got ready before us.
+  send('initial');
+  setTimeout(function () { send('retry @1s'); }, 1000);
+  setTimeout(function () { send('retry @3s'); }, 3000);
+
+  // No auto-close — user closes manually so they can read debug.
 })();
 </script>`,
         200,
