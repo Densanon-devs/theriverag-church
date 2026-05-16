@@ -14,6 +14,19 @@
 <body>
   <div id="nc-root"></div>
   <script>
+    // ── Diagnostic catch-all ──────────────────────────────────────────
+    // Logs EVERY postMessage that reaches this window. Tells us whether
+    // the popup's messages are even arriving, regardless of whether
+    // Decap's own listener processes them. Remove once OAuth is stable.
+    window.addEventListener('message', function (e) {
+      var preview = typeof e.data === 'string'
+        ? e.data.slice(0, 100)
+        : '<' + (typeof e.data) + '>';
+      console.log('[MSG]', e.origin, '/', preview, 'source=' + (e.source === window ? 'self' : e.source ? 'other-window' : 'null'));
+    });
+  </script>
+
+  <script>
     // OAuth bridge — runs BEFORE the Decap bundle so listeners are up
     // by the time oauth-callback.html hands the token over.
     //
