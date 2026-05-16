@@ -63,13 +63,23 @@ BLOG_OUT = ROOT / "blog"
 
 
 def load_data() -> dict:
-    """Read every YAML file in _data/ into a single dict, keyed by filename."""
+    """Read every YAML file in _data/ into a single dict, keyed by filename.
+    Files under _data/pages/ are nested under a 'pages' key so they resolve
+    via paths like `pages.home.blocks.0.heading`."""
     data: dict = {}
     if not DATA_DIR.exists():
         return data
     for f in DATA_DIR.glob("*.yml"):
         with open(f, "r", encoding="utf-8") as fh:
             data[f.stem] = yaml.safe_load(fh) or {}
+    pages_dir = DATA_DIR / "pages"
+    if pages_dir.is_dir():
+        pages: dict = {}
+        for f in pages_dir.glob("*.yml"):
+            with open(f, "r", encoding="utf-8") as fh:
+                pages[f.stem] = yaml.safe_load(fh) or {}
+        if pages:
+            data["pages"] = pages
     return data
 
 
@@ -180,6 +190,48 @@ _DATA_CMS_HTML_RE = re.compile(
     r'(?P<close></(?P=tag)\s*>)',
     re.DOTALL,
 )
+
+
+# cms:blocks page="X" — page-builder marker. The build pipeline finds
+# this directive and inlines the rendered blocks from
+# _data/pages/<X>.yml, wrapped in idempotent block-rendered marker
+# comments so subsequent builds find + replace the previous render.
+_BLOCKS_RE = re.compile(
+    r'<!--\s*cms:blocks\s+page="(?P<page>[^"]+)"\s*-->'
+    r'(?P<rendered>\s*<!--\s*cms:blocks-start[^>]*-->.*?<!--\s*cms:blocks-end[^>]*-->)?',
+    re.DOTALL,
+)
+
+
+def render_blocks(html: str, data: dict) -> tuple[str, int]:
+    """Find <!--cms:blocks page="X"--> markers and inline the rendered
+    page tree underneath, idempotently."""
+    # Local import so the build script still works if the module is missing
+    # (e.g. on a branch that hasn't pulled the new file yet).
+    try:
+        from render_blocks import render_page  # type: ignore
+    except ImportError:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "render_blocks", ROOT / "scripts" / "render_blocks.py"
+        )
+        mod = importlib.util.module_from_spec(spec)  # type: ignore
+        spec.loader.exec_module(mod)  # type: ignore
+        render_page = mod.render_page
+
+    count = 0
+
+    def repl(m: re.Match) -> str:
+        nonlocal count
+        page = m.group("page")
+        body = render_page(page, data)
+        count += 1
+        return (
+            f'<!--cms:blocks page="{page}"-->\n'
+            f'<!--cms:blocks-start "{page}"-->\n{body}\n<!--cms:blocks-end "{page}"-->'
+        )
+
+    return _BLOCKS_RE.sub(repl, html), count
 
 
 def render_data_cms_html(html: str, data: dict) -> tuple[str, int]:
@@ -476,6 +528,9 @@ def main() -> int:
         original = target.read_text(encoding="utf-8")
         # Inline partials FIRST so the rest of the passes see the full HTML.
         rendered, n_inc = render_includes(original)
+        # Expand <!--cms:blocks page="X"--> markers next — the rendered
+        # block HTML carries data-cms attributes that subsequent passes fill in.
+        rendered, n_blocks = render_blocks(rendered, data)
         # Then expand list templates — they create the per-item DOM that
         # data-cms substitution then fills in.
         rendered, n_list = render_lists(rendered, data)
@@ -486,8 +541,9 @@ def main() -> int:
         if rendered != original:
             target.write_text(rendered, encoding="utf-8")
             print(f"  {target.relative_to(ROOT)}: {n_cms} data-cms + {n_html} html + "
-                  f"{n_img} img + {n_placeholder} placeholder + {n_list} list + {n_inc} include")
-            total += n_cms + n_html + n_placeholder + n_list + n_img + n_inc
+                  f"{n_img} img + {n_placeholder} placeholder + {n_list} list + "
+                  f"{n_inc} include + {n_blocks} blocks")
+            total += n_cms + n_html + n_placeholder + n_list + n_img + n_inc + n_blocks
         else:
             print(f"  {target.relative_to(ROOT)}: no changes")
     print(f"Total: {total} substitution(s)")

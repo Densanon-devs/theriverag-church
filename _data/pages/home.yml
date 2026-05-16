@@ -1,0 +1,83 @@
+# Home page tree. Each entry under `blocks:` is one top-level section.
+# Reorder, add, or remove blocks via the admin visual editor — the build
+# pipeline regenerates index.html from this list on every push.
+blocks:
+  - type: hero
+    heading: "YOU BELONG HERE!"
+    tagline: "At The River Church you will find a place where you feel at home! A place where you can feel like family. A place you belong!"
+
+  - type: wave_divider
+
+  - type: service_times
+    live_heading: Join us live on YouTube!
+    live_embed_url: https://www.youtube.com/embed/gHczC5kLM0A
+    cards:
+      - heading: Sunday Services 9:30 & 11am
+        description: Join us for worship! Two identical services every Sunday morning — come to whichever fits your schedule.
+        when: Sundays @ 9:30 & 11:00 AM
+      - heading: Young Adults
+        description: A weekly gathering for young adults at the church — currently studying through 1 Peter.
+        when: Mondays @ 6:30 PM
+      - heading: River Youth
+        description: Wednesday night youth group for middle and high schoolers — a time of worship, teaching, and fellowship at the church.
+        when: Wednesdays @ 6:30 PM
+      - heading: River Kids
+        description: A safe, fun place where your kids can grow, learn, and make friends. River Kids meets during both Sunday services.
+        when: Sundays @ 9:30 & 11:00 AM
+    inline_photo: /site/images/gallery-01.jpg
+    values_lines:
+      - "Reaching the Lost  〰  Serving Others"
+      - "Making Disciples  〰  Reading the Word"
+      - "Living by the Spirit  〰  Doing Life Together"
+
+  - type: gallery_strip
+    wave_bottom: true
+    photos:
+      - { src: /site/images/hero.jpg }
+      - { src: /site/images/gallery-01.jpg }
+      - { src: /site/images/gallery-03.jpg }
+
+  - type: wave_divider
+
+  - type: invitation
+    heading: Are You Curious About Jesus?
+    paragraphs:
+      - "Maybe you have been a Christian for a long time…"
+      - "No matter what your past looks like we believe you will find"
+      - "A place where you belong at The River Church!"
+
+  - type: gallery_strip
+    photos:
+      - { src: /site/images/gallery-04.jpg }
+      - { src: /site/images/gallery-02.jpg }
+      - { src: /site/images/gallery-06.jpg }
+
+  - type: three_cards
+    cards:
+      - heading: More About Us
+        image: /site/images/pastors-steve-tracey.jpg
+        button_label: More About Us
+        button_url: about/
+        icon_style: default
+      - heading: River Youth Group
+        image: /site/images/brand/river-kids-logo.png
+        button_label: Learn About River Youth Group
+        button_url: about/
+        icon_style: blue
+      - heading: How to Give Online
+        use_heart_icon: true
+        button_label: How to Give Online
+        button_url: https://theriveragchurch.churchcenter.com/giving
+        button_target: _blank
+        icon_style: gold
+
+  - type: wave_divider
+
+  - type: calendar
+    heading: View Our Full Calendar!
+    calendar_url: https://theriveragchurch.churchcenter.com/calendar
+    embed_src: https://theriveragchurch.churchcenter.com/assets/calendar_embed.js
+
+  - type: tagline
+    heading: You Belong Here!
+    theme: light

@@ -115,187 +115,172 @@
 
 <!--inc:end "_includes/header.html"-->
 
-  <!-- 1. Hero -->
-  <section class="hero hero-home wave-bottom">
-    <div class="container">
-      <div class="hero-frame">
-        <div class="hero-content">
-          <h1 data-cms="site.hero_heading">YOU BELONG HERE!</h1>
-          <p data-cms="site.hero_tagline">At The River Church you will find a place where you feel at home! A place where you can feel like family. A place you belong!</p>
-        </div>
+  <!--cms:blocks page="home"-->
+<!--cms:blocks-start "home"-->
+<div class="cms-blocks-page" data-cms-blocks-page="home">
+<section class="hero hero-home wave-bottom" data-cms-block="0" data-cms-block-type="hero">
+  <div class="container">
+    <div class="hero-frame">
+      <div class="hero-content">
+        <h1 data-cms="pages.home.blocks.0.heading">YOU BELONG HERE!</h1>
+        <p data-cms="pages.home.blocks.0.tagline">At The River Church you will find a place where you feel at home! A place where you can feel like family. A place you belong!</p>
       </div>
     </div>
-  </section>
-
-  <!-- Wave divider (gold stroke decoration on the cut between sections) -->
-  <div class="wave-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
-    </svg>
   </div>
+</section>
 
-  <!-- 2. Service Times -->
-  <section class="service-block wave-top" aria-label="Service times">
-    <div class="container">
-      <div class="service-row">
-        <div class="live-card">
-          <h2><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" data-cms="site.live_heading">Join us live on YouTube!</a></h2>
-          <div class="live-thumb live-thumb-embed">
-            <iframe
-              id="home-live-embed"
-              src="https://www.youtube.com/embed/gHczC5kLM0A"
-              title="Latest sermon — The River Church"
-              frameborder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy"></iframe>
-          </div>
-        </div>
+<div class="wave-divider" aria-hidden="true" data-cms-block="1" data-cms-block-type="wave_divider">
+  <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
+  </svg>
+</div>
 
-        <div class="accordion-list" data-cms-list="services.cards">
-          <template data-cms-item-template="services.cards"><details class="accordion-card" data-cms-item="services.cards.{{cms-index}}">
-            <summary>
-              <h3 data-cms="services.cards.{{cms-index}}.heading">Heading</h3>
-              <span class="accordion-chev" aria-hidden="true"></span>
-            </summary>
-            <div class="accordion-body">
-              <p data-cms="services.cards.{{cms-index}}.description">Description</p>
-              <span class="when" data-cms="services.cards.{{cms-index}}.when">When</span>
-            </div>
-          </details></template><!-- cms:rendered --><details class="accordion-card" data-cms-item="services.cards.0">
-            <summary>
-              <h3 data-cms="services.cards.0.heading">Sunday Services 9:30 & 11am</h3>
-              <span class="accordion-chev" aria-hidden="true"></span>
-            </summary>
-            <div class="accordion-body">
-              <p data-cms="services.cards.0.description">Join us for worship! Two identical services every Sunday morning — come to whichever fits your schedule.</p>
-              <span class="when" data-cms="services.cards.0.when">Sundays @ 9:30 & 11:00 AM</span>
-            </div>
-          </details><details class="accordion-card" data-cms-item="services.cards.1">
-            <summary>
-              <h3 data-cms="services.cards.1.heading">Young Adults</h3>
-              <span class="accordion-chev" aria-hidden="true"></span>
-            </summary>
-            <div class="accordion-body">
-              <p data-cms="services.cards.1.description">A weekly gathering for young adults at the church — currently studying through 1 Peter.</p>
-              <span class="when" data-cms="services.cards.1.when">Mondays @ 6:30 PM</span>
-            </div>
-          </details><details class="accordion-card" data-cms-item="services.cards.2">
-            <summary>
-              <h3 data-cms="services.cards.2.heading">River Youth</h3>
-              <span class="accordion-chev" aria-hidden="true"></span>
-            </summary>
-            <div class="accordion-body">
-              <p data-cms="services.cards.2.description">Wednesday night youth group for middle and high schoolers — a time of worship, teaching, and fellowship at the church.</p>
-              <span class="when" data-cms="services.cards.2.when">Wednesdays @ 6:30 PM</span>
-            </div>
-          </details><details class="accordion-card" data-cms-item="services.cards.3">
-            <summary>
-              <h3 data-cms="services.cards.3.heading">River Kids</h3>
-              <span class="accordion-chev" aria-hidden="true"></span>
-            </summary>
-            <div class="accordion-body">
-              <p data-cms="services.cards.3.description">A safe, fun place where your kids can grow, learn, and make friends. River Kids meets during both Sunday services.</p>
-              <span class="when" data-cms="services.cards.3.when">Sundays @ 9:30 & 11:00 AM</span>
-            </div>
-          </details><!-- /cms:rendered -->
+<section class="service-block wave-top" aria-label="Service times" data-cms-block="2" data-cms-block-type="service_times">
+  <div class="container">
+    <div class="service-row">
+      <div class="live-card">
+        <h2><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" data-cms="pages.home.blocks.2.live_heading">Join us live on YouTube!</a></h2>
+        <div class="live-thumb live-thumb-embed">
+          <iframe id="home-live-embed" src="https://www.youtube.com/embed/gHczC5kLM0A" title="Latest sermon — The River Church" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
-
-      <div class="service-row">
-        <div class="service-row__media">
-          <div class="rounded-photo">
-            <img data-cms-image="gallery.inline_photo" src="/site/images/gallery-01.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600">
-          </div>
-        </div>
-        <div class="inline-values">
-          <p>Reaching the Lost <span class="sep">〰</span> Serving Others</p>
-          <p>Making Disciples <span class="sep">〰</span> Reading the Word</p>
-          <p>Living by the Spirit <span class="sep">〰</span> Doing Life Together</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Image Gallery (first) — items rendered from gallery.yml via build_pages.py -->
-  <div class="gallery-strip wave-bottom" aria-label="Photo gallery" data-cms-list="gallery.strip_1">
-    <template data-cms-item-template="gallery.strip_1"><div class="gallery-item" data-cms-item="gallery.strip_1.{{cms-index}}"><img data-cms-image="gallery.strip_1.{{cms-index}}.photo" src="" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div></template><!-- cms:rendered --><div class="gallery-item" data-cms-item="gallery.strip_1.0"><img data-cms-image="gallery.strip_1.0.photo" src="/site/images/hero.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div><div class="gallery-item" data-cms-item="gallery.strip_1.1"><img data-cms-image="gallery.strip_1.1.photo" src="/site/images/gallery-01.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div><div class="gallery-item" data-cms-item="gallery.strip_1.2"><img data-cms-image="gallery.strip_1.2.photo" src="/site/images/gallery-03.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div><!-- /cms:rendered -->
+      <div class="accordion-list" data-cms-list="pages.home.blocks.2.cards">
+<details class="accordion-card" data-cms-item="pages.home.blocks.2.cards.0">
+  <summary>
+    <h3 data-cms="pages.home.blocks.2.cards.0.heading">Sunday Services 9:30 & 11am</h3>
+    <span class="accordion-chev" aria-hidden="true"></span>
+  </summary>
+  <div class="accordion-body">
+    <p data-cms="pages.home.blocks.2.cards.0.description">Join us for worship! Two identical services every Sunday morning — come to whichever fits your schedule.</p>
+    <span class="when" data-cms="pages.home.blocks.2.cards.0.when">Sundays @ 9:30 & 11:00 AM</span>
   </div>
-
-  <!-- Wave divider (gold stroke decoration on the cut between sections) -->
-  <div class="wave-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
-    </svg>
+</details>
+<details class="accordion-card" data-cms-item="pages.home.blocks.2.cards.1">
+  <summary>
+    <h3 data-cms="pages.home.blocks.2.cards.1.heading">Young Adults</h3>
+    <span class="accordion-chev" aria-hidden="true"></span>
+  </summary>
+  <div class="accordion-body">
+    <p data-cms="pages.home.blocks.2.cards.1.description">A weekly gathering for young adults at the church — currently studying through 1 Peter.</p>
+    <span class="when" data-cms="pages.home.blocks.2.cards.1.when">Mondays @ 6:30 PM</span>
   </div>
-
-  <!-- 7. Invitation -->
-  <section class="section-river wave-top">
-    <div class="container">
-      <div class="invitation" data-cms-list="site.invitation.paragraphs">
-        <h2 data-cms="site.invitation.heading">Are You Curious About Jesus?</h2>
-        <template data-cms-item-template="site.invitation.paragraphs"><p data-cms="site.invitation.paragraphs.{{cms-index}}" data-cms-item="site.invitation.paragraphs.{{cms-index}}">Paragraph</p></template><!-- cms:rendered --><p data-cms="site.invitation.paragraphs.0" data-cms-item="site.invitation.paragraphs.0">Maybe you have been a Christian for a long time…</p><p data-cms="site.invitation.paragraphs.1" data-cms-item="site.invitation.paragraphs.1">No matter what your past looks like we believe you will find</p><p data-cms="site.invitation.paragraphs.2" data-cms-item="site.invitation.paragraphs.2">A place where you belong at The River Church!</p><!-- /cms:rendered -->
+</details>
+<details class="accordion-card" data-cms-item="pages.home.blocks.2.cards.2">
+  <summary>
+    <h3 data-cms="pages.home.blocks.2.cards.2.heading">River Youth</h3>
+    <span class="accordion-chev" aria-hidden="true"></span>
+  </summary>
+  <div class="accordion-body">
+    <p data-cms="pages.home.blocks.2.cards.2.description">Wednesday night youth group for middle and high schoolers — a time of worship, teaching, and fellowship at the church.</p>
+    <span class="when" data-cms="pages.home.blocks.2.cards.2.when">Wednesdays @ 6:30 PM</span>
+  </div>
+</details>
+<details class="accordion-card" data-cms-item="pages.home.blocks.2.cards.3">
+  <summary>
+    <h3 data-cms="pages.home.blocks.2.cards.3.heading">River Kids</h3>
+    <span class="accordion-chev" aria-hidden="true"></span>
+  </summary>
+  <div class="accordion-body">
+    <p data-cms="pages.home.blocks.2.cards.3.description">A safe, fun place where your kids can grow, learn, and make friends. River Kids meets during both Sunday services.</p>
+    <span class="when" data-cms="pages.home.blocks.2.cards.3.when">Sundays @ 9:30 & 11:00 AM</span>
+  </div>
+</details>
       </div>
     </div>
-  </section>
-
-  <!-- Image Gallery (second) -->
-  <div class="gallery-strip" aria-label="Photo gallery" data-cms-list="gallery.strip_2">
-    <template data-cms-item-template="gallery.strip_2"><div class="gallery-item" data-cms-item="gallery.strip_2.{{cms-index}}"><img data-cms-image="gallery.strip_2.{{cms-index}}.photo" src="" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div></template><!-- cms:rendered --><div class="gallery-item" data-cms-item="gallery.strip_2.0"><img data-cms-image="gallery.strip_2.0.photo" src="/site/images/gallery-04.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div><div class="gallery-item" data-cms-item="gallery.strip_2.1"><img data-cms-image="gallery.strip_2.1.photo" src="/site/images/gallery-02.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div><div class="gallery-item" data-cms-item="gallery.strip_2.2"><img data-cms-image="gallery.strip_2.2.photo" src="/site/images/gallery-06.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div><!-- /cms:rendered -->
-  </div>
-
-  <!-- 9. Three-card section -->
-  <section class="section section-dark wave-bottom">
-    <div class="container">
-      <div class="three-card-grid">
-        <div class="three-card">
-          <div class="three-card-icon"><img data-cms-image="site.three_cards.0.image" src="/site/images/pastors-steve-tracey.jpg" alt="Photo" loading="lazy" decoding="async" width="320" height="320"></div>
-          <h3 data-cms="site.three_cards.0.heading">More About Us</h3>
-          <a href="about/" class="btn btn-primary">More About Us</a>
-        </div>
-        <div class="three-card">
-          <div class="three-card-icon three-card-icon-blue"><img class="contain" data-cms-image="site.three_cards.1.image" src="/site/images/brand/river-kids-logo.png" alt="Photo" loading="lazy" decoding="async" width="320" height="320"></div>
-          <h3 data-cms="site.three_cards.1.heading">River Youth Group</h3>
-          <a href="about/" class="btn btn-primary">Learn About River Youth Group</a>
-        </div>
-        <div class="three-card">
-          <div class="three-card-icon three-card-icon-gold"><span class="give-heart" aria-hidden="true">♥</span></div>
-          <h3 data-cms="site.three_cards.2.heading">How to Give Online</h3>
-          <a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener" class="btn btn-primary">How to Give Online</a>
+    <div class="service-row">
+      <div class="service-row__media">
+        <div class="rounded-photo">
+          <img data-cms-image="pages.home.blocks.2.inline_photo" src="/site/images/gallery-01.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600">
         </div>
       </div>
+      <div class="inline-values">
+    <p data-cms="pages.home.blocks.2.values_lines.0">Reaching the Lost  〰  Serving Others</p>
+    <p data-cms="pages.home.blocks.2.values_lines.1">Making Disciples  〰  Reading the Word</p>
+    <p data-cms="pages.home.blocks.2.values_lines.2">Living by the Spirit  〰  Doing Life Together</p>
+      </div>
     </div>
-  </section>
-
-  <!-- Wave divider (gold stroke decoration on the cut between sections) -->
-  <div class="wave-divider" aria-hidden="true">
-    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
-    </svg>
   </div>
+</section>
 
-  <!-- Calendar -->
-  <section class="section-river wave-top">
-    <div class="container">
-      <div class="calendar-callout">
-        <a href="https://theriveragchurch.churchcenter.com/calendar" target="_blank" rel="noopener" style="text-decoration:none;">
-          <h2 data-cms="site.calendar_heading">View Our Full Calendar!</h2>
-        </a>
-      </div>
-      <div class="calendar-embed">
-        <script src="https://theriveragchurch.churchcenter.com/assets/calendar_embed.js" data-view="list" data-show-filter="true" data-height="560px"></script>
-      </div>
-    </div>
-  </section>
+<div class="gallery-strip wave-bottom" aria-label="Photo gallery" data-cms-block="3" data-cms-block-type="gallery_strip" data-cms-list="pages.home.blocks.3.photos">
+  <div class="gallery-item" data-cms-item="pages.home.blocks.3.photos.0"><img data-cms-image="pages.home.blocks.3.photos.0.src" src="/site/images/hero.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
+  <div class="gallery-item" data-cms-item="pages.home.blocks.3.photos.1"><img data-cms-image="pages.home.blocks.3.photos.1.src" src="/site/images/gallery-01.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
+  <div class="gallery-item" data-cms-item="pages.home.blocks.3.photos.2"><img data-cms-image="pages.home.blocks.3.photos.2.src" src="/site/images/gallery-03.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
+</div>
 
-  <!-- Tagline -->
-  <section class="section section-light">
-    <div class="container">
-      <div class="tagline">
-        <h2 data-cms="site.tagline_heading">You Belong Here!</h2>
-      </div>
+<div class="wave-divider" aria-hidden="true" data-cms-block="4" data-cms-block-type="wave_divider">
+  <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
+  </svg>
+</div>
+
+<section class="section-river wave-top" data-cms-block="5" data-cms-block-type="invitation">
+  <div class="container">
+    <div class="invitation" data-cms-list="pages.home.blocks.5.paragraphs">
+      <h2 data-cms="pages.home.blocks.5.heading">Are You Curious About Jesus?</h2>
+    <p data-cms="pages.home.blocks.5.paragraphs.0" data-cms-item="pages.home.blocks.5.paragraphs.0">Maybe you have been a Christian for a long time…</p>
+    <p data-cms="pages.home.blocks.5.paragraphs.1" data-cms-item="pages.home.blocks.5.paragraphs.1">No matter what your past looks like we believe you will find</p>
+    <p data-cms="pages.home.blocks.5.paragraphs.2" data-cms-item="pages.home.blocks.5.paragraphs.2">A place where you belong at The River Church!</p>
     </div>
-  </section>
+  </div>
+</section>
+
+<div class="gallery-strip" aria-label="Photo gallery" data-cms-block="6" data-cms-block-type="gallery_strip" data-cms-list="pages.home.blocks.6.photos">
+  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.0"><img data-cms-image="pages.home.blocks.6.photos.0.src" src="/site/images/gallery-04.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
+  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.1"><img data-cms-image="pages.home.blocks.6.photos.1.src" src="/site/images/gallery-02.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
+  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.2"><img data-cms-image="pages.home.blocks.6.photos.2.src" src="/site/images/gallery-06.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
+</div>
+
+<section class="section section-dark wave-bottom" data-cms-block="7" data-cms-block-type="three_cards">
+  <div class="container">
+    <div class="three-card-grid" data-cms-list="pages.home.blocks.7.cards">
+  <div class="three-card" data-cms-item="pages.home.blocks.7.cards.0">
+    <div class="three-card-icon"><img data-cms-image="pages.home.blocks.7.cards.0.image" src="/site/images/pastors-steve-tracey.jpg" alt="Photo" loading="lazy" decoding="async" width="320" height="320"></div>
+    <h3 data-cms="pages.home.blocks.7.cards.0.heading">More About Us</h3>
+    <a href="about/" class="btn btn-primary" data-cms="pages.home.blocks.7.cards.0.button_label">More About Us</a>
+  </div>
+  <div class="three-card" data-cms-item="pages.home.blocks.7.cards.1">
+    <div class="three-card-icon three-card-icon-blue"><img class="contain" data-cms-image="pages.home.blocks.7.cards.1.image" src="/site/images/brand/river-kids-logo.png" alt="Photo" loading="lazy" decoding="async" width="320" height="320"></div>
+    <h3 data-cms="pages.home.blocks.7.cards.1.heading">River Youth Group</h3>
+    <a href="about/" class="btn btn-primary" data-cms="pages.home.blocks.7.cards.1.button_label">Learn About River Youth Group</a>
+  </div>
+  <div class="three-card" data-cms-item="pages.home.blocks.7.cards.2">
+    <div class="three-card-icon three-card-icon-gold"><span class="give-heart" aria-hidden="true">&hearts;</span></div>
+    <h3 data-cms="pages.home.blocks.7.cards.2.heading">How to Give Online</h3>
+    <a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener" class="btn btn-primary" data-cms="pages.home.blocks.7.cards.2.button_label">How to Give Online</a>
+  </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" aria-hidden="true" data-cms-block="8" data-cms-block-type="wave_divider">
+  <svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24" fill="none" stroke="#cfa861" stroke-width="2"/>
+  </svg>
+</div>
+
+<section class="section-river wave-top" data-cms-block="9" data-cms-block-type="calendar">
+  <div class="container">
+    <div class="calendar-callout">
+      <a href="https://theriveragchurch.churchcenter.com/calendar" target="_blank" rel="noopener" style="text-decoration:none;">
+        <h2 data-cms="pages.home.blocks.9.heading">View Our Full Calendar!</h2>
+      </a>
+    </div>
+    <div class="calendar-embed">
+      <script src="https://theriveragchurch.churchcenter.com/assets/calendar_embed.js" data-view="list" data-show-filter="true" data-height="560px"></script>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" data-cms-block="10" data-cms-block-type="tagline">
+  <div class="container">
+    <div class="tagline">
+      <h2 data-cms="pages.home.blocks.10.heading">You Belong Here!</h2>
+    </div>
+  </div>
+</section>
+</div>
+<!--cms:blocks-end "home"-->
 
   <!--#include file="_includes/footer.html" -->
 <!--inc:start "_includes/footer.html"-->
