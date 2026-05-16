@@ -20,40 +20,64 @@
 </head>
 <body>
 
-  <!-- Header — big centered logo, nav left, social + CTA right -->
-  <header class="site-header">
-    <div class="header-inner">
-      <button class="menu-toggle" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
+  <!--#include file="_includes/header.html" -->
+<!--inc:start "_includes/header.html"-->
+<!--
+  Shared header — announcement bar + site header. All URLs absolute so
+  the same markup works from any page depth. Edit this file to change
+  the header everywhere; build_pages.py inlines it on build.
+-->
+<div class="announcement-bar" data-cms="site.announcement_text">NEW LOCATION: 19587 W Riverview Dr, Post Falls (Take Exit 299).</div>
 
-      <nav class="main-nav">
-        <ul>
-          <li><a href="./" class="active">Sermons</a></li>
-          <li><a href="../about/">About</a></li>
-          <li><a href="../blog/">Blog</a></li>
-          <li><a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener">Give</a></li>
-        </ul>
-      </nav>
+<header class="site-header">
+  <div class="header-inner">
+    <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
-      <a href="../" class="logo"><img src="../site/images/logo.png" alt="The River Church"></a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/podcasts/" data-cms="site.nav.sermons">Sermons</a></li>
+        <li><a href="/about/" data-cms="site.nav.about">About</a></li>
+        <li><a href="/blog/" data-cms="site.nav.blog">Blog</a></li>
+        <li><a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener" data-cms="site.nav.give">Give</a></li>
+      </ul>
+    </nav>
 
-      <div class="header-right">
-        <ul class="social-icons">
-          <li><a href="https://www.instagram.com/theriverag.church" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0-2.2c-3.3 0-3.7 0-5 .1-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4-.7.7-1.1 1.4-1.4 2.2-.3.8-.5 1.7-.6 3-.1 1.3-.1 1.7-.1 5s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6-1.3-.1-1.7-.1-5-.1zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
-          </a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=100090242570915" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.5 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
-          </a></li>
-          <li><a href="https://www.youtube.com/@theriverag.church" target="_blank" rel="noopener" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.5 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
-          </a></li>
-        </ul>
-        <a href="https://theriveragchurch.churchcenter.com/people/forms/559632" target="_blank" rel="noopener" class="header-cta header-cta-desktop">Get Connected</a>
-      </div>
+    <a href="/" class="logo" aria-label="The River Church — Home"><img src="/site/images/logo.png" alt="The River Church" width="180" height="180"></a>
+
+    <div class="header-right">
+      <ul class="social-icons">
+        <li><a href="https://www.instagram.com/theriverag.church" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0-2.2c-3.3 0-3.7 0-5 .1-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4-.7.7-1.1 1.4-1.4 2.2-.3.8-.5 1.7-.6 3-.1 1.3-.1 1.7-.1 5s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6-1.3-.1-1.7-.1-5-.1zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+        </a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100090242570915" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.5 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
+        </a></li>
+        <li><a href="https://www.youtube.com/@theriverag.church" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.5 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+        </a></li>
+      </ul>
+      <a href="https://theriveragchurch.churchcenter.com/people/forms/559632" target="_blank" rel="noopener" class="header-cta header-cta-desktop" data-cms="site.header_cta">Get Connected</a>
     </div>
-  </header>
+  </div>
+</header>
+
+<script>
+  // Highlight the nav link that matches the current page.
+  (function () {
+    var p = location.pathname.replace(/\/index\.html$/, '/');
+    if (p === '') p = '/';
+    document.querySelectorAll('.main-nav a').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (href === p || (href !== '/' && p.indexOf(href) === 0)) {
+        a.classList.add('active');
+      }
+    });
+  })();
+</script>
+
+<!--inc:end "_includes/header.html"-->
 
   <!-- Listen heading + platform pill buttons (light cream bg, matches live) -->
   <section class="section section-light sermons-intro">
@@ -285,39 +309,50 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <img src="../site/images/logo.png" alt="The River Church" class="footer-logo">
-          <p>A place where you feel at home. A place where you can feel like family.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Visit Us</h4>
-          <p>Meeting in Northwest Family Church West<br>19587 W Riverview Dr<br>Post Falls, ID 83854</p>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>
-            <a href="tel:+12083048536">(208) 304-8536</a><br>
-            <a href="mailto:steven@theriverag.church">steven@theriverag.church</a><br>
-            <a href="https://theriveragchurch.churchcenter.com/people/forms/735194" target="_blank" rel="noopener">Ministry Communications Request</a><br>
-            <a href="../privacy/">Privacy Policy</a> &middot; <a href="../terms/">Terms</a>
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <ul class="social-links">
-            <li><a href="https://www.facebook.com/profile.php?id=100090242570915" target="_blank" rel="noopener">Facebook</a></li>
-            <li><a href="https://www.instagram.com/theriverag.church" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://www.youtube.com/@theriverag.church" target="_blank" rel="noopener">YouTube</a></li>
-          </ul>
-        </div>
+  <!--#include file="_includes/footer.html" -->
+<!--inc:start "_includes/footer.html"-->
+<!--
+  Shared footer — site-wide footer block. All URLs absolute so the
+  same markup works from any page depth.
+-->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="/site/images/logo.png" alt="The River Church" class="footer-logo" loading="lazy" decoding="async" width="180" height="180">
+        <p data-cms="site.footer_tagline">A place where you feel at home. A place where you can feel like family.</p>
       </div>
-      <div class="footer-bottom"><p>&copy; <span id="year">2026</span> The River Church. All rights reserved.</p></div>
+      <div class="footer-col">
+        <h4 data-cms="site.footer.visit_heading">Visit Us</h4>
+        <p>
+          <span data-cms="site.address_line_1">Meeting in Northwest Family Church West</span><br>
+          <span data-cms="site.address_line_2">19587 W Riverview Dr</span><br>
+          <span data-cms="site.address_line_3">Post Falls, ID 83854</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 data-cms="site.footer.contact_heading">Contact</h4>
+        <p>
+          <a href="tel:+12083048536" data-cms="site.footer.phone_label">(208) 304-8536</a><br>
+          <a href="mailto:steven@theriverag.church" data-cms="site.footer.email_label">steven@theriverag.church</a><br>
+          <a href="https://theriveragchurch.churchcenter.com/people/forms/735194" target="_blank" rel="noopener" data-cms="site.footer.ministry_label">Ministry Communications Request</a><br>
+          <a href="/privacy/" data-cms="site.footer.privacy_label">Privacy Policy</a> &middot; <a href="/terms/" data-cms="site.footer.terms_label">Terms</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 data-cms="site.footer.connect_heading">Connect</h4>
+        <ul class="social-links">
+          <li><a href="https://www.facebook.com/profile.php?id=100090242570915" target="_blank" rel="noopener" data-cms="site.footer.facebook_label">Facebook</a></li>
+          <li><a href="https://www.instagram.com/theriverag.church" target="_blank" rel="noopener" data-cms="site.footer.instagram_label">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@theriverag.church" target="_blank" rel="noopener" data-cms="site.footer.youtube_label">YouTube</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
+    <div class="footer-bottom"><p>&copy; <span id="year">2026</span> The River Church. <span data-cms="site.footer.copyright_suffix">All rights reserved.</span></p></div>
+  </div>
+</footer>
+
+<!--inc:end "_includes/footer.html"-->
 
   <script src="../js/main.js"></script>
   <script src="../js/dynamic.js"></script>

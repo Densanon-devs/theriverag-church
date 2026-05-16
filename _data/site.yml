@@ -30,16 +30,38 @@ invitation:
 
 three_cards:
   - heading: More About Us
+    button: More About Us
     image: /site/images/pastors-steve-tracey.jpg
   - heading: River Youth Group
+    button: Learn About River Youth Group
     image: /site/images/brand/river-kids-logo.png
   - heading: How to Give Online
+    button: How to Give Online
     image: ""  # this card uses the ♥ emoji, not an image
 
-calendar_heading: View Our Full Calendar!
-tagline_heading: You Belong Here!
+nav:
+  sermons: Sermons
+  about: About
+  blog: Blog
+  give: Give
 
 footer:
   visit_heading: Visit Us
   contact_heading: Contact
   connect_heading: Connect
+  phone_label: (208) 304-8536
+  email_label: steven@theriverag.church
+  ministry_label: Ministry Communications Request
+  privacy_label: Privacy Policy
+  terms_label: Terms
+  facebook_label: Facebook
+  instagram_label: Instagram
+  youtube_label: YouTube
+  copyright_suffix: All rights reserved.
+
+podcasts_page:
+  heading: Listen to Our Messages Below!
+  subheading: Or Find us on Your Favorite Podcasting Platform!
+
+calendar_heading: View Our Full Calendar!
+tagline_heading: You Belong Here!

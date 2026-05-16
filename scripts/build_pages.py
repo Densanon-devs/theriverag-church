@@ -47,7 +47,13 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "_data"
-TARGETS = [ROOT / "index.html", ROOT / "about" / "index.html", ROOT / "podcasts" / "index.html"]
+TARGETS = [
+    ROOT / "index.html",
+    ROOT / "about" / "index.html",
+    ROOT / "podcasts" / "index.html",
+    ROOT / "privacy" / "index.html",
+    ROOT / "terms" / "index.html",
+]
 
 # Blog: the church-ops pipeline commits content/blog/<date>-<slug>.md files
 # (YAML frontmatter + HTML body); we render those into /blog/<slug>/index.html
@@ -95,6 +101,54 @@ _DATA_CMS_RE = re.compile(
     r'(?P<close></(?P=tag)\s*>)',
     re.DOTALL,
 )
+
+# SSI-style include directives, with idempotent marker comments wrapping the
+# rendered output. On first build, an `<!--#include -->` directive gets a
+# matching <!--inc:start … --> … <!--inc:end --> block appended; on later
+# builds we find that block and replace it from the current partial, so the
+# source file always carries both the directive (the source of truth) and a
+# fresh inlined copy that GitHub Pages serves directly.
+_INCLUDE_RE = re.compile(
+    r'<!--\s*#include\s+file="(?P<path>[^"]+)"\s*-->'
+    r'(?P<rendered>\s*<!--\s*inc:start[^>]*-->.*?<!--\s*inc:end[^>]*-->)?',
+    re.DOTALL,
+)
+
+
+def _read_partial(rel: str, depth: int) -> str | None:
+    target = (ROOT / rel.lstrip("/")).resolve()
+    try:
+        target.relative_to(ROOT)
+    except ValueError:
+        return None
+    if not target.is_file():
+        return None
+    body = target.read_text(encoding="utf-8")
+    expanded, _ = render_includes(body, depth + 1)
+    return expanded
+
+
+def render_includes(html: str, depth: int = 0) -> tuple[str, int]:
+    """Inline <!--#include file="..." --> directives idempotently. Paths
+    resolve from repo root. Recursive with a depth cap for accidental cycles."""
+    if depth > 8:
+        return html, 0
+    count = 0
+
+    def repl(m: re.Match) -> str:
+        nonlocal count
+        rel = m.group("path")
+        body = _read_partial(rel, depth)
+        if body is None:
+            return m.group(0)
+        count += 1
+        marker_rel = rel.replace('"', "")
+        return (
+            f'<!--#include file="{rel}" -->\n'
+            f'<!--inc:start "{marker_rel}"-->\n{body}\n<!--inc:end "{marker_rel}"-->'
+        )
+
+    return _INCLUDE_RE.sub(repl, html), count
 
 
 def render_data_cms(html: str, data: dict) -> tuple[str, int]:
@@ -207,12 +261,6 @@ _ESC = _html.escape
 _MONTHS = ["", "January", "February", "March", "April", "May", "June",
            "July", "August", "September", "October", "November", "December"]
 
-# Social SVGs reused in the page header (same markup as the rest of the site).
-_SVG_IG = ('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1zm0-2.2c-3.3 0-3.7 0-5 .1-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4-.7.7-1.1 1.4-1.4 2.2-.3.8-.5 1.7-.6 3-.1 1.3-.1 1.7-.1 5s0 3.7.1 5c.1 1.3.3 2.2.6 3 .3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.3 3-.6.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-5s0-3.7-.1-5c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6-1.3-.1-1.7-.1-5-.1zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>')
-_SVG_FB = ('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8l-.5 2.9h-2.4v7A10 10 0 0022 12z"/></svg>')
-_SVG_YT = ('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 00.5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1.1 1.8 2.1 2.1 1.9.5 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>')
-
-
 def _human_date(iso: str) -> str:
     try:
         y, m, d = (int(x) for x in iso.split("-")[:3])
@@ -260,21 +308,13 @@ def _parse_post(md_path: Path) -> dict | None:
     }
 
 
-def _nav(prefix: str, active: str) -> str:
-    a = lambda name: ' class="active"' if name == active else ""
-    return (
-        '<nav class="main-nav"><ul>'
-        f'<li><a href="{prefix}podcasts/"{a("sermons")}>Sermons</a></li>'
-        f'<li><a href="{prefix}about/"{a("about")}>About</a></li>'
-        f'<li><a href="{prefix}blog/"{a("blog")}>Blog</a></li>'
-        '<li><a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener">Give</a></li>'
-        '</ul></nav>'
-    )
-
-
 def _page(prefix: str, *, title: str, desc: str, canonical: str, og_type: str,
-          active: str, body_html: str) -> str:
-    return f'''<!DOCTYPE html>
+          body_html: str) -> str:
+    # Header / footer are emitted as include directives so they share a single
+    # source of truth with every other page. render_includes() (called below)
+    # inlines them before the file is written. The shared header detects the
+    # active nav link at runtime from location.pathname.
+    raw = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -296,38 +336,20 @@ def _page(prefix: str, *, title: str, desc: str, canonical: str, og_type: str,
   <link rel="stylesheet" href="{prefix}css/blog.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <button class="menu-toggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
-      {_nav(prefix, active)}
-      <a href="{prefix}" class="logo"><img src="{prefix}site/images/logo.png" alt="The River Church"></a>
-      <div class="header-right">
-        <ul class="social-icons">
-          <li><a href="https://www.instagram.com/theriverag.church" target="_blank" rel="noopener" aria-label="Instagram">{_SVG_IG}</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=100090242570915" target="_blank" rel="noopener" aria-label="Facebook">{_SVG_FB}</a></li>
-          <li><a href="https://www.youtube.com/@theriverag.church" target="_blank" rel="noopener" aria-label="YouTube">{_SVG_YT}</a></li>
-        </ul>
-        <a href="https://theriveragchurch.churchcenter.com/people/forms/559632" target="_blank" rel="noopener" class="header-cta header-cta-desktop">Get Connected</a>
-      </div>
-    </div>
-  </header>
+
+  <!--#include file="_includes/header.html" -->
+
 {body_html}
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col"><img src="{prefix}site/images/logo.png" alt="The River Church" class="footer-logo"><p>A place where you feel at home. A place where you can feel like family.</p></div>
-        <div class="footer-col"><h4>Visit Us</h4><p>Meeting in Northwest Family Church West<br>19587 W Riverview Dr<br>Post Falls, ID 83854</p></div>
-        <div class="footer-col"><h4>Contact</h4><p><a href="tel:+12083048536">(208) 304-8536</a><br><a href="mailto:steven@theriverag.church">steven@theriverag.church</a><br><a href="{prefix}privacy/">Privacy Policy</a> &middot; <a href="{prefix}terms/">Terms</a></p></div>
-        <div class="footer-col"><h4>Connect</h4><ul class="social-links"><li><a href="https://www.facebook.com/profile.php?id=100090242570915" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/theriverag.church" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.youtube.com/@theriverag.church" target="_blank" rel="noopener">YouTube</a></li></ul></div>
-      </div>
-      <div class="footer-bottom"><p>&copy; <span id="year">2026</span> The River Church. All rights reserved.</p></div>
-    </div>
-  </footer>
+
+  <!--#include file="_includes/footer.html" -->
+
   <script src="{prefix}js/main.js"></script>
   <script src="{prefix}js/dynamic.js"></script>
 </body>
 </html>
 '''
+    expanded, _ = render_includes(raw)
+    return expanded
 
 
 def _render_post_page(p: dict) -> str:
@@ -350,7 +372,7 @@ def _render_post_page(p: dict) -> str:
   </main>'''
     desc = p["summary"] or f'{p["title"]} — sermon recap from The River Church, Post Falls, Idaho.'
     return _page(prefix, title=f'{p["title"]} — The River Church', desc=desc,
-                 canonical=f'blog/{p["slug"]}/', og_type="article", active="blog",
+                 canonical=f'blog/{p["slug"]}/', og_type="article",
                  body_html=body)
 
 
@@ -378,7 +400,7 @@ def _render_blog_index(posts: list[dict]) -> str:
   </main>'''
     return _page(prefix, title="Sermon Notes — The River Church",
                  desc="Weekly sermon recaps from The River Church in Post Falls, Idaho — read the message and watch it here.",
-                 canonical="blog/", og_type="website", active="blog", body_html=body)
+                 canonical="blog/", og_type="website", body_html=body)
 
 
 def build_blog() -> int:
@@ -421,17 +443,19 @@ def main() -> int:
         if not target.exists():
             continue
         original = target.read_text(encoding="utf-8")
-        # Expand list templates FIRST — they create the per-item DOM that
+        # Inline partials FIRST so the rest of the passes see the full HTML.
+        rendered, n_inc = render_includes(original)
+        # Then expand list templates — they create the per-item DOM that
         # data-cms substitution then fills in.
-        rendered, n_list = render_lists(original, data)
+        rendered, n_list = render_lists(rendered, data)
         rendered, n_placeholder = render_placeholders(rendered, data)
         rendered, n_cms = render_data_cms(rendered, data)
         rendered, n_img = render_data_cms_image(rendered, data)
         if rendered != original:
             target.write_text(rendered, encoding="utf-8")
             print(f"  {target.relative_to(ROOT)}: {n_cms} data-cms + {n_img} img + "
-                  f"{n_placeholder} placeholder + {n_list} list")
-            total += n_cms + n_placeholder + n_list + n_img
+                  f"{n_placeholder} placeholder + {n_list} list + {n_inc} include")
+            total += n_cms + n_placeholder + n_list + n_img + n_inc
         else:
             print(f"  {target.relative_to(ROOT)}: no changes")
     print(f"Total: {total} substitution(s)")
