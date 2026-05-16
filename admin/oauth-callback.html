@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The River Church — Signing you in…</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { margin: 0; padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .ok { color: #486; }
+    .err { color: #a33; }
+    code { background: #f3f0e6; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <p id="msg">Finishing sign-in…</p>
+  <script>
+    // Same-origin handoff page for the Decap OAuth popup. The Cloudflare
+    // Worker redirects the popup here after exchanging the GitHub code for
+    // a token — with the token in the URL fragment so it never hits the
+    // server. We then postMessage it back to window.opener (the main Decap
+    // window, same origin as us — works reliably even after the cross-origin
+    // detour through github.com).
+    (function () {
+      var msgEl = document.getElementById('msg');
+      function fail(text) {
+        msgEl.className = 'err';
+        msgEl.textContent = text;
+      }
+
+      var hash = (window.location.hash || '').replace(/^#/, '');
+      var params = new URLSearchParams(hash);
+      var token = params.get('access_token');
+      var error = params.get('error');
+
+      if (error) {
+        fail('OAuth error: ' + error);
+        return;
+      }
+      if (!token) {
+        fail('No token in URL fragment. Try signing in again from /admin/.');
+        return;
+      }
+
+      var msg = 'authorization:github:success:' + JSON.stringify({
+        token: token,
+        provider: 'github'
+      });
+
+      function send() {
+        if (window.opener && !window.opener.closed) {
+          // Decap is same-origin with us (both on theriverag.church) so the
+          // restrictive targetOrigin works and is safer than "*".
+          window.opener.postMessage(msg, window.location.origin);
+        }
+      }
+
+      // Decap polls the popup with "authorizing:github" until it gets a
+      // success message — listen and respond.
+      window.addEventListener('message', function (e) {
+        if (typeof e.data === 'string' && e.data.indexOf('authorizing:github') === 0) {
+          send();
+        }
+      });
+      // Also send proactively in case Decap's listener was ready before us.
+      send();
+
+      msgEl.className = 'ok';
+      msgEl.textContent = 'Signed in! This window will close automatically.';
+      setTimeout(function () { window.close(); }, 2000);
+    })();
+  </script>
+</body>
+</html>

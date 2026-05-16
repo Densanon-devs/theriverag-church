@@ -89,25 +89,22 @@ export default {
         );
       }
 
-      // The exact message format Decap CMS expects. Sent both reactively
-      // (in response to "authorizing:github" from the opener) and
-      // proactively (on load) so Decap always picks it up.
-      const payload = JSON.stringify({ token, provider: "github" });
-      const messageJs = JSON.stringify(`authorization:github:success:${payload}`);
+      // Hand off to a same-origin page on theriverag.church for the
+      // postMessage step. Crossing back through workers.dev → site for the
+      // postMessage works around Chrome severing window.opener after the
+      // cross-origin hop to github.com. The token rides along in the URL
+      // fragment (not the query) so it never hits any server log.
+      const callbackUrl =
+        "https://theriverag.church/admin/oauth-callback.html" +
+        "#access_token=" + encodeURIComponent(token) +
+        "&token_type=bearer";
 
+      // Use HTML/JS replace rather than a 302 — some browsers strip URL
+      // fragments from Location headers, and replace() doesn't leave a
+      // history entry the user can back-button into.
       return html(
-        `<p>Signed in! This window should close automatically.</p>
-<script>
-(function () {
-  var msg = ${messageJs};
-  function send() { if (window.opener) window.opener.postMessage(msg, "*"); }
-  window.addEventListener("message", function (e) {
-    if (typeof e.data === "string" && e.data.indexOf("authorizing:github") === 0) send();
-  });
-  send();
-  setTimeout(function () { window.close(); }, 2500);
-})();
-</script>`,
+        `<p>Finishing sign-in…</p>
+<script>window.location.replace(${JSON.stringify(callbackUrl)});</script>`,
         200,
         { "Set-Cookie": "oauth_state=; Path=/; Max-Age=0" }
       );
