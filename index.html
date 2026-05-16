@@ -132,49 +132,16 @@
         </div>
 
         <div class="accordion-list" data-cms-list="services.cards">
-          <details class="accordion-card" open data-cms-item="services.cards.0">
+          <template data-cms-item-template="services.cards"><details class="accordion-card" data-cms-item="services.cards.{{cms-index}}">
             <summary>
-              <h3 data-cms="services.cards.0.heading">Sunday Services 9:30 & 11am</h3>
+              <h3 data-cms="services.cards.{{cms-index}}.heading">Heading</h3>
               <span class="accordion-chev" aria-hidden="true"></span>
             </summary>
             <div class="accordion-body">
-              <p data-cms="services.cards.0.description">Join us for worship! Two identical services every Sunday morning — come to whichever fits your schedule.</p>
-              <span class="when" data-cms="services.cards.0.when">Sundays @ 9:30 & 11:00 AM</span>
+              <p data-cms="services.cards.{{cms-index}}.description">Description</p>
+              <span class="when" data-cms="services.cards.{{cms-index}}.when">When</span>
             </div>
-          </details>
-
-          <details class="accordion-card" data-cms-item="services.cards.1">
-            <summary>
-              <h3 data-cms="services.cards.1.heading">Young Adults</h3>
-              <span class="accordion-chev" aria-hidden="true"></span>
-            </summary>
-            <div class="accordion-body">
-              <p data-cms="services.cards.1.description">A weekly gathering for young adults at the church — currently studying through 1 Peter.</p>
-              <span class="when" data-cms="services.cards.1.when">Mondays @ 6:30 PM</span>
-            </div>
-          </details>
-
-          <details class="accordion-card" data-cms-item="services.cards.2">
-            <summary>
-              <h3 data-cms="services.cards.2.heading">River Youth</h3>
-              <span class="accordion-chev" aria-hidden="true"></span>
-            </summary>
-            <div class="accordion-body">
-              <p data-cms="services.cards.2.description">Wednesday night youth group for middle and high schoolers — a time of worship, teaching, and fellowship at the church.</p>
-              <span class="when" data-cms="services.cards.2.when">Wednesdays @ 6:30 PM</span>
-            </div>
-          </details>
-
-          <details class="accordion-card" data-cms-item="services.cards.3">
-            <summary>
-              <h3 data-cms="services.cards.3.heading">River Kids</h3>
-              <span class="accordion-chev" aria-hidden="true"></span>
-            </summary>
-            <div class="accordion-body">
-              <p data-cms="services.cards.3.description">A safe, fun place where your kids can grow, learn, and make friends. River Kids meets during both Sunday services.</p>
-              <span class="when" data-cms="services.cards.3.when">Sundays @ 9:30 & 11:00 AM</span>
-            </div>
-          </details>
+          </details></template>
         </div>
       </div>
 

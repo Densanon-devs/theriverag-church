@@ -115,6 +115,46 @@ def render_data_cms(html: str, data: dict) -> tuple[str, int]:
     return _DATA_CMS_RE.sub(repl, html), count
 
 
+# List-template expansion. Source HTML has a <template> tag with
+# data-cms-item-template="path" — browsers naturally ignore <template>
+# contents, so the unrendered file is visually clean. Build time, we
+# repeat the template contents once per YAML entry (with {{cms-index}}
+# substituted) and wrap the result in cms:rendered marker comments so
+# subsequent builds find and replace the previous render idempotently.
+
+_TEMPLATE_WITH_RENDERED_RE = re.compile(
+    r'(?P<template><template\b[^>]*\bdata-cms-item-template="(?P<path>[A-Za-z0-9_.]+)"[^>]*>'
+    r'(?P<tmpl>.*?)</template>)'
+    r'(?P<existing>\s*<!--\s*cms:rendered\s*-->.*?<!--\s*/cms:rendered\s*-->)?',
+    re.DOTALL,
+)
+
+
+def render_lists(html: str, data: dict) -> tuple[str, int]:
+    """Expand <template data-cms-item-template="path"> blocks: repeat the
+    template content once per YAML entry, substituting {{cms-index}}, then
+    wrap the rendered items in <!-- cms:rendered -->...<!-- /cms:rendered -->
+    so the next build can find + replace the block idempotently."""
+    count = 0
+
+    def repl(m: re.Match) -> str:
+        nonlocal count
+        path = m.group("path")
+        template_block = m.group("template")
+        template_body = m.group("tmpl")
+        the_list = resolve(path, data)
+        if not isinstance(the_list, list):
+            return m.group(0)
+        rendered = "".join(
+            template_body.replace("{{cms-index}}", str(i))
+            for i in range(len(the_list))
+        )
+        count += 1
+        return template_block + "<!-- cms:rendered -->" + rendered + "<!-- /cms:rendered -->"
+
+    return _TEMPLATE_WITH_RENDERED_RE.sub(repl, html), count
+
+
 def render_placeholders(html: str, data: dict) -> tuple[str, int]:
     """Replace {{path}} placeholders with resolved values (one-shot)."""
     pattern = re.compile(r"\{\{\s*([a-zA-Z0-9_.]+)\s*\}\}")
@@ -351,12 +391,15 @@ def main() -> int:
         if not target.exists():
             continue
         original = target.read_text(encoding="utf-8")
-        rendered, n_placeholder = render_placeholders(original, data)
+        # Expand list templates FIRST — they create the per-item DOM that
+        # data-cms substitution then fills in.
+        rendered, n_list = render_lists(original, data)
+        rendered, n_placeholder = render_placeholders(rendered, data)
         rendered, n_cms = render_data_cms(rendered, data)
         if rendered != original:
             target.write_text(rendered, encoding="utf-8")
-            print(f"  {target.relative_to(ROOT)}: {n_cms} data-cms + {n_placeholder} placeholder")
-            total += n_cms + n_placeholder
+            print(f"  {target.relative_to(ROOT)}: {n_cms} data-cms + {n_placeholder} placeholder + {n_list} list")
+            total += n_cms + n_placeholder + n_list
         else:
             print(f"  {target.relative_to(ROOT)}: no changes")
     print(f"Total: {total} substitution(s)")
