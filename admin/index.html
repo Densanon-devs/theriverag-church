@@ -15,14 +15,69 @@
   <div id="nc-root"></div>
   <script>
     // ── Diagnostic catch-all ──────────────────────────────────────────
-    // Logs EVERY postMessage that reaches this window. Tells us whether
-    // the popup's messages are even arriving, regardless of whether
-    // Decap's own listener processes them. Remove once OAuth is stable.
     window.addEventListener('message', function (e) {
       var preview = typeof e.data === 'string'
         ? e.data.slice(0, 100)
         : '<' + (typeof e.data) + '>';
       console.log('[MSG]', e.origin, '/', preview, 'source=' + (e.source === window ? 'self' : e.source ? 'other-window' : 'null'));
+    });
+
+    // ── Direct hydration bypass ───────────────────────────────────────
+    // Decap's own auth listener is receiving the postMessage but not
+    // dispatching the login state for reasons we couldn't pin down. So
+    // we grab the token ourselves, fetch the GitHub user, drop it into
+    // every localStorage key Decap might use, and reload — Decap should
+    // rehydrate to a logged-in state on next boot.
+    var hydrated = false;
+    window.addEventListener('message', async function (e) {
+      if (hydrated) return;
+      if (typeof e.data !== 'string') return;
+      var m = e.data.match(/^authorization:github:success:(.+)$/);
+      if (!m) return;
+      hydrated = true;  // guard against the popup's 3 retries triggering 3 reloads
+
+      console.log('[hydrate] caught auth message, bypassing Decap auth flow');
+      var payload;
+      try { payload = JSON.parse(m[1]); }
+      catch (err) { console.error('[hydrate] bad JSON:', err); return; }
+      if (!payload.token) { console.error('[hydrate] no token in payload'); return; }
+
+      try {
+        var r = await fetch('https://api.github.com/user', {
+          headers: { Authorization: 'token ' + payload.token, 'Accept': 'application/vnd.github+json' }
+        });
+        console.log('[hydrate] GitHub /user status:', r.status);
+        if (!r.ok) {
+          var body = await r.text();
+          console.error('[hydrate] /user failed body:', body.slice(0, 200));
+          alert('GitHub user fetch failed (' + r.status + '). Check console.');
+          return;
+        }
+        var ghUser = await r.json();
+        console.log('[hydrate] got user:', ghUser.login);
+
+        var user = {
+          backendName: 'github',
+          token: payload.token,
+          login: ghUser.login,
+          name: ghUser.name || ghUser.login,
+          email: ghUser.email || '',
+          avatar_url: ghUser.avatar_url || '',
+          useOpenAuthoring: false,
+        };
+        var userJson = JSON.stringify(user);
+
+        // Try every key Decap / Netlify CMS have used historically.
+        var keys = ['decap-cms-user', 'netlify-cms-user', 'nf-cms-user'];
+        for (var i = 0; i < keys.length; i++) {
+          try { localStorage.setItem(keys[i], userJson); } catch (_) {}
+        }
+        console.log('[hydrate] wrote user to', keys.join(', '), '— reloading in 500ms');
+        setTimeout(function () { window.location.reload(); }, 500);
+      } catch (err) {
+        console.error('[hydrate] failed:', err);
+        alert('Hydration failed — see console.');
+      }
     });
   </script>
 
