@@ -89,22 +89,43 @@ export default {
         );
       }
 
-      // Hand off to a same-origin page on theriverag.church for the
-      // postMessage step. Crossing back through workers.dev → site for the
-      // postMessage works around Chrome severing window.opener after the
-      // cross-origin hop to github.com. The token rides along in the URL
-      // fragment (not the query) so it never hits any server log.
-      const callbackUrl =
-        "https://theriverag.church/admin/oauth-callback.html" +
-        "#access_token=" + encodeURIComponent(token) +
-        "&token_type=bearer";
+      // Send the token back to Decap by postMessage. Critical: Decap's
+      // auth listener checks event.origin === base_url AND event.source ===
+      // the popup window. That means the message HAS to come from this
+      // workers.dev page directly — we can't redirect the popup to the site
+      // origin first. (Earlier attempt did exactly that and Decap silently
+      // dropped every message.) Cross-origin window.opener should survive
+      // in Chrome as long as we don't trip COOP — empirically it does.
+      const payload = JSON.stringify({ token, provider: "github" });
+      const messageJs = JSON.stringify(`authorization:github:success:${payload}`);
 
-      // Use HTML/JS replace rather than a 302 — some browsers strip URL
-      // fragments from Location headers, and replace() doesn't leave a
-      // history entry the user can back-button into.
       return html(
-        `<p>Finishing sign-in…</p>
-<script>window.location.replace(${JSON.stringify(callbackUrl)});</script>`,
+        `<p>Signed in! This window will close automatically.</p>
+<pre id="dbg" style="color:#666;font-size:0.8rem;"></pre>
+<script>
+(function () {
+  var msg = ${messageJs};
+  var dbg = document.getElementById('dbg');
+  function log(s) { dbg.textContent += s + '\\n'; try { console.log('[callback]', s); } catch (_) {} }
+  log('origin: ' + window.location.origin);
+  log('opener: ' + (window.opener ? 'present' : 'NULL'));
+  function send() {
+    if (window.opener && !window.opener.closed) {
+      try { window.opener.postMessage(msg, "*"); log('sent via opener (target *)'); } catch (e) { log('opener.postMessage threw: ' + e.message); }
+    }
+  }
+  // Decap polls us with "authorizing:github" — respond with the token.
+  window.addEventListener("message", function (e) {
+    if (typeof e.data === "string" && e.data.indexOf("authorizing:github") === 0) {
+      log('got authorizing handshake from ' + e.origin);
+      send();
+    }
+  });
+  // Also send proactively in case Decap's listener got ready before us.
+  send();
+  setTimeout(function () { window.close(); }, 4000);
+})();
+</script>`,
         200,
         { "Set-Cookie": "oauth_state=; Path=/; Max-Age=0" }
       );
