@@ -45,7 +45,7 @@ def render_hero(block: dict, idx: int, page: str) -> str:
     p = _path(page, idx, "heading")
     pt = _path(page, idx, "tagline")
     return (
-        f'<section class="hero hero-home wave-bottom" data-cms-block="{idx}" data-cms-block-type="hero">\n'
+        f'<section class="hero hero-home" data-cms-block="{idx}" data-cms-block-type="hero">\n'
         f'  <div class="container">\n'
         f'    <div class="hero-frame">\n'
         f'      <div class="hero-content">\n'
@@ -108,7 +108,7 @@ def render_service_times(block: dict, idx: int, page: str) -> str:
     p_cards = _path(page, idx, "cards")
 
     return (
-        f'<section class="service-block wave-top" aria-label="Service times" data-cms-block="{idx}" data-cms-block-type="service_times">\n'
+        f'<section class="service-block" aria-label="Service times" data-cms-block="{idx}" data-cms-block-type="service_times">\n'
         f'  <div class="container">\n'
         f'    <div class="service-row">\n'
         f'      <div class="live-card">\n'
@@ -138,7 +138,6 @@ def render_service_times(block: dict, idx: int, page: str) -> str:
 
 def render_gallery_strip(block: dict, idx: int, page: str) -> str:
     photos = block.get("photos", []) or []
-    extra_class = " wave-bottom" if block.get("wave_bottom") else ""
     p_photos = _path(page, idx, "photos")
     items = []
     for pi, photo in enumerate(photos):
@@ -150,7 +149,7 @@ def render_gallery_strip(block: dict, idx: int, page: str) -> str:
         )
     items_html = "\n".join(items)
     return (
-        f'<div class="gallery-strip{extra_class}" aria-label="Photo gallery" data-cms-block="{idx}" data-cms-block-type="gallery_strip" data-cms-list="{p_photos}">\n'
+        f'<div class="gallery-strip" aria-label="Photo gallery" data-cms-block="{idx}" data-cms-block-type="gallery_strip" data-cms-list="{p_photos}">\n'
         f'{items_html}\n'
         f'</div>'
     )
@@ -169,7 +168,7 @@ def render_invitation(block: dict, idx: int, page: str) -> str:
         )
     paras_html = "\n".join(paras)
     return (
-        f'<section class="section-river wave-top" data-cms-block="{idx}" data-cms-block-type="invitation">\n'
+        f'<section class="section-river" data-cms-block="{idx}" data-cms-block-type="invitation">\n'
         f'  <div class="container">\n'
         f'    <div class="invitation" data-cms-list="{p_list}">\n'
         f'      <h2 data-cms="{p_h}">{heading}</h2>\n'
@@ -220,7 +219,7 @@ def render_three_cards(block: dict, idx: int, page: str) -> str:
         )
     cards_html = "\n".join(cards_html_parts)
     return (
-        f'<section class="section section-dark wave-bottom" data-cms-block="{idx}" data-cms-block-type="three_cards">\n'
+        f'<section class="section section-dark" data-cms-block="{idx}" data-cms-block-type="three_cards">\n'
         f'  <div class="container">\n'
         f'    <div class="three-card-grid" data-cms-list="{p_list}">\n'
         f'{cards_html}\n'
@@ -236,7 +235,7 @@ def render_calendar(block: dict, idx: int, page: str) -> str:
     calendar_url = _ESC(str(block.get("calendar_url", "https://theriveragchurch.churchcenter.com/calendar")))
     p_h = _path(page, idx, "heading")
     return (
-        f'<section class="section-river wave-top" data-cms-block="{idx}" data-cms-block-type="calendar">\n'
+        f'<section class="section-river" data-cms-block="{idx}" data-cms-block-type="calendar">\n'
         f'  <div class="container">\n'
         f'    <div class="calendar-callout">\n'
         f'      <a href="{calendar_url}" target="_blank" rel="noopener" style="text-decoration:none;">\n'
@@ -323,15 +322,13 @@ def render_ministry_card(block: dict, idx: int, page: str) -> str:
     description = _ESC(str(block.get("description", "")))
     when = _ESC(str(block.get("when", "")))
     reverse = bool(block.get("reverse", False))
-    wave_bottom = bool(block.get("wave_bottom", False))
-    extra_class = " wave-bottom" if wave_bottom else ""
     p_h = _path(page, idx, "heading")
     p_img = _path(page, idx, "image")
     p_desc = _path(page, idx, "description")
     p_when = _path(page, idx, "when")
     row_class = "about-row about-row-reverse" if reverse else "about-row"
     return (
-        f'<section class="about-section section-dark{extra_class}" data-cms-block="{idx}" data-cms-block-type="ministry_card">\n'
+        f'<section class="about-section section-dark" data-cms-block="{idx}" data-cms-block-type="ministry_card">\n'
         f'  <div class="container">\n'
         f'    <h1 data-cms="{p_h}">{heading}</h1>\n'
         f'    <div class="{row_class}">\n'
@@ -373,7 +370,7 @@ def render_beliefs_grid(block: dict, idx: int, page: str) -> str:
         )
     cards_html = "\n".join(cards)
     return (
-        f'<section class="section-river wave-top" data-cms-block="{idx}" data-cms-block-type="beliefs_grid">\n'
+        f'<section class="section-river" data-cms-block="{idx}" data-cms-block-type="beliefs_grid">\n'
         f'  <div class="container">\n'
         f'    <div class="section-header">\n'
         f'      <h1 style="font-size:clamp(2rem,3.5vw,2.8rem);text-align:center;margin-bottom:0.5rem;" data-cms="{p_h}">{heading}</h1>\n'
@@ -577,7 +574,6 @@ BLOCK_TYPES: dict[str, dict[str, Any]] = {
         "label": "Gallery strip (row of photos)",
         "default": {
             "photos": [{"src": "/site/images/gallery-01.jpg"}],
-            "wave_bottom": False,
         },
     },
     "invitation": {
@@ -637,7 +633,6 @@ BLOCK_TYPES: dict[str, dict[str, Any]] = {
             "description": "Short description.",
             "when": "When it meets",
             "reverse": False,
-            "wave_bottom": False,
         },
     },
     "beliefs_grid": {
@@ -718,13 +713,53 @@ def render_block(block: dict, idx: int, page: str, data: dict | None = None) -> 
     return _call_renderer(spec["renderer"], block, idx, page, data or {})
 
 
+import re as _re_for_waves
+
+# Regex for the first class="..." in a rendered block. Used to inject
+# wave-top / wave-bottom based on adjacency to wave_divider blocks.
+_FIRST_CLASS_ATTR_RE = _re_for_waves.compile(r'(<[a-zA-Z][a-zA-Z0-9]*\b[^>]*?\bclass=")([^"]*)(")')
+
+
+def _inject_wave_classes(html: str, wave_above: bool, wave_below: bool) -> str:
+    """Add wave-top / wave-bottom into the first class="..." of the block's
+    rendered HTML when its neighbor is a wave_divider. Idempotent — won't
+    double-add a class that's already present."""
+    if not (wave_above or wave_below):
+        return html
+    extras = []
+    if wave_above:
+        extras.append("wave-top")
+    if wave_below:
+        extras.append("wave-bottom")
+
+    def repl(m):
+        existing = m.group(2)
+        tokens = existing.split()
+        for c in extras:
+            if c not in tokens:
+                tokens.append(c)
+        return m.group(1) + " ".join(tokens) + m.group(3)
+
+    return _FIRST_CLASS_ATTR_RE.sub(repl, html, count=1)
+
+
 def render_page(page_name: str, data: dict) -> str:
     """Render the full blocks list for a page. Wraps the whole thing in a
     container marked data-cms-blocks-page so the editor can find it for
-    drag-reorder + +Add Section."""
+    drag-reorder + +Add Section. Wave classes on neighboring blocks are
+    computed from adjacency to wave_divider entries (move the divider
+    and the wavy edges follow it; remove it and they go flat)."""
     page_data = (data.get("pages") or {}).get(page_name) or {}
     blocks = page_data.get("blocks") or []
-    parts = [render_block(b, i, page_name, data) for i, b in enumerate(blocks)]
+    parts = []
+    for i, b in enumerate(blocks):
+        rendered = render_block(b, i, page_name, data)
+        if str(b.get("type", "")).strip() != "wave_divider":
+            prev_is_wave = i > 0 and str(blocks[i - 1].get("type", "")).strip() == "wave_divider"
+            next_is_wave = (i + 1 < len(blocks)
+                            and str(blocks[i + 1].get("type", "")).strip() == "wave_divider")
+            rendered = _inject_wave_classes(rendered, prev_is_wave, next_is_wave)
+        parts.append(rendered)
     body = "\n\n".join(parts)
     return (
         f'<div class="cms-blocks-page" data-cms-blocks-page="{_ESC(page_name)}">\n'

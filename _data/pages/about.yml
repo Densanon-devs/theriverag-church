@@ -24,7 +24,6 @@ blocks:
     image_alt: River Youth — Wednesdays at 6:30 PM
     description: "We believe in the importance of reaching the next generation for Christ and raising them up in the way they should go through fellowship and mentorship. At River Youth, we are doing exactly that every Wednesdays @ 6:30 pm. Join us for a time of learning, fun, and fellowship!"
     when: Wednesdays @ 6:30 PM
-    wave_bottom: true
 
   - type: wave_divider
 
