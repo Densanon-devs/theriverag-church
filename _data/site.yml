@@ -62,6 +62,10 @@ footer:
 podcasts_page:
   heading: Listen to Our Messages Below!
   subheading: Or Find us on Your Favorite Podcasting Platform!
+  spotify_label: Listen On Spotify
+  apple_label: Listen On Apple
+  youtube_label: Watch on YouTube
+  older_posts_label: Older Posts &rarr;
 
 calendar_heading: View Our Full Calendar!
 tagline_heading: You Belong Here!

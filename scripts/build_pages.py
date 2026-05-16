@@ -169,6 +169,37 @@ def render_data_cms(html: str, data: dict) -> tuple[str, int]:
     return _DATA_CMS_RE.sub(repl, html), count
 
 
+# data-cms-html — for elements whose content includes inline HTML (e.g., a
+# paragraph with <a> links inside). Same matching shape as data-cms, but
+# content uses .*? DOTALL so nested tags are allowed. Pair with non-self-
+# nesting tags only (p, li, h1–h4, span) — wrapping a <div data-cms-html>
+# around other <div>s will eat the inner divs via greedy backtracking.
+_DATA_CMS_HTML_RE = re.compile(
+    r'(?P<open><(?P<tag>p|li|h1|h2|h3|h4|span)\b[^>]*?\bdata-cms-html="(?P<path>[^"]+)"[^>]*>)'
+    r'(?P<content>.*?)'
+    r'(?P<close></(?P=tag)\s*>)',
+    re.DOTALL,
+)
+
+
+def render_data_cms_html(html: str, data: dict) -> tuple[str, int]:
+    """Replace inner HTML of elements carrying data-cms-html="path"."""
+    count = 0
+
+    def repl(m: re.Match) -> str:
+        nonlocal count
+        val = resolve(m.group("path"), data)
+        if val is None:
+            return m.group(0)
+        new = str(val)
+        if new.strip() == m.group("content").strip():
+            return m.group(0)
+        count += 1
+        return m.group("open") + new + m.group("close")
+
+    return _DATA_CMS_HTML_RE.sub(repl, html), count
+
+
 # List-template expansion. Source HTML has a <template> tag with
 # data-cms-item-template="path" — browsers naturally ignore <template>
 # contents, so the unrendered file is visually clean. Build time, we
@@ -450,12 +481,13 @@ def main() -> int:
         rendered, n_list = render_lists(rendered, data)
         rendered, n_placeholder = render_placeholders(rendered, data)
         rendered, n_cms = render_data_cms(rendered, data)
+        rendered, n_html = render_data_cms_html(rendered, data)
         rendered, n_img = render_data_cms_image(rendered, data)
         if rendered != original:
             target.write_text(rendered, encoding="utf-8")
-            print(f"  {target.relative_to(ROOT)}: {n_cms} data-cms + {n_img} img + "
-                  f"{n_placeholder} placeholder + {n_list} list + {n_inc} include")
-            total += n_cms + n_placeholder + n_list + n_img + n_inc
+            print(f"  {target.relative_to(ROOT)}: {n_cms} data-cms + {n_html} html + "
+                  f"{n_img} img + {n_placeholder} placeholder + {n_list} list + {n_inc} include")
+            total += n_cms + n_html + n_placeholder + n_list + n_img + n_inc
         else:
             print(f"  {target.relative_to(ROOT)}: no changes")
     print(f"Total: {total} substitution(s)")

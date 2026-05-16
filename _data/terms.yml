@@ -1,0 +1,75 @@
+# Terms of Service page content. Each section's heading, body, and any
+# bullet items are individually editable through the admin visual editor.
+heading: Terms of Service
+effective_date_label: "Effective date: May 7, 2026"
+intro_html: |
+  Welcome to The River Church. These terms govern your use of <a href="https://theriverag.church">theriverag.church</a> and the digital channels we operate (our Facebook Page, Instagram account, YouTube channel, podcast feed, and email list). By using the site or these channels, you agree to these terms. If you don't agree, please don't use the site.
+
+about_us:
+  heading: About us
+  body_html: |
+    The River Church is an Assemblies of God congregation located at 19587 W Riverview Dr, Post Falls, Idaho 83854. Questions about these terms can be sent to <a href="mailto:steven@theriverag.church">steven@theriverag.church</a> or <a href="tel:+12083048536">(208) 304-8536</a>.
+
+what_we_offer:
+  heading: What we offer
+  body: This website provides information about who we are, when we meet, what we believe, and how to get connected. It also makes our weekly sermons available for replay and links to forms and giving hosted by Planning Center / Church Center. We do not charge for access to anything on the site, and there is no account or login required.
+
+acceptable_use:
+  heading: Acceptable use
+  intro: "You agree to use the site lawfully and respectfully. Specifically, please don't:"
+  items:
+    - Attempt to disrupt the site, probe it for vulnerabilities, or interfere with its availability.
+    - Use automated tools to scrape content beyond ordinary browsing or feed-reading.
+    - Misrepresent yourself, impersonate a member of our staff, or attempt to gain unauthorized access to any account or system we operate.
+    - Submit content (through forms, comments, or other means) that is unlawful, harassing, defamatory, or that infringes someone else's rights.
+
+content_you_submit:
+  heading: Content you submit
+  body_html: |
+    If you submit information through one of our forms (Get Connected, Ministry Communications Request, online giving) or send us an email, that content is processed under our <a href="../privacy/">Privacy Policy</a>. By submitting prayer requests, questions, or testimony to us, you give us permission to read it, route it to the appropriate ministry team, and respond to you. We will not publish your submission publicly without your explicit permission.
+
+our_content:
+  heading: Our content
+  body_html: |
+    The text, photos, sermon recordings, graphics, podcasts, and other original content on this site and on our digital channels are produced by The River Church and are owned by the church (or by people who have given us permission to publish their work). Personal, non-commercial sharing — for example, sharing a sermon link with a friend, embedding a sermon clip in a small group setting, or quoting a sermon in your own writing with attribution — is welcome and encouraged. Commercial republication, modification, or use of our materials requires our written permission. Email <a href="mailto:steven@theriverag.church">steven@theriverag.church</a> if you'd like to ask.
+  body_2: Where we quote, summarize, or build on material from the broader Christian tradition (Scripture, hymns, public-domain liturgy), those works belong to their respective sources. Where a third-party translation, song, or work is used by license, the underlying license still applies.
+
+third_party_services:
+  heading: Third-party services
+  body: The site embeds and links to third-party services we don't operate, including (but not limited to) Planning Center, YouTube, Spotify, Apple Podcasts, Meta (Facebook and Instagram), Google Workspace, and GitHub Pages. Your interaction with those services is governed by their own terms and privacy policies. We're not responsible for the content, availability, or behavior of services we don't operate.
+
+donations:
+  heading: Donations and giving
+  body: Online giving on our site links out to our giving platform on Church Center, operated by Planning Center. Donations processed through Church Center are governed by Planning Center's terms. Receipts and tax acknowledgments come from us as the recipient organization.
+
+disclaimers:
+  heading: Disclaimers
+  body: 'The site is provided "as is." We do our best to keep information accurate and current — service times, addresses, and beliefs reflect our church''s actual practice — but we don''t promise the site will be free of every error or interruption. Sermons, devotional content, and other ministry materials are pastoral teaching offered in good faith; they aren''t legal, medical, financial, or counseling advice. If you need professional advice, please see a qualified professional.'
+
+limitation:
+  heading: Limitation of liability
+  body: To the fullest extent allowed by law, The River Church and its leaders, staff, volunteers, and contractors won't be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the site, even if we knew such damages were possible. Where liability cannot be excluded by law, our total liability to you for any claim arising from your use of the site is limited to one hundred dollars ($100).
+
+indemnification:
+  heading: Indemnification
+  body: You agree to indemnify and hold harmless The River Church from any claim arising out of your misuse of the site, your violation of these terms, or your violation of any applicable law.
+
+children:
+  heading: Children
+  body: The site is not directed at children under 13. Children should ask a parent or guardian before submitting any information through the site or its forms.
+
+changes:
+  heading: Changes to these terms
+  body: We may update these terms from time to time. Material changes will be posted on this page for at least 30 days before they take effect. Continued use of the site after a change means you accept the updated terms.
+
+governing_law:
+  heading: Governing law
+  body: These terms are governed by the laws of the State of Idaho, without regard to conflict-of-laws rules. Any disputes will be brought in the state or federal courts located in Kootenai County, Idaho.
+
+contact:
+  heading: Contact
+  body_html: |
+    The River Church<br>
+    19587 W Riverview Dr<br>
+    Post Falls, ID 83854<br>
+    <a href="mailto:steven@theriverag.church">steven@theriverag.church</a> &middot; <a href="tel:+12083048536">(208) 304-8536</a>

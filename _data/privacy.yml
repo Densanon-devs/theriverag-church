@@ -1,0 +1,86 @@
+# Privacy Policy page content. Each section's heading + body + bullet
+# items are individually editable through the admin visual editor.
+# data-cms-html fields preserve inline links / <strong> tags; the build
+# pipeline substitutes the values into privacy/index.html on each build.
+heading: Privacy Policy
+effective_date_label: "Effective date: May 7, 2026"
+intro_html: |
+  The River Church ("we," "us," "our") cares about the privacy of the people who visit our website and engage with our digital ministry. This policy explains what information we collect, how we use it, who we share it with, and the choices you have. If you have questions, email <a href="mailto:steven@theriverag.church">steven@theriverag.church</a> or call <a href="tel:+12083048536">(208) 304-8536</a>.
+
+who_we_are:
+  heading: Who we are
+  body_html: |
+    The River Church is an Assemblies of God congregation located at 19587 W Riverview Dr, Post Falls, Idaho 83854. This policy covers <a href="https://theriverag.church">theriverag.church</a> and the digital communications channels we operate (our Facebook Page, Instagram account, YouTube channel, podcast feed, and email list).
+
+information_we_collect:
+  heading: Information we collect
+  intro: "Our website itself is a static site that does not require an account, set first-party cookies, or run analytics. The following limited categories of information may be collected:"
+  items:
+    - "<strong>Information you give us directly</strong> through forms hosted by Planning Center / Church Center (Get Connected, Ministry Communications Request, online giving). These submissions are processed by Planning Center under their own privacy policy. We use the contact information you provide to respond to you and connect you with the appropriate ministry team."
+    - "<strong>Server access logs</strong> kept by our hosting provider (GitHub Pages) for security and traffic analysis. These typically include IP address, request timestamp, the page requested, and basic browser metadata. We do not link these logs to individuals."
+    - "<strong>Embedded third-party content.</strong> Our pages embed video and audio from YouTube and Spotify, a calendar widget from Planning Center, and fonts from Google Fonts. When your browser loads these, those providers may receive your IP address and standard browser data under their own privacy policies."
+    - "<strong>Email correspondence.</strong> If you email us, we keep that correspondence in our church inbox in order to respond and provide ongoing pastoral care."
+
+how_we_use:
+  heading: How we use information
+  intro: "We use what you provide to:"
+  items:
+    - Respond to your questions or prayer requests
+    - Help you get connected to a small group, ministry team, or next step
+    - Send the weekly recap email or other ministry updates if you have asked to receive them
+    - Process online giving and provide receipts
+    - Maintain the security and integrity of our website and digital channels
+
+third_party_apis:
+  heading: How we use third-party APIs
+  intro: "We operate a private internal automation that posts our weekly sermon content to channels we own — our Facebook Page, our Instagram Business account, our YouTube channel, and our own website. This automation:"
+  items:
+    - "Reads from public sources (our own YouTube channel's RSS feed)"
+    - Generates derivative content (titles, captions, blog posts, devotional notes) using a language model
+    - Publishes that content to our own accounts using each platform's official API
+    - "Does <strong>not</strong> collect or process information about people who view our posts beyond what those platforms themselves report to us in standard public engagement metrics (likes, follower counts)"
+  outro: This automation does not access private user data on Facebook, Instagram, YouTube, or any other platform. It only writes to accounts the church owns and operates.
+
+who_we_share:
+  heading: Who we share information with
+  intro: "We do not sell, rent, or trade personal information to anyone. We share limited information with:"
+  items:
+    - "<strong>Planning Center / Church Center</strong> — our church management and giving platform — for forms, calendar events, and donations you submit through their embeds."
+    - "<strong>Google Workspace</strong> — for our church email accounts and outbound email delivery."
+    - "<strong>GitHub Pages</strong> — our website host — receives standard web traffic data when you visit pages."
+    - "<strong>Meta (Facebook and Instagram), YouTube, Spotify</strong> — when content is embedded on our pages or when you choose to follow us on those platforms."
+    - "<strong>Law enforcement</strong> — only when required by valid legal process or to protect someone from imminent harm."
+
+children:
+  heading: Children
+  body_html: |
+    Our website is not directed at children under 13. We do not knowingly collect personal information from children under 13 through the website. Parents who believe a child has provided personal information should contact us at <a href="mailto:steven@theriverag.church">steven@theriverag.church</a> and we will delete it.
+
+your_choices:
+  heading: Your choices
+  items:
+    - You can ask us what information we have about you and request that we correct or delete it.
+    - 'You can unsubscribe from any email we send by replying with "unsubscribe" or clicking the unsubscribe link in the footer.'
+    - You can adjust the privacy controls on Facebook, Instagram, YouTube, Spotify, and Planning Center under each platform's own settings.
+  outro_html: |
+    To exercise any of these rights, email <a href="mailto:steven@theriverag.church">steven@theriverag.church</a>. We will respond within 30 days.
+
+data_retention:
+  heading: Data retention
+  body: We keep contact information and pastoral correspondence for as long as we have an active relationship with you, plus a reasonable period to respond to follow-ups. Web server access logs are kept for the rolling window our host retains them. Giving records are kept for the period required by tax and accounting rules.
+
+security:
+  heading: Security
+  body: We use reasonable safeguards — including 2-factor authentication on church accounts, encrypted in transit, and limited admin access — to protect your information. No system is perfectly secure, however. If we ever discover a breach affecting your information, we will notify you and any required authorities promptly.
+
+changes:
+  heading: Changes to this policy
+  body: 'We may update this policy as our practices evolve. The "Effective date" at the top will reflect the most recent change. Material changes will be noted on this page for at least 30 days.'
+
+contact:
+  heading: Contact
+  body_html: |
+    The River Church<br>
+    19587 W Riverview Dr<br>
+    Post Falls, ID 83854<br>
+    <a href="mailto:steven@theriverag.church">steven@theriverag.church</a> &middot; <a href="tel:+12083048536">(208) 304-8536</a>
