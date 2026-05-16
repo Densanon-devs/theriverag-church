@@ -8,23 +8,32 @@
     body { margin: 0; padding: 2rem; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
     .ok { color: #486; }
     .err { color: #a33; }
-    code { background: #f3f0e6; padding: 2px 6px; border-radius: 3px; }
+    .dim { color: #888; font-size: 0.85rem; }
+    pre { background: #f3f0e6; padding: 8px 12px; border-radius: 4px; overflow: auto; max-width: 700px; }
   </style>
 </head>
 <body>
   <p id="msg">Finishing sign-in…</p>
+  <pre id="debug" class="dim"></pre>
   <script>
-    // Same-origin handoff page for the Decap OAuth popup. The Cloudflare
-    // Worker redirects the popup here after exchanging the GitHub code for
-    // a token — with the token in the URL fragment so it never hits the
-    // server. We then postMessage it back to window.opener (the main Decap
-    // window, same origin as us — works reliably even after the cross-origin
-    // detour through github.com).
+    // Same-origin handoff for the Decap OAuth popup. The Worker redirected
+    // us here with the token in the URL fragment.
+    //
+    // Why this isn't trivial: Chrome's origin-keyed agent clusters mean
+    // window.opener gets nulled after the cross-origin hop to github.com,
+    // even though we're now back on theriverag.church (same origin as the
+    // Decap main window). So window.opener.postMessage doesn't work.
+    //
+    // Workaround: BroadcastChannel — a same-origin pub/sub channel that
+    // doesn't depend on opener references. The Decap main window has a
+    // small bridge script that re-posts received messages to itself, so
+    // Decap's built-in message listener picks them up normally.
     (function () {
       var msgEl = document.getElementById('msg');
-      function fail(text) {
-        msgEl.className = 'err';
-        msgEl.textContent = text;
+      var dbgEl = document.getElementById('debug');
+      function log(line) {
+        dbgEl.textContent += line + '\n';
+        try { console.log('[oauth-callback]', line); } catch (_) {}
       }
 
       var hash = (window.location.hash || '').replace(/^#/, '');
@@ -32,12 +41,17 @@
       var token = params.get('access_token');
       var error = params.get('error');
 
+      log('hash params: ' + (hash ? hash.replace(/access_token=[^&]+/, 'access_token=<redacted>') : '(empty)'));
+      log('window.opener: ' + (window.opener ? 'present' : 'null (severed by browser — that\'s OK)'));
+
       if (error) {
-        fail('OAuth error: ' + error);
+        msgEl.className = 'err';
+        msgEl.textContent = 'OAuth error: ' + error;
         return;
       }
       if (!token) {
-        fail('No token in URL fragment. Try signing in again from /admin/.');
+        msgEl.className = 'err';
+        msgEl.textContent = 'No access_token in URL fragment. Try signing in again from /admin/.';
         return;
       }
 
@@ -46,27 +60,47 @@
         provider: 'github'
       });
 
-      function send() {
-        if (window.opener && !window.opener.closed) {
-          // Decap is same-origin with us (both on theriverag.church) so the
-          // restrictive targetOrigin works and is safer than "*".
-          window.opener.postMessage(msg, window.location.origin);
-        }
+      var sentVia = [];
+
+      // Primary channel: BroadcastChannel — works same-origin regardless
+      // of opener state. The bridge in admin/index.html forwards to Decap.
+      try {
+        var bc = new BroadcastChannel('decap-oauth');
+        bc.postMessage(msg);
+        sentVia.push('BroadcastChannel');
+      } catch (e) {
+        log('BroadcastChannel failed: ' + (e && e.message));
       }
 
-      // Decap polls the popup with "authorizing:github" until it gets a
-      // success message — listen and respond.
+      // Fallback: window.opener.postMessage (works when opener survives)
+      function sendViaOpener() {
+        if (window.opener && !window.opener.closed) {
+          try {
+            window.opener.postMessage(msg, window.location.origin);
+            sentVia.push('window.opener');
+            return true;
+          } catch (e) {
+            log('opener.postMessage failed: ' + (e && e.message));
+          }
+        }
+        return false;
+      }
+      sendViaOpener();
+
+      // If the opener is still alive and listening, it'll send us
+      // "authorizing:github" as a handshake — re-send when that arrives.
       window.addEventListener('message', function (e) {
         if (typeof e.data === 'string' && e.data.indexOf('authorizing:github') === 0) {
-          send();
+          sendViaOpener();
         }
       });
-      // Also send proactively in case Decap's listener was ready before us.
-      send();
 
       msgEl.className = 'ok';
       msgEl.textContent = 'Signed in! This window will close automatically.';
-      setTimeout(function () { window.close(); }, 2000);
+      log('sent via: ' + (sentVia.length ? sentVia.join(', ') : '(nothing — both channels failed)'));
+
+      // Close after a delay so the parent has time to process.
+      setTimeout(function () { window.close(); }, 1500);
     })();
   </script>
 </body>

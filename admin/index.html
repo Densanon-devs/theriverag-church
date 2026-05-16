@@ -13,9 +13,37 @@
 </head>
 <body>
   <div id="nc-root"></div>
+  <script>
+    // OAuth bridge — runs BEFORE the Decap bundle so the listener is up
+    // by the time oauth-callback.html posts on the channel.
+    //
+    // Chrome's origin-keyed agent clusters null out window.opener after
+    // the cross-origin hop through github.com, so Decap's built-in
+    // postMessage handshake (popup → opener) doesn't fire. The popup
+    // posts to a same-origin BroadcastChannel instead, and we forward
+    // those messages to Decap by dispatching a synthetic MessageEvent
+    // that its window-level listener picks up.
+    (function () {
+      try {
+        var bc = new BroadcastChannel('decap-oauth');
+        bc.addEventListener('message', function (e) {
+          if (typeof e.data !== 'string') return;
+          if (e.data.indexOf('authorization:github') !== 0) return;
+          // Synthesize a real MessageEvent so Decap's listener accepts it.
+          window.dispatchEvent(new MessageEvent('message', {
+            data: e.data,
+            origin: window.location.origin,
+            source: window,
+          }));
+        });
+      } catch (err) {
+        console.warn('[decap-bridge] BroadcastChannel unavailable:', err);
+      }
+    })();
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
-    // Decap will read /admin/config.yml automatically and mount its UI
+    // Decap reads /admin/config.yml automatically and mounts its UI.
   </script>
 </body>
 </html>
