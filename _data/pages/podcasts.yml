@@ -1,0 +1,45 @@
+# Sermons / Podcasts page tree.
+blocks:
+  - type: podcasts_intro
+    heading: Listen to Our Messages Below!
+    subheading: Or Find us on Your Favorite Podcasting Platform!
+    spotify_url: https://open.spotify.com/show/3BV5ul28GDoP4jBbH0U4WS
+    apple_url: https://podcasts.apple.com/us/podcast/the-river-church-post-falls-idaho/id1696026080
+    youtube_url: https://www.youtube.com/@theriverag.church/streams
+    spotify_label: Listen On Spotify
+    apple_label: Listen On Apple
+    youtube_label: Watch on YouTube
+
+  - type: spotify_embed
+    show_id: 3BV5ul28GDoP4jBbH0U4WS
+    height: "232"
+
+  - type: sermon_grid
+    archive_url: https://open.spotify.com/show/3BV5ul28GDoP4jBbH0U4WS
+    archive_label: Older Posts &rarr;
+    default_card_url: https://www.youtube.com/@theriverag.church/streams
+    sermons:
+      - { title: Acts Chapter 4, date: 4/19/26, category: Sunday Service, image: /site/images/sermons/Artboard_1.png }
+      - { title: Acts Chapter 3, date: 4/12/26, category: Sunday Service, image: /site/images/sermons/Artboard_1.png }
+      - { title: Easter Sunday 2026, date: 4/5/26, category: Sunday Service, image: /site/images/sermons/PODCAST2.png }
+      - { title: Palm Sunday 2026, date: 3/29/26, category: Sunday Service, image: /site/images/sermons/PODCAST2.png }
+      - { title: Sunday Service 3.22.26, date: 3/22/26, category: Sunday Service, image: /site/images/sermons/TheRiverPodcast.png }
+      - { title: You Belong 5, date: 3/8/26, category: Sunday Service, image: /site/images/sermons/light3-1.png }
+      - { title: You Belong 4, date: 3/1/26, category: Sunday Service, image: /site/images/sermons/light3@0.75x-1.png }
+      - { title: You Belong 3, date: 2/22/26, category: Sunday Service, image: /site/images/sermons/light3-1.png }
+      - { title: You Belong 2, date: 2/15/26, category: Sunday Service, image: /site/images/sermons/light3-1.png }
+      - { title: You Belong, date: 2/8/26, category: Sunday Service, image: /site/images/sermons/light3-1.png }
+      - { title: "Cody Karst | Conflict: A Family Tradition", date: 2/1/26, category: Sunday Service, image: /site/images/sermons/light3-1.png }
+      - { title: Abundant Life, date: 1/25/26, category: Sunday Service, image: /site/images/sermons/light3.png }
+      - { title: Judges Part 6, date: 1/18/26, category: Sunday Service, image: /site/images/sermons/Judges_Podcast.png }
+      - { title: Judges Part 5, date: 1/11/26, category: Sunday Service, image: /site/images/sermons/Judges_Podcast.png }
+      - { title: Judges Part 4, date: 1/4/26, category: Sunday Service, image: /site/images/sermons/Judges_Podcast.png }
+      - { title: Light of the World 3, date: 12/21/25, category: Sunday Service, image: /site/images/sermons/light3-1.png }
+      - { title: Light of the World 2, date: 12/14/25, category: Sunday Service, image: /site/images/sermons/light2.png }
+      - { title: Light of the World, date: 12/7/25, category: Sunday Service, image: /site/images/sermons/light1.png }
+      - { title: "Cody Karst | Jonah", date: 11/30/25, category: Sunday Service, image: /site/images/sermons/address-1764870924071.png }
+      - { title: The Cave is Not Your Address, date: 11/25/25, category: Sunday Service, image: /site/images/sermons/address-1764108791221.png }
+
+  - type: tagline
+    heading: You Belong Here!
+    theme: dark

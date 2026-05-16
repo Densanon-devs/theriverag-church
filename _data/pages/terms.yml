@@ -1,0 +1,5 @@
+# Terms page tree. Single legal_page block pointing at _data/terms.yml
+# for the section/paragraph content.
+blocks:
+  - type: legal_page
+    source: terms

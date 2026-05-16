@@ -1,0 +1,8 @@
+# Privacy page tree. Today the only block is a single legal_page block
+# pointing at _data/privacy.yml — the section/paragraph content lives
+# there so the existing per-element data-cms annotations stay intact.
+# You CAN add other blocks (heading, callout, etc.) above or below
+# this legal block by clicking + Add Section.
+blocks:
+  - type: legal_page
+    source: privacy

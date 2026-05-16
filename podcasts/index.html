@@ -79,202 +79,206 @@
 
 <!--inc:end "_includes/header.html"-->
 
-  <!-- Listen heading + platform pill buttons (light cream bg, matches live) -->
-  <section class="section section-light sermons-intro">
-    <div class="container">
-      <h1 class="sermons-h1" data-cms="site.podcasts_page.heading">Listen to Our Messages Below!</h1>
-      <h2 class="sermons-h2" data-cms="site.podcasts_page.subheading">Or Find us on Your Favorite Podcasting Platform!</h2>
-      <div class="sermons-platforms">
-        <a href="https://open.spotify.com/show/3BV5ul28GDoP4jBbH0U4WS" target="_blank" rel="noopener" class="btn btn-primary" data-cms="site.podcasts_page.spotify_label">Listen On Spotify</a>
-        <a href="https://podcasts.apple.com/us/podcast/the-river-church-post-falls-idaho/id1696026080" target="_blank" rel="noopener" class="btn btn-primary" data-cms="site.podcasts_page.apple_label">Listen On Apple</a>
-        <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="btn btn-primary" data-cms="site.podcasts_page.youtube_label">Watch on YouTube</a>
-      </div>
+  <!--cms:blocks page="podcasts"-->
+<!--cms:blocks-start "podcasts"-->
+<div class="cms-blocks-page" data-cms-blocks-page="podcasts">
+<section class="section section-light sermons-intro" data-cms-block="0" data-cms-block-type="podcasts_intro">
+  <div class="container">
+    <h1 class="sermons-h1" data-cms="pages.podcasts.blocks.0.heading">Listen to Our Messages Below!</h1>
+    <h2 class="sermons-h2" data-cms="pages.podcasts.blocks.0.subheading">Or Find us on Your Favorite Podcasting Platform!</h2>
+    <div class="sermons-platforms">
+      <a href="https://open.spotify.com/show/3BV5ul28GDoP4jBbH0U4WS" target="_blank" rel="noopener" class="btn btn-primary" data-cms="pages.podcasts.blocks.0.spotify_label">Listen On Spotify</a>
+      <a href="https://podcasts.apple.com/us/podcast/the-river-church-post-falls-idaho/id1696026080" target="_blank" rel="noopener" class="btn btn-primary" data-cms="pages.podcasts.blocks.0.apple_label">Listen On Apple</a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="btn btn-primary" data-cms="pages.podcasts.blocks.0.youtube_label">Watch on YouTube</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Spotify show embed — public, no creds -->
-  <section class="section section-dark spotify-block">
-    <div class="container">
-      <div class="spotify-embed">
-        <iframe
-          src="https://open.spotify.com/embed/show/3BV5ul28GDoP4jBbH0U4WS?utm_source=generator&theme=0"
-          width="100%"
-          height="232"
-          frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          title="The River Church Podcast on Spotify"></iframe>
-      </div>
+<section class="section section-dark spotify-block" data-cms-block="1" data-cms-block-type="spotify_embed">
+  <div class="container">
+    <div class="spotify-embed">
+      <iframe src="https://open.spotify.com/embed/show/3BV5ul28GDoP4jBbH0U4WS?utm_source=generator&amp;theme=0" width="100%" height="232" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="The River Church Podcast on Spotify"></iframe>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Sermon grid — JS populates from YouTube RSS via site/data/sermons.json,
-       static fallback below shows if JS fails. -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="sermon-grid" id="sermons-dynamic" data-cms-list="podcasts.fallback_sermons">
-        <template data-cms-item-template="podcasts.fallback_sermons"><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.{{cms-index}}">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.{{cms-index}}.image" src="" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.{{cms-index}}.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.{{cms-index}}.title">Sermon title</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.{{cms-index}}.date">Date</span>
-          </div>
-        </a></template><!-- cms:rendered --><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.0">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.0.image" src="/site/images/sermons/Artboard_1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.0.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.0.title">Acts Chapter 4</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.0.date">4/19/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.1">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.1.image" src="/site/images/sermons/Artboard_1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.1.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.1.title">Acts Chapter 3</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.1.date">4/12/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.2">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.2.image" src="/site/images/sermons/PODCAST2.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.2.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.2.title">Easter Sunday 2026</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.2.date">4/5/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.3">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.3.image" src="/site/images/sermons/PODCAST2.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.3.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.3.title">Palm Sunday 2026</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.3.date">3/29/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.4">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.4.image" src="/site/images/sermons/TheRiverPodcast.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.4.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.4.title">Sunday Service 3.22.26</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.4.date">3/22/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.5">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.5.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.5.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.5.title">You Belong 5</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.5.date">3/8/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.6">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.6.image" src="/site/images/sermons/light3@0.75x-1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.6.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.6.title">You Belong 4</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.6.date">3/1/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.7">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.7.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.7.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.7.title">You Belong 3</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.7.date">2/22/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.8">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.8.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.8.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.8.title">You Belong 2</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.8.date">2/15/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.9">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.9.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.9.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.9.title">You Belong</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.9.date">2/8/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.10">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.10.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.10.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.10.title">Cody Karst | Conflict: A Family Tradition</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.10.date">2/1/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.11">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.11.image" src="/site/images/sermons/light3.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.11.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.11.title">Abundant Life</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.11.date">1/25/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.12">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.12.image" src="/site/images/sermons/Judges_Podcast.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.12.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.12.title">Judges Part 6</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.12.date">1/18/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.13">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.13.image" src="/site/images/sermons/Judges_Podcast.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.13.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.13.title">Judges Part 5</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.13.date">1/11/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.14">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.14.image" src="/site/images/sermons/Judges_Podcast.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.14.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.14.title">Judges Part 4</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.14.date">1/4/26</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.15">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.15.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.15.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.15.title">Light of the World 3</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.15.date">12/21/25</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.16">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.16.image" src="/site/images/sermons/light2.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.16.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.16.title">Light of the World 2</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.16.date">12/14/25</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.17">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.17.image" src="/site/images/sermons/light1.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.17.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.17.title">Light of the World</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.17.date">12/7/25</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.18">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.18.image" src="/site/images/sermons/address-1764870924071.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.18.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.18.title">Cody Karst | Jonah</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.18.date">11/30/25</span>
-          </div>
-        </a><a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="podcasts.fallback_sermons.19">
-          <div class="sermon-thumb"><img data-cms-image="podcasts.fallback_sermons.19.image" src="/site/images/sermons/address-1764108791221.png" alt="Sermon thumbnail"></div>
-          <div class="sermon-meta">
-            <span class="sermon-category" data-cms="podcasts.fallback_sermons.19.category">Sunday Service</span>
-            <h3 class="sermon-title" data-cms="podcasts.fallback_sermons.19.title">The Cave is Not Your Address</h3>
-            <span class="sermon-date" data-cms="podcasts.fallback_sermons.19.date">11/25/25</span>
-          </div>
-        </a><!-- /cms:rendered -->
-      </div>
-
-      <p class="archive-note"><a href="https://open.spotify.com/show/3BV5ul28GDoP4jBbH0U4WS" target="_blank" rel="noopener" data-cms="site.podcasts_page.older_posts_label">Older Posts &rarr;</a></p>
+<section class="section section-dark" data-cms-block="2" data-cms-block-type="sermon_grid">
+  <div class="container">
+    <div class="sermon-grid" id="sermons-dynamic" data-cms-list="pages.podcasts.blocks.2.sermons">
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.0">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.0.image" src="/site/images/sermons/Artboard_1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.0.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.0.title">Acts Chapter 4</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.0.date">4/19/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.1">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.1.image" src="/site/images/sermons/Artboard_1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.1.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.1.title">Acts Chapter 3</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.1.date">4/12/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.2">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.2.image" src="/site/images/sermons/PODCAST2.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.2.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.2.title">Easter Sunday 2026</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.2.date">4/5/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.3">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.3.image" src="/site/images/sermons/PODCAST2.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.3.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.3.title">Palm Sunday 2026</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.3.date">3/29/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.4">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.4.image" src="/site/images/sermons/TheRiverPodcast.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.4.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.4.title">Sunday Service 3.22.26</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.4.date">3/22/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.5">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.5.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.5.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.5.title">You Belong 5</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.5.date">3/8/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.6">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.6.image" src="/site/images/sermons/light3@0.75x-1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.6.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.6.title">You Belong 4</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.6.date">3/1/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.7">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.7.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.7.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.7.title">You Belong 3</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.7.date">2/22/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.8">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.8.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.8.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.8.title">You Belong 2</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.8.date">2/15/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.9">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.9.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.9.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.9.title">You Belong</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.9.date">2/8/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.10">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.10.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.10.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.10.title">Cody Karst | Conflict: A Family Tradition</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.10.date">2/1/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.11">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.11.image" src="/site/images/sermons/light3.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.11.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.11.title">Abundant Life</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.11.date">1/25/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.12">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.12.image" src="/site/images/sermons/Judges_Podcast.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.12.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.12.title">Judges Part 6</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.12.date">1/18/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.13">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.13.image" src="/site/images/sermons/Judges_Podcast.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.13.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.13.title">Judges Part 5</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.13.date">1/11/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.14">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.14.image" src="/site/images/sermons/Judges_Podcast.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.14.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.14.title">Judges Part 4</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.14.date">1/4/26</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.15">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.15.image" src="/site/images/sermons/light3-1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.15.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.15.title">Light of the World 3</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.15.date">12/21/25</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.16">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.16.image" src="/site/images/sermons/light2.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.16.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.16.title">Light of the World 2</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.16.date">12/14/25</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.17">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.17.image" src="/site/images/sermons/light1.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.17.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.17.title">Light of the World</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.17.date">12/7/25</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.18">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.18.image" src="/site/images/sermons/address-1764870924071.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.18.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.18.title">Cody Karst | Jonah</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.18.date">11/30/25</span>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@theriverag.church/streams" target="_blank" rel="noopener" class="sermon-card" data-cms-item="pages.podcasts.blocks.2.sermons.19">
+        <div class="sermon-thumb"><img data-cms-image="pages.podcasts.blocks.2.sermons.19.image" src="/site/images/sermons/address-1764108791221.png" alt="Sermon thumbnail"></div>
+        <div class="sermon-meta">
+          <span class="sermon-category" data-cms="pages.podcasts.blocks.2.sermons.19.category">Sunday Service</span>
+          <h3 class="sermon-title" data-cms="pages.podcasts.blocks.2.sermons.19.title">The Cave is Not Your Address</h3>
+          <span class="sermon-date" data-cms="pages.podcasts.blocks.2.sermons.19.date">11/25/25</span>
+        </div>
+      </a>
     </div>
-  </section>
+    <p class="archive-note"><a href="https://open.spotify.com/show/3BV5ul28GDoP4jBbH0U4WS" target="_blank" rel="noopener" data-cms="pages.podcasts.blocks.2.archive_label">Older Posts &rarr;</a></p>
+  </div>
+</section>
 
-  <!-- Tagline -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="tagline">
-        <h1 data-cms="site.tagline_heading">You Belong Here!</h1>
-      </div>
+<section class="section section-dark" data-cms-block="3" data-cms-block-type="tagline">
+  <div class="container">
+    <div class="tagline">
+      <h2 data-cms="pages.podcasts.blocks.3.heading">You Belong Here!</h2>
     </div>
-  </section>
+  </div>
+</section>
+</div>
+<!--cms:blocks-end "podcasts"-->
 
   <!--#include file="_includes/footer.html" -->
 <!--inc:start "_includes/footer.html"-->
