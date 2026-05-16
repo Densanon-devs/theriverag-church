@@ -14,28 +14,58 @@
 <body>
   <div id="nc-root"></div>
   <script>
-    // OAuth bridge — runs BEFORE the Decap bundle so the listener is up
-    // by the time oauth-callback.html posts on the channel.
+    // OAuth bridge — runs BEFORE the Decap bundle so listeners are up
+    // by the time oauth-callback.html hands the token over.
     //
     // Chrome's origin-keyed agent clusters null out window.opener after
     // the cross-origin hop through github.com, so Decap's built-in
-    // postMessage handshake (popup → opener) doesn't fire. The popup
-    // posts to a same-origin BroadcastChannel instead, and we forward
-    // those messages to Decap by dispatching a synthetic MessageEvent
-    // that its window-level listener picks up.
+    // postMessage handshake (popup → opener) doesn't fire. We listen
+    // on two same-origin channels — localStorage and BroadcastChannel —
+    // and forward the token to Decap as a synthetic MessageEvent.
     (function () {
+      function forward(msg) {
+        if (typeof msg !== 'string') return;
+        if (msg.indexOf('authorization:github') !== 0) return;
+        console.log('[decap-bridge] forwarding to Decap');
+        window.dispatchEvent(new MessageEvent('message', {
+          data: msg,
+          origin: window.location.origin,
+          source: window,
+        }));
+      }
+
+      // Channel 1: localStorage. Most durable — fires even if the listener
+      // attached after the write, on a poll of the storage key.
+      var STORAGE_KEY = 'decap-oauth-handoff';
+      function checkStorage() {
+        var raw = null;
+        try { raw = localStorage.getItem(STORAGE_KEY); } catch (e) { return; }
+        if (!raw) return;
+        try {
+          var payload = JSON.parse(raw);
+          if (!payload || !payload.token) return;
+          if (payload.ts && Date.now() - payload.ts > 120000) {
+            localStorage.removeItem(STORAGE_KEY);
+            return;
+          }
+          localStorage.removeItem(STORAGE_KEY);
+          var msg = 'authorization:github:success:' + JSON.stringify({
+            token: payload.token, provider: 'github'
+          });
+          forward(msg);
+        } catch (e) { /* malformed — ignore */ }
+      }
+      // Poll once on load (in case popup wrote BEFORE this script ran),
+      // then on every storage event (cross-window writes by the popup).
+      checkStorage();
+      window.addEventListener('storage', function (e) {
+        if (e.key === STORAGE_KEY) checkStorage();
+      });
+
+      // Channel 2: BroadcastChannel.
       try {
         var bc = new BroadcastChannel('decap-oauth');
-        bc.addEventListener('message', function (e) {
-          if (typeof e.data !== 'string') return;
-          if (e.data.indexOf('authorization:github') !== 0) return;
-          // Synthesize a real MessageEvent so Decap's listener accepts it.
-          window.dispatchEvent(new MessageEvent('message', {
-            data: e.data,
-            origin: window.location.origin,
-            source: window,
-          }));
-        });
+        bc.addEventListener('message', function (e) { forward(e.data); });
       } catch (err) {
         console.warn('[decap-bridge] BroadcastChannel unavailable:', err);
       }
