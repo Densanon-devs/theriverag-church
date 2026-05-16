@@ -23,13 +23,17 @@
     // on two same-origin channels — localStorage and BroadcastChannel —
     // and forward the token to Decap as a synthetic MessageEvent.
     (function () {
+      // Decap's auth listener silently drops messages whose origin doesn't
+      // match its configured base_url. Keep this in sync with config.yml.
+      var OAUTH_BASE_URL = 'https://decao-oauth.media-a75.workers.dev';
+
       function forward(msg) {
         if (typeof msg !== 'string') return;
         if (msg.indexOf('authorization:github') !== 0) return;
         console.log('[decap-bridge] forwarding to Decap');
         window.dispatchEvent(new MessageEvent('message', {
           data: msg,
-          origin: window.location.origin,
+          origin: OAUTH_BASE_URL,
           source: window,
         }));
       }
