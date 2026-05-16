@@ -60,7 +60,7 @@
   <!-- About Our Leadership -->
   <section id="pastors" class="about-section section-dark">
     <div class="container">
-      <h1>About Our Leadership</h1>
+      <h1 data-cms="leadership.pastors_section_heading">About Our Leadership</h1>
       <div class="about-row">
         <div class="about-image">
           <img src="../site/images/pastors-steve-tracey.jpg" alt="Pastors Steve and Tracey Karst with family">
@@ -75,14 +75,14 @@
   <!-- About Our Kids Ministry -->
   <section id="kids" class="about-section section-dark">
     <div class="container">
-      <h1>About Our Kids Ministry</h1>
+      <h1 data-cms="leadership.kids.section_heading">About Our Kids Ministry</h1>
       <div class="about-row about-row-reverse">
         <div class="about-image">
           <img src="../site/images/river-kids.jpg" alt="River Kids ministry">
         </div>
         <div class="about-text">
-          <p>We believe that children are a treasure from the Lord. Here at The River Church, we want your kids to be safe, make friends, and have fun. We aim to take every opportunity to interact with and teach children about Jesus. Leaders lead by example and show the abundant love of Jesus.</p>
-          <span class="about-when">Sundays @ 9:30 &amp; 11:00 AM</span>
+          <p data-cms="leadership.kids.description">We believe that children are a treasure from the Lord. Here at The River Church, we want your kids to be safe, make friends, and have fun. We aim to take every opportunity to interact with and teach children about Jesus. Leaders lead by example and show the abundant love of Jesus.</p>
+          <span class="about-when" data-cms="leadership.kids.when">Sundays @ 9:30 &amp; 11:00 AM</span>
         </div>
       </div>
     </div>
@@ -91,14 +91,14 @@
   <!-- About Our Youth Ministry -->
   <section id="youth" class="about-section section-dark wave-bottom">
     <div class="container">
-      <h1>About Our Youth Ministry</h1>
+      <h1 data-cms="leadership.youth.section_heading">About Our Youth Ministry</h1>
       <div class="about-row">
         <div class="about-image">
           <img src="../site/images/youth/youth-service-time.png" alt="River Youth — Wednesdays at 6:30 PM">
         </div>
         <div class="about-text">
-          <p>We believe in the importance of reaching the next generation for Christ and raising them up in the way they should go through fellowship and mentorship. At River Youth, we are doing exactly that every Wednesdays @ 6:30 pm. Join us for a time of learning, fun, and fellowship!</p>
-          <span class="about-when">Wednesdays @ 6:30 PM</span>
+          <p data-cms="leadership.youth.description">We believe in the importance of reaching the next generation for Christ and raising them up in the way they should go through fellowship and mentorship. At River Youth, we are doing exactly that every Wednesdays @ 6:30 pm. Join us for a time of learning, fun, and fellowship!</p>
+          <span class="about-when" data-cms="leadership.youth.when">Wednesdays @ 6:30 PM</span>
         </div>
       </div>
     </div>
@@ -115,30 +115,15 @@
   <section id="beliefs" class="section-river wave-top">
     <div class="container">
       <div class="section-header">
-        <h1 style="font-size:clamp(2rem,3.5vw,2.8rem);text-align:center;margin-bottom:0.5rem;">About Our Beliefs</h1>
-        <p>The River Church is part of the Assemblies of God fellowship. Our doctrine follows the AG Statement of Fundamental Truths.</p>
+        <h1 style="font-size:clamp(2rem,3.5vw,2.8rem);text-align:center;margin-bottom:0.5rem;" data-cms="beliefs.heading">About Our Beliefs</h1>
+        <p data-cms="beliefs.intro">The River Church is part of the Assemblies of God fellowship. Our doctrine follows the AG Statement of Fundamental Truths.</p>
       </div>
-      <div class="beliefs-grid">
-        <div class="belief-card"><h2>The One True God</h2><p>One God, eternally existing in three persons: Father, Son, and Holy Spirit.</p></div>
-        <div class="belief-card"><h2>The Fall of Man</h2><p>Humanity, created good, fell through voluntary transgression, resulting in separation from God.</p></div>
-        <div class="belief-card"><h2>The Deity of the Lord Jesus Christ</h2><p>Jesus Christ is the eternal Son of God &mdash; virgin born, sinless, crucified, risen, and exalted.</p></div>
-        <div class="belief-card"><h2>The Blessed Hope</h2><p>The resurrection of believers and the imminent return of the Lord.</p></div>
-        <div class="belief-card"><h2>The Salvation of Man</h2><p>Salvation is by grace, through faith in the shed blood of Jesus Christ.</p></div>
-        <div class="belief-card"><h2>Sanctification</h2><p>An ongoing work of separation from sin and conformity to Christ by the Holy Spirit.</p></div>
-        <div class="belief-card"><h2>The Scriptures Inspired</h2><p>The Bible is the inspired, infallible, and authoritative Word of God.</p></div>
-        <div class="belief-card"><h2>The Baptism of the Holy Spirit</h2><p>A gift available to every believer, empowering us for life and witness.</p></div>
-        <div class="belief-card"><h2>The Church and its Mission</h2><p>The Church exists to evangelize the world, worship God, disciple believers, and serve in love.</p></div>
-        <div class="belief-card"><h2>Divine Healing</h2><p>Healing is provided in the atonement and is the privilege of every believer.</p></div>
-        <div class="belief-card"><h2>The Ordinances of the Church</h2><p>Water baptism by immersion and the Lord's Supper, as commanded by Scripture.</p></div>
-        <div class="belief-card"><h2>The Initial Physical Evidence</h2><p>Speaking in other tongues is the initial physical evidence of the baptism in the Holy Spirit.</p></div>
-        <div class="belief-card"><h2>The Ministry</h2><p>A scripturally ordained ministry called to evangelize, worship, build, and serve.</p></div>
-        <div class="belief-card"><h2>The Millennial Reign of Christ</h2><p>Christ's visible return and reign on earth for one thousand years.</p></div>
-        <div class="belief-card"><h2>The Final Judgement</h2><p>A final judgment of the wicked dead, with eternal consequences.</p></div>
-        <div class="belief-card"><h2>The New Heaven and the New Earth</h2><p>A new heaven and a new earth where righteousness dwells.</p></div>
+      <div class="beliefs-grid" data-cms-list="beliefs.items">
+        <template data-cms-item-template="beliefs.items"><div class="belief-card" data-cms-item="beliefs.items.{{cms-index}}"><h2 data-cms="beliefs.items.{{cms-index}}.heading">Heading</h2><p data-cms="beliefs.items.{{cms-index}}.description">Description</p></div></template>
       </div>
 
       <p class="beliefs-link" style="text-align:center;margin-top:2.5rem;">
-        <a href="https://ag.org/Beliefs/Statement-of-Fundamental-Truths" target="_blank" rel="noopener" class="btn btn-secondary">Read the Full Statement at AG.org</a>
+        <a href="https://ag.org/Beliefs/Statement-of-Fundamental-Truths" target="_blank" rel="noopener" class="btn btn-secondary" data-cms="beliefs.full_statement_label">Read the Full Statement at AG.org</a>
       </p>
     </div>
   </section>

@@ -1,10 +1,42 @@
+# Site-wide editable content. The admin's visual editor reads/writes
+# this file; the build pipeline substitutes values into the HTML pages
+# via data-cms="site.<path>" + {{site.<path>}} placeholders.
+
 announcement_text: 'NEW LOCATION: 19587 W Riverview Dr, Post Falls (Take Exit 299).'
+hero_heading: YOU BELONG HERE!
 hero_tagline: At The River Church you will find a place where you feel at home! A place where you can feel like family. A place you belong!
+header_cta: Get Connected
+live_heading: Join us live on YouTube!
+
 footer_tagline: A place where you feel at home. A place where you can feel like family.
+
 phone: (208) 304-8536
 email: steven@theriverag.church
 address_line_1: Meeting in Northwest Family Church West
-address_line_2: 19587 W Riverview Dr, Post Falls, ID 83854
+address_line_2: 19587 W Riverview Dr
+address_line_3: Post Falls, ID 83854
+
 facebook_url: https://www.facebook.com/profile.php?id=100090242570915
 instagram_url: https://www.instagram.com/theriverag.church
 youtube_url: https://www.youtube.com/@theriverag.church
+
+# Section headings + content blocks
+invitation:
+  heading: Are You Curious About Jesus?
+  paragraphs:
+    - "Maybe you have been a Christian for a long time…"
+    - "No matter what your past looks like we believe you will find"
+    - "A place where you belong at The River Church!"
+
+three_cards:
+  - heading: More About Us
+  - heading: River Youth Group
+  - heading: How to Give Online
+
+calendar_heading: View Our Full Calendar!
+tagline_heading: You Belong Here!
+
+footer:
+  visit_heading: Visit Us
+  contact_heading: Contact
+  connect_heading: Connect

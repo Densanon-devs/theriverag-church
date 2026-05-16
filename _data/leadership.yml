@@ -1,7 +1,22 @@
-# Pastors bio shown on the About page.
+# About page content — leadership, kids ministry, youth ministry.
+# The admin's visual editor reads/writes this file.
+
+pastors_section_heading: "About Our Leadership"
 heading: "Pastors Steve & Tracey Karst"
 photo: "/site/images/pastors-steve-tracey.jpg"
 paragraphs:
   - "Pastors Steve and Tracey came to The River in February 2023. Originally from Wallace, Idaho Steve is a passionate visionary with a heart for the people of North Idaho. Beginning his career in management helped to hone his leadership gifting. His goal at The River is to lead people into a loving and life-giving relationship with Jesus Christ by building servant leaders, reaching the lost, and helping others discover and fulfill the call of God on their lives."
   - "Steve and Tracey have a heart for adoption and foster care ministries. They have four adopted children at home — Gabriel, Moriah, Israel, and Ezekiel — and hope to continue to foster and adopt for the rest of their lives."
   - "Since Steve and Tracey have four children, they have no spare time, but when they do you will find them watching the Dallas Cowboys win, playing board games with their family, smoking ribs, and dreaming of visiting Galaxy's Edge at Disneyland."
+
+kids:
+  section_heading: "About Our Kids Ministry"
+  photo: "/site/images/river-kids.jpg"
+  description: "We believe that children are a treasure from the Lord. Here at The River Church, we want your kids to be safe, make friends, and have fun. We aim to take every opportunity to interact with and teach children about Jesus. Leaders lead by example and show the abundant love of Jesus."
+  when: "Sundays @ 9:30 & 11:00 AM"
+
+youth:
+  section_heading: "About Our Youth Ministry"
+  photo: "/site/images/youth/youth-service-time.png"
+  description: "We believe in the importance of reaching the next generation for Christ and raising them up in the way they should go through fellowship and mentorship. At River Youth, we are doing exactly that every Wednesdays @ 6:30 pm. Join us for a time of learning, fun, and fellowship!"
+  when: "Wednesdays @ 6:30 PM"
