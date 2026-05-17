@@ -1,4 +1,12 @@
 # Sermons / Podcasts page tree.
+meta:
+  title: "Sermons — The River Church"
+  description: "Listen to sermons from The River Church in Post Falls, Idaho. Available on Spotify, Apple Podcasts, and YouTube."
+  nav_label: Sermons
+  show_in_nav: true
+  nav_order: 10
+  slug: podcasts
+
 blocks:
   - type: podcasts_intro
     heading: Listen to Our Messages Below!

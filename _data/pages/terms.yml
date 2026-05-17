@@ -1,5 +1,13 @@
 # Terms page tree. Single legal_page block pointing at _data/terms.yml
 # for the section/paragraph content.
+meta:
+  title: "Terms of Service — The River Church"
+  description: "Terms of service for The River Church website and digital communications."
+  nav_label: Terms
+  show_in_nav: false   # footer only
+  nav_order: 91
+  slug: terms
+
 blocks:
   - type: legal_page
     source: terms

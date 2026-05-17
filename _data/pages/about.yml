@@ -1,5 +1,13 @@
 # About page tree. Reorder, add, or remove sections via the admin
 # visual editor; build_pages.py regenerates about/index.html on push.
+meta:
+  title: "About — The River Church"
+  description: "Meet Pastors Steve and Tracey Karst, learn about our kids and youth ministries, and read what we believe at The River Church in Post Falls, Idaho."
+  nav_label: About
+  show_in_nav: true
+  nav_order: 20
+  slug: about
+
 blocks:
   - type: leadership_section
     heading: About Our Leadership

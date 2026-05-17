@@ -3,6 +3,14 @@
 # there so the existing per-element data-cms annotations stay intact.
 # You CAN add other blocks (heading, callout, etc.) above or below
 # this legal block by clicking + Add Section.
+meta:
+  title: "Privacy Policy — The River Church"
+  description: "Privacy policy for The River Church website and digital communications."
+  nav_label: Privacy
+  show_in_nav: false   # surfaced in the footer instead
+  nav_order: 90
+  slug: privacy
+
 blocks:
   - type: legal_page
     source: privacy

@@ -1,6 +1,14 @@
 # Home page tree. Each entry under `blocks:` is one top-level section.
 # Reorder, add, or remove blocks via the admin visual editor — the build
 # pipeline regenerates index.html from this list on every push.
+meta:
+  title: "The River Church — You Belong Here | Post Falls, Idaho"
+  description: "The River Church in Post Falls, Idaho — a place where you belong. Sunday services at 9:30 and 11 AM. Come as you are."
+  nav_label: Home
+  show_in_nav: false   # the logo links home; no separate nav link
+  nav_order: 0
+  slug: ""             # root path (index.html)
+
 blocks:
   - type: hero
     heading: "YOU BELONG HERE!"

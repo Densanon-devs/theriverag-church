@@ -192,6 +192,68 @@ _DATA_CMS_HTML_RE = re.compile(
 )
 
 
+# cms:nav — the nav <li> list is auto-generated from _data/pages/*.yml.
+# Each page's `meta:` block decides whether it appears (show_in_nav),
+# in what order (nav_order), with what label (nav_label), and pointing
+# where (slug or external_url).
+_NAV_RE = re.compile(
+    r'(<!--\s*cms:nav\s*-->)'
+    r'(?P<existing>.*?)'
+    r'(<!--\s*/cms:nav\s*-->)',
+    re.DOTALL,
+)
+
+
+def _build_nav_html(data: dict) -> str:
+    pages = data.get("pages") or {}
+    items = []
+    for name, page in pages.items():
+        meta = (page or {}).get("meta") or {}
+        if not meta.get("show_in_nav"):
+            continue
+        nav_order_raw = meta.get("nav_order")
+        items.append({
+            "slug": (str(meta.get("slug")) if "slug" in meta else name).strip("/"),
+            "label": str(meta.get("nav_label") or name),
+            "order": int(nav_order_raw) if nav_order_raw is not None else 100,
+            "external_url": str(meta.get("external_url") or "").strip(),
+        })
+    items.sort(key=lambda x: (x["order"], x["label"]))
+    out_lines = []
+    for it in items:
+        if it["external_url"]:
+            href = it["external_url"]
+            extra = ' target="_blank" rel="noopener"'
+        else:
+            slug = it["slug"]
+            href = "/" if not slug else f"/{slug}/"
+            extra = ""
+        out_lines.append(f'        <li><a href="{href}"{extra}>{it["label"]}</a></li>')
+    return "\n".join(out_lines)
+
+
+def render_nav_in_header(data: dict) -> int:
+    """Inline the auto-generated nav into _includes/header.html between
+    the <!--cms:nav--> ... <!--/cms:nav--> markers. Returns 1 if the
+    partial was rewritten, 0 if unchanged."""
+    target = ROOT / "_includes" / "header.html"
+    if not target.is_file():
+        return 0
+    original = target.read_text(encoding="utf-8")
+    new_nav = _build_nav_html(data)
+    if not new_nav:
+        return 0
+
+    def repl(m: re.Match) -> str:
+        return m.group(1) + "\n" + new_nav + "\n        " + m.group(3)
+
+    new_text, n = _NAV_RE.subn(repl, original)
+    if n and new_text != original:
+        target.write_text(new_text, encoding="utf-8")
+        return 1
+    return 0
+
+
 # cms:blocks page="X" — page-builder marker. The build pipeline finds
 # this directive and inlines the rendered blocks from
 # _data/pages/<X>.yml, wrapped in idempotent block-rendered marker
@@ -521,6 +583,12 @@ def main() -> int:
         return 0
 
     print(f"Loaded data from {len(data)} file(s): {sorted(data.keys())}")
+    # Rebuild the header partial's nav from page meta BEFORE inlining
+    # partials into each page — that way the inlined header carries the
+    # current nav for every page in this same build.
+    n_nav = render_nav_in_header(data)
+    if n_nav:
+        print(f"  _includes/header.html: nav refreshed from pages/")
     total = 0
     for target in TARGETS:
         if not target.exists():

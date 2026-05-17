@@ -1,0 +1,13 @@
+# "Give" nav entry — points off-site to Church Center giving rather than
+# rendering an internal page.
+meta:
+  title: Give — The River Church
+  description: ""
+  nav_label: Give
+  show_in_nav: true
+  nav_order: 40
+  slug: give
+  external_url: https://theriveragchurch.churchcenter.com/giving
+  no_html: true
+
+blocks: []
