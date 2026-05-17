@@ -55,6 +55,7 @@ blocks:
       - "A place where you belong at The River Church!"
 
   - type: gallery_strip
+    lightbox: true
     photos:
       - { src: /site/images/gallery-04.jpg }
       - { src: /site/images/gallery-02.jpg }

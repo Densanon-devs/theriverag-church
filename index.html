@@ -65,7 +65,53 @@
   <meta name="twitter:description" content="The River Church in Post Falls, Idaho — a place where you belong. Sunday services at 9:30 and 11 AM. Come as you are.">
   <link rel="canonical" href="https://theriverag.church/">
   <meta property="og:url" content="https://theriverag.church/">
+  <meta property="og:image" content="https://theriverag.church/site/images/og-cover.png">
+  <meta name="twitter:image" content="https://theriverag.church/site/images/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="website">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Church",
+  "name": "The River Church",
+  "url": "https://theriverag.church",
+  "logo": "https://theriverag.church/site/images/logo.png",
+  "image": "https://theriverag.church/site/images/og-cover.png",
+  "telephone": "+12083048536",
+  "email": "steven@theriverag.church",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "19587 W Riverview Dr",
+    "addressLocality": "Post Falls",
+    "addressRegion": "ID",
+    "postalCode": "83854",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=100090242570915",
+    "https://www.instagram.com/theriverag.church",
+    "https://www.youtube.com/@theriverag.church"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "09:30",
+      "closes": "12:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "18:30",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "18:30",
+      "closes": "20:00"
+    }
+  ]
+}</script>
 <!--/cms:seo-->
 </head>
 <body>
@@ -92,6 +138,7 @@
         <li><a href="/about/">About</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="https://theriveragchurch.churchcenter.com/giving" target="_blank" rel="noopener">Give</a></li>
+        <li><a href="/contact/">Contact</a></li>
         <!--/cms:nav-->
       </ul>
     </nav>
@@ -242,9 +289,9 @@
 </section>
 
 <div class="gallery-strip" aria-label="Photo gallery" data-cms-block="6" data-cms-block-type="gallery_strip" data-cms-list="pages.home.blocks.6.photos">
-  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.0"><img data-cms-image="pages.home.blocks.6.photos.0.src" src="/site/images/gallery-04.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
-  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.1"><img data-cms-image="pages.home.blocks.6.photos.1.src" src="/site/images/gallery-02.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
-  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.2"><img data-cms-image="pages.home.blocks.6.photos.2.src" src="/site/images/gallery-06.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600"></div>
+  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.0"><img data-cms-image="pages.home.blocks.6.photos.0.src" src="/site/images/gallery-04.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600" data-cms-lightbox="1"></div>
+  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.1"><img data-cms-image="pages.home.blocks.6.photos.1.src" src="/site/images/gallery-02.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600" data-cms-lightbox="1"></div>
+  <div class="gallery-item" data-cms-item="pages.home.blocks.6.photos.2"><img data-cms-image="pages.home.blocks.6.photos.2.src" src="/site/images/gallery-06.jpg" alt="Photo" loading="lazy" decoding="async" width="800" height="600" data-cms-lightbox="1"></div>
 </div>
 
 <section class="section section-dark wave-bottom" data-cms-block="7" data-cms-block-type="three_cards">
@@ -347,5 +394,155 @@
   <script src="js/dynamic.js"></script>
 
   <!--cms:body-code--><!--/cms:body-code-->
+<style id="cms-lightbox-css">
+  .gallery-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+  }
+  .gallery-strip .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+  }
+  .gallery-strip [data-cms-lightbox="1"] { cursor: zoom-in; }
+  .gallery-layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+  .gallery-layout-masonry {
+    display: block;
+    column-gap: 1rem;
+    column-count: 1;
+  }
+  @media (min-width: 600px) { .gallery-layout-masonry { column-count: 2; } }
+  @media (min-width: 900px) { .gallery-layout-masonry { column-count: 3; } }
+  @media (min-width: 1200px){ .gallery-layout-masonry { column-count: 4; } }
+  .gallery-layout-masonry .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 100%;
+  }
+  .gallery-layout-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
+  }
+  .gallery-layout-carousel .gallery-item {
+    flex: 0 0 auto;
+    width: clamp(220px, 60vw, 480px);
+    scroll-snap-align: start;
+  }
+
+  /* Lightbox overlay */
+  .cms-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+    pointer-events: none;
+  }
+  .cms-lightbox-overlay.open { opacity: 1; pointer-events: auto; }
+  .cms-lightbox-overlay img {
+    max-width: 92vw;
+    max-height: 88vh;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    border-radius: 4px;
+  }
+  .cms-lightbox-overlay button {
+    position: absolute;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border: 0;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  }
+  .cms-lightbox-overlay button:hover { background: rgba(255,255,255,0.22); }
+  .cms-lightbox-close { top: 16px; right: 16px; }
+  .cms-lightbox-prev { left: 16px; }
+  .cms-lightbox-next { right: 16px; }
+  .cms-lightbox-prev, .cms-lightbox-next {
+    top: 50%; transform: translateY(-50%);
+  }
+</style>
+<script>
+(function () {
+  var imgs = Array.prototype.slice.call(
+    document.querySelectorAll('img[data-cms-lightbox="1"]')
+  );
+  if (!imgs.length) return;
+
+  var overlay = document.createElement('div');
+  overlay.className = 'cms-lightbox-overlay';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  var img = document.createElement('img');
+  var closeBtn = document.createElement('button');
+  closeBtn.className = 'cms-lightbox-close';
+  closeBtn.setAttribute('aria-label', 'Close');
+  closeBtn.textContent = '×';
+  var prevBtn = document.createElement('button');
+  prevBtn.className = 'cms-lightbox-prev';
+  prevBtn.setAttribute('aria-label', 'Previous');
+  prevBtn.textContent = '‹';
+  var nextBtn = document.createElement('button');
+  nextBtn.className = 'cms-lightbox-next';
+  nextBtn.setAttribute('aria-label', 'Next');
+  nextBtn.textContent = '›';
+  overlay.appendChild(img);
+  overlay.appendChild(closeBtn);
+  overlay.appendChild(prevBtn);
+  overlay.appendChild(nextBtn);
+  document.body.appendChild(overlay);
+
+  var current = -1;
+  function show(i) {
+    current = (i + imgs.length) % imgs.length;
+    img.src = imgs[current].getAttribute('src') || '';
+    img.alt = imgs[current].getAttribute('alt') || '';
+    overlay.classList.add('open');
+  }
+  function close() {
+    overlay.classList.remove('open');
+    current = -1;
+    img.src = '';
+  }
+
+  imgs.forEach(function (el, idx) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      show(idx);
+    });
+  });
+  closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', function () { if (current >= 0) show(current - 1); });
+  nextBtn.addEventListener('click', function () { if (current >= 0) show(current + 1); });
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (current < 0) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(current - 1);
+    else if (e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+</script>
 </body>
 </html>

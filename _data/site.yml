@@ -69,3 +69,45 @@ podcasts_page:
 
 calendar_heading: View Our Full Calendar!
 tagline_heading: You Belong Here!
+
+# Site-wide OpenGraph image used for social-share previews when a
+# page doesn't override its own meta.og_image.
+og_image: https://theriverag.church/site/images/og-cover.png
+
+# JSON-LD Church schema — injected into the <head> of every page via
+# the cms:seo marker block. Local-SEO win: shows up in Google Knowledge
+# Panel + Maps. Edit fields via the admin's YAML editor; build picks
+# up changes on next push.
+schema:
+  "@context": https://schema.org
+  "@type": Church
+  name: The River Church
+  url: https://theriverag.church
+  logo: https://theriverag.church/site/images/logo.png
+  image: https://theriverag.church/site/images/og-cover.png
+  telephone: "+12083048536"
+  email: steven@theriverag.church
+  address:
+    "@type": PostalAddress
+    streetAddress: 19587 W Riverview Dr
+    addressLocality: Post Falls
+    addressRegion: ID
+    postalCode: "83854"
+    addressCountry: US
+  sameAs:
+    - https://www.facebook.com/profile.php?id=100090242570915
+    - https://www.instagram.com/theriverag.church
+    - https://www.youtube.com/@theriverag.church
+  openingHoursSpecification:
+    - "@type": OpeningHoursSpecification
+      dayOfWeek: Sunday
+      opens: "09:30"
+      closes: "12:30"
+    - "@type": OpeningHoursSpecification
+      dayOfWeek: Monday
+      opens: "18:30"
+      closes: "20:00"
+    - "@type": OpeningHoursSpecification
+      dayOfWeek: Wednesday
+      opens: "18:30"
+      closes: "20:00"
