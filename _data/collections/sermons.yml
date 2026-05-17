@@ -1,0 +1,117 @@
+# Sermon collection — drives the static fallback grid on /podcasts/.
+# Add new sermons here and the page rebuilds automatically.
+meta:
+  title: Sermons
+  base_path: sermons        # /sermons/<slug>/ when item pages are turned on
+  slug_field: slug
+  item_template: ""         # disabled for now; cards link to YouTube directly
+
+items:
+  - slug: acts-chapter-4
+    title: "Acts Chapter 4"
+    date: "4/19/26"
+    category: Sunday Service
+    image: /site/images/sermons/Artboard_1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: acts-chapter-3
+    title: "Acts Chapter 3"
+    date: "4/12/26"
+    category: Sunday Service
+    image: /site/images/sermons/Artboard_1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: easter-sunday-2026
+    title: "Easter Sunday 2026"
+    date: "4/5/26"
+    category: Sunday Service
+    image: /site/images/sermons/PODCAST2.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: palm-sunday-2026
+    title: "Palm Sunday 2026"
+    date: "3/29/26"
+    category: Sunday Service
+    image: /site/images/sermons/PODCAST2.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: sunday-service-3-22-26
+    title: "Sunday Service 3.22.26"
+    date: "3/22/26"
+    category: Sunday Service
+    image: /site/images/sermons/TheRiverPodcast.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: you-belong-5
+    title: "You Belong 5"
+    date: "3/8/26"
+    category: Sunday Service
+    image: /site/images/sermons/light3-1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: you-belong-4
+    title: "You Belong 4"
+    date: "3/1/26"
+    category: Sunday Service
+    image: /site/images/sermons/light3@0.75x-1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: you-belong-3
+    title: "You Belong 3"
+    date: "2/22/26"
+    category: Sunday Service
+    image: /site/images/sermons/light3-1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: you-belong-2
+    title: "You Belong 2"
+    date: "2/15/26"
+    category: Sunday Service
+    image: /site/images/sermons/light3-1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: you-belong
+    title: "You Belong"
+    date: "2/8/26"
+    category: Sunday Service
+    image: /site/images/sermons/light3-1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: cody-karst-conflict
+    title: "Cody Karst | Conflict: A Family Tradition"
+    date: "2/1/26"
+    category: Sunday Service
+    image: /site/images/sermons/light3-1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: abundant-life
+    title: "Abundant Life"
+    date: "1/25/26"
+    category: Sunday Service
+    image: /site/images/sermons/light3.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: judges-part-6
+    title: "Judges Part 6"
+    date: "1/18/26"
+    category: Sunday Service
+    image: /site/images/sermons/Judges_Podcast.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: judges-part-5
+    title: "Judges Part 5"
+    date: "1/11/26"
+    category: Sunday Service
+    image: /site/images/sermons/Judges_Podcast.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: judges-part-4
+    title: "Judges Part 4"
+    date: "1/4/26"
+    category: Sunday Service
+    image: /site/images/sermons/Judges_Podcast.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: light-of-the-world-3
+    title: "Light of the World 3"
+    date: "12/21/25"
+    category: Sunday Service
+    image: /site/images/sermons/light3-1.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: light-of-the-world-2
+    title: "Light of the World 2"
+    date: "12/14/25"
+    category: Sunday Service
+    image: /site/images/sermons/light2.png
+    url: https://www.youtube.com/@theriverag.church/streams
+  - slug: light-of-the-world
+    title: "Light of the World"
+    date: "12/7/25"
+    category: Sunday Service
+    image: /site/images/sermons/light1.png
+    url: https://www.youtube.com/@theriverag.church/streams

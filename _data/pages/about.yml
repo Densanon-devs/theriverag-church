@@ -13,6 +13,7 @@ blocks:
     animation: { type: fade-up, duration: 700 }
     heading: About Our Leadership
     image: /site/images/pastors-steve-tracey.jpg
+    image_focal: { x: 50, y: 30 }   # face-level crop on phones
     image_alt: Pastors Steve and Tracey Karst with family
     paragraphs:
       - "Pastors Steve and Tracey came to The River in February 2023. Originally from Wallace, Idaho Steve is a passionate visionary with a heart for the people of North Idaho. Beginning his career in management helped to hone his leadership gifting. His goal at The River is to lead people into a loving and life-giving relationship with Jesus Christ by building servant leaders, reaching the lost, and helping others discover and fulfill the call of God on their lives."
