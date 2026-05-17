@@ -13,10 +13,17 @@ blocks:
   - type: hero
     heading: "YOU BELONG HERE!"
     tagline: "At The River Church you will find a place where you feel at home! A place where you can feel like family. A place you belong!"
+    animation:
+      type: fade-up
+      duration: 800
+      delay: 100
 
   - type: wave_divider
 
   - type: service_times
+    animation:
+      type: fade-up
+      duration: 700
     live_heading: Join us live on YouTube!
     live_embed_url: https://www.youtube.com/embed/gHczC5kLM0A
     cards:
@@ -48,6 +55,7 @@ blocks:
   - type: wave_divider
 
   - type: invitation
+    animation: { type: fade-up, duration: 700 }
     heading: Are You Curious About Jesus?
     paragraphs:
       - "Maybe you have been a Christian for a long time…"
@@ -62,6 +70,7 @@ blocks:
       - { src: /site/images/gallery-06.jpg }
 
   - type: three_cards
+    animation: { type: fade-up, duration: 700 }
     cards:
       - heading: More About Us
         image: /site/images/pastors-steve-tracey.jpg
@@ -83,10 +92,16 @@ blocks:
   - type: wave_divider
 
   - type: calendar
+    animation: { type: fade-up, duration: 700 }
     heading: View Our Full Calendar!
     calendar_url: https://theriveragchurch.churchcenter.com/calendar
     embed_src: https://theriveragchurch.churchcenter.com/assets/calendar_embed.js
 
+  - type: shape_divider
+    shape: curve
+    color: "#cfa861"
+
   - type: tagline
+    animation: { type: zoom-in, duration: 700 }
     heading: You Belong Here!
     theme: light

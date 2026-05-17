@@ -12,12 +12,16 @@ meta:
 
 blocks:
   - type: hero
+    animation: { type: fade-up, duration: 700 }
     heading: Get in Touch
     tagline: We'd love to hear from you. Send a prayer request, ask a question, or let us know how we can help.
 
-  - type: wave_divider
+  - type: shape_divider
+    shape: curve
+    color: "#cfa861"
 
   - type: form
+    animation: { type: fade-up, duration: 700 }
     heading: Prayer Request
     intro: "Share a prayer request with our pastoral team. We hold every request in confidence."
     form_name: prayer
@@ -29,6 +33,7 @@ blocks:
       - { type: textarea, name: request, label: Prayer request, required: true }
 
   - type: form
+    animation: { type: fade-up, duration: 700 }
     heading: Contact Us
     intro: "Have a question or want to connect with a ministry team? Send us a note."
     form_name: contact

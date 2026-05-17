@@ -145,7 +145,7 @@
   <!--cms:blocks page="about"-->
 <!--cms:blocks-start "about"-->
 <div class="cms-blocks-page" data-cms-blocks-page="about">
-<section class="about-section section-dark" data-cms-block="0" data-cms-block-type="leadership_section">
+<section class="about-section section-dark cms-anim cms-anim-fade-up" data-cms-block="0" data-cms-block-type="leadership_section" style="--cms-anim-duration: 700ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
   <div class="container">
     <h1 data-cms="pages.about.blocks.0.heading">About Our Leadership</h1>
     <div class="about-row">
@@ -161,7 +161,7 @@
   </div>
 </section>
 
-<section class="about-section section-dark" data-cms-block="1" data-cms-block-type="ministry_card">
+<section class="about-section section-dark cms-anim cms-anim-fade-up" data-cms-block="1" data-cms-block-type="ministry_card" style="--cms-anim-duration: 700ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
   <div class="container">
     <h1 data-cms="pages.about.blocks.1.heading">About Our Kids Ministry</h1>
     <div class="about-row about-row-reverse">
@@ -176,7 +176,7 @@
   </div>
 </section>
 
-<section class="about-section section-dark wave-bottom" data-cms-block="2" data-cms-block-type="ministry_card">
+<section class="about-section section-dark cms-anim cms-anim-fade-up wave-bottom" data-cms-block="2" data-cms-block-type="ministry_card" style="--cms-anim-duration: 700ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
   <div class="container">
     <h1 data-cms="pages.about.blocks.2.heading">About Our Youth Ministry</h1>
     <div class="about-row">
@@ -197,7 +197,7 @@
   </svg>
 </div>
 
-<section class="section-river wave-top" data-cms-block="4" data-cms-block-type="beliefs_grid">
+<section class="section-river cms-anim cms-anim-fade-up wave-top" data-cms-block="4" data-cms-block-type="beliefs_grid" style="--cms-anim-duration: 800ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
   <div class="container">
     <div class="section-header">
       <h1 style="font-size:clamp(2rem,3.5vw,2.8rem);text-align:center;margin-bottom:0.5rem;" data-cms="pages.about.blocks.4.heading">About Our Beliefs</h1>
@@ -333,5 +333,86 @@
   <script src="../js/main.js"></script>
 
   <!--cms:body-code--><!--/cms:body-code-->
+<style id="cms-anim-css">
+  .cms-anim {
+    opacity: 0;
+    transition:
+      opacity   var(--cms-anim-duration, 600ms) ease-out var(--cms-anim-delay, 0ms),
+      transform var(--cms-anim-duration, 600ms) ease-out var(--cms-anim-delay, 0ms);
+    will-change: opacity, transform;
+  }
+  .cms-anim.cms-anim-load,
+  .cms-anim.cms-anim-in,
+  .cms-anim-hover:hover { opacity: 1; transform: none; }
+
+  .cms-anim-fade-in    { transform: none; }
+  .cms-anim-fade-up    { transform: translateY(24px); }
+  .cms-anim-fade-down  { transform: translateY(-24px); }
+  .cms-anim-fade-left  { transform: translateX(24px); }
+  .cms-anim-fade-right { transform: translateX(-24px); }
+  .cms-anim-slide-up    { transform: translateY(60px); }
+  .cms-anim-slide-down  { transform: translateY(-60px); }
+  .cms-anim-slide-left  { transform: translateX(60px); }
+  .cms-anim-slide-right { transform: translateX(-60px); }
+  .cms-anim-scale-in    { transform: scale(0.92); }
+  .cms-anim-zoom-in     { transform: scale(0.78); }
+  .cms-anim-zoom-out    { transform: scale(1.18); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cms-anim {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+</style>
+<script>
+(function () {
+  var honor = !window.matchMedia
+    || !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!honor) return;  // reduced motion → CSS already shows everything.
+
+  var nodes = document.querySelectorAll('.cms-anim');
+  if (!nodes.length) return;
+
+  var triggerLoad = [];
+  var triggerScroll = [];
+  nodes.forEach(function (el) {
+    var t = el.getAttribute('data-cms-anim-trigger') || 'scroll';
+    if (t === 'load') triggerLoad.push(el);
+    else if (t === 'hover') { /* CSS handles hover */ }
+    else triggerScroll.push(el);
+  });
+
+  // 'load' trigger — animate immediately after parse, with each block's delay.
+  triggerLoad.forEach(function (el) {
+    el.classList.add('cms-anim-load');
+  });
+
+  // 'scroll' trigger — IntersectionObserver per element so each can have
+  // its own threshold via data-cms-anim-offset.
+  if (!('IntersectionObserver' in window)) {
+    // Old browser — just show everything.
+    triggerScroll.forEach(function (el) { el.classList.add('cms-anim-in'); });
+    return;
+  }
+  triggerScroll.forEach(function (el) {
+    var offset = parseFloat(el.getAttribute('data-cms-anim-offset') || '0.15');
+    if (isNaN(offset)) offset = 0.15;
+    var once = el.getAttribute('data-cms-anim-once') !== '0';
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          el.classList.add('cms-anim-in');
+          if (once) io.unobserve(el);
+        } else if (!once) {
+          el.classList.remove('cms-anim-in');
+        }
+      });
+    }, { threshold: offset, rootMargin: '0px 0px -8% 0px' });
+    io.observe(el);
+  });
+})();
+</script>
 </body>
 </html>

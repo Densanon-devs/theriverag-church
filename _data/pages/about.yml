@@ -10,6 +10,7 @@ meta:
 
 blocks:
   - type: leadership_section
+    animation: { type: fade-up, duration: 700 }
     heading: About Our Leadership
     image: /site/images/pastors-steve-tracey.jpg
     image_alt: Pastors Steve and Tracey Karst with family
@@ -19,6 +20,7 @@ blocks:
       - "Since Steve and Tracey have four children, they have no spare time, but when they do you will find them watching the Dallas Cowboys win, playing board games with their family, smoking ribs, and dreaming of visiting Galaxy's Edge at Disneyland."
 
   - type: ministry_card
+    animation: { type: fade-up, duration: 700 }
     heading: About Our Kids Ministry
     image: /site/images/river-kids.jpg
     image_alt: River Kids ministry
@@ -27,6 +29,7 @@ blocks:
     reverse: true
 
   - type: ministry_card
+    animation: { type: fade-up, duration: 700 }
     heading: About Our Youth Ministry
     image: /site/images/youth/youth-service-time.png
     image_alt: River Youth — Wednesdays at 6:30 PM
@@ -36,6 +39,7 @@ blocks:
   - type: wave_divider
 
   - type: beliefs_grid
+    animation: { type: fade-up, duration: 800 }
     heading: About Our Beliefs
     intro: "The River Church is part of the Assemblies of God fellowship. Our doctrine follows the AG Statement of Fundamental Truths."
     items:
