@@ -92,6 +92,17 @@ blocks:
 
   - type: wave_divider
 
+  - type: upcoming_events
+    animation: { type: fade-up, duration: 700 }
+    heading: "Coming Up at the River"
+    intro: "The next non-routine events on our calendar. Sundays + weekly groups are listed above."
+    # Events list comes from _data/upcoming_events.yml, refreshed daily 6am
+    # by the church-ops scheduled job (Planning Center ICS / PC API).
+    events: []
+    all_events_url: https://theriveragchurch.churchcenter.com/calendar
+    all_events_label: "See full calendar"
+    fallback_text: "No special events on the calendar right now — see the full calendar for routine services and groups."
+
   - type: calendar
     animation: { type: fade-up, duration: 700 }
     heading: View Our Full Calendar!
