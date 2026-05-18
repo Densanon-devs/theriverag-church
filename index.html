@@ -322,14 +322,27 @@
   </svg>
 </div>
 
-<section class="section section-light cms-upcoming-events cms-upcoming-empty cms-anim cms-anim-fade-up wave-top" data-cms-block="9" data-cms-block-type="upcoming_events" style="--cms-anim-duration: 700ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
+<section class="section section-light cms-upcoming-events cms-anim cms-anim-fade-up wave-top" data-cms-block="9" data-cms-block-type="upcoming_events" style="--cms-anim-duration: 700ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
   <div class="container">
     <h2 class="cms-upcoming-heading" data-cms="pages.home.blocks.9.heading">Coming Up at the River</h2>
-    <p class="cms-upcoming-fallback" style="text-align:center;opacity:0.7;">No special events on the calendar right now — see the full calendar for routine services and groups.</p>
+    <p class="cms-upcoming-intro" data-cms="pages.home.blocks.9.intro">The next non-routine events on our calendar. Sundays + weekly groups are listed above.</p>
+    <div class="cms-upcoming-grid" data-cms-list="pages.home.blocks.9.events" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.5rem;margin-top:1.5rem;">
+      <article class="cms-upcoming-card" data-cms-item="pages.home.blocks.9.events.0">
+        <div class="cms-upcoming-date">
+          <span class="cms-upcoming-month">JUN</span>
+          <span class="cms-upcoming-day">22</span>
+        </div>
+        <h3 class="cms-upcoming-title" data-cms="pages.home.blocks.9.events.0.title">Vacation Bible School 2026</h3>
+        <div class="cms-upcoming-when" data-cms="pages.home.blocks.9.events.0.when_text">Mon 5:30pm</div>
+        <div class="cms-upcoming-location" data-cms="pages.home.blocks.9.events.0.location">The River Church Temporary Location - 19587 W Riverview Dr, Post Falls , ID 83854</div>
+        <a href="https://theriveragchurch.churchcenter.com/registrations/events/3432447" class="cms-upcoming-rsvp btn btn-primary" target="_blank" rel="noopener" data-cms="pages.home.blocks.9.events.0.rsvp_label">RSVP</a>
+      </article>
+    </div>
+    <p class="cms-upcoming-all"><a href="https://theriveragchurch.churchcenter.com/calendar" target="_blank" rel="noopener" data-cms="pages.home.blocks.9.all_events_label">See full calendar</a></p>
   </div>
 </section>
 
-<section class="section-river cms-anim cms-anim-fade-up wave-bottom" data-cms-block="10" data-cms-block-type="calendar" style="--cms-anim-duration: 700ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
+<section class="section-river cms-anim cms-anim-fade-up" data-cms-block="10" data-cms-block-type="calendar" style="--cms-anim-duration: 700ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
   <div class="container">
     <div class="calendar-callout">
       <a href="https://theriveragchurch.churchcenter.com/calendar" target="_blank" rel="noopener" style="text-decoration:none;">
@@ -338,20 +351,6 @@
     </div>
     <div class="calendar-embed">
       <script src="https://theriveragchurch.churchcenter.com/assets/calendar_embed.js" data-view="list" data-show-filter="true" data-height="560px"></script>
-    </div>
-  </div>
-</section>
-
-<div class="shape-divider shape-divider-curve" aria-hidden="true" data-cms-block="11" data-cms-block-type="shape_divider" style="line-height:0;">
-  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="80">
-    <path d="M0,80 Q720,0 1440,80 L1440,80 L0,80 Z" fill="#cfa861"/>
-  </svg>
-</div>
-
-<section class="section section-light cms-anim cms-anim-zoom-in wave-top" data-cms-block="12" data-cms-block-type="tagline" style="--cms-anim-duration: 700ms; --cms-anim-delay: 0ms" data-cms-anim-trigger="scroll" data-cms-anim-once="1" data-cms-anim-offset="0.15">
-  <div class="container">
-    <div class="tagline">
-      <h2 data-cms="pages.home.blocks.12.heading">You Belong Here!</h2>
     </div>
   </div>
 </section>

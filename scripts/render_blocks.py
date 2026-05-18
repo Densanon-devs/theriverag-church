@@ -18,6 +18,12 @@ _DENSANON_CORE = _REPO_ROOT.parent / "densanon-core"
 if _DENSANON_CORE.is_dir() and str(_DENSANON_CORE) not in sys.path:
     sys.path.insert(0, str(_DENSANON_CORE))
 
+# Make own scripts/ dir importable so `import church_blocks` works when
+# the admin server importlib-loads this file from outside its own dir.
+_SCRIPTS_DIR = Path(__file__).resolve().parent
+if str(_SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_DIR))
+
 from densanon.core.site_builder import default_blocks  # noqa: F401
 from densanon.core.site_builder.block_base import default_registry
 from densanon.core.site_builder.renderer import render_page as _render_page
