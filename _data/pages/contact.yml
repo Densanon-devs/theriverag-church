@@ -1,7 +1,3 @@
-# Contact page — tap-anywhere prayer request + general contact.
-# Two form blocks land submissions in _data/form_submissions/<form>/
-# as JSON files; the church-ops admin will surface them once the
-# forms inbox UI is wired up.
 meta:
   title: Contact — The River Church
   description: Get in touch with The River Church in Post Falls, Idaho. Send a prayer request or contact our team.
@@ -9,40 +5,60 @@ meta:
   show_in_nav: true
   nav_order: 50
   slug: contact
-
 blocks:
-  - type: hero
-    animation: { type: fade-up, duration: 700 }
-    heading: Get in Touch
-    tagline: We'd love to hear from you. Send a prayer request, ask a question, or let us know how we can help.
-
-  - type: shape_divider
-    shape: curve
-    color: "#cfa861"
-
-  - type: form
-    animation: { type: fade-up, duration: 700 }
-    heading: Prayer Request
-    intro: "Share a prayer request with our pastoral team. We hold every request in confidence."
-    form_name: prayer
-    submit_label: Send Request
-    fields:
-      - { type: text,     name: name,    label: Name,         required: true }
-      - { type: email,    name: email,   label: Email,        required: false }
-      - { type: tel,      name: phone,   label: Phone,        required: false }
-      - { type: textarea, name: request, label: Prayer request, required: true }
-
-  - type: form
-    animation: { type: fade-up, duration: 700 }
-    heading: Contact Us
-    intro: "Have a question or want to connect with a ministry team? Send us a note."
-    form_name: contact
-    submit_label: Send Message
-    fields:
-      - { type: text,     name: name,    label: Name,    required: true }
-      - { type: email,    name: email,   label: Email,   required: true }
-      - { type: textarea, name: message, label: Message, required: true }
-
-  - type: tagline
-    heading: You Belong Here!
-    theme: dark
+- type: hero
+  animation:
+    type: fade-up
+    duration: 700
+  heading: Get in Touch
+  tagline: We'd love to hear from you. Send a prayer request, ask a question, or let us know how we can help.
+- type: wave_divider
+- type: form
+  animation:
+    type: fade-up
+    duration: 700
+  heading: Prayer Request
+  intro: Share a prayer request with our pastoral team. We hold every request in confidence.
+  form_name: prayer
+  submit_label: Send Request
+  fields:
+  - type: text
+    name: name
+    label: Name
+    required: true
+  - type: email
+    name: email
+    label: Email
+    required: false
+  - type: tel
+    name: phone
+    label: Phone
+    required: false
+  - type: textarea
+    name: request
+    label: Prayer request
+    required: true
+- type: form
+  animation:
+    type: fade-up
+    duration: 700
+  heading: Contact Us
+  intro: Have a question or want to connect with a ministry team? Send us a note.
+  form_name: contact
+  submit_label: Send Message
+  fields:
+  - type: text
+    name: name
+    label: Name
+    required: true
+  - type: email
+    name: email
+    label: Email
+    required: true
+  - type: textarea
+    name: message
+    label: Message
+    required: true
+- type: tagline
+  heading: You Belong Here!
+  theme: dark
