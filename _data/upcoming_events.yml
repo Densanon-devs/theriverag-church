@@ -1,0 +1,26 @@
+fetched_at: '2026-05-18T14:25:45.669037+00:00'
+events:
+- date_iso: '2026-05-19'
+  month: MAY
+  day: '19'
+  title: 'Young Adults: Young Adults Fellowship'
+  when_text: Tue 1am
+  location: The River Church - 1687 E Horsehaven Ave, Post Falls, ID 83854
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
+- date_iso: '2026-05-20'
+  month: MAY
+  day: '20'
+  title: Dinner Church Service
+  when_text: Wed 11pm
+  location: The River Church Temporary Location - 19587 W Riverview Dr, Post Falls , ID 83854
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
+- date_iso: '2026-05-21'
+  month: MAY
+  day: '21'
+  title: 'River Youth Group: Weekly Meeting'
+  when_text: Thu 1:30am
+  location: The River Youth Worship Center (2nd Floor) - 1687 Horsehaven Ave, Post Falls, ID 83854
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
