@@ -112,10 +112,20 @@ def _parse_post(md_path: Path) -> dict | None:
 
 
 def _blog_page_shell(prefix: str, *, title: str, desc: str,
-                     canonical: str, og_type: str, body_html: str) -> str:
+                     canonical: str, og_type: str, body_html: str,
+                     article_schema: dict | None = None) -> str:
     """Standard blog-page wrapper. Uses the shared header/footer partials
     so blog pages auto-pick up nav + footer changes from the site_builder
-    pipeline."""
+    pipeline. The SEO meta tags (title/description/og:*/twitter:*/
+    canonical) plus the BlogPosting JSON-LD schema all live inside the
+    cms:seo marker block — same convention as the rest of the site, so
+    apply_seo() doesn't see two copies."""
+    import json as _json
+    og_image = f"{BASE_URL}/site/images/og-cover.png"
+    schema_json = (
+        f'\n  <script type="application/ld+json">{_json.dumps(article_schema, indent=2, ensure_ascii=False)}</script>'
+        if article_schema else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,20 +133,30 @@ def _blog_page_shell(prefix: str, *, title: str, desc: str,
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="{prefix}site/images/favicon.ico">
   <link rel="apple-touch-icon" href="{prefix}site/images/logo.png">
-  <meta name="description" content="{_ESC(desc)}">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="{BASE_URL}/{canonical}">
-  <meta property="og:title" content="{_ESC(title)}">
-  <meta property="og:description" content="{_ESC(desc)}">
-  <meta property="og:url" content="{BASE_URL}/{canonical}">
-  <meta property="og:type" content="{og_type}">
-  <title>{_ESC(title)}</title>
+  <meta name="theme-color" content="#cfa861">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Oswald:wght@400;600;700&family=Abel&display=swap">
   <link rel="stylesheet" href="{prefix}css/styles.css">
   <link rel="stylesheet" href="{prefix}css/blog.css">
   <!--cms:head-code--><!--/cms:head-code-->
+  <!--cms:seo-->
+  <title>{_ESC(title)}</title>
+  <meta name="description" content="{_ESC(desc)}">
+  <meta property="og:title" content="{_ESC(title)}">
+  <meta property="og:description" content="{_ESC(desc)}">
+  <meta property="og:url" content="{BASE_URL}/{canonical}">
+  <meta property="og:type" content="{og_type}">
+  <meta property="og:image" content="{og_image}">
+  <meta property="og:site_name" content="The River Church">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{_ESC(title)}">
+  <meta name="twitter:description" content="{_ESC(desc)}">
+  <meta name="twitter:image" content="{og_image}">
+  <link rel="canonical" href="{BASE_URL}/{canonical}">{schema_json}
+  <!--/cms:seo-->
 </head>
 <body>
 
@@ -180,6 +200,33 @@ def _render_post_page(p: dict) -> str:
         canonical=f'blog/{p["slug"]}/',
         og_type="article",
         body_html=body,
+        article_schema={
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": p["title"],
+            "datePublished": p["date_iso"],
+            "dateModified": p["date_iso"],
+            "description": desc,
+            "url": f"{BASE_URL}/blog/{p['slug']}/",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": f"{BASE_URL}/blog/{p['slug']}/",
+            },
+            "image": f"{BASE_URL}/site/images/og-cover.png",
+            "author": {
+                "@type": "Organization",
+                "name": "The River Church",
+                "url": BASE_URL,
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "The River Church",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": f"{BASE_URL}/site/images/logo.png",
+                },
+            },
+        },
     )
 
 
@@ -263,6 +310,58 @@ def build_blog(ctx: "BuildContext | None" = None) -> int:
 # ─── main ──────────────────────────────────────────────────────────────
 
 
+def _append_blog_to_sitemap() -> int:
+    """Add `/blog/` index + every `/blog/<slug>/` post to sitemap.xml.
+
+    The densanon-core write_sitemap_xml only sees `data['pages']`, which
+    has `blog.yml > meta.no_html: true` (so /blog/ stays OUT) and no
+    entry per post. This pass reopens the sitemap, drops any entries
+    we'd duplicate, and adds one URL per .md file under content/blog/
+    plus the index. Idempotent — collapses on repeated builds."""
+    import xml.etree.ElementTree as ET
+    from datetime import date as _d
+    sitemap = ROOT / "sitemap.xml"
+    if not sitemap.is_file():
+        return 0
+
+    posts: list[dict] = []
+    if BLOG_SRC.exists():
+        for md in sorted(BLOG_SRC.glob("*.md")):
+            p = _parse_post(md)
+            if p:
+                posts.append(p)
+
+    today = _d.today().isoformat()
+    blog_urls = [{"loc": f"{BASE_URL}/blog/", "lastmod": today}]
+    for p in posts:
+        blog_urls.append({
+            "loc": f"{BASE_URL}/blog/{p['slug']}/",
+            "lastmod": p["date_iso"] or today,
+        })
+
+    # Parse, deduplicate, append.
+    ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    ET.register_namespace("", ns["sm"])
+    tree = ET.parse(sitemap)
+    root = tree.getroot()
+    existing = {url.find("sm:loc", ns).text for url in root.findall("sm:url", ns)
+                if url.find("sm:loc", ns) is not None}
+    added = 0
+    for entry in blog_urls:
+        if entry["loc"] in existing:
+            continue
+        u = ET.SubElement(root, f'{{{ns["sm"]}}}url')
+        ET.SubElement(u, f'{{{ns["sm"]}}}loc').text = entry["loc"]
+        ET.SubElement(u, f'{{{ns["sm"]}}}lastmod').text = entry["lastmod"]
+        added += 1
+    if added:
+        # Pretty-print to match the rest of the file's style.
+        ET.indent(tree, space="  ")
+        with sitemap.open("wb") as f:
+            tree.write(f, encoding="utf-8", xml_declaration=True)
+    return added
+
+
 def main() -> int:
     data = load_site_data(ROOT)
     if not data:
@@ -283,6 +382,9 @@ def main() -> int:
         flag = "changed" if changed else "no changes"
         print(f"  {path}: {flag}")
     print(f"Total: {result.pages_changed}/{result.pages_built} page(s) updated")
+    n = _append_blog_to_sitemap()
+    if n:
+        print(f"  sitemap.xml: +{n} blog URL(s)")
     return 0
 
 

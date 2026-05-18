@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://theriverag.church/about/</loc>
@@ -23,5 +23,25 @@
   <url>
     <loc>https://theriverag.church/terms/</loc>
     <lastmod>2026-05-18</lastmod>
+  </url>
+  <url>
+    <loc>https://theriverag.church/blog/</loc>
+    <lastmod>2026-05-18</lastmod>
+  </url>
+  <url>
+    <loc>https://theriverag.church/blog/miracles-in-the-ordinary/</loc>
+    <lastmod>2026-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://theriverag.church/blog/boldness-in-the-face-of-opposition/</loc>
+    <lastmod>2026-04-22</lastmod>
+  </url>
+  <url>
+    <loc>https://theriverag.church/blog/obey-god-rather-than-people/</loc>
+    <lastmod>2026-05-06</lastmod>
+  </url>
+  <url>
+    <loc>https://theriverag.church/blog/time-to-move/</loc>
+    <lastmod>2026-05-12</lastmod>
   </url>
 </urlset>
