@@ -111,9 +111,34 @@ def _parse_post(md_path: Path) -> dict | None:
     }
 
 
+_YT_ID_RE = re.compile(r"(?:v=|youtu\.be/|/embed/)([A-Za-z0-9_-]{11})")
+
+
+def _youtube_thumb(video_id: str) -> str:
+    """maxresdefault is 1280x720 (matches FB / Twitter's 1.91:1 preferred
+    ratio) and exists for any video uploaded after ~2012. If it's
+    missing, YouTube serves the fallback hqdefault transparently."""
+    return f"https://img.youtube.com/vi/{video_id}/maxresdefault.jpg"
+
+
+def _post_og_image(p: dict) -> str:
+    """Pick the best social-share image for a sermon-recap post:
+    sermon_id → YouTube thumb (already at video resolution),
+    else parse youtube_url for the id, else site default."""
+    vid = (p.get("sermon_id") or "").strip()
+    if not vid:
+        m = _YT_ID_RE.search(p.get("youtube_url") or "")
+        if m:
+            vid = m.group(1)
+    if vid:
+        return _youtube_thumb(vid)
+    return f"{BASE_URL}/site/images/og-cover.png"
+
+
 def _blog_page_shell(prefix: str, *, title: str, desc: str,
                      canonical: str, og_type: str, body_html: str,
-                     article_schema: dict | None = None) -> str:
+                     article_schema: dict | None = None,
+                     og_image: str | None = None) -> str:
     """Standard blog-page wrapper. Uses the shared header/footer partials
     so blog pages auto-pick up nav + footer changes from the site_builder
     pipeline. The SEO meta tags (title/description/og:*/twitter:*/
@@ -121,7 +146,8 @@ def _blog_page_shell(prefix: str, *, title: str, desc: str,
     cms:seo marker block — same convention as the rest of the site, so
     apply_seo() doesn't see two copies."""
     import json as _json
-    og_image = f"{BASE_URL}/site/images/og-cover.png"
+    if og_image is None:
+        og_image = f"{BASE_URL}/site/images/og-cover.png"
     schema_json = (
         f'\n  <script type="application/ld+json">{_json.dumps(article_schema, indent=2, ensure_ascii=False)}</script>'
         if article_schema else ""
@@ -135,6 +161,7 @@ def _blog_page_shell(prefix: str, *, title: str, desc: str,
   <link rel="apple-touch-icon" href="{prefix}site/images/logo.png">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#cfa861">
+  <link rel="alternate" type="application/rss+xml" title="The River Church — Sermons Podcast" href="{BASE_URL}/feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Oswald:wght@400;600;700&family=Abel&display=swap">
@@ -193,6 +220,7 @@ def _render_post_page(p: dict) -> str:
     </article>
   </main>'''
     desc = p["summary"] or f'{p["title"]} — sermon recap from The River Church, Post Falls, Idaho.'
+    og_img = _post_og_image(p)
     return _blog_page_shell(
         prefix,
         title=f'{p["title"]} — The River Church',
@@ -200,6 +228,7 @@ def _render_post_page(p: dict) -> str:
         canonical=f'blog/{p["slug"]}/',
         og_type="article",
         body_html=body,
+        og_image=og_img,
         article_schema={
             "@context": "https://schema.org",
             "@type": "BlogPosting",
@@ -212,7 +241,7 @@ def _render_post_page(p: dict) -> str:
                 "@type": "WebPage",
                 "@id": f"{BASE_URL}/blog/{p['slug']}/",
             },
-            "image": f"{BASE_URL}/site/images/og-cover.png",
+            "image": og_img,
             "author": {
                 "@type": "Organization",
                 "name": "The River Church",
