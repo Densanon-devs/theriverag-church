@@ -10,7 +10,7 @@
   <language>en-us</language>
   <description><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></description>
   <itunes:summary><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></itunes:summary>
-  <lastBuildDate>Wed, 13 May 2026 02:05:05 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 21 May 2026 15:35:09 +0000</lastBuildDate>
   <itunes:author>theriverag.church</itunes:author>
   <itunes:owner>
     <itunes:name>The River Church</itunes:name>
@@ -22,6 +22,18 @@
   </itunes:category>
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
+  <item>
+    <title>From Serving Tables to Standing Tall - Acts 6-7</title>
+    <description><![CDATA[The sermon explores the tension between serving practical needs and fulfilling spiritual duties in early Christian communities. It emphasizes the importance of prioritizing prayer, study, and preaching while also addressing the overlooked members of the congregation.]]></description>
+    <itunes:summary><![CDATA[The sermon explores the tension between serving practical needs and fulfilling spiritual duties in early Christian communities. It emphasizes the importance of prioritizing prayer, study, and preaching while also addressing the overlooked members of the congregation.]]></itunes:summary>
+    <link>https://theriverag.church/blog/</link>
+    <guid isPermaLink="false">HuzuyN74Pmw</guid>
+    <pubDate>Thu, 21 May 2026 14:53:49 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/HuzuyN74Pmw.mp3" length="16896563" type="audio/mpeg"/>
+    <itunes:duration>35:12</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
   <item>
     <title>God's Call to Move Forward — Deuteronomy 1</title>
     <description><![CDATA[The sermon explores the Israelites' long journey from slavery in Egypt to their promised land, emphasizing God's call for them to move forward despite fear and hesitation. The speaker encourages listeners to trust God’s timing and step into new opportunities.]]></description>
