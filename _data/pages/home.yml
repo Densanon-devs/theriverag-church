@@ -38,9 +38,11 @@ blocks:
     x: 50
     y: 35
   values_lines:
-  - Reaching the Lost  〰  Serving Others
-  - Making Disciples  〰  Reading the Word
-  - Living by the Spirit  〰  Doing Life Together
+  - In the world, reaching the lost
+  - In church, serving others
+  - In fellowship, making disciples
+  - In the Word, Jesus speaking to you
+  - In the Spirit, Jesus leading you.
 - type: gallery_strip
   wave_bottom: true
   photos:

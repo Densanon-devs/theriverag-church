@@ -67,8 +67,10 @@ def render_service_times(block: dict, idx: int, page: str) -> str:
         )
     cards_html = "\n".join(cards_html_parts)
 
+    p_values = _path(page, idx, "values_lines")
     values_html = "\n".join(
-        f'    <p data-cms="{_path(page, idx, "values_lines", str(li))}">{_ESC(str(line))}</p>'
+        f'    <p data-cms="{_path(page, idx, "values_lines", str(li))}"'
+        f' data-cms-item="{_path(page, idx, "values_lines", str(li))}">{_ESC(str(line))}</p>'
         for li, line in enumerate(values_lines)
     )
 
@@ -96,7 +98,7 @@ def render_service_times(block: dict, idx: int, page: str) -> str:
         f'          <img data-cms-image="{p_photo}" src="{_ESC(inline_photo)}" alt="Photo" loading="lazy" decoding="async" width="800" height="600">\n'
         f'        </div>\n'
         f'      </div>\n'
-        f'      <div class="inline-values">\n'
+        f'      <div class="inline-values" data-cms-list="{p_values}">\n'
         f'{values_html}\n'
         f'      </div>\n'
         f'    </div>\n'
