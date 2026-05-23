@@ -1,50 +1,38 @@
-# Site-wide editable content. The admin's visual editor reads/writes
-# this file; the build pipeline substitutes values into the HTML pages
-# via data-cms="site.<path>" + {{site.<path>}} placeholders.
-
 announcement_text: 'NEW LOCATION: 19587 W Riverview Dr, Post Falls (Take Exit 299).'
 hero_heading: YOU BELONG HERE!
 hero_tagline: At The River Church you will find a place where you feel at home! A place where you can feel like family. A place you belong!
 header_cta: Get Connected
 live_heading: Join us live on YouTube!
-
-footer_tagline: A place where you feel at home. A place where you can feel like family.
-
+footer_tagline: A place where you feel at home. A place where you can feel like family. A place you belong!
 phone: (208) 304-8536
 email: steven@theriverag.church
 address_line_1: Meeting in Northwest Family Church West
 address_line_2: 19587 W Riverview Dr
 address_line_3: Post Falls, ID 83854
-
 facebook_url: https://www.facebook.com/profile.php?id=100090242570915
 instagram_url: https://www.instagram.com/theriverag.church
 youtube_url: https://www.youtube.com/@theriverag.church
-
-# Section headings + content blocks
 invitation:
   heading: Are You Curious About Jesus?
   paragraphs:
-    - "Maybe you have been a Christian for a long time…"
-    - "No matter what your past looks like we believe you will find"
-    - "A place where you belong at The River Church!"
-
+  - Maybe you have been a Christian for a long time…
+  - No matter what your past looks like we believe you will find
+  - A place where you belong at The River Church!
 three_cards:
-  - heading: More About Us
-    button: More About Us
-    image: /site/images/pastors-steve-tracey.jpg
-  - heading: River Youth Group
-    button: Learn About River Youth Group
-    image: /site/images/brand/river-kids-logo.png
-  - heading: How to Give Online
-    button: How to Give Online
-    image: ""  # this card uses the ♥ emoji, not an image
-
+- heading: More About Us
+  button: More About Us
+  image: /site/images/pastors-steve-tracey.jpg
+- heading: River Youth Group
+  button: Learn About River Youth Group
+  image: /site/images/brand/river-kids-logo.png
+- heading: How to Give Online
+  button: How to Give Online
+  image: ''
 nav:
   sermons: Sermons
   about: About
   blog: Blog
   give: Give
-
 footer:
   visit_heading: Visit Us
   contact_heading: Contact
@@ -58,7 +46,6 @@ footer:
   instagram_label: Instagram
   youtube_label: YouTube
   copyright_suffix: All rights reserved.
-
 podcasts_page:
   heading: Listen to Our Messages Below!
   subheading: Or Find us on Your Favorite Podcasting Platform!
@@ -66,48 +53,39 @@ podcasts_page:
   apple_label: Listen On Apple
   youtube_label: Watch on YouTube
   older_posts_label: Older Posts &rarr;
-
 calendar_heading: View Our Full Calendar!
 tagline_heading: You Belong Here!
-
-# Site-wide OpenGraph image used for social-share previews when a
-# page doesn't override its own meta.og_image.
 og_image: https://theriverag.church/site/images/og-cover.png
-
-# JSON-LD Church schema — injected into the <head> of every page via
-# the cms:seo marker block. Local-SEO win: shows up in Google Knowledge
-# Panel + Maps. Edit fields via the admin's YAML editor; build picks
-# up changes on next push.
 schema:
-  "@context": https://schema.org
-  "@type": Church
+  '@context': https://schema.org
+  '@type': Church
   name: The River Church
   url: https://theriverag.church
   logo: https://theriverag.church/site/images/logo.png
   image: https://theriverag.church/site/images/og-cover.png
-  telephone: "+12083048536"
+  telephone: '+12083048536'
   email: steven@theriverag.church
   address:
-    "@type": PostalAddress
+    '@type': PostalAddress
     streetAddress: 19587 W Riverview Dr
     addressLocality: Post Falls
     addressRegion: ID
-    postalCode: "83854"
+    postalCode: '83854'
     addressCountry: US
   sameAs:
-    - https://www.facebook.com/profile.php?id=100090242570915
-    - https://www.instagram.com/theriverag.church
-    - https://www.youtube.com/@theriverag.church
+  - https://www.facebook.com/profile.php?id=100090242570915
+  - https://www.instagram.com/theriverag.church
+  - https://www.youtube.com/@theriverag.church
   openingHoursSpecification:
-    - "@type": OpeningHoursSpecification
-      dayOfWeek: Sunday
-      opens: "09:30"
-      closes: "12:30"
-    - "@type": OpeningHoursSpecification
-      dayOfWeek: Monday
-      opens: "18:30"
-      closes: "20:00"
-    - "@type": OpeningHoursSpecification
-      dayOfWeek: Wednesday
-      opens: "18:30"
-      closes: "20:00"
+  - '@type': OpeningHoursSpecification
+    dayOfWeek: Sunday
+    opens: 09:30
+    closes: '12:30'
+  - '@type': OpeningHoursSpecification
+    dayOfWeek: Monday
+    opens: '18:30'
+    closes: '20:00'
+  - '@type': OpeningHoursSpecification
+    dayOfWeek: Wednesday
+    opens: '18:30'
+    closes: '20:00'
