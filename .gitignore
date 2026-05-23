@@ -21,3 +21,8 @@ __pycache__/
 
 # Scratchpad scrapes of the live site
 _scrape/
+
+# church-ops SQLite DB if a script accidentally runs from this dir
+# (config.db_path is relative; correct location is ../church-ops/).
+church_ops.db
+church_ops.db-journal
