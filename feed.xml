@@ -10,7 +10,7 @@
   <language>en-us</language>
   <description><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></description>
   <itunes:summary><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></itunes:summary>
-  <lastBuildDate>Thu, 21 May 2026 15:35:09 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 30 May 2026 22:39:22 +0000</lastBuildDate>
   <itunes:author>theriverag.church</itunes:author>
   <itunes:owner>
     <itunes:name>The River Church</itunes:name>
@@ -22,6 +22,18 @@
   </itunes:category>
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
+  <item>
+    <title>Philip in Samaria — Acts 8</title>
+    <description><![CDATA[The sermon explores the spread of Christianity from Jerusalem to Samaria, highlighting Philip's role as a lay person spreading the gospel despite persecution. It emphasizes that God uses ordinary people like Philip and C.S. Lewis to bring about transformation.]]></description>
+    <itunes:summary><![CDATA[The sermon explores the spread of Christianity from Jerusalem to Samaria, highlighting Philip's role as a lay person spreading the gospel despite persecution. It emphasizes that God uses ordinary people like Philip and C.S. Lewis to bring about transformation.]]></itunes:summary>
+    <link>https://theriverag.church/blog/</link>
+    <guid isPermaLink="false">2026-05-24</guid>
+    <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/2026-05-24.mp3" length="16633033" type="audio/mpeg"/>
+    <itunes:duration>34:39</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
   <item>
     <title>From Serving Tables to Standing Tall - Acts 6-7</title>
     <description><![CDATA[The sermon explores the tension between serving practical needs and fulfilling spiritual duties in early Christian communities. It emphasizes the importance of prioritizing prayer, study, and preaching while also addressing the overlooked members of the congregation.]]></description>
