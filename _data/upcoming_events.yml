@@ -1,2 +1,18 @@
-fetched_at: '2026-05-23T02:00:53.930352+00:00'
-events: []
+fetched_at: '2026-05-30T13:00:03.925687+00:00'
+events:
+- date_iso: '2026-06-13'
+  month: JUN
+  day: '13'
+  title: Men's Breakfast
+  when_text: Sat 8am
+  location: The River Church - 8076 W Prairie Ave, Post Falls, ID 83854, USA
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
+- date_iso: '2026-07-26'
+  month: JUL
+  day: '26'
+  title: The River at the river
+  when_text: Sun 11am
+  location: Q'emiln Park - 12201 W Parkway Dr, Post Falls, ID 83854, USA
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
