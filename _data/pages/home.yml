@@ -33,6 +33,12 @@ blocks:
   - heading: River Kids
     description: A safe, fun place where your kids can grow, learn, and make friends. River Kids meets during both Sunday services.
     when: Sundays @ 9:30 & 11:00 AM
+  - heading: Men's Group
+    description: Men coming together in faith — sharing a meal, honest conversation, and encouraging one another in their walk with Christ. The Men's Breakfast meets twice a month.
+    when: 2nd & 4th Saturdays @ 8:00 AM
+  - heading: Ladies Ministry
+    description: Fellowship and fun for the women of The River — coffee meet-ups, paint nights, and seasonal gatherings throughout the year. Check the calendar for the next event.
+    when: See calendar for upcoming events
   inline_photo: /site/images/gallery-01.jpg
   inline_photo_focal:
     x: 50
