@@ -39,14 +39,28 @@ except ImportError:
     print("Install pyyaml: pip install pyyaml", file=sys.stderr)
     sys.exit(1)
 
-from densanon.core.site_builder import default_blocks  # noqa: F401 — registers core block library
-from densanon.core.site_builder.data_loader import load_site_data
-from densanon.core.site_builder.pipeline import BuildContext, build_page, build_site
+# The rendering engine lives in the sibling densanon-core repo, which is
+# present on the publish box (the admin "Publish to site" runs this script
+# there) but NOT on the GitHub Actions runner. Pages are rendered + committed
+# from the box, so on the runner this build has nothing to do — skip cleanly
+# instead of crashing. (Before this guard, every push failed the "Build
+# content from _data" workflow with `No module named 'densanon'`, which is
+# what made site edits appear to "never publish": the push landed but the
+# render that turns _data edits into HTML never ran.)
+try:
+    from densanon.core.site_builder import default_blocks  # noqa: F401 — registers core block library
+    from densanon.core.site_builder.data_loader import load_site_data
+    from densanon.core.site_builder.pipeline import BuildContext, build_page, build_site
 
-# Side-effect import: registers church-specific block types onto
-# densanon's default_registry. MUST come after default_blocks so any
-# overrides we apply land on top.
-import church_blocks  # noqa: F401
+    # Side-effect import: registers church-specific block types onto
+    # densanon's default_registry. MUST come after default_blocks so any
+    # overrides we apply land on top.
+    import church_blocks  # noqa: F401
+except ModuleNotFoundError as exc:
+    print(f"[build_pages] rendering engine unavailable ({exc}); "
+          f"pages are built + committed on the publish box, nothing to do here. "
+          f"Skipping.", file=sys.stderr)
+    sys.exit(0)
 
 
 ROOT = _REPO_ROOT
