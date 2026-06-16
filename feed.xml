@@ -10,7 +10,7 @@
   <language>en-us</language>
   <description><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></description>
   <itunes:summary><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></itunes:summary>
-  <lastBuildDate>Wed, 10 Jun 2026 03:05:08 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 16 Jun 2026 19:09:22 +0000</lastBuildDate>
   <itunes:author>theriverag.church</itunes:author>
   <itunes:owner>
     <itunes:name>The River Church</itunes:name>
@@ -22,6 +22,18 @@
   </itunes:category>
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
+  <item>
+    <title>Acts 10 - The River Church | Post Falls, Idaho</title>
+    <description><![CDATA[This sermon explores how God prepares hearts before we even have a chance to speak, using Cornelius as an example. It emphasizes that prayer and generosity are noticed by God, regardless of one's background or status.]]></description>
+    <itunes:summary><![CDATA[This sermon explores how God prepares hearts before we even have a chance to speak, using Cornelius as an example. It emphasizes that prayer and generosity are noticed by God, regardless of one's background or status.]]></itunes:summary>
+    <link>https://theriverag.church/blog/</link>
+    <guid isPermaLink="false">4NEGVYkbNzM</guid>
+    <pubDate>Wed, 10 Jun 2026 02:59:11 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/4NEGVYkbNzM.mp3" length="16392714" type="audio/mpeg"/>
+    <itunes:duration>34:09</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
   <item>
     <title>Acts 9</title>
     <description><![CDATA[This sermon explores the dramatic transformation of Saul, a zealous persecutor of Christians, into Paul, an apostle for Christ. It highlights how God uses divine interruptions to reach self-righteous individuals and calls believers to walk in compassion rather than pride.]]></description>
