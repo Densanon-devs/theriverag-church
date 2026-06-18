@@ -10,7 +10,7 @@
   <language>en-us</language>
   <description><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></description>
   <itunes:summary><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></itunes:summary>
-  <lastBuildDate>Wed, 17 Jun 2026 23:35:04 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 18 Jun 2026 20:05:10 +0000</lastBuildDate>
   <itunes:author>theriverag.church</itunes:author>
   <itunes:owner>
     <itunes:name>The River Church</itunes:name>
@@ -22,6 +22,18 @@
   </itunes:category>
   <itunes:explicit>false</itunes:explicit>
   <itunes:type>episodic</itunes:type>
+  <item>
+    <title>Maybe Yes, Maybe No: Empowered, Not Enabled — Acts 12</title>
+    <description><![CDATA[Working through Acts 12, this Sunday's message walks through Herod's persecution of the church, James being put to the sword, and Peter sleeping between two soldiers the night before his execution until an angel walks him out of prison. The central tension is why God lets James die yet delivers Peter — and the reminder that God doesn't enable us, He empowers us, asking us to do what we can while He handles what only He can. The call is to pray earnestly and with expectation, use the reason God gave us, and trust the God who sees the whole picture even when we only see earth.]]></description>
+    <itunes:summary><![CDATA[Working through Acts 12, this Sunday's message walks through Herod's persecution of the church, James being put to the sword, and Peter sleeping between two soldiers the night before his execution until an angel walks him out of prison. The central tension is why God lets James die yet delivers Peter — and the reminder that God doesn't enable us, He empowers us, asking us to do what we can while He handles what only He can. The call is to pray earnestly and with expectation, use the reason God gave us, and trust the God who sees the whole picture even when we only see earth.]]></itunes:summary>
+    <link>https://theriverag.church/blog/</link>
+    <guid isPermaLink="false">B0wUUlFwNI8</guid>
+    <pubDate>Thu, 18 Jun 2026 01:03:12 +0000</pubDate>
+    <enclosure url="https://github.com/densanon-devs/theriverag-church/releases/download/podcast/B0wUUlFwNI8.mp3" length="12688759" type="audio/mpeg"/>
+    <itunes:duration>26:26</itunes:duration>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:episodeType>full</itunes:episodeType>
+  </item>
   <item>
     <title>Acts 10 - The River Church | Post Falls, Idaho</title>
     <description><![CDATA[This sermon explores how God prepares hearts before we even have a chance to speak, using Cornelius as an example. It emphasizes that prayer and generosity are noticed by God, regardless of one's background or status.]]></description>
