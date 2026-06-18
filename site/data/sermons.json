@@ -1,5 +1,12 @@
 [
   {
+    "videoId": "B0wUUlFwNI8",
+    "title": "The River Church | Post Falls, Idaho",
+    "published": "2026-06-18T01:03:12+00:00",
+    "url": "https://www.youtube.com/watch?v=B0wUUlFwNI8",
+    "thumbnail": "https://i.ytimg.com/vi/B0wUUlFwNI8/hqdefault.jpg"
+  },
+  {
     "videoId": "4NEGVYkbNzM",
     "title": "Acts 10 - The River Church | Post Falls, Idaho",
     "published": "2026-06-10T02:59:11+00:00",
@@ -96,12 +103,5 @@
     "published": "2026-02-16T08:11:06+00:00",
     "url": "https://www.youtube.com/watch?v=1eTudHuR6NI",
     "thumbnail": "https://i.ytimg.com/vi/1eTudHuR6NI/hqdefault.jpg"
-  },
-  {
-    "videoId": "x_82g_OaUBo",
-    "title": "You Belong",
-    "published": "2026-02-09T08:13:03+00:00",
-    "url": "https://www.youtube.com/watch?v=x_82g_OaUBo",
-    "thumbnail": "https://i.ytimg.com/vi/x_82g_OaUBo/hqdefault.jpg"
   }
 ]
