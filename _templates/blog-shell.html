@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="{{prefix}}site/images/favicon.ico">
+  <link rel="apple-touch-icon" href="{{prefix}}site/images/logo.png">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#cfa861">
+  <link rel="alternate" type="application/rss+xml" title="The River Church — Sermons Podcast" href="{{base_url}}/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Oswald:wght@400;600;700&family=Abel&display=swap">
+  <link rel="stylesheet" href="{{prefix}}css/styles.css">
+  <link rel="stylesheet" href="{{prefix}}css/blog.css">
+  <!--cms:head-code--><!--/cms:head-code-->
+  <!--cms:seo-->
+{{seo}}
+  <!--/cms:seo-->
+</head>
+<body>
+
+  <!--#include file="_includes/header.html" -->
+
+{{content}}
+
+  <!--#include file="_includes/footer.html" -->
+
+  <script src="{{prefix}}js/main.js"></script>
+  <script src="{{prefix}}js/dynamic.js"></script>
+  <script src="{{prefix}}js/blog-reveal.js" defer></script>
+  <!--cms:body-code--><!--/cms:body-code-->
+</body>
+</html>

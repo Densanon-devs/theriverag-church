@@ -74,6 +74,32 @@ _MONTHS = ["", "January", "February", "March", "April", "May", "June",
            "July", "August", "September", "October", "November", "December"]
 
 
+# ─── Blog templates (the single, unified source of the blog look) ──────
+# The markup for every blog page lives in _templates/*.html; each post's .md
+# only supplies its specific parts, which get injected into the {{placeholders}}.
+# Restyle all blogs at once by editing a template here and rebuilding — the
+# individual posts are never hand-touched. See _templates/README.md.
+TPL_DIR = ROOT / "_templates"
+_TPL_CACHE: dict[str, str] = {}
+
+
+def _load_template(name: str) -> str:
+    """Read _templates/<name>.html (cached for the build)."""
+    if name not in _TPL_CACHE:
+        _TPL_CACHE[name] = (TPL_DIR / f"{name}.html").read_text(encoding="utf-8")
+    return _TPL_CACHE[name]
+
+
+def _fill(template: str, **values: str) -> str:
+    """Substitute {{key}} placeholders. Plain string replacement (not eval or
+    str.format), so injected HTML/JSON can contain any characters — including
+    the braces that appear in JSON-LD and inline styles."""
+    out = template
+    for key, val in values.items():
+        out = out.replace("{{" + key + "}}", val)
+    return out
+
+
 # ─── Blog rendering (church-specific, not block-tree-driven) ───────────
 
 
@@ -149,71 +175,56 @@ def _post_og_image(p: dict) -> str:
     return f"{BASE_URL}/site/images/og-cover.png"
 
 
-def _blog_page_shell(prefix: str, *, title: str, desc: str,
-                     canonical: str, og_type: str, body_html: str,
-                     article_schema: dict | None = None,
-                     og_image: str | None = None) -> str:
-    """Standard blog-page wrapper. Uses the shared header/footer partials
-    so blog pages auto-pick up nav + footer changes from the site_builder
-    pipeline. The SEO meta tags (title/description/og:*/twitter:*/
-    canonical) plus the BlogPosting JSON-LD schema all live inside the
-    cms:seo marker block — same convention as the rest of the site, so
-    apply_seo() doesn't see two copies."""
+def _build_seo(*, title: str, desc: str, canonical: str, og_type: str,
+               og_image: str, article_schema: dict | None) -> str:
+    """Assemble the per-page SEO block (title/description/og:*/twitter:*/
+    canonical + optional BlogPosting JSON-LD) that fills the shell's {{seo}}
+    placeholder. Kept in Python because it's data-driven; the template stays
+    pure markup."""
     import json as _json
-    if og_image is None:
-        og_image = f"{BASE_URL}/site/images/og-cover.png"
     schema_json = (
         f'\n  <script type="application/ld+json">{_json.dumps(article_schema, indent=2, ensure_ascii=False)}</script>'
         if article_schema else ""
     )
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="{prefix}site/images/favicon.ico">
-  <link rel="apple-touch-icon" href="{prefix}site/images/logo.png">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#cfa861">
-  <link rel="alternate" type="application/rss+xml" title="The River Church — Sermons Podcast" href="{BASE_URL}/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Oswald:wght@400;600;700&family=Abel&display=swap">
-  <link rel="stylesheet" href="{prefix}css/styles.css">
-  <link rel="stylesheet" href="{prefix}css/blog.css">
-  <!--cms:head-code--><!--/cms:head-code-->
-  <!--cms:seo-->
-  <title>{_ESC(title)}</title>
-  <meta name="description" content="{_ESC(desc)}">
-  <meta property="og:title" content="{_ESC(title)}">
-  <meta property="og:description" content="{_ESC(desc)}">
-  <meta property="og:url" content="{BASE_URL}/{canonical}">
-  <meta property="og:type" content="{og_type}">
-  <meta property="og:image" content="{og_image}">
-  <meta property="og:site_name" content="The River Church">
-  <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{_ESC(title)}">
-  <meta name="twitter:description" content="{_ESC(desc)}">
-  <meta name="twitter:image" content="{og_image}">
-  <link rel="canonical" href="{BASE_URL}/{canonical}">{schema_json}
-  <!--/cms:seo-->
-</head>
-<body>
+    return (
+        f'  <title>{_ESC(title)}</title>\n'
+        f'  <meta name="description" content="{_ESC(desc)}">\n'
+        f'  <meta property="og:title" content="{_ESC(title)}">\n'
+        f'  <meta property="og:description" content="{_ESC(desc)}">\n'
+        f'  <meta property="og:url" content="{BASE_URL}/{canonical}">\n'
+        f'  <meta property="og:type" content="{og_type}">\n'
+        f'  <meta property="og:image" content="{og_image}">\n'
+        f'  <meta property="og:site_name" content="The River Church">\n'
+        f'  <meta property="og:locale" content="en_US">\n'
+        f'  <meta name="twitter:card" content="summary_large_image">\n'
+        f'  <meta name="twitter:title" content="{_ESC(title)}">\n'
+        f'  <meta name="twitter:description" content="{_ESC(desc)}">\n'
+        f'  <meta name="twitter:image" content="{og_image}">\n'
+        f'  <link rel="canonical" href="{BASE_URL}/{canonical}">{schema_json}'
+    )
 
-  <!--#include file="_includes/header.html" -->
 
-{body_html}
-
-  <!--#include file="_includes/footer.html" -->
-
-  <script src="{prefix}js/main.js"></script>
-  <script src="{prefix}js/dynamic.js"></script>
-  <script src="{prefix}js/blog-reveal.js" defer></script>
-  <!--cms:body-code--><!--/cms:body-code-->
-</body>
-</html>
-"""
+def _blog_page_shell(prefix: str, *, title: str, desc: str,
+                     canonical: str, og_type: str, body_html: str,
+                     article_schema: dict | None = None,
+                     og_image: str | None = None) -> str:
+    """Wrap a page's body in the unified blog shell (_templates/blog-shell.html).
+    Uses the shared header/footer partials so blog pages auto-pick up nav +
+    footer changes from the site_builder pipeline. The SEO meta tags + the
+    BlogPosting JSON-LD live inside the cms:seo marker block — same convention
+    as the rest of the site, so apply_seo() doesn't see two copies."""
+    if og_image is None:
+        og_image = f"{BASE_URL}/site/images/og-cover.png"
+    seo = _build_seo(title=title, desc=desc, canonical=canonical,
+                     og_type=og_type, og_image=og_image,
+                     article_schema=article_schema)
+    return _fill(
+        _load_template("blog-shell"),
+        prefix=prefix,
+        base_url=BASE_URL,
+        seo=seo,
+        content=body_html.rstrip("\n"),
+    )
 
 
 def _render_post_page(p: dict) -> str:
@@ -226,25 +237,18 @@ def _render_post_page(p: dict) -> str:
                f'</div>')
     desc = p["summary"] or f'{p["title"]} — sermon recap from The River Church, Post Falls, Idaho.'
     og_img = _post_og_image(p)
-    # Cinematic hero: the sermon's title + date over the message thumbnail, with
-    # a dark legibility veil and a bottom gradient that fades into the white page
-    # (mirrors the reference Squarespace sermon page). The thumbnail is passed as
-    # a CSS custom property so the styling lives entirely in blog.css.
-    hero = f'''  <header class="sermon-hero" style="--hero-img:url('{_ESC(og_img)}')">
-    <div class="sermon-hero__inner container">
-      <p class="blog-back"><a href="{prefix}blog/">&larr; All sermon notes</a></p>
-      <p class="blog-date">{_ESC(p["date_human"])}</p>
-      <h1>{_ESC(p["title"])}</h1>
-    </div>
-  </header>'''
-    body = f'''{hero}
-  <main class="blog-page">
-    <article class="blog-post container">
-{p["body"]}
-      <hr class="blog-rule">
-      {cta}
-    </article>
-  </main>'''
+    # The post's specific parts get injected into the unified post template
+    # (_templates/blog-post.html): a cinematic hero (title + date over the
+    # message thumbnail, styled entirely in blog.css) then the article body.
+    body = _fill(
+        _load_template("blog-post"),
+        prefix=prefix,
+        hero_image=_ESC(og_img),
+        date=_ESC(p["date_human"]),
+        title=_ESC(p["title"]),
+        body=p["body"],
+        cta=cta,
+    ).rstrip("\n")
     return _blog_page_shell(
         prefix,
         title=f'{p["title"]} — The River Church',
@@ -286,25 +290,20 @@ def _render_post_page(p: dict) -> str:
 def _render_blog_index(posts: list[dict]) -> str:
     prefix = "../"
     if posts:
+        card_tpl = _load_template("blog-card")
         cards = "\n".join(
-            f'''      <article class="blog-card">
-        <h2><a href="{prefix}blog/{p["slug"]}/">{_ESC(p["title"])}</a></h2>
-        <p class="blog-date">{_ESC(p["date_human"])}</p>
-        <p class="blog-summary">{_ESC(p["summary"])}</p>
-        <p><a class="blog-readmore" href="{prefix}blog/{p["slug"]}/">Read the recap &rarr;</a></p>
-      </article>''' for p in posts
+            _fill(
+                card_tpl,
+                href=f'{prefix}blog/{p["slug"]}/',
+                title=_ESC(p["title"]),
+                date=_ESC(p["date_human"]),
+                summary=_ESC(p["summary"]),
+            ).rstrip("\n")
+            for p in posts
         )
     else:
         cards = '      <p class="blog-empty">Sermon recaps will appear here soon — check back after this week\'s message.</p>'
-    body = f'''  <main class="blog-page">
-    <section class="blog-hero container">
-      <h1>Sermon Notes</h1>
-      <p class="blog-lead">Weekly recaps of what we're learning together at The River Church &mdash; each with the full message embedded so you can catch up anytime.</p>
-    </section>
-    <section class="blog-list container">
-{cards}
-    </section>
-  </main>'''
+    body = _fill(_load_template("blog-index"), cards=cards).rstrip("\n")
     return _blog_page_shell(
         prefix,
         title="Sermon Notes — The River Church",
