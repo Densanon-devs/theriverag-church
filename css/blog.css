@@ -115,3 +115,99 @@
   border: 2px solid var(--color-accent);
 }
 .blog-cta .btn-outline:hover { background: var(--color-bg-light); }
+
+/* ============================================================
+   Cinematic sermon hero (single-post pages)
+   Title + date over the message thumbnail, with a dark
+   legibility veil and a bottom gradient that fades into the
+   white page background. Mirrors the reference sermon page.
+   ============================================================ */
+.sermon-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(320px, 48vh, 520px);   /* tightened height */
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--color-bg-dark);   /* fallback if the thumbnail 404s */
+}
+/* thumbnail layer (its own element via ::before so we can scale + blur it).
+   A light blur + dim keeps the imagery recognizable while stopping a busy
+   thumbnail's own baked-in text from competing with the sermon title. The
+   extra scale hides the soft edges the blur would otherwise reveal. */
+.sermon-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--hero-img);
+  background-size: cover;
+  background-position: center 32%;
+  transform: scale(1.12);
+  filter: blur(3px) brightness(.86) saturate(1.05);
+  animation: heroZoom 1.4s cubic-bezier(.2,.7,.2,1) both;
+}
+/* veil (legibility — darker in the lower band where the title sits) + page
+   fade (bottom → white). */
+.sermon-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(to top, var(--color-bg) 0%, rgba(255,255,255,0) 22%),
+    linear-gradient(to bottom,
+      rgba(6,6,8,.42) 0%,
+      rgba(6,6,8,.34) 26%,
+      rgba(6,6,8,.66) 74%,
+      rgba(6,6,8,.60) 100%);
+}
+.sermon-hero__inner {
+  width: 100%;
+  padding: 2.4rem 0 4.2rem;        /* lift the title clear of the bottom fade */
+  animation: heroIn .9s cubic-bezier(.2,.7,.2,1) both;
+}
+.sermon-hero .blog-back { margin: 0 0 .8rem; }
+.sermon-hero .blog-back a { color: rgba(255,255,255,.82); }
+.sermon-hero .blog-back a:hover { color: #fff; }
+.sermon-hero .blog-date {
+  color: var(--color-accent);
+  margin: 0 0 .55rem;
+  text-shadow: 0 1px 12px rgba(0,0,0,.6);
+}
+.sermon-hero h1 {
+  font-family: var(--font-heading);
+  color: #fff;
+  font-size: clamp(1.9rem, 4.6vw, 2.95rem);   /* capped so it doesn't dominate */
+  line-height: 1.06;
+  margin: 0;
+  max-width: 16ch;
+  text-shadow: 0 2px 26px rgba(0,0,0,.62);
+}
+/* A post page leads with the hero, so pull the article up under it and let the
+   page background do the blending (no extra top padding fighting the fade). */
+.sermon-hero + .blog-page { padding-top: 1.6rem; }
+
+@keyframes heroIn  { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes heroZoom { from { transform: scale(1.2); } to { transform: scale(1.12); } }
+
+/* ============================================================
+   Scroll reveal — the `.reveal` class is added by js/blog-reveal.js
+   (so no-JS visitors are never left with hidden content).
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sermon-hero::before,
+  .sermon-hero__inner { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

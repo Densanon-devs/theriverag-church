@@ -209,6 +209,7 @@ def _blog_page_shell(prefix: str, *, title: str, desc: str,
 
   <script src="{prefix}js/main.js"></script>
   <script src="{prefix}js/dynamic.js"></script>
+  <script src="{prefix}js/blog-reveal.js" defer></script>
   <!--cms:body-code--><!--/cms:body-code-->
 </body>
 </html>
@@ -223,18 +224,27 @@ def _render_post_page(p: dict) -> str:
                f'<a href="{_ESC(p["youtube_url"])}" target="_blank" rel="noopener" class="btn">Watch on YouTube</a>'
                f'<a href="{prefix}#visit" class="btn btn-outline">Plan a visit</a>'
                f'</div>')
-    body = f'''  <main class="blog-page">
-    <article class="blog-post container">
+    desc = p["summary"] or f'{p["title"]} — sermon recap from The River Church, Post Falls, Idaho.'
+    og_img = _post_og_image(p)
+    # Cinematic hero: the sermon's title + date over the message thumbnail, with
+    # a dark legibility veil and a bottom gradient that fades into the white page
+    # (mirrors the reference Squarespace sermon page). The thumbnail is passed as
+    # a CSS custom property so the styling lives entirely in blog.css.
+    hero = f'''  <header class="sermon-hero" style="--hero-img:url('{_ESC(og_img)}')">
+    <div class="sermon-hero__inner container">
       <p class="blog-back"><a href="{prefix}blog/">&larr; All sermon notes</a></p>
-      <h1>{_ESC(p["title"])}</h1>
       <p class="blog-date">{_ESC(p["date_human"])}</p>
+      <h1>{_ESC(p["title"])}</h1>
+    </div>
+  </header>'''
+    body = f'''{hero}
+  <main class="blog-page">
+    <article class="blog-post container">
 {p["body"]}
       <hr class="blog-rule">
       {cta}
     </article>
   </main>'''
-    desc = p["summary"] or f'{p["title"]} — sermon recap from The River Church, Post Falls, Idaho.'
-    og_img = _post_og_image(p)
     return _blog_page_shell(
         prefix,
         title=f'{p["title"]} — The River Church',
