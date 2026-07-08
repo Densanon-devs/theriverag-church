@@ -1,4 +1,4 @@
-fetched_at: '2026-05-30T21:45:06.672113+00:00'
+fetched_at: '2026-07-08T13:00:03.936122+00:00'
 events:
 - date_iso: '2026-07-26'
   month: JUL
@@ -6,5 +6,13 @@ events:
   title: The River at the river
   when_text: Sun 11am
   location: Q'emiln Park - 12201 W Parkway Dr, Post Falls, ID 83854, USA
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
+- date_iso: '2026-08-16'
+  month: AUG
+  day: '16'
+  title: Popsicles in the Park
+  when_text: Sun 1:30pm
+  location: ''
   url: https://theriverag.church/calendar
   rsvp_label: Details
