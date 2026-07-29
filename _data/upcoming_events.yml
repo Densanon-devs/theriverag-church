@@ -1,4 +1,4 @@
-fetched_at: '2026-07-27T13:00:05.107027+00:00'
+fetched_at: '2026-07-29T13:00:04.373987+00:00'
 events:
 - date_iso: '2026-08-16'
   month: AUG
@@ -6,5 +6,13 @@ events:
   title: Popsicles in the Park
   when_text: Sun 1:30pm
   location: ''
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
+- date_iso: '2026-08-29'
+  month: AUG
+  day: '29'
+  title: Women's Gathering
+  when_text: Sat 9am
+  location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
   url: https://theriverag.church/calendar
   rsvp_label: Details
