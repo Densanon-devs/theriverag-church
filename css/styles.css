@@ -1668,3 +1668,42 @@ p {
         scroll-behavior: auto !important;
     }
 }
+
+/* ── Contact / prayer form submission status ────────────────────────────── */
+/* Set by js/forms.js. Before this, a failed submit navigated the visitor to a
+   405 error page; the message now lands inline, under the form. */
+.cms-form-status {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    border-left: 3px solid transparent;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cms-form-status:empty {
+    display: none;
+}
+
+.cms-form-status.is-pending {
+    color: var(--color-text-muted);
+    border-left-color: var(--color-text-muted);
+    background: var(--color-bg-light);
+}
+
+.cms-form-status.is-ok {
+    color: var(--color-text);
+    border-left-color: var(--color-bg-accent);
+    background: var(--color-bg-light);
+}
+
+.cms-form-status.is-error {
+    color: var(--color-text);
+    border-left-color: var(--color-accent-deep);
+    background: var(--color-bg-light);
+}
+
+.cms-form-status.is-error a {
+    color: var(--color-accent-deep);
+    font-weight: 600;
+}

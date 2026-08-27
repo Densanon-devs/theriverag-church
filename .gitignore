@@ -26,3 +26,7 @@ _scrape/
 # (config.db_path is relative; correct location is ../church-ops/).
 church_ops.db
 church_ops.db-journal
+
+# Form submissions must never be committed — this repo is public and
+# church-ops auto-pushes it. Submissions live in the private church-ops repo.
+_data/form_submissions/
