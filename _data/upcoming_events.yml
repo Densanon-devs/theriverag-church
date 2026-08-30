@@ -1,13 +1,5 @@
-fetched_at: '2026-08-28T13:00:03.623361+00:00'
+fetched_at: '2026-08-30T13:00:04.304431+00:00'
 events:
-- date_iso: '2026-08-29'
-  month: AUG
-  day: '29'
-  title: Women's Gathering
-  when_text: Sat 9am
-  location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
-  url: https://theriverag.church/calendar
-  rsvp_label: Details
 - date_iso: '2026-09-03'
   month: SEP
   day: '03'
@@ -24,3 +16,11 @@ events:
   location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
   url: https://theriveragchurch.churchcenter.com/registrations/events/3837763
   rsvp_label: RSVP
+- date_iso: '2026-09-23'
+  month: SEP
+  day: '23'
+  title: Dinner by The River
+  when_text: Wed 4pm
+  location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
