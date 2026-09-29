@@ -10,7 +10,7 @@
   <language>en-us</language>
   <description><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></description>
   <itunes:summary><![CDATA[If you're looking for a church to call home we believe you will find a place to belong at The River Church! Follow along as we preach through the Word of God in Post Falls, Idaho. Learn more at theriverag.church]]></itunes:summary>
-  <lastBuildDate>Tue, 29 Sep 2026 03:49:01 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 29 Sep 2026 03:58:08 +0000</lastBuildDate>
   <itunes:author>theriverag.church</itunes:author>
   <itunes:owner>
     <itunes:name>The River Church</itunes:name>
@@ -53,8 +53,8 @@
     <link>https://theriverag.church/blog/</link>
     <guid isPermaLink="false">KYnTjJq8gGo</guid>
     <pubDate>Sun, 30 Aug 2026 23:54:28 +0000</pubDate>
-    <enclosure url="https://media.theriverag.church/podcast/KYnTjJq8gGo.mp3" length="576720" type="audio/mpeg"/>
-    <itunes:duration>01:12</itunes:duration>
+    <enclosure url="https://media.theriverag.church/podcast/KYnTjJq8gGo-full.mp3" length="14872596" type="audio/mpeg"/>
+    <itunes:duration>30:59</itunes:duration>
     <itunes:explicit>false</itunes:explicit>
     <itunes:episodeType>full</itunes:episodeType>
   </item>
