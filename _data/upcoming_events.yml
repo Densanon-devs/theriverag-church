@@ -1,13 +1,5 @@
-fetched_at: '2026-10-02T13:00:04.013024+00:00'
+fetched_at: '2026-10-03T13:00:04.646532+00:00'
 events:
-- date_iso: '2026-10-02'
-  month: OCT
-  day: '02'
-  title: Mom's on Mission - Mom's Group
-  when_text: Fri 8:30am
-  location: ''
-  url: https://theriverag.church/calendar
-  rsvp_label: Details
 - date_iso: '2026-10-06'
   month: OCT
   day: '06'
@@ -21,6 +13,14 @@ events:
   day: '07'
   title: Dinner by The River
   when_text: Wed 4pm
+  location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
+- date_iso: '2026-10-08'
+  month: OCT
+  day: 08
+  title: Worship Circle / Practice
+  when_text: Thu 5:30pm
   location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
   url: https://theriverag.church/calendar
   rsvp_label: Details
