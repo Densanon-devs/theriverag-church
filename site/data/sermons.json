@@ -1,12 +1,5 @@
 [
   {
-    "videoId": "wEVbi4fkQEk",
-    "title": "Acts 27 | Post Falls, Idaho",
-    "published": "2026-11-02T08:37:03+00:00",
-    "url": "https://www.youtube.com/watch?v=wEVbi4fkQEk",
-    "thumbnail": "https://i.ytimg.com/vi/wEVbi4fkQEk/hqdefault.jpg"
-  },
-  {
     "videoId": "TtrZg5TGq0o",
     "title": "Acts 28 | Post Falls, Idaho",
     "published": "2026-11-01T20:16:47+00:00",
@@ -14,11 +7,11 @@
     "thumbnail": "https://i.ytimg.com/vi/TtrZg5TGq0o/hqdefault.jpg"
   },
   {
-    "videoId": "FebaZVqoZIM",
-    "title": "Acts 28 | Post Falls, Idaho",
-    "published": "2026-11-01T20:15:46+00:00",
-    "url": "https://www.youtube.com/watch?v=FebaZVqoZIM",
-    "thumbnail": "https://i.ytimg.com/vi/FebaZVqoZIM/hqdefault.jpg"
+    "videoId": "wEVbi4fkQEk",
+    "title": "Acts 27 | Post Falls, Idaho",
+    "published": "2026-11-02T08:37:03+00:00",
+    "url": "https://www.youtube.com/watch?v=wEVbi4fkQEk",
+    "thumbnail": "https://i.ytimg.com/vi/wEVbi4fkQEk/hqdefault.jpg"
   },
   {
     "videoId": "6peAtFvm9YI",
@@ -103,5 +96,12 @@
     "published": "2026-08-11T15:00:11+00:00",
     "url": "https://www.youtube.com/watch?v=OZMC0kgELqM",
     "thumbnail": "https://i.ytimg.com/vi/OZMC0kgELqM/hqdefault.jpg"
+  },
+  {
+    "videoId": "sIJExNmbrds",
+    "title": "Acts 17 - The River Church | Post Falls, Idaho",
+    "published": "2026-08-03T20:55:38+00:00",
+    "url": "https://www.youtube.com/watch?v=sIJExNmbrds",
+    "thumbnail": "https://i.ytimg.com/vi/sIJExNmbrds/hqdefault.jpg"
   }
 ]
