@@ -100,10 +100,396 @@ sections:
   bar_spacing: 0.12em
   bar_transform: uppercase
   bar_text: var(--color-bg-dark)
+  accent_line: 2px
+  accent_line_thick: 3px
+  hero_focus: center
+  invitation_focus: center
   post_width: 760px
   post_h2_size: 1.6rem
   post_h3_size: 1.3rem
   post_line: '1.75'
+# The inner details of each kind of section: text sizes, gaps, margins,
+# padding, columns, shadows, picture shapes. A text size points at a text
+# style above times a factor, so changing Paragraph 3 or Heading 3 reaches
+# it. Names end in _upto768 and the like where the value is for screens up
+# to that width.
+components:
+  about-row:
+    about_row_gap: 3.5rem
+    about_row_max_width: 1100px
+  about-section:
+    about_section_h1_size: clamp(1.85rem, 3.2vw, 2.5rem)
+    about_section_h1_margin: 0 auto 2.5rem
+    about_section_h1_max_width: 1100px
+    about_section_h1_spacing: 0.04em
+    about_section_h1_weight: '500'
+  about-text:
+    about_text_p_mb: 1rem
+  about-when:
+    about_when_mt: 1.25rem
+    about_when_pad: 0.6rem 1.25rem
+    about_when_weight: '600'
+    about_when_radius: 999px
+    about_when_spacing: 0.12em
+    about_when_size: calc(var(--p3-size) * 0.94444444)
+  accordion-body:
+    accordion_body_pt: 1.25rem
+    accordion_body_p_size: calc(var(--h4-size) * 1.03157895)
+    accordion_body_p_line: '1.7'
+    accordion_body_p_mb: 0.5rem
+    accordion_body_when_mt: 0.85rem
+    accordion_body_when_size: var(--p3-size)
+    accordion_body_when_spacing: 0.14em
+  accordion-card:
+    accordion_card_summary_gap: 1rem
+    accordion_card_summary_h2_size: clamp(1.2rem, 1.8vw, 1.5rem)
+    accordion_card_summary_h2_spacing: 0.06em
+    accordion_card_summary_h2_weight: '500'
+  accordion-chev:
+    accordion_chev_mr: 4px
+    accordion_chev_width: 12px
+    accordion_chev_height: 12px
+  accordion-list:
+    accordion_list_gap: 1rem
+  announcement-bar:
+    announcement_bar_weight: '600'
+  archive-note:
+    archive_note_mt: 3rem
+    archive_note_a_spacing: 0.16em
+    archive_note_a_weight: '600'
+    archive_note_a_size: calc(var(--p3-size) * 0.94444444)
+  belief-card:
+    belief_card_h2_size: calc(var(--text-size) * 1.08235294)
+    belief_card_h2_mb: 0.75rem
+    belief_card_h2_spacing: 0.06em
+    belief_card_h2_weight: '500'
+    belief_card_p_size: var(--h4-size)
+    belief_card_p_line: '1.65'
+    belief_card_p_opacity: '0.88'
+  beliefs:
+    beliefs_heading_size: clamp(2rem,3.5vw,2.8rem)
+    beliefs_heading_mb: 0.5rem
+    beliefs_link_mt: 2.5rem
+  beliefs-grid:
+    beliefs_grid_columns: '2'
+    beliefs_grid_gap: 1.25rem
+    beliefs_grid_max_width: 1100px
+  blog-back:
+    blog_back_margin: 0 0 .8rem
+    blog_back_a_spacing: .1em
+    blog_back_a_size: calc(var(--p3-size) * 0.86666667)
+  blog-card:
+    blog_card_pad: 1.7rem 0
+    blog_card_h2_size: calc(var(--h3-size) * 1.10714286)
+    blog_card_h2_margin: 0 0 .3rem
+    blog_card_img_mb: 1rem
+    blog_card_img_max_height: 320px
+  blog-cta:
+    blog_cta_gap: .8rem
+  blog-date:
+    blog_date_spacing: .1em
+    blog_date_size: calc(var(--p3-size) * 0.88888889)
+    blog_date_margin: 0 0 .6rem
+  blog-empty:
+    blog_empty_pad: 1.5rem 0
+  blog-hero:
+    blog_hero_mb: 2.2rem
+    blog_hero_h1_size: clamp(2rem, 5vw, 3rem)
+    blog_hero_h1_line: '1.1'
+    blog_hero_h1_margin: 0 0 .6rem
+    blog_hero_blog_lead_size: calc(var(--text-size) * 1.03529412)
+  blog-page:
+    blog_page_pad: 2.5rem 0 4rem
+  blog-post:
+    blog_post_h1_size: clamp(1.8rem, 4.6vw, 2.7rem)
+    blog_post_h1_line: '1.14'
+    blog_post_h1_margin: .2rem 0 .4rem
+    blog_post_h2_margin: 2rem 0 .7rem
+    blog_post_h2_line: '1.2'
+    blog_post_p_margin: 0 0 1.15rem
+    blog_post_ul_margin: 0 0 1.15rem 1.4rem
+    blog_post_li_margin: 0 0 .35rem
+    blog_post_blockquote_margin: 1.5rem 0
+    blog_post_blockquote_pad: .15rem 0 .15rem 1.2rem
+    blog_post_img_margin: 1.5rem auto
+    blog_post_post_pic_margin: 1.75rem auto
+    blog_post_post_pic_figcaption_line: '1.5'
+    blog_post_post_pic_figcaption_mt: 0.6rem
+    blog_post_post_pic_left_margin: 0.4rem 1.75rem 1rem 0
+    blog_post_post_pic_right_margin: 0.4rem 0 1rem 1.75rem
+    blog_post_post_pic_full_post_pic_left_margin: 1.75rem auto
+    blog_post_post_pic_left_margin_upto640: 1.5rem auto
+    blog_post_post_pic_wide_img_shape: 16 / 9
+    blog_post_post_pic_square_img_shape: 1 / 1
+    blog_post_post_pic_tall_img_shape: 4 / 5
+  blog-readmore:
+    blog_readmore_spacing: .1em
+    blog_readmore_size: calc(var(--p3-size) * 0.88888889)
+    blog_readmore_weight: '600'
+  blog-rule:
+    blog_rule_margin: 2.6rem 0 1.6rem
+  blog-summary:
+    blog_summary_margin: .2rem 0 .7rem
+    blog_summary_line: '1.6'
+  btn-lg:
+    btn_lg_pad: 1rem 2.25rem
+    btn_lg_size: var(--h4-size)
+  btn-primary:
+    btn_primary_shadow: 0 8px 20px -8px rgba(var(--color-accent-rgb), 0.6)
+    btn_primary_hover_shadow: 0 14px 30px -10px rgba(var(--color-accent-rgb), 0.75)
+  calendar-callout:
+    calendar_callout_pad: 1rem 0 2.5rem
+    calendar_callout_h1_size: clamp(2rem, 4vw, 3rem)
+    calendar_callout_h1_spacing: 0.05em
+    calendar_callout_h1_text_shadow: 0 2px 14px rgba(var(--color-shadow-rgb), 0.5)
+  calendar-embed:
+    calendar_embed_max_width: 1100px
+  cms-form-status:
+    cms_form_status_mt: 1rem
+    cms_form_status_pad: 0.75rem 1rem
+    cms_form_status_radius: 4px
+    cms_form_status_size: var(--h4-size)
+    cms_form_status_line: '1.5'
+    cms_form_status_is_error_a_weight: '600'
+  container:
+    container_pad: 0 1.5rem
+  footer-bottom:
+    footer_bottom_pt: 2rem
+    footer_bottom_size: calc(var(--p3-size) * 0.91111111)
+    footer_bottom_spacing: 0.04em
+    footer_bottom_opacity: '0.6'
+  footer-grid:
+    footer_grid_gap: 2.5rem
+    footer_grid_mb: 3rem
+    footer_grid_columns_upto960: '2'
+  footer-logo:
+    footer_logo_mb: 1rem
+    footer_logo_height: 64px
+  gallery-strip:
+    gallery_strip_columns: '3'
+    gallery_strip_gap: 2px
+    gallery_strip_gallery_item_shape: 4 / 3
+    gallery_strip_gallery_item_img_filter: saturate(0.95)
+    gallery_strip_gallery_item_hover_img_filter: saturate(1.05)
+  give-heart:
+    give_heart_size: calc(var(--h3-size) * 3.57142857)
+  header-cta:
+    header_cta_pad: 0.8rem 1.75rem
+    header_cta_weight: '600'
+    header_cta_spacing: 0.12em
+    header_cta_size: calc(var(--p3-size) * 0.94444444)
+    header_cta_pad_upto720: 0.65rem 1.25rem
+    header_cta_size_upto720: calc(var(--p3-size) * 0.86666667)
+    header_cta_shadow: 0 8px 20px -8px rgba(var(--color-accent-rgb), 0.6)
+    header_cta_hover_shadow: 0 12px 28px -10px rgba(var(--color-accent-rgb), 0.7)
+  header-inner:
+    header_inner_max_width: 1400px
+    header_inner_pad: 0.75rem 2rem
+    header_inner_gap: 1.5rem
+    header_inner_min_height_upto960: 84px
+    header_inner_pad_upto960: 0.6rem 1.25rem
+    header_inner_min_height_upto720: 72px
+  header-right:
+    header_right_gap: 1.25rem
+    header_right_gap_upto720: 0.5rem
+  hero-buttons:
+    hero_buttons_gap: 0.85rem
+  hero-content:
+    hero_content_max_width: 820px
+    hero_content_h1_size: clamp(2.6rem, 6.8vw, 5.25rem)
+    hero_content_h1_weight: '600'
+    hero_content_h1_spacing: 0.04em
+    hero_content_h1_mb: 1.5rem
+    hero_content_p_size: clamp(1.05rem, 1.3vw, 1.2rem)
+    hero_content_p_margin: 0 auto 2.25rem
+    hero_content_p_max_width: 620px
+    hero_content_p_line: '1.7'
+    hero_content_h1_text_shadow: 0 2px 24px rgba(var(--color-shadow-rgb), 0.45)
+    hero_content_p_opacity: '0.94'
+  hero-frame:
+    hero_frame_max_width: 880px
+  inline-values:
+    inline_values_gap: 1.25rem
+    inline_values_p_size: clamp(1.5rem, 2.6vw, 2.1rem)
+    inline_values_p_weight: '500'
+    inline_values_p_spacing: 0.06em
+    inline_values_p_line: '1.15'
+    inline_values_p_sep_margin: 0 0.5em
+    inline_values_p_sep_weight: '300'
+  invitation:
+    invitation_max_width: 880px
+    invitation_h2_size: clamp(1.3rem, 2.2vw, 1.7rem)
+    invitation_h2_weight: '500'
+    invitation_h2_mb: 1rem
+    invitation_h2_spacing: 0.01em
+    invitation_h2_line: '1.3'
+    invitation_h2_size_2: clamp(1.9rem, 3.4vw, 2.75rem)
+    invitation_h2_weight_2: '600'
+    invitation_h2_mb_2: 1.5rem
+    invitation_h2_spacing_2: 0.005em
+    invitation_backdrop: blur(8px)
+    invitation_shadow: 0 30px 80px rgba(var(--color-shadow-rgb), 0.4), inset 0 1px 0 rgba(var(--color-on-photo-rgb), 0.06)
+    invitation_before_width: 48px
+  live-card:
+    live_card_h3_size: clamp(1.3rem, 1.9vw, 1.7rem)
+    live_card_h3_mb: 1.25rem
+    live_card_h3_spacing: 0.08em
+    live_card_h3_weight: '500'
+    live_card_live_thumb_shape: 16 / 9
+    live_card_hover_live_thumb_shadow: 0 36px 90px rgba(var(--color-shadow-rgb), 0.45)
+  logo:
+    logo_img_max_height: 14vh
+    logo_img_height_upto960: 56px
+    logo_img_height_upto720: 48px
+  main-nav:
+    main_nav_ul_gap: 2rem
+    main_nav_a_weight: '400'
+    main_nav_a_size: calc(var(--h4-size) * 1.05263158)
+    main_nav_a_spacing: 0.12em
+    main_nav_a_pad: 0.4rem 0
+    main_nav_pad_upto720: 1.25rem 1.5rem
+    main_nav_ul_gap_upto720: 1rem
+    main_nav_a_size_upto720: calc(var(--text-size) * 0.98823529)
+    main_nav_shadow_upto720: 0 10px 30px rgba(var(--color-shadow-rgb), 0.35)
+  menu-toggle:
+    menu_toggle_pad: 0.5rem
+    menu_toggle_gap: 5px
+    menu_toggle_span_radius: 2px
+    menu_toggle_span_width: 26px
+  page:
+    focus_visible_radius: 4px
+    h2_mb: 0.75rem
+    h3_mb: 0.5em
+    h4_mb: 0.75em
+    p_mb: 1rem
+  platform-card:
+    platform_card_gap: 0.4rem
+  platform-cta:
+    platform_cta_weight: '600'
+    platform_cta_size: calc(var(--p3-size) * 0.88888889)
+    platform_cta_spacing: 0.14em
+  platform-name:
+    platform_name_size: calc(var(--p1-size) * 1.04)
+    platform_name_weight: '600'
+    platform_name_spacing: 0.06em
+  platform-row:
+    platform_row_columns: '3'
+    platform_row_gap: 1rem
+    platform_row_max_width: 900px
+  rounded-photo:
+    rounded_photo_shape: 4 / 3
+  section-header:
+    section_header_max_width: 720px
+    section_header_margin: 0 auto 3.5rem
+    section_header_label_spacing: 0.24em
+    section_header_label_size: calc(var(--p3-size) * 0.88888889)
+    section_header_label_weight: '600'
+    section_header_label_mb: 0.85rem
+    section_header_label_pb: 0.6rem
+    section_header_p_size: calc(var(--text-size) * 0.98823529)
+    section_header_label_after_width: 28px
+  sermon-category:
+    sermon_category_size: calc(var(--p3-size) * 0.8)
+    sermon_category_spacing: 0.18em
+    sermon_category_weight: '600'
+  sermon-date:
+    sermon_date_size: calc(var(--p3-size) * 0.91111111)
+    sermon_date_spacing: 0.06em
+  sermon-grid:
+    sermon_grid_columns: '4'
+    sermon_grid_gap: 1.75rem
+    sermon_grid_max_width: 1280px
+    sermon_grid_columns_upto1100: '3'
+  sermon-hero:
+    sermon_hero_min_height: clamp(320px, 48vh, 520px)
+    sermon_hero_inner_pad: 2.4rem 0 4.2rem
+    sermon_hero_blog_back_margin: 0 0 .8rem
+    sermon_hero_blog_date_margin: 0 0 .55rem
+    sermon_hero_h1_size: clamp(1.9rem, 4.6vw, 2.95rem)
+    sermon_hero_h1_line: '1.06'
+    sermon_hero_h1_max_width: 16ch
+    sermon_hero_blog_page_pt: 1.6rem
+    sermon_hero_before_focus: center 32%
+    sermon_hero_before_filter: blur(3px) brightness(.86) saturate(1.05)
+    sermon_hero_blog_date_text_shadow: 0 1px 12px rgba(var(--color-shadow-rgb), .6)
+    sermon_hero_h1_text_shadow: 0 2px 26px rgba(var(--color-shadow-rgb), .62)
+  sermon-meta:
+    sermon_meta_gap: 0.4rem
+  sermon-thumb:
+    sermon_thumb_shape: 1 / 1
+  sermon-title:
+    sermon_title_size: calc(var(--h4-size) * 1.05263158)
+    sermon_title_weight: '600'
+    sermon_title_spacing: 0.03em
+    sermon_title_line: '1.3'
+  sermon-video:
+    sermon_video_pb: 56.25%
+    sermon_video_margin: 1.5rem 0 2.2rem
+  sermons-h1:
+    sermons_h1_size: clamp(2rem, 4vw, 2.8rem)
+    sermons_h1_mb: 0.85rem
+    sermons_h1_spacing: 0.04em
+  sermons-h2:
+    sermons_h2_size: clamp(1.15rem, 1.8vw, 1.45rem)
+    sermons_h2_weight: '400'
+    sermons_h2_mb: 2rem
+    sermons_h2_spacing: 0.01em
+  sermons-platforms:
+    sermons_platforms_gap: 0.85rem
+    sermons_platforms_mt: 0.5rem
+    sermons_platforms_btn_pad: 0.85rem 1.85rem
+    sermons_platforms_btn_size: calc(var(--p3-size) * 0.88888889)
+  service-row:
+    service_row_gap: 4.5rem
+    service_row_max_width: 1200px
+    service_row_margin: 0 auto 5rem
+    service_row_pad: 0 1.5rem
+    service_row_gap_upto960: 2.5rem
+    service_row_mb_upto960: 4rem
+  shape-divider-curve:
+    shape_divider_curve_svg_height: 80px
+    shape_divider_curve_svg_opacity: '0.7'
+  site-footer:
+    site_footer_pad: 5rem 0 2rem
+    site_footer_p_size: calc(var(--p3-size) * 1.02222222)
+    site_footer_p_line: '1.7'
+    site_footer_h4_mb: 1rem
+    site_footer_h4_size: calc(var(--p3-size) * 0.94444444)
+    site_footer_h4_spacing: 0.18em
+  site-header:
+    site_header_backdrop: saturate(140%) blur(6px)
+  social-icons:
+    social_icons_gap: 0.5rem
+    social_icons_a_width: 40px
+    social_icons_a_height: 40px
+    social_icons_svg_width: 16px
+    social_icons_svg_height: 16px
+  social-links:
+    social_links_gap: 0.5rem
+  spotify-embed:
+    spotify_embed_max_width: 1100px
+  tagline:
+    tagline_h1_size: clamp(2rem, 4.5vw, 3.25rem)
+    tagline_h1_spacing: 0.06em
+  three-card:
+    three_card_h3_size: calc(var(--h3-size) * 0.96428571)
+    three_card_h3_spacing: 0.08em
+    three_card_h3_mb: 1.25rem
+    three_card_h3_weight: '500'
+    three_card_btn_pad: 0.7rem 1.5rem
+    three_card_btn_size: calc(var(--p3-size) * 0.88888889)
+    three_card_hover_three_card_icon_shadow: 0 18px 40px -18px rgba(var(--color-accent-rgb), 0.6)
+  three-card-grid:
+    three_card_grid_columns: '3'
+    three_card_grid_gap: 2.5rem
+    three_card_grid_columns_upto960: '2'
+  three-card-icon:
+    three_card_icon_margin: 0 auto 1.75rem
+    three_card_icon_img_contain_pad: 1rem
+    three_card_icon_width: 168px
+    three_card_icon_height: 168px
+  wave-divider:
+    wave_divider_svg_opacity: '0.7'
 # How a new picture in a post starts out (the post editor's choices).
 posts:
   picture_size: full
