@@ -34,7 +34,7 @@
 .blog-summary { color: var(--color-text-muted); margin: var(--blog-summary-margin); line-height: var(--blog-summary-line); }
 .blog-readmore {
   font-family: var(--font-display);
-  text-transform: uppercase;
+  text-transform: var(--blog-readmore-case);
   letter-spacing: var(--blog-readmore-spacing);
   font-size: var(--blog-readmore-size);
   font-weight: var(--blog-readmore-weight);
@@ -47,7 +47,7 @@
 /* --- shared --- */
 .blog-date {
   font-family: var(--font-display);
-  text-transform: uppercase;
+  text-transform: var(--blog-date-case);
   letter-spacing: var(--blog-date-spacing);
   font-size: var(--blog-date-size);
   color: var(--color-text-muted);
@@ -58,7 +58,7 @@
 .blog-back { margin: var(--blog-back-margin); }
 .blog-back a {
   font-family: var(--font-display);
-  text-transform: uppercase;
+  text-transform: var(--blog-back-a-case);
   letter-spacing: var(--blog-back-a-spacing);
   font-size: var(--blog-back-a-size);
   color: var(--color-text-muted);
