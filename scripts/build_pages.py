@@ -146,6 +146,8 @@ def _parse_post(md_path: Path) -> dict | None:
         "summary": str(fm.get("summary") or "").strip(),
         "youtube_url": str(fm.get("youtube_url") or "").strip(),
         "sermon_id": str(fm.get("sermon_id") or "").strip(),
+        # A cover picture, for posts written by hand (site path or full URL).
+        "image": str(fm.get("image") or "").strip(),
         "body": body,
         "src": md_path,
     }
@@ -165,6 +167,11 @@ def _post_og_image(p: dict) -> str:
     """Pick the best social-share image for a sermon-recap post:
     sermon_id → YouTube thumb (already at video resolution),
     else parse youtube_url for the id, else site default."""
+    img = (p.get("image") or "").strip()
+    if re.fullmatch(r"/[A-Za-z0-9_./-]+", img) and ".." not in img:
+        return BASE_URL + img
+    if re.fullmatch(r"https://[^\s\"'<>]+", img):
+        return img
     vid = (p.get("sermon_id") or "").strip()
     if not vid:
         m = _YT_ID_RE.search(p.get("youtube_url") or "")
@@ -243,7 +250,9 @@ def _render_post_page(p: dict) -> str:
     body = _fill(
         _load_template("blog-post"),
         prefix=prefix,
-        hero_image=_ESC(og_img),
+        # A post's own cover is served from this site: use its path, so it
+        # also shows on a copy of the site that isn't at the public address.
+        hero_image=_ESC(p["image"] if p.get("image", "").startswith("/") else og_img),
         date=_ESC(p["date_human"]),
         title=_ESC(p["title"]),
         body=p["body"],
@@ -298,6 +307,8 @@ def _render_blog_index(posts: list[dict]) -> str:
                 title=_ESC(p["title"]),
                 date=_ESC(p["date_human"]),
                 summary=_ESC(p["summary"]),
+                cover=(f'\n        <a href="{prefix}blog/{p["slug"]}/"><img class="blog-card__img" src="{_ESC(p["image"] if p["image"].startswith("/") else _post_og_image(p))}" alt="" loading="lazy"></a>'
+                       if p.get("image") else ""),
             ).rstrip("\n")
             for p in posts
         )

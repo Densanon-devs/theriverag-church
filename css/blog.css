@@ -157,10 +157,10 @@
   background:
     linear-gradient(to top, var(--color-bg) 0%, rgba(255,255,255,0) 22%),
     linear-gradient(to bottom,
-      rgba(6,6,8,.42) 0%,
-      rgba(6,6,8,.34) 26%,
-      rgba(6,6,8,.66) 74%,
-      rgba(6,6,8,.60) 100%);
+      rgba(var(--color-bg-darker-rgb), .42) 0%,
+      rgba(var(--color-bg-darker-rgb), .34) 26%,
+      rgba(var(--color-bg-darker-rgb), .66) 74%,
+      rgba(var(--color-bg-darker-rgb), .60) 100%);
 }
 .sermon-hero__inner {
   width: 100%;
@@ -210,4 +210,21 @@
   .sermon-hero::before,
   .sermon-hero__inner { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Pictures in a hand-written post, and a post's cover on the blog page. */
+.blog-post img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: var(--radius);
+}
+.blog-card__img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
 }

@@ -4,6 +4,8 @@
    Same class names; modernized visuals.
    ============================================ */
 
+/* cms:theme — written by the admin panel from _data/theme.yml.
+   Change colours, fonts and shapes in Website > Site styles, not here. */
 :root {
     --color-bg: #ffffff;
     --color-bg-light: #f7f4ee;
@@ -18,9 +20,28 @@
     --color-accent-hover: #b8924c;
     --color-accent-deep: #755827;
     --color-border: #e8e2d4;
+    --color-highlight: #2680c2;
+    --color-overlay: #0a0a0c;
+    --color-accent-rgb: 207, 168, 97;
+    --color-bg-rgb: 255, 255, 255;
+    --color-bg-light-rgb: 247, 244, 238;
+    --color-bg-dark-rgb: 11, 11, 12;
+    --color-bg-darker-rgb: 6, 6, 7;
+    --color-bg-accent-rgb: 59, 79, 76;
+    --color-bg-sage-rgb: 175, 196, 191;
+    --color-text-rgb: 21, 22, 26;
+    --color-text-muted-rgb: 94, 97, 104;
+    --color-text-light-rgb: 245, 242, 236;
+    --color-accent-hover-rgb: 184, 146, 76;
+    --color-accent-deep-rgb: 117, 88, 39;
+    --color-border-rgb: 232, 226, 212;
+    --color-highlight-rgb: 38, 128, 194;
+    --color-overlay-rgb: 10, 10, 12;
     --max-width: 1200px;
     --radius: 10px;
     --radius-lg: 22px;
+    --button-radius: 999px;
+    --section-space: 6rem;
     --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
     --shadow: 0 14px 40px rgba(0, 0, 0, 0.10);
     --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.28);
@@ -28,6 +49,12 @@
     --font-heading: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     --font-display: 'Abel', 'Oswald', sans-serif;
     --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+/* /cms:theme */
+
+/* Anything the panel hides (the announcement bar, say) stays hidden. */
+[hidden] {
+    display: none !important;
 }
 
 * {
@@ -277,14 +304,14 @@ p {
     background: var(--color-accent);
     color: var(--color-bg-dark);
     padding: 0.8rem 1.75rem;
-    border-radius: 999px;
+    border-radius: var(--button-radius);
     font-family: var(--font-display);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-size: 0.85rem;
     white-space: nowrap;
-    box-shadow: 0 8px 20px -8px rgba(207,168,97,0.6);
+    box-shadow: 0 8px 20px -8px rgba(var(--color-accent-rgb), 0.6);
     transition: var(--transition);
     transition-property: background, transform, box-shadow;
 }
@@ -293,7 +320,7 @@ p {
         background: var(--color-accent-hover);
         color: var(--color-bg-dark);
         transform: translateY(-2px);
-        box-shadow: 0 12px 28px -10px rgba(207,168,97,0.7);
+        box-shadow: 0 12px 28px -10px rgba(var(--color-accent-rgb), 0.7);
     }
 
 .menu-toggle {
@@ -320,7 +347,7 @@ p {
    ============================================ */
 .hero {
     position: relative;
-    background: linear-gradient(180deg, rgba(10,10,12,0.55) 0%, rgba(10,10,12,0.65) 60%, rgba(10,10,12,0.85) 100%), url('../site/images/hero-river.png') center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(var(--color-overlay-rgb), 0.55) 0%, rgba(var(--color-overlay-rgb), 0.65) 60%, rgba(var(--color-overlay-rgb), 0.85) 100%), url('../site/images/hero-river.png') center/cover no-repeat;
     color: var(--color-text-light);
     padding: 7rem 1.5rem 8rem;
     text-align: center;
@@ -422,7 +449,7 @@ p {
     align-items: center;
     justify-content: center;
     padding: 0.85rem 1.75rem;
-    border-radius: 999px;
+    border-radius: var(--button-radius);
     font-family: var(--font-display);
     font-weight: 600;
     text-transform: uppercase;
@@ -443,7 +470,7 @@ p {
     background: var(--color-accent);
     color: var(--color-bg-dark);
     border-color: var(--color-accent);
-    box-shadow: 0 8px 20px -8px rgba(207,168,97,0.6);
+    box-shadow: 0 8px 20px -8px rgba(var(--color-accent-rgb), 0.6);
 }
 
     .btn-primary:hover {
@@ -451,7 +478,7 @@ p {
         border-color: var(--color-accent-hover);
         color: var(--color-bg-dark);
         transform: translateY(-2px);
-        box-shadow: 0 14px 30px -10px rgba(207,168,97,0.75);
+        box-shadow: 0 14px 30px -10px rgba(var(--color-accent-rgb), 0.75);
     }
 
 .btn-secondary {
@@ -470,7 +497,7 @@ p {
    Sections
    ============================================ */
 .section {
-    padding: 6rem 0;
+    padding: var(--section-space) 0;
 }
 
 .section-light {
@@ -560,6 +587,22 @@ p {
         overflow: visible;
         opacity: 0.7;
     }
+
+    /* The site engine draws the wave with a fixed gold stroke; follow the
+       site's accent instead (a CSS stroke wins over the attribute). */
+    .wave-divider svg path {
+        stroke: var(--color-accent);
+    }
+
+/* A shape divider left on the site engine's default colour follows the
+   site's accent; one given its own colour keeps it. */
+.shape-divider svg [fill="#cfa861"] {
+    fill: var(--color-accent);
+}
+
+.shape-divider svg [stroke="#cfa861"] {
+    stroke: var(--color-accent);
+}
 
 /* The wave is a true cut between adjacent sections: the upper section's
    bottom edge follows the wave curve, the lower section's top follows
@@ -664,7 +707,7 @@ p {
 
     .shape-divider-curve svg path {
         fill: none !important;
-        stroke: #cfa861;
+        stroke: var(--color-accent);
         stroke-width: 2;
     }
 
@@ -725,7 +768,7 @@ p {
             content: '';
             position: absolute;
             inset: 0;
-            border: 1px solid rgba(207,168,97,0.25);
+            border: 1px solid rgba(var(--color-accent-rgb), 0.25);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -760,7 +803,7 @@ p {
 }
 
 .accordion-card {
-    border: 1px solid rgba(207,168,97,0.35);
+    border: 1px solid rgba(var(--color-accent-rgb), 0.35);
     border-radius: 16px;
     overflow: hidden;
     background: rgba(255,255,255,0.025);
@@ -768,7 +811,7 @@ p {
 }
 
     .accordion-card:hover {
-        border-color: rgba(207,168,97,0.6);
+        border-color: rgba(var(--color-accent-rgb), 0.6);
         background: rgba(255,255,255,0.04);
     }
 
@@ -818,7 +861,7 @@ p {
 .accordion-body {
     padding: 0 1.75rem 1.5rem;
     color: rgba(255,255,255,0.82);
-    border-top: 1px solid rgba(207,168,97,0.18);
+    border-top: 1px solid rgba(var(--color-accent-rgb), 0.18);
     padding-top: 1.25rem;
 }
 
@@ -854,7 +897,7 @@ p {
         content: '';
         position: absolute;
         inset: 0;
-        border: 1px solid rgba(207,168,97,0.2);
+        border: 1px solid rgba(var(--color-accent-rgb), 0.2);
         border-radius: inherit;
         pointer-events: none;
     }
@@ -899,7 +942,7 @@ p {
    ============================================ */
 .section-river {
     position: relative;
-    background: linear-gradient(rgba(10,10,12,0.6), rgba(10,10,12,0.78)), url('../site/images/hero-river.png') center/cover no-repeat;
+    background: linear-gradient(rgba(var(--color-overlay-rgb), 0.6), rgba(var(--color-overlay-rgb), 0.78)), url('../site/images/hero-river.png') center/cover no-repeat;
     color: var(--color-text-light);
     padding: 7rem 1.5rem;
     overflow: hidden;
@@ -912,7 +955,7 @@ p {
     padding: 3.5rem 3rem;
     border: 0;
     outline: 0;
-    background: rgba(10,10,12,0.4);
+    background: rgba(var(--color-overlay-rgb), 0.4);
     backdrop-filter: blur(8px);
     border-radius: 18px;
     box-shadow: 0 30px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06);
@@ -1010,7 +1053,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(207,168,97,0.6);
+    border: 1px solid rgba(var(--color-accent-rgb), 0.6);
     transition: var(--transition);
     transition-property: transform, border-color, box-shadow;
     position: relative;
@@ -1020,14 +1063,14 @@ p {
         content: '';
         position: absolute;
         inset: -8px;
-        border: 1px solid rgba(207,168,97,0.15);
+        border: 1px solid rgba(var(--color-accent-rgb), 0.15);
         border-radius: 50%;
         transition: inset var(--transition), border-color var(--transition);
     }
 
 .three-card:hover .three-card-icon::after {
     inset: -12px;
-    border-color: rgba(207,168,97,0.35);
+    border-color: rgba(var(--color-accent-rgb), 0.35);
 }
 
 .three-card-icon img {
@@ -1042,8 +1085,8 @@ p {
     }
 
 .three-card-icon-blue {
-    background: #2680C2;
-    border-color: #2680C2;
+    background: var(--color-highlight);
+    border-color: var(--color-highlight);
 }
 
 .three-card-icon-gold {
@@ -1061,7 +1104,7 @@ p {
 .three-card:hover .three-card-icon {
     transform: translateY(-5px);
     border-color: var(--color-accent);
-    box-shadow: 0 18px 40px -18px rgba(207,168,97,0.6);
+    box-shadow: 0 18px 40px -18px rgba(var(--color-accent-rgb), 0.6);
 }
 
 .three-card h3 {
@@ -1107,7 +1150,7 @@ p {
     border-radius: 16px;
     background: #fff;
     box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(207,168,97,0.5);
+    border: 1px solid rgba(var(--color-accent-rgb), 0.5);
     color: var(--color-text);
 }
 
@@ -1220,7 +1263,7 @@ p {
 
     .belief-card:hover {
         background: rgba(255,255,255,0.06);
-        border-color: rgba(207,168,97,0.4);
+        border-color: rgba(var(--color-accent-rgb), 0.4);
         transform: translateY(-2px);
     }
 

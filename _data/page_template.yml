@@ -1,0 +1,14 @@
+# What a new page starts with (Website > New page template in the admin panel).
+# "{page name}" in any text becomes the new page's name.
+# keep_with_layouts: the section also stays when a page starts from a
+# ready-made layout (About, Contact ...).
+meta:
+  title: New page template
+  show_in_nav: true
+blocks:
+  - type: tagline
+    heading: "{page name}"
+    theme: light
+    keep_with_layouts: true
+  - type: text
+    body: Write a few words to introduce this page.
