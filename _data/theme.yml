@@ -80,6 +80,30 @@ look:
   caption_size: 0.9rem
   caption_color: var(--color-text-muted)
   caption_align: center
+# Sizes that belong to kinds of section: cards, the opener, the top bar.
+# The three "scale" values multiply what each section's design calls for
+# (1 = as designed), so one slider moves them all together.
+sections:
+  card_radius: 14px
+  media_radius: 16px
+  panel_radius: 18px
+  border_width: 1px
+  card_space: '1'
+  space_scale: '1'
+  shade_strength: '1'
+  hero_height: 86vh
+  hero_height_phone: 70vh
+  header_height: 120px
+  logo_height: 96px
+  bar_padding: 0.65rem 1rem
+  bar_size: 0.9rem
+  bar_spacing: 0.12em
+  bar_transform: uppercase
+  bar_text: var(--color-bg-dark)
+  post_width: 760px
+  post_h2_size: 1.6rem
+  post_h3_size: 1.3rem
+  post_line: '1.75'
 # How a new picture in a post starts out (the post editor's choices).
 posts:
   picture_size: full

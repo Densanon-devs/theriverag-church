@@ -90,6 +90,26 @@
     --caption-size: 0.9rem;
     --caption-color: var(--color-text-muted);
     --caption-align: center;
+    --card-radius: 14px;
+    --media-radius: 16px;
+    --panel-radius: 18px;
+    --border-width: 1px;
+    --card-space: 1;
+    --space-scale: 1;
+    --shade-strength: 1;
+    --hero-height: 86vh;
+    --hero-height-phone: 70vh;
+    --header-height: 120px;
+    --logo-height: 96px;
+    --bar-padding: 0.65rem 1rem;
+    --bar-size: 0.9rem;
+    --bar-spacing: 0.12em;
+    --bar-transform: uppercase;
+    --bar-text: var(--color-bg-dark);
+    --post-width: 760px;
+    --post-h2-size: 1.6rem;
+    --post-h3-size: 1.3rem;
+    --post-line: 1.75;
     --shadow-sm: 0 2px 10px rgba(var(--color-shadow-rgb), 0.05);
     --shadow: 0 14px 40px rgba(var(--color-shadow-rgb), 0.10);
     --shadow-lg: 0 30px 80px rgba(var(--color-shadow-rgb), 0.28);
@@ -205,13 +225,13 @@ p {
    ============================================ */
 .announcement-bar {
     background: linear-gradient(90deg, var(--color-accent-deep), var(--color-accent) 50%, var(--color-accent-deep));
-    color: var(--color-bg-dark);
+    color: var(--bar-text);
     text-align: center;
-    padding: 0.65rem 1rem;
+    padding: var(--bar-padding);
     font-family: var(--font-display);
-    font-size: 0.9rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    font-size: var(--bar-size);
+    letter-spacing: var(--bar-spacing);
+    text-transform: var(--bar-transform);
     font-weight: 600;
 }
 
@@ -230,7 +250,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 50;
-    border-bottom: 1px solid rgba(var(--color-on-photo-rgb), 0.06);
+    border-bottom: var(--border-width) solid rgba(var(--color-on-photo-rgb), 0.06);
     backdrop-filter: saturate(140%) blur(6px);
 }
 
@@ -242,7 +262,7 @@ p {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 1.5rem;
-    min-height: 120px;
+    min-height: var(--header-height);
 }
 
 .logo {
@@ -253,7 +273,7 @@ p {
 }
 
     .logo img {
-        height: 96px;
+        height: var(--logo-height);
         width: auto;
         max-height: 14vh;
         transition: transform var(--transition);
@@ -326,7 +346,7 @@ p {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 1px solid rgba(var(--color-on-photo-rgb), 0.2);
+        border: var(--border-width) solid rgba(var(--color-on-photo-rgb), 0.2);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -395,15 +415,15 @@ p {
    ============================================ */
 .hero {
     position: relative;
-    background: linear-gradient(180deg, rgba(var(--color-overlay-rgb), 0.55) 0%, rgba(var(--color-overlay-rgb), 0.65) 60%, rgba(var(--color-overlay-rgb), 0.85) 100%), url('../site/images/hero-river.png') center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(var(--color-overlay-rgb), calc(0.55 * var(--shade-strength))) 0%, rgba(var(--color-overlay-rgb), calc(0.65 * var(--shade-strength))) 60%, rgba(var(--color-overlay-rgb), calc(0.85 * var(--shade-strength))) 100%), url('../site/images/hero-river.png') center/cover no-repeat;
     color: var(--color-text-light);
-    padding: 7rem 1.5rem 8rem;
+    padding: calc(7rem * var(--space-scale)) 1.5rem calc(8rem * var(--space-scale));
     text-align: center;
     overflow: hidden;
 }
 
 .hero-home {
-    min-height: 86vh;
+    min-height: var(--hero-height);
     display: flex;
     align-items: center;
 }
@@ -558,7 +578,7 @@ p {
    Sections
    ============================================ */
 .section {
-    padding: var(--section-space) 0;
+    padding: calc(var(--section-space) * var(--space-scale)) 0;
 }
 
 .section-light {
@@ -778,7 +798,7 @@ p {
 .service-block {
     background: var(--color-bg-dark);
     color: var(--color-text-light);
-    padding: 6rem 0 7rem;
+    padding: calc(6rem * var(--space-scale)) 0 calc(7rem * var(--space-scale));
 }
 
 .service-row {
@@ -816,7 +836,7 @@ p {
     }
 
     .live-card .live-thumb {
-        border-radius: 16px;
+        border-radius: var(--media-radius);
         overflow: hidden;
         aspect-ratio: 16 / 9;
         background: var(--color-shadow);
@@ -829,7 +849,7 @@ p {
             content: '';
             position: absolute;
             inset: 0;
-            border: 1px solid rgba(var(--color-accent-rgb), 0.25);
+            border: var(--border-width) solid rgba(var(--color-accent-rgb), 0.25);
             border-radius: inherit;
             pointer-events: none;
         }
@@ -864,8 +884,8 @@ p {
 }
 
 .accordion-card {
-    border: 1px solid rgba(var(--color-accent-rgb), 0.35);
-    border-radius: 16px;
+    border: var(--border-width) solid rgba(var(--color-accent-rgb), 0.35);
+    border-radius: var(--media-radius);
     overflow: hidden;
     background: rgba(var(--color-on-photo-rgb), 0.025);
     transition: border-color var(--transition), background var(--transition), transform var(--transition);
@@ -883,7 +903,7 @@ p {
     .accordion-card summary {
         list-style: none;
         cursor: pointer;
-        padding: 1.4rem 1.75rem;
+        padding: calc(1.4rem * var(--card-space)) calc(1.75rem * var(--card-space));
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -920,9 +940,9 @@ p {
 }
 
 .accordion-body {
-    padding: 0 1.75rem 1.5rem;
+    padding: 0 calc(1.75rem * var(--card-space)) calc(1.5rem * var(--card-space));
     color: rgba(var(--color-on-photo-rgb), 0.82);
-    border-top: 1px solid rgba(var(--color-accent-rgb), 0.18);
+    border-top: var(--border-width) solid rgba(var(--color-accent-rgb), 0.18);
     padding-top: 1.25rem;
 }
 
@@ -947,7 +967,7 @@ p {
     }
 
 .rounded-photo {
-    border-radius: 22px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
     aspect-ratio: 4 / 3;
     box-shadow: var(--shadow-lg);
@@ -958,7 +978,7 @@ p {
         content: '';
         position: absolute;
         inset: 0;
-        border: 1px solid rgba(var(--color-accent-rgb), 0.2);
+        border: var(--border-width) solid rgba(var(--color-accent-rgb), 0.2);
         border-radius: inherit;
         pointer-events: none;
     }
@@ -1003,9 +1023,9 @@ p {
    ============================================ */
 .section-river {
     position: relative;
-    background: linear-gradient(rgba(var(--color-overlay-rgb), 0.6), rgba(var(--color-overlay-rgb), 0.78)), url('../site/images/hero-river.png') center/cover no-repeat;
+    background: linear-gradient(rgba(var(--color-overlay-rgb), calc(0.6 * var(--shade-strength))), rgba(var(--color-overlay-rgb), calc(0.78 * var(--shade-strength)))), url('../site/images/hero-river.png') center/cover no-repeat;
     color: var(--color-text-light);
-    padding: 7rem 1.5rem;
+    padding: calc(7rem * var(--space-scale)) 1.5rem;
     overflow: hidden;
 }
 
@@ -1013,12 +1033,12 @@ p {
     max-width: 880px;
     margin: 0 auto;
     text-align: left;
-    padding: 3.5rem 3rem;
+    padding: calc(3.5rem * var(--card-space)) calc(3rem * var(--card-space));
     border: 0;
     outline: 0;
-    background: rgba(var(--color-overlay-rgb), 0.4);
+    background: rgba(var(--color-overlay-rgb), calc(0.4 * var(--shade-strength)));
     backdrop-filter: blur(8px);
-    border-radius: 18px;
+    border-radius: var(--panel-radius);
     box-shadow: 0 30px 80px rgba(var(--color-shadow-rgb), 0.4), inset 0 1px 0 rgba(var(--color-on-photo-rgb), 0.06);
     position: relative;
 }
@@ -1114,7 +1134,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(var(--color-accent-rgb), 0.6);
+    border: var(--border-width) solid rgba(var(--color-accent-rgb), 0.6);
     transition: var(--transition);
     transition-property: transform, border-color, box-shadow;
     position: relative;
@@ -1124,7 +1144,7 @@ p {
         content: '';
         position: absolute;
         inset: -8px;
-        border: 1px solid rgba(var(--color-accent-rgb), 0.15);
+        border: var(--border-width) solid rgba(var(--color-accent-rgb), 0.15);
         border-radius: 50%;
         transition: inset var(--transition), border-color var(--transition);
     }
@@ -1207,11 +1227,11 @@ p {
 .calendar-embed {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 1.5rem;
-    border-radius: 16px;
+    padding: calc(1.5rem * var(--card-space));
+    border-radius: var(--media-radius);
     background: var(--color-bg);
     box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(var(--color-accent-rgb), 0.5);
+    border: var(--border-width) solid rgba(var(--color-accent-rgb), 0.5);
     color: var(--color-text);
 }
 
@@ -1226,7 +1246,7 @@ p {
    ============================================ */
 .tagline {
     text-align: center;
-    padding: 3.5rem 0;
+    padding: calc(3.5rem * var(--space-scale)) 0;
 }
 
     .tagline h1 {
@@ -1244,7 +1264,7 @@ p {
    About page
    ============================================ */
 .about-section {
-    padding: 5.5rem 0;
+    padding: calc(5.5rem * var(--space-scale)) 0;
 }
 
     .about-section h1 {
@@ -1275,7 +1295,7 @@ p {
     }
 
 .about-image img {
-    border-radius: 16px;
+    border-radius: var(--media-radius);
     box-shadow: var(--shadow);
 }
 
@@ -1315,9 +1335,9 @@ p {
 
 .belief-card {
     background: rgba(var(--color-on-photo-rgb), 0.04);
-    border: 1px solid rgba(var(--color-on-photo-rgb), 0.1);
-    padding: 1.85rem;
-    border-radius: 14px;
+    border: var(--border-width) solid rgba(var(--color-on-photo-rgb), 0.1);
+    padding: calc(1.85rem * var(--card-space));
+    border-radius: var(--card-radius);
     transition: var(--transition);
     transition-property: background, border-color, transform;
 }
@@ -1348,13 +1368,13 @@ p {
    Spotify
    ============================================ */
 .spotify-block {
-    padding: 3rem 0 2rem;
+    padding: calc(3rem * var(--space-scale)) 0 calc(2rem * var(--space-scale));
 }
 
 .spotify-embed {
     max-width: 1100px;
     margin: 0 auto;
-    border-radius: 14px;
+    border-radius: var(--card-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
 }
@@ -1362,7 +1382,7 @@ p {
     .spotify-embed iframe {
         display: block;
         border: 0;
-        border-radius: 14px;
+        border-radius: var(--card-radius);
     }
 
 /* ============================================
@@ -1370,7 +1390,7 @@ p {
    ============================================ */
 .sermons-intro {
     text-align: center;
-    padding: 5rem 1.5rem 5.5rem;
+    padding: calc(5rem * var(--space-scale)) 1.5rem calc(5.5rem * var(--space-scale));
 }
 
 .sermons-h1 {
@@ -1414,9 +1434,9 @@ p {
 
 .platform-card {
     background: rgba(var(--color-on-photo-rgb), 0.04);
-    border: 1px solid rgba(var(--color-on-photo-rgb), 0.12);
-    padding: 1.85rem 1.25rem;
-    border-radius: 14px;
+    border: var(--border-width) solid rgba(var(--color-on-photo-rgb), 0.12);
+    padding: calc(1.85rem * var(--card-space)) calc(1.25rem * var(--card-space));
+    border-radius: var(--card-radius);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1461,7 +1481,7 @@ p {
     display: flex;
     flex-direction: column;
     background: var(--color-bg-light);
-    border-radius: 14px;
+    border-radius: var(--card-radius);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
@@ -1494,7 +1514,7 @@ p {
 }
 
 .sermon-meta {
-    padding: 1.25rem 1.25rem 1.5rem;
+    padding: calc(1.25rem * var(--card-space)) calc(1.25rem * var(--card-space)) calc(1.5rem * var(--card-space));
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -1552,7 +1572,7 @@ p {
     background: var(--footer-bg);
     color: var(--footer-text);
     padding: 5rem 0 2rem;
-    border-top: 1px solid rgba(var(--color-on-photo-rgb), 0.05);
+    border-top: var(--border-width) solid rgba(var(--color-on-photo-rgb), 0.05);
 }
 
 .footer-grid {
@@ -1596,7 +1616,7 @@ p {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(var(--color-on-photo-rgb), 0.08);
+    border-top: var(--border-width) solid rgba(var(--color-on-photo-rgb), 0.08);
     padding-top: 2rem;
     text-align: center;
     font-size: 0.82rem;
@@ -1672,7 +1692,7 @@ p {
     }
 
     .section {
-        padding: 4.5rem 0;
+        padding: calc(4.5rem * var(--space-scale)) 0;
     }
 }
 
@@ -1692,7 +1712,7 @@ p {
         padding: 1.25rem 1.5rem;
         box-shadow: 0 10px 30px rgba(var(--color-shadow-rgb), 0.35);
         grid-column: 1 / -1;
-        border-top: 1px solid rgba(var(--color-on-photo-rgb), 0.06);
+        border-top: var(--border-width) solid rgba(var(--color-on-photo-rgb), 0.06);
     }
 
         .main-nav.is-open {
@@ -1737,11 +1757,11 @@ p {
     }
 
     .hero {
-        padding: 4.5rem 1rem 5rem;
+        padding: calc(4.5rem * var(--space-scale)) 1rem calc(5rem * var(--space-scale));
     }
 
     .hero-home {
-        min-height: 70vh;
+        min-height: var(--hero-height-phone);
     }
 
     .hero-frame {
@@ -1757,7 +1777,7 @@ p {
     }
 
     .invitation {
-        padding: 2.25rem 1.5rem;
+        padding: calc(2.25rem * var(--card-space)) calc(1.5rem * var(--card-space));
     }
 
         .invitation::before {

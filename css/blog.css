@@ -3,7 +3,7 @@
    CSS variables so it matches the rest of the site. */
 
 .blog-page { padding: 2.5rem 0 4rem; }
-.blog-page .container { max-width: 760px; }
+.blog-page .container { max-width: var(--post-width); }
 
 /* --- index --- */
 .blog-hero { margin-bottom: 2.2rem; }
@@ -21,7 +21,7 @@
 }
 .blog-card {
   padding: 1.7rem 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: var(--border-width) solid var(--color-border);
 }
 .blog-card:last-child { border-bottom: none; }
 .blog-card h2 {
@@ -78,10 +78,10 @@
   margin: 2rem 0 .7rem;
   line-height: 1.2;
 }
-.blog-post h2 { font-size: 1.6rem; }
-.blog-post h3 { font-size: 1.3rem; }
-.blog-post p { line-height: 1.75; margin: 0 0 1.15rem; color: var(--color-text); }
-.blog-post ul, .blog-post ol { line-height: 1.75; margin: 0 0 1.15rem 1.4rem; color: var(--color-text); }
+.blog-post h2 { font-size: var(--post-h2-size); }
+.blog-post h3 { font-size: var(--post-h3-size); }
+.blog-post p { line-height: var(--post-line); margin: 0 0 1.15rem; color: var(--color-text); }
+.blog-post ul, .blog-post ol { line-height: var(--post-line); margin: 0 0 1.15rem 1.4rem; color: var(--color-text); }
 .blog-post li { margin: 0 0 .35rem; }
 .blog-post a { color: var(--color-accent-deep); }
 .blog-post blockquote {
@@ -107,7 +107,7 @@
 }
 .sermon-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
-.blog-rule { border: none; border-top: 1px solid var(--color-border); margin: 2.6rem 0 1.6rem; }
+.blog-rule { border: none; border-top: var(--border-width) solid var(--color-border); margin: 2.6rem 0 1.6rem; }
 .blog-cta { display: flex; gap: .8rem; flex-wrap: wrap; }
 .blog-cta .btn-outline {
   background: transparent;
@@ -157,10 +157,10 @@
   background:
     linear-gradient(to top, var(--color-bg) 0%, rgba(var(--color-bg-rgb), 0) 22%),
     linear-gradient(to bottom,
-      rgba(var(--color-bg-darker-rgb), .42) 0%,
-      rgba(var(--color-bg-darker-rgb), .34) 26%,
-      rgba(var(--color-bg-darker-rgb), .66) 74%,
-      rgba(var(--color-bg-darker-rgb), .60) 100%);
+      rgba(var(--color-bg-darker-rgb), calc(.42 * var(--shade-strength))) 0%,
+      rgba(var(--color-bg-darker-rgb), calc(.34 * var(--shade-strength))) 26%,
+      rgba(var(--color-bg-darker-rgb), calc(.66 * var(--shade-strength))) 74%,
+      rgba(var(--color-bg-darker-rgb), calc(.60 * var(--shade-strength))) 100%);
 }
 .sermon-hero__inner {
   width: 100%;
