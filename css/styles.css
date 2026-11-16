@@ -22,6 +22,8 @@
     --color-border: #e8e2d4;
     --color-highlight: #2680c2;
     --color-overlay: #0a0a0c;
+    --color-on-photo: #ffffff;
+    --color-shadow: #000000;
     --color-accent-rgb: 207, 168, 97;
     --color-bg-rgb: 255, 255, 255;
     --color-bg-light-rgb: 247, 244, 238;
@@ -37,14 +39,60 @@
     --color-border-rgb: 232, 226, 212;
     --color-highlight-rgb: 38, 128, 194;
     --color-overlay-rgb: 10, 10, 12;
+    --color-on-photo-rgb: 255, 255, 255;
+    --color-shadow-rgb: 0, 0, 0;
     --max-width: 1200px;
     --radius: 10px;
     --radius-lg: 22px;
     --button-radius: 999px;
     --section-space: 6rem;
-    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
-    --shadow: 0 14px 40px rgba(0, 0, 0, 0.10);
-    --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.28);
+    --text-size: 17px;
+    --text-line: 1.7;
+    --text-weight: 400;
+    --heading-line: 1.12;
+    --heading-weight: 600;
+    --heading-spacing: 0.005em;
+    --h1-size: clamp(2.4rem, 5.2vw, 4.25rem);
+    --h1-transform: uppercase;
+    --h1-spacing: 0.02em;
+    --h2-size: clamp(1.85rem, 3.2vw, 2.75rem);
+    --h2-transform: uppercase;
+    --h2-spacing: 0.015em;
+    --h3-size: 1.4rem;
+    --h4-size: 0.95rem;
+    --h4-transform: uppercase;
+    --h4-spacing: 0.18em;
+    --h4-weight: 600;
+    --p1-size: 1.25rem;
+    --p3-size: 0.9rem;
+    --button-font: var(--font-display);
+    --button-size: 0.85rem;
+    --button-weight: 600;
+    --button-transform: uppercase;
+    --button-spacing: 0.12em;
+    --button-padding: 0.85rem 1.75rem;
+    --button-border: 1.5px;
+    --button-bg: var(--color-accent);
+    --button-text: var(--color-bg-dark);
+    --button-hover-bg: var(--color-accent-hover);
+    --button2-bg: transparent;
+    --button2-text: var(--color-text-light);
+    --button2-border: rgba(var(--color-on-photo-rgb), 0.65);
+    --button3-text: var(--color-accent);
+    --link-color: var(--color-accent);
+    --link-hover: var(--color-accent-hover);
+    --header-bg: var(--color-bg-dark);
+    --header-text: var(--color-text-light);
+    --footer-bg: var(--color-bg-darker);
+    --footer-text: var(--color-text-light);
+    --divider-color: var(--color-accent);
+    --post-pic-radius: var(--radius);
+    --caption-size: 0.9rem;
+    --caption-color: var(--color-text-muted);
+    --caption-align: center;
+    --shadow-sm: 0 2px 10px rgba(var(--color-shadow-rgb), 0.05);
+    --shadow: 0 14px 40px rgba(var(--color-shadow-rgb), 0.10);
+    --shadow-lg: 0 30px 80px rgba(var(--color-shadow-rgb), 0.28);
     --transition: 250ms cubic-bezier(.2,.7,.2,1);
     --font-heading: 'Oswald', 'Arial Narrow', Arial, sans-serif;
     --font-display: 'Abel', 'Oswald', sans-serif;
@@ -70,11 +118,11 @@ html {
 
 body {
     font-family: var(--font-body);
-    font-size: 17px;
-    line-height: 1.7;
+    font-size: var(--text-size);
+    line-height: var(--text-line);
     color: var(--color-text);
     background: var(--color-bg);
-    font-weight: 400;
+    font-weight: var(--text-weight);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -92,13 +140,13 @@ img {
 }
 
 a {
-    color: var(--color-accent);
+    color: var(--link-color);
     text-decoration: none;
     transition: color var(--transition);
 }
 
     a:hover {
-        color: var(--color-accent-hover);
+        color: var(--link-hover);
     }
 
 :focus-visible {
@@ -109,37 +157,37 @@ a {
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
-    line-height: 1.12;
-    font-weight: 600;
-    letter-spacing: 0.005em;
+    line-height: var(--heading-line);
+    font-weight: var(--heading-weight);
+    letter-spacing: var(--heading-spacing);
     color: inherit;
 }
 
 h1 {
-    font-size: clamp(2.4rem, 5.2vw, 4.25rem);
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    font-size: var(--h1-size);
+    text-transform: var(--h1-transform);
+    letter-spacing: var(--h1-spacing);
 }
 
 h2 {
-    font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+    font-size: var(--h2-size);
     margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.015em;
+    text-transform: var(--h2-transform);
+    letter-spacing: var(--h2-spacing);
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: var(--h3-size);
     margin-bottom: 0.5em;
 }
 
 h4 {
-    font-size: 0.95rem;
+    font-size: var(--h4-size);
     margin-bottom: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
+    text-transform: var(--h4-transform);
+    letter-spacing: var(--h4-spacing);
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: var(--h4-weight);
 }
 
 p {
@@ -177,12 +225,12 @@ p {
    Header
    ============================================ */
 .site-header {
-    background: var(--color-bg-dark);
-    color: var(--color-text-light);
+    background: var(--header-bg);
+    color: var(--header-text);
     position: sticky;
     top: 0;
     z-index: 50;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(var(--color-on-photo-rgb), 0.06);
     backdrop-filter: saturate(140%) blur(6px);
 }
 
@@ -278,7 +326,7 @@ p {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 1px solid rgba(255,255,255,0.2);
+        border: 1px solid rgba(var(--color-on-photo-rgb), 0.2);
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -407,7 +455,7 @@ p {
         font-weight: 600;
         letter-spacing: 0.04em;
         margin-bottom: 1.5rem;
-        text-shadow: 0 2px 24px rgba(0,0,0,0.45);
+        text-shadow: 0 2px 24px rgba(var(--color-shadow-rgb), 0.45);
     }
 
     .hero-content p {
@@ -448,15 +496,15 @@ p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.85rem 1.75rem;
+    padding: var(--button-padding);
     border-radius: var(--button-radius);
-    font-family: var(--font-display);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-size: 0.85rem;
+    font-family: var(--button-font);
+    font-weight: var(--button-weight);
+    text-transform: var(--button-transform);
+    letter-spacing: var(--button-spacing);
+    font-size: var(--button-size);
     cursor: pointer;
-    border: 1.5px solid transparent;
+    border: var(--button-border) solid transparent;
     transition: var(--transition);
     transition-property: background, color, border-color, transform, box-shadow;
 }
@@ -467,24 +515,37 @@ p {
 }
 
 .btn-primary {
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
-    border-color: var(--color-accent);
+    background: var(--button-bg);
+    color: var(--button-text);
+    border-color: var(--button-bg);
     box-shadow: 0 8px 20px -8px rgba(var(--color-accent-rgb), 0.6);
 }
 
     .btn-primary:hover {
-        background: var(--color-accent-hover);
-        border-color: var(--color-accent-hover);
-        color: var(--color-bg-dark);
+        background: var(--button-hover-bg);
+        border-color: var(--button-hover-bg);
+        color: var(--button-text);
         transform: translateY(-2px);
         box-shadow: 0 14px 30px -10px rgba(var(--color-accent-rgb), 0.75);
     }
 
-.btn-secondary {
+/* A third, quiet kind of button: words only (Site styles > Buttons). */
+.btn-tertiary {
     background: transparent;
-    color: var(--color-text-light);
-    border-color: rgba(255,255,255,0.65);
+    color: var(--button3-text);
+    border-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+    .btn-tertiary:hover {
+        color: var(--link-hover);
+    }
+
+.btn-secondary {
+    background: var(--button2-bg);
+    color: var(--button2-text);
+    border-color: var(--button2-border);
 }
 
     .btn-secondary:hover {
@@ -557,7 +618,7 @@ p {
     }
 
 .section-dark .section-header p, .section-accent .section-header p {
-    color: rgba(255,255,255,0.78);
+    color: rgba(var(--color-on-photo-rgb), 0.78);
 }
 
 /* ============================================
@@ -591,17 +652,17 @@ p {
     /* The site engine draws the wave with a fixed gold stroke; follow the
        site's accent instead (a CSS stroke wins over the attribute). */
     .wave-divider svg path {
-        stroke: var(--color-accent);
+        stroke: var(--divider-color);
     }
 
 /* A shape divider left on the site engine's default colour follows the
    site's accent; one given its own colour keeps it. */
 .shape-divider svg [fill="#cfa861"] {
-    fill: var(--color-accent);
+    fill: var(--divider-color);
 }
 
 .shape-divider svg [stroke="#cfa861"] {
-    stroke: var(--color-accent);
+    stroke: var(--divider-color);
 }
 
 /* The wave is a true cut between adjacent sections: the upper section's
@@ -707,7 +768,7 @@ p {
 
     .shape-divider-curve svg path {
         fill: none !important;
-        stroke: var(--color-accent);
+        stroke: var(--divider-color);
         stroke-width: 2;
     }
 
@@ -758,7 +819,7 @@ p {
         border-radius: 16px;
         overflow: hidden;
         aspect-ratio: 16 / 9;
-        background: #000;
+        background: var(--color-shadow);
         box-shadow: var(--shadow-lg);
         transition: transform var(--transition), box-shadow var(--transition);
         position: relative;
@@ -784,7 +845,7 @@ p {
 
     .live-card:hover .live-thumb {
         transform: translateY(-4px);
-        box-shadow: 0 36px 90px rgba(0,0,0,0.45);
+        box-shadow: 0 36px 90px rgba(var(--color-shadow-rgb), 0.45);
     }
 
     .live-card h3 a {
@@ -806,17 +867,17 @@ p {
     border: 1px solid rgba(var(--color-accent-rgb), 0.35);
     border-radius: 16px;
     overflow: hidden;
-    background: rgba(255,255,255,0.025);
+    background: rgba(var(--color-on-photo-rgb), 0.025);
     transition: border-color var(--transition), background var(--transition), transform var(--transition);
 }
 
     .accordion-card:hover {
         border-color: rgba(var(--color-accent-rgb), 0.6);
-        background: rgba(255,255,255,0.04);
+        background: rgba(var(--color-on-photo-rgb), 0.04);
     }
 
     .accordion-card[open] {
-        background: rgba(255,255,255,0.045);
+        background: rgba(var(--color-on-photo-rgb), 0.045);
     }
 
     .accordion-card summary {
@@ -860,7 +921,7 @@ p {
 
 .accordion-body {
     padding: 0 1.75rem 1.5rem;
-    color: rgba(255,255,255,0.82);
+    color: rgba(var(--color-on-photo-rgb), 0.82);
     border-top: 1px solid rgba(var(--color-accent-rgb), 0.18);
     padding-top: 1.25rem;
 }
@@ -958,7 +1019,7 @@ p {
     background: rgba(var(--color-overlay-rgb), 0.4);
     backdrop-filter: blur(8px);
     border-radius: 18px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06);
+    box-shadow: 0 30px 80px rgba(var(--color-shadow-rgb), 0.4), inset 0 1px 0 rgba(var(--color-on-photo-rgb), 0.06);
     position: relative;
 }
 
@@ -1049,7 +1110,7 @@ p {
     margin: 0 auto 1.75rem;
     border-radius: 50%;
     overflow: hidden;
-    background: rgba(255,255,255,0.04);
+    background: rgba(var(--color-on-photo-rgb), 0.04);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1134,7 +1195,7 @@ p {
         font-size: clamp(2rem, 4vw, 3rem);
         margin: 0;
         color: var(--color-accent);
-        text-shadow: 0 2px 14px rgba(0,0,0,0.5);
+        text-shadow: 0 2px 14px rgba(var(--color-shadow-rgb), 0.5);
         transition: color var(--transition);
         letter-spacing: 0.05em;
     }
@@ -1148,7 +1209,7 @@ p {
     margin: 0 auto;
     padding: 1.5rem;
     border-radius: 16px;
-    background: #fff;
+    background: var(--color-bg);
     box-shadow: var(--shadow-lg);
     border: 1px solid rgba(var(--color-accent-rgb), 0.5);
     color: var(--color-text);
@@ -1224,7 +1285,7 @@ p {
 }
 
 .section-dark .about-text p, .section-accent .about-text p {
-    color: rgba(255,255,255,0.86);
+    color: rgba(var(--color-on-photo-rgb), 0.86);
 }
 
 .about-when {
@@ -1253,8 +1314,8 @@ p {
 }
 
 .belief-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(var(--color-on-photo-rgb), 0.04);
+    border: 1px solid rgba(var(--color-on-photo-rgb), 0.1);
     padding: 1.85rem;
     border-radius: 14px;
     transition: var(--transition);
@@ -1262,7 +1323,7 @@ p {
 }
 
     .belief-card:hover {
-        background: rgba(255,255,255,0.06);
+        background: rgba(var(--color-on-photo-rgb), 0.06);
         border-color: rgba(var(--color-accent-rgb), 0.4);
         transform: translateY(-2px);
     }
@@ -1352,8 +1413,8 @@ p {
 }
 
 .platform-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(var(--color-on-photo-rgb), 0.04);
+    border: 1px solid rgba(var(--color-on-photo-rgb), 0.12);
     padding: 1.85rem 1.25rem;
     border-radius: 14px;
     text-align: center;
@@ -1488,10 +1549,10 @@ p {
    Footer
    ============================================ */
 .site-footer {
-    background: var(--color-bg-darker);
-    color: var(--color-text-light);
+    background: var(--footer-bg);
+    color: var(--footer-text);
     padding: 5rem 0 2rem;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(var(--color-on-photo-rgb), 0.05);
 }
 
 .footer-grid {
@@ -1520,7 +1581,7 @@ p {
 }
 
 .site-footer a {
-    color: rgba(255,255,255,0.78);
+    color: rgba(var(--color-on-photo-rgb), 0.78);
 }
 
     .site-footer a:hover {
@@ -1535,7 +1596,7 @@ p {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(var(--color-on-photo-rgb), 0.08);
     padding-top: 2rem;
     text-align: center;
     font-size: 0.82rem;
@@ -1629,9 +1690,9 @@ p {
         right: 0;
         background: var(--color-bg-dark);
         padding: 1.25rem 1.5rem;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        box-shadow: 0 10px 30px rgba(var(--color-shadow-rgb), 0.35);
         grid-column: 1 / -1;
-        border-top: 1px solid rgba(255,255,255,0.06);
+        border-top: 1px solid rgba(var(--color-on-photo-rgb), 0.06);
     }
 
         .main-nav.is-open {

@@ -102,7 +102,7 @@
   margin: 1.5rem 0 2.2rem;
   border-radius: var(--radius);
   overflow: hidden;
-  background: #000;
+  background: var(--color-shadow);
   box-shadow: var(--shadow-sm);
 }
 .sermon-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -155,7 +155,7 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(to top, var(--color-bg) 0%, rgba(255,255,255,0) 22%),
+    linear-gradient(to top, var(--color-bg) 0%, rgba(var(--color-bg-rgb), 0) 22%),
     linear-gradient(to bottom,
       rgba(var(--color-bg-darker-rgb), .42) 0%,
       rgba(var(--color-bg-darker-rgb), .34) 26%,
@@ -168,21 +168,21 @@
   animation: heroIn .9s cubic-bezier(.2,.7,.2,1) both;
 }
 .sermon-hero .blog-back { margin: 0 0 .8rem; }
-.sermon-hero .blog-back a { color: rgba(255,255,255,.82); }
-.sermon-hero .blog-back a:hover { color: #fff; }
+.sermon-hero .blog-back a { color: rgba(var(--color-on-photo-rgb), .82); }
+.sermon-hero .blog-back a:hover { color: var(--color-on-photo); }
 .sermon-hero .blog-date {
   color: var(--color-accent);
   margin: 0 0 .55rem;
-  text-shadow: 0 1px 12px rgba(0,0,0,.6);
+  text-shadow: 0 1px 12px rgba(var(--color-shadow-rgb), .6);
 }
 .sermon-hero h1 {
   font-family: var(--font-heading);
-  color: #fff;
+  color: var(--color-on-photo);
   font-size: clamp(1.9rem, 4.6vw, 2.95rem);   /* capped so it doesn't dominate */
   line-height: 1.06;
   margin: 0;
   max-width: 16ch;
-  text-shadow: 0 2px 26px rgba(0,0,0,.62);
+  text-shadow: 0 2px 26px rgba(var(--color-shadow-rgb), .62);
 }
 /* A post page leads with the hero, so pull the article up under it and let the
    page background do the blending (no extra top padding fighting the fade). */
@@ -227,4 +227,24 @@
   object-fit: cover;
   border-radius: var(--radius);
   margin-bottom: 1rem;
+}
+
+/* How a picture sits in a hand-written post: its size, its side, its shape,
+   and a caption. The classes are set from the admin panel's post editor. */
+.blog-post .post-pic { margin: 1.75rem auto; max-width: 100%; }
+.blog-post .post-pic img { display: block; width: 100%; height: auto; margin: 0; border-radius: var(--post-pic-radius); }
+.blog-post .post-pic figcaption { font-size: var(--caption-size); line-height: 1.5; color: var(--caption-color); text-align: var(--caption-align); margin-top: 0.6rem; }
+.blog-post .post-pic--small { width: 40%; }
+.blog-post .post-pic--medium { width: 70%; }
+.blog-post .post-pic--full { width: 100%; }
+.blog-post .post-pic--left { float: left; margin: 0.4rem 1.75rem 1rem 0; }
+.blog-post .post-pic--right { float: right; margin: 0.4rem 0 1rem 1.75rem; }
+.blog-post .post-pic--full.post-pic--left, .blog-post .post-pic--full.post-pic--right { float: none; margin: 1.75rem auto; }
+.blog-post .post-pic--wide img { aspect-ratio: 16 / 9; object-fit: cover; }
+.blog-post .post-pic--square img { aspect-ratio: 1 / 1; object-fit: cover; }
+.blog-post .post-pic--tall img { aspect-ratio: 4 / 5; object-fit: cover; }
+.blog-post .blog-rule { clear: both; }
+@media (max-width: 640px) {
+  .blog-post .post-pic--small, .blog-post .post-pic--medium { width: 100%; }
+  .blog-post .post-pic--left, .blog-post .post-pic--right { float: none; margin: 1.5rem auto; }
 }

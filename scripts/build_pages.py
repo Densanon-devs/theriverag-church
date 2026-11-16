@@ -63,6 +63,35 @@ except ModuleNotFoundError as exc:
     sys.exit(0)
 
 
+# A section may carry `hook: <name>` in its YAML; it is drawn with the class
+# `sec-<name>`, a handle that stays put when sections are reordered, for the
+# site's own CSS (css/custom.css, the admin panel's "Your own CSS") to hold
+# on to. church-ops does the same for its preview (site_design.add_hook).
+from densanon.core.site_builder import renderer as _renderer
+
+_HOOK_RE = re.compile(r"[a-z][a-z0-9-]{1,40}")
+_FIRST_TAG = re.compile(r"<([a-zA-Z][a-zA-Z0-9]*)\b([^>]*)>")
+_engine_render_block = _renderer.render_block
+
+
+def _render_block_with_hook(block, idx, page, data=None, registry=None):
+    html = _engine_render_block(block, idx, page, data, registry)
+    hook = str(block.get("hook") or "") if isinstance(block, dict) else ""
+    if not _HOOK_RE.fullmatch(hook):
+        return html
+    m = _FIRST_TAG.search(html)
+    if not m:
+        return html
+    attrs = m.group(2)
+    if re.search(r'\bclass="', attrs):
+        attrs = re.sub(r'\bclass="', f'class="sec-{hook} ', attrs, count=1)
+    else:
+        attrs = f' class="sec-{hook}"' + attrs
+    return html[:m.start()] + f"<{m.group(1)}{attrs}>" + html[m.end():]
+
+
+_renderer.render_block = _render_block_with_hook
+
 ROOT = _REPO_ROOT
 BLOG_SRC = ROOT / "content" / "blog"
 BLOG_OUT = ROOT / "blog"
@@ -425,8 +454,33 @@ def _append_blog_to_sitemap() -> int:
     return added
 
 
+def _apply_head_defaults(data: dict) -> None:
+    """Site-wide title suffix and default description, from `head:` in
+    _data/site.yml (the admin panel's Website > Search, icon and code).
+    A page's title gets the suffix unless it already says it; a page with
+    no description gets the default. Mirrors church-ops'
+    site_design.apply_head_defaults, which does the same for the preview."""
+    site = data.get("site") if isinstance(data.get("site"), dict) else {}
+    head = site.get("head") if isinstance(site.get("head"), dict) else {}
+    suffix = str(head.get("title_suffix") or "")
+    desc = str(head.get("description") or "").strip()
+    core = re.sub(r"^[\s|\-–—·:]+", "", suffix).strip()
+    if not core and not desc:
+        return
+    for page in (data.get("pages") or {}).values():
+        meta = page.get("meta") if isinstance(page, dict) else None
+        if not isinstance(meta, dict):
+            continue
+        title = str(meta.get("title") or "").strip()
+        if core and title and core.lower() not in title.lower():
+            meta["title"] = title + (suffix if suffix[:1] in " |-–—·:" else " " + suffix).rstrip()
+        if desc and not str(meta.get("description") or "").strip():
+            meta["description"] = desc
+
+
 def main() -> int:
     data = load_site_data(ROOT)
+    _apply_head_defaults(data)
     if not data:
         print("No _data/*.yml files found; skipped substitution.")
         build_blog()

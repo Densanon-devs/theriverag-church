@@ -19,6 +19,8 @@ colors:
   border: '#e8e2d4'
   highlight: '#2680c2'
   overlay: '#0a0a0c'
+  on_photo: '#ffffff'
+  shadow: '#000000'
 fonts:
   heading: '''Oswald'', ''Arial Narrow'', Arial, sans-serif'
   display: '''Abel'', ''Oswald'', sans-serif'
@@ -29,10 +31,64 @@ shape:
   radius_lg: 22px
   button_radius: 999px
   section_space: 6rem
+# Text styles: Heading 1-4 and Paragraph 1-3. A page, a section or a single
+# heading can use another value for any of these; here is what they start from.
+type:
+  text_size: 17px
+  text_line: '1.7'
+  text_weight: '400'
+  heading_line: '1.12'
+  heading_weight: '600'
+  heading_spacing: 0.005em
+  h1_size: clamp(2.4rem, 5.2vw, 4.25rem)
+  h1_transform: uppercase
+  h1_spacing: 0.02em
+  h2_size: clamp(1.85rem, 3.2vw, 2.75rem)
+  h2_transform: uppercase
+  h2_spacing: 0.015em
+  h3_size: 1.4rem
+  h4_size: 0.95rem
+  h4_transform: uppercase
+  h4_spacing: 0.18em
+  h4_weight: '600'
+  p1_size: 1.25rem
+  p3_size: 0.9rem
+buttons:
+  button_font: var(--font-display)
+  button_size: 0.85rem
+  button_weight: '600'
+  button_transform: uppercase
+  button_spacing: 0.12em
+  button_padding: 0.85rem 1.75rem
+  button_border: 1.5px
+  button_bg: var(--color-accent)
+  button_text: var(--color-bg-dark)
+  button_hover_bg: var(--color-accent-hover)
+  button2_bg: transparent
+  button2_text: var(--color-text-light)
+  button2_border: rgba(var(--color-on-photo-rgb), 0.65)
+  button3_text: var(--color-accent)
+look:
+  link_color: var(--color-accent)
+  link_hover: var(--color-accent-hover)
+  header_bg: var(--color-bg-dark)
+  header_text: var(--color-text-light)
+  footer_bg: var(--color-bg-darker)
+  footer_text: var(--color-text-light)
+  divider_color: var(--color-accent)
+  post_pic_radius: var(--radius)
+  caption_size: 0.9rem
+  caption_color: var(--color-text-muted)
+  caption_align: center
+# How a new picture in a post starts out (the post editor's choices).
+posts:
+  picture_size: full
+  picture_align: center
+  picture_shape: ''
 variables:
-  shadow_sm: 0 2px 10px rgba(0, 0, 0, 0.05)
-  shadow: 0 14px 40px rgba(0, 0, 0, 0.10)
-  shadow_lg: 0 30px 80px rgba(0, 0, 0, 0.28)
+  shadow_sm: 0 2px 10px rgba(var(--color-shadow-rgb), 0.05)
+  shadow: 0 14px 40px rgba(var(--color-shadow-rgb), 0.10)
+  shadow_lg: 0 30px 80px rgba(var(--color-shadow-rgb), 0.28)
   transition: 250ms cubic-bezier(.2,.7,.2,1)
 fonts_loaded:
 - Abel
