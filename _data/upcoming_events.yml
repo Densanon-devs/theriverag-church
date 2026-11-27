@@ -1,13 +1,5 @@
-fetched_at: '2026-11-26T14:01:55.611623+00:00'
+fetched_at: '2026-11-27T14:00:07.496570+00:00'
 events:
-- date_iso: '2026-11-26'
-  month: NOV
-  day: '26'
-  title: Worship Circle / Practice
-  when_text: Thu 5:30pm
-  location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
-  url: https://theriverag.church/calendar
-  rsvp_label: Details
 - date_iso: '2026-11-27'
   month: NOV
   day: '27'
@@ -21,6 +13,14 @@ events:
   day: '02'
   title: Dinner by The River
   when_text: Wed 4pm
+  location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
+  url: https://theriverag.church/calendar
+  rsvp_label: Details
+- date_iso: '2026-12-03'
+  month: DEC
+  day: '03'
+  title: Worship Circle / Practice
+  when_text: Thu 5:30pm
   location: The River Church  - 8076 W Prairie Ave, Post Falls , ID 83854
   url: https://theriverag.church/calendar
   rsvp_label: Details
